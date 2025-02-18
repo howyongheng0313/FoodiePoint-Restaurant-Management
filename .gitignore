@@ -1,0 +1,44 @@
+# Visual Studio build files
+/.vs/
+/bin/
+/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# IDE-specific files
+.vscode/
+
+# Dependency caches
+/node_modules/
+/packages/
+
+# Database files
+*.sqlite
+*.db
+
+# Environment files
+.env
+
+# Build artifacts
+/dist/
+/out/
+
+# Python virtual environments (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore library and tool-specific directories
+.DS_Store
+Thumbs.db
+
