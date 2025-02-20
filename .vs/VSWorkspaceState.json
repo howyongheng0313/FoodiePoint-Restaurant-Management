@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Chef",
+    "\\Chef\\Database",
+    "\\Manager"
   ],
-  "SelectedNode": "\\Manager",
+  "SelectedNode": "\\Chef",
   "PreviewInSolutionExplorer": false
 }
