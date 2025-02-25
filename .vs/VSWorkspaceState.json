@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Chef",
-    "\\Chef\\Database",
-    "\\Database2",
-    "\\Manager",
-    "\\Manager\\Connected Services",
-    "\\Manager\\Properties",
-    "\\Manager\\Properties\\DataSources",
-    "\\Manager\\Resources",
-    "\\Reservation_Coordinator"
+    ""
   ],
-  "SelectedNode": "\\Manager\\Form5.cs",
+  "SelectedNode": "\\C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager",
   "PreviewInSolutionExplorer": false
 }
