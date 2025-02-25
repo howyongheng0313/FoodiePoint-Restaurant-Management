@@ -1,4 +1,4 @@
-﻿namespace Reservation_Coordinator
+﻿namespace Reservation_Coordinator.View1
 {
     partial class Form1
     {
@@ -37,4 +37,3 @@
         #endregion
     }
 }
-
