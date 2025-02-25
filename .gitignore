@@ -1,7 +1,7 @@
 # Visual Studio build files
 **/.vs/
-/bin/
-/obj/
+**/bin/
+**/obj/
 
 # User-specific files
 *.user
@@ -33,7 +33,7 @@
 /out/
 
 # Python virtual environments (if applicable)
-__pycache__/
+_pycache_/
 *.pyc
 *.pyo
 *.pyd

@@ -53,7 +53,7 @@
             this.lblChefNewUsername.Size = new System.Drawing.Size(103, 16);
             this.lblChefNewUsername.TabIndex = 3;
             this.lblChefNewUsername.Text = "New Username:";
-            this.lblChefNewUsername.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // lblChefNewPassword
             // 
@@ -118,6 +118,7 @@
             this.btnProfileToChef.TabIndex = 11;
             this.btnProfileToChef.Text = "Chef Main Page";
             this.btnProfileToChef.UseVisualStyleBackColor = true;
+            this.btnProfileToChef.Click += new System.EventHandler(this.btnProfileToChef_Click);
             // 
             // label1
             // 
@@ -127,7 +128,7 @@
             this.label1.Size = new System.Drawing.Size(148, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Confirm New Password:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+
             // 
             // textBox1
             // 
@@ -144,6 +145,7 @@
             this.btnProfileToInventory.TabIndex = 14;
             this.btnProfileToInventory.Text = "Inventory Page";
             this.btnProfileToInventory.UseVisualStyleBackColor = true;
+            this.btnProfileToInventory.Click += new System.EventHandler(this.btnProfileToInventory_Click);
             // 
             // btnProfileToOrder
             // 
@@ -153,6 +155,7 @@
             this.btnProfileToOrder.TabIndex = 15;
             this.btnProfileToOrder.Text = "Orders Page";
             this.btnProfileToOrder.UseVisualStyleBackColor = true;
+            this.btnProfileToOrder.Click += new System.EventHandler(this.btnProfileToOrder_Click);
             // 
             // groupBox1
             // 
@@ -166,7 +169,7 @@
             this.groupBox1.Controls.Add(this.tbxChefNewName);
             this.groupBox1.Controls.Add(this.tbxChefNewEmail);
             this.groupBox1.Controls.Add(this.tbxChefNewPassword);
-            this.groupBox1.Location = new System.Drawing.Point(234, 43);
+            this.groupBox1.Location = new System.Drawing.Point(279, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(418, 354);
             this.groupBox1.TabIndex = 16;

@@ -17,19 +17,25 @@ namespace FoodiePointManagementSystem
             InitializeComponent();
         }
 
-        private void lblOrder_Click(object sender, EventArgs e)
+        private void btnProfileToChef_Click(object sender, EventArgs e)
         {
-
+            frmChef frmChef = new frmChef();
+            frmChef.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnProfileToOrder_Click(object sender, EventArgs e)
         {
-
+            frmOrder frmOrder = new frmOrder();
+            frmOrder.Show();
+            this.Hide();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void btnProfileToInventory_Click(object sender, EventArgs e)
         {
-
+            frmInventory frmInventory = new frmInventory();
+            frmInventory.Show();
+            this.Hide();
         }
     }
 }
