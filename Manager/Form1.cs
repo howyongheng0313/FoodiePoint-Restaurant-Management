@@ -88,5 +88,10 @@ namespace FoodieUI
         {
             button.MainMenu();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            button.Profile();
+        }
     }
 }

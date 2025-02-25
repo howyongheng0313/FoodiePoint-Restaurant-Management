@@ -83,6 +83,7 @@
             this.button10.TabStop = false;
             this.button10.Text = "My Profile";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // splitContainer1
             // 
@@ -125,6 +126,7 @@
             this.button9.TabStop = false;
             this.button9.Text = "Reservations";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 

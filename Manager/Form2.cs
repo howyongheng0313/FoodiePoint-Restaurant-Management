@@ -45,7 +45,17 @@ namespace FoodieUI
 
         private void button8_Click(object sender, EventArgs e)
         {
+            button.HallMgmt();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
             button.Reservations();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            button.Profile();
         }
     }
 }
