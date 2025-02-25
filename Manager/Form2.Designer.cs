@@ -66,6 +66,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "Menu";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button10
             // 
@@ -140,6 +141,7 @@
             this.button8.TabStop = false;
             this.button8.Text = "Hall Mgmt";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label2
             // 

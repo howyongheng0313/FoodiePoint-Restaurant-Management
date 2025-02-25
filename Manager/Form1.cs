@@ -12,43 +12,12 @@ namespace FoodieUI
 {
     public partial class Form1 : Form
     {
+        Button button = new Button();
         public Form1()
         {
             InitializeComponent();
         }
 
-        public void MainMenu()
-        {
-            Form1 fm = new Form1();
-            fm.StartPosition = FormStartPosition.Manual;
-            fm.Location = this.Location;
-            fm.Show();
-            this.Hide();
-        }
-        public void HallMgmt()
-        {
-            Form2 fm2 = new Form2();
-            fm2.StartPosition = FormStartPosition.Manual;
-            fm2.Location = this.Location;
-            fm2.Show();
-            this.Hide();
-        }
-        public void Reservations()
-        {
-            Form3 fm3 = new Form3();
-            fm3.StartPosition = FormStartPosition.Manual;
-            fm3.Location = this.Location;
-            fm3.Show();
-            this.Hide();
-        }
-        public void Profile()
-        {
-            Form4 fm4 = new Form4();
-            fm4.StartPosition = FormStartPosition.Manual;
-            fm4.Location = this.Location;
-            fm4.Show();
-            this.Hide();
-        }
 
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
@@ -102,22 +71,22 @@ namespace FoodieUI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MainMenu();
+            button.MainMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            HallMgmt();
+            button.HallMgmt();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Reservations();
+            button.Reservations();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MainMenu();
+            button.MainMenu();
         }
     }
 }

@@ -34,7 +34,6 @@ namespace FoodieUI
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SELECT * FROM [master].[Schema1].[Table1]
         }
     }
 }

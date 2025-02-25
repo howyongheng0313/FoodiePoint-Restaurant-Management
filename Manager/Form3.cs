@@ -12,13 +12,11 @@ namespace FoodieUI
 {
     public partial class Form3 : Form
     {
-        private Form1 f1;
+        Button button = new Button();
 
         public Form3()
         {
             InitializeComponent();
-            f1 = new Form1();
-
         }
 
 
@@ -69,26 +67,22 @@ namespace FoodieUI
 
         private void button8_Click(object sender, EventArgs e)
         {
-            f1.HallMgmt();
-            this.Hide();
+            button.HallMgmt();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            f1.MainMenu();
-            this.Hide();
+            button.MainMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            f1.Reservations();
-            this.Hide();
+            button.Reservations();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            f1.Profile();
-            this.Hide();
+            button.Profile();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace FoodieUI
 {
     public partial class Form2 : Form
     {
+        Button button = new Button();
         public Form2()
         {
             InitializeComponent();
@@ -35,6 +36,16 @@ namespace FoodieUI
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button.MainMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            button.Reservations();
         }
     }
 }
