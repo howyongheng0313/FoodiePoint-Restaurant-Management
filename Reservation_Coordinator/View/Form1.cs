@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Reservation_Coordinator.View1
+namespace Reservation_Coordinator.View
 {
     public partial class Form1 : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace Reservation_Coordinator.View1
+﻿namespace Reservation_Coordinator.View
 {
     partial class Form1
     {
