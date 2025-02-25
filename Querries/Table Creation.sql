@@ -1,0 +1,94 @@
+﻿DROP TABLE IF EXISTS OrderItem;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Requests;
+DROP TABLE IF EXISTS Reservations;
+DROP TABLE IF EXISTS Recipes;
+DROP TABLE IF EXISTS Inventory;
+DROP TABLE IF EXISTS Halls;
+DROP TABLE IF EXISTS Menu;
+DROP TABLE IF EXISTS Feedbacks;
+DROP TABLE IF EXISTS Users;
+
+CREATE TABLE Users (
+    UserID NVARCHAR(10) PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(50) NOT NULL,
+    FullName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    Role NVARCHAR(50) DEFAULT 'Customer' 
+);
+
+CREATE TABLE Orders (
+    OrderID NVARCHAR(10) PRIMARY KEY,
+    UserID NVARCHAR(10) NOT NULL,
+    DateTime DATETIME NOT NULL,
+    OrderStatus NVARCHAR(20) DEFAULT 'Pending',
+    CONSTRAINT FK_Orders_User FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Feedbacks (
+    FeedbackID NVARCHAR(10) PRIMARY KEY,
+    OrderID NVARCHAR(10) NOT NULL,
+    Feedback NVARCHAR(MAX),
+    Rating INT DEFAULT 3 CHECK (Rating BETWEEN 1 AND 5),
+    CONSTRAINT FK_Feedbacks_Order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
+
+CREATE TABLE Menu (
+    ItemID NVARCHAR(10) PRIMARY KEY,
+    ItemName NVARCHAR(100) NOT NULL,
+    ItemPrice DECIMAL(10,2) DEFAULT 10.00,
+    ItemCategory NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Halls (
+    HallID NVARCHAR(10) PRIMARY KEY,
+    HallName NVARCHAR(100) NOT NULL,
+    HallPartyType NVARCHAR(50) NOT NULL,
+    HallCapacity INT NOT NULL,
+    Availability NVARCHAR(20) DEFAULT 'Available'
+);
+
+CREATE TABLE Inventory (
+    IngredientID NVARCHAR(10) PRIMARY KEY,
+    IngredientName NVARCHAR(100) NOT NULL,
+    QuantityInStock INT DEFAULT 0,
+    Unit NVARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Recipes (
+    ItemID NVARCHAR(10) NOT NULL,
+    IngredientID NVARCHAR(10) NOT NULL,
+    Quantity INT NOT NULL,
+    PRIMARY KEY (ItemID, IngredientID),
+    CONSTRAINT FK_Recipes_Item FOREIGN KEY (ItemID) REFERENCES Menu(ItemID),
+    CONSTRAINT FK_Recipes_Ingredient FOREIGN KEY (IngredientID) REFERENCES Inventory(IngredientID)
+);
+
+CREATE TABLE Reservations (
+    ReservationID NVARCHAR(10) PRIMARY KEY,
+    HallID NVARCHAR(10) NOT NULL,
+    UserID NVARCHAR(10) NOT NULL,
+    ReservationDate DATETIME NOT NULL,
+    ReservationType NVARCHAR(50) NOT NULL,
+    ReservationStatus NVARCHAR(20) DEFAULT 'Pending',
+    CONSTRAINT FK_Reservations_Hall FOREIGN KEY (HallID) REFERENCES Halls(HallID),
+    CONSTRAINT FK_Reservations_User FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Requests (
+    RequestID NVARCHAR(10) PRIMARY KEY,
+    ReservationID NVARCHAR(10) NOT NULL,
+    UserRequest NVARCHAR(MAX),
+    Reply NVARCHAR(MAX),
+    CONSTRAINT FK_Requests_Reservation FOREIGN KEY (ReservationID) REFERENCES Reservations(ReservationID)
+);
+
+CREATE TABLE OrderItem (
+    OrderID NVARCHAR(10) NOT NULL,
+    ItemID NVARCHAR(10) NOT NULL,
+    Quantity INT NOT NULL,
+    PRIMARY KEY (OrderID, ItemID),
+    CONSTRAINT FK_OrderItem_Order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    CONSTRAINT FK_OrderItem_Item FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+);

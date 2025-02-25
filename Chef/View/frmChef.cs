@@ -24,9 +24,6 @@ namespace FoodiePointManagementSystem
 
         private void frmChef_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'foodiePointDataSet.Order' table. You can move, or remove it, as needed.
-            this.orderTableAdapter.Fill(this.foodiePointDataSet.Order);
-
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -48,14 +45,6 @@ namespace FoodiePointManagementSystem
             frmChefProfile frmChefProfile = new frmChefProfile();
             frmChefProfile.Show();
             this.Hide();
-        }
-
-        private void orderBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.orderBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.foodiePointDataSet);
-
         }
     }
 }
