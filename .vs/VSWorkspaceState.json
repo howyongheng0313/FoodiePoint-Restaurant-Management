@@ -3,7 +3,11 @@
     "",
     "\\Chef",
     "\\Chef\\Database",
-    "\\Manager"
+    "\\Chef\\Model",
+    "\\Database2",
+    "\\Manager",
+    "\\Manager\\Properties"
   ],
+  "SelectedNode": "\\Manager\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
