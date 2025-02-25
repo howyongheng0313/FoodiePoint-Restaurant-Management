@@ -3,11 +3,14 @@
     "",
     "\\Chef",
     "\\Chef\\Database",
-    "\\Chef\\Model",
     "\\Database2",
     "\\Manager",
-    "\\Manager\\Properties"
+    "\\Manager\\Connected Services",
+    "\\Manager\\Properties",
+    "\\Manager\\Properties\\DataSources",
+    "\\Manager\\Resources",
+    "\\Reservation_Coordinator"
   ],
-  "SelectedNode": "\\Manager\\Program.cs",
+  "SelectedNode": "\\Manager\\Form5.cs",
   "PreviewInSolutionExplorer": false
 }
