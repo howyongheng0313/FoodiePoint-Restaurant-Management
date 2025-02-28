@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChef));
             this.lblChefDashboard = new System.Windows.Forms.Label();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnUpdateProfile = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,40 +47,8 @@
             this.lblChefDashboard.Size = new System.Drawing.Size(193, 22);
             this.lblChefDashboard.TabIndex = 0;
             this.lblChefDashboard.Text = "Chef Dashboard";
+            this.lblChefDashboard.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblChefDashboard.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOrder.Location = new System.Drawing.Point(292, 101);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(192, 110);
-            this.btnOrder.TabIndex = 1;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnInventory.Location = new System.Drawing.Point(541, 101);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(192, 110);
-            this.btnInventory.TabIndex = 2;
-            this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
-            // btnUpdateProfile
-            // 
-            this.btnUpdateProfile.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(420, 233);
-            this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(192, 110);
-            this.btnUpdateProfile.TabIndex = 3;
-            this.btnUpdateProfile.Text = "Update Profile";
-            this.btnUpdateProfile.UseVisualStyleBackColor = false;
-            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
             // 
             // pictureBox1
             // 
@@ -91,15 +60,49 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnUpdateProfile
+            // 
+            this.btnUpdateProfile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateProfile.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(432, 242);
+            this.btnUpdateProfile.Name = "btnUpdateProfile";
+            this.btnUpdateProfile.Size = new System.Drawing.Size(192, 110);
+            this.btnUpdateProfile.TabIndex = 7;
+            this.btnUpdateProfile.Text = "Update Profile";
+            this.btnUpdateProfile.UseVisualStyleBackColor = false;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventory.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInventory.Location = new System.Drawing.Point(553, 110);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(192, 110);
+            this.btnInventory.TabIndex = 6;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = false;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOrder.Location = new System.Drawing.Point(304, 110);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(192, 110);
+            this.btnOrder.TabIndex = 5;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            // 
             // frmChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUpdateProfile);
             this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblChefDashboard);
             this.Name = "frmChef";
             this.Text = "Chef Main Page";
@@ -113,9 +116,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblChefDashboard;
-        private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Button btnInventory;
-        private System.Windows.Forms.Button btnUpdateProfile;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnUpdateProfile;
+        private System.Windows.Forms.Button btnInventory;
+        private System.Windows.Forms.Button btnOrder;
     }
 }

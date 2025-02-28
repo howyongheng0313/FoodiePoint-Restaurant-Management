@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace FoodiePointManagementSystem
 {
+
+    // Create object, call the method in the object.
+
     public partial class frmOrder : Form
     {
         public frmOrder()
@@ -24,14 +27,23 @@ namespace FoodiePointManagementSystem
             this.Hide();
         }
 
-        private void btnInProgress_Click(object sender, EventArgs e)
+        private void btnOrderToInventory_Click(object sender, EventArgs e)
         {
+            frmInventory frmInventory = new frmInventory();
+            frmInventory.Show();
+            this.Hide();
+        }
 
+        private void btnOrderToProfile_Click(object sender, EventArgs e)
+        {
+            frmChefProfile frmChefProfile = new frmChefProfile();
+            frmChefProfile.Show();
+            this.Hide();
         }
 
         private void frmOrder_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
