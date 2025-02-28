@@ -49,6 +49,7 @@
             this.dgvOrder.RowTemplate.Height = 24;
             this.dgvOrder.Size = new System.Drawing.Size(404, 395);
             this.dgvOrder.TabIndex = 0;
+
             // 
             // btnInProgress
             // 
@@ -58,7 +59,6 @@
             this.btnInProgress.TabIndex = 2;
             this.btnInProgress.Text = "In Progress";
             this.btnInProgress.UseVisualStyleBackColor = true;
-            this.btnInProgress.Click += new System.EventHandler(this.btnInProgress_Click);
             // 
             // gbxOrder
             // 
@@ -98,6 +98,7 @@
             this.btnOrderToInventory.TabIndex = 6;
             this.btnOrderToInventory.Text = "Inventory Page";
             this.btnOrderToInventory.UseVisualStyleBackColor = true;
+            this.btnOrderToInventory.Click += new System.EventHandler(this.btnOrderToInventory_Click);
             // 
             // btnOrderToProfile
             // 
@@ -107,6 +108,7 @@
             this.btnOrderToProfile.TabIndex = 7;
             this.btnOrderToProfile.Text = "Update Profile Page";
             this.btnOrderToProfile.UseVisualStyleBackColor = true;
+            this.btnOrderToProfile.Click += new System.EventHandler(this.btnOrderToProfile_Click);
             // 
             // frmOrder
             // 

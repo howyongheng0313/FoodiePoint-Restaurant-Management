@@ -41,7 +41,7 @@
             this.tbxSearchDelete = new System.Windows.Forms.TextBox();
             this.lblSearchDelete = new System.Windows.Forms.Label();
             this.btnSearchIngredient = new System.Windows.Forms.Button();
-            this.btnInventoryToAChef = new System.Windows.Forms.Button();
+            this.btnInventoryToChef = new System.Windows.Forms.Button();
             this.btnInventoryToProfile = new System.Windows.Forms.Button();
             this.btnInventoryToOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -57,7 +57,7 @@
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
-            this.dgvInventory.Size = new System.Drawing.Size(341, 426);
+            this.dgvInventory.Size = new System.Drawing.Size(328, 426);
             this.dgvInventory.TabIndex = 0;
             // 
             // tbxIngredient
@@ -102,7 +102,7 @@
             this.gbxAddEdit.Controls.Add(this.tbxIngredient);
             this.gbxAddEdit.Controls.Add(this.lblIngredient);
             this.gbxAddEdit.Controls.Add(this.btnAddIngredient);
-            this.gbxAddEdit.Location = new System.Drawing.Point(540, 40);
+            this.gbxAddEdit.Location = new System.Drawing.Point(540, 29);
             this.gbxAddEdit.Name = "gbxAddEdit";
             this.gbxAddEdit.Size = new System.Drawing.Size(248, 173);
             this.gbxAddEdit.TabIndex = 8;
@@ -174,14 +174,15 @@
             this.btnSearchIngredient.Text = "Search";
             this.btnSearchIngredient.UseVisualStyleBackColor = true;
             // 
-            // btnInventoryToAChef
+            // btnInventoryToChef
             // 
-            this.btnInventoryToAChef.Location = new System.Drawing.Point(26, 76);
-            this.btnInventoryToAChef.Name = "btnInventoryToAChef";
-            this.btnInventoryToAChef.Size = new System.Drawing.Size(144, 48);
-            this.btnInventoryToAChef.TabIndex = 6;
-            this.btnInventoryToAChef.Text = "Chef Main Page";
-            this.btnInventoryToAChef.UseVisualStyleBackColor = true;
+            this.btnInventoryToChef.Location = new System.Drawing.Point(26, 76);
+            this.btnInventoryToChef.Name = "btnInventoryToChef";
+            this.btnInventoryToChef.Size = new System.Drawing.Size(144, 48);
+            this.btnInventoryToChef.TabIndex = 6;
+            this.btnInventoryToChef.Text = "Chef Main Page";
+            this.btnInventoryToChef.UseVisualStyleBackColor = true;
+            this.btnInventoryToChef.Click += new System.EventHandler(this.btnInventoryToChef_Click);
             // 
             // btnInventoryToProfile
             // 
@@ -191,6 +192,7 @@
             this.btnInventoryToProfile.TabIndex = 10;
             this.btnInventoryToProfile.Text = "Update Profile Page";
             this.btnInventoryToProfile.UseVisualStyleBackColor = true;
+            this.btnInventoryToProfile.Click += new System.EventHandler(this.btnInventoryToProfile_Click);
             // 
             // btnInventoryToOrder
             // 
@@ -200,6 +202,7 @@
             this.btnInventoryToOrder.TabIndex = 11;
             this.btnInventoryToOrder.Text = "Orders Page";
             this.btnInventoryToOrder.UseVisualStyleBackColor = true;
+            this.btnInventoryToOrder.Click += new System.EventHandler(this.btnInventoryToOrder_Click);
             // 
             // frmInventory
             // 
@@ -208,7 +211,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnInventoryToOrder);
             this.Controls.Add(this.btnInventoryToProfile);
-            this.Controls.Add(this.btnInventoryToAChef);
+            this.Controls.Add(this.btnInventoryToChef);
             this.Controls.Add(this.gbxSearchDelete);
             this.Controls.Add(this.gbxAddEdit);
             this.Controls.Add(this.dgvInventory);
@@ -236,7 +239,7 @@
         private System.Windows.Forms.TextBox tbxSearchDelete;
         private System.Windows.Forms.Label lblSearchDelete;
         private System.Windows.Forms.Button btnSearchIngredient;
-        private System.Windows.Forms.Button btnInventoryToAChef;
+        private System.Windows.Forms.Button btnInventoryToChef;
         private System.Windows.Forms.TextBox tbx;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Button btnInventoryToProfile;

@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\FoodiePointDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Database\DatabaseHelper.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderItem.cs" />
+    <Compile Include="Presenter\InventoryService.cs" />
+    <Compile Include="Presenter\OrderService.cs" />
     <Compile Include="View\frmChef.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,16 +115,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Database\FoodiePointDataSet.xsc">
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database\FoodiePointDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database\FoodiePointDataSet.xss">
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,10 +148,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>FoodiePoint.mdf</DependentUpon>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Presenter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
