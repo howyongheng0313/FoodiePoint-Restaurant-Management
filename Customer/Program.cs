@@ -16,6 +16,12 @@ namespace new_customer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Form3 cartForm = new Form3();
+            Form2 form2 = new Form2(cartForm);
+            form2.Show();
+            cartForm.Show();
+
             Application.Run(new Form1());
         }
     }

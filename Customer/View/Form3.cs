@@ -12,39 +12,47 @@ namespace new_customer
 {
     public partial class Form3: Form
     {
+        private Form3
         public Form3()
         {
             InitializeComponent();
+            
         }
-
-        private Form2 form2menu; // Reference to Form2
-
-        public Form3(Form2 form2)
+        public void RefreshCart()
         {
-            InitializeComponent();
-            form2menu = form2; // Store Form2 reference
+            dataGridView1.Refresh(); // Forces UI update
+        }
+        public void AddToCart(string selectfood, string quantity)
+        {
+            // Check if the item already exists in the DataGridView
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == selectfood)
+                {
+                    //Update the quantity if the item exists
+                    int existingQuantity = Convert.ToInt32(row.Cells[1].Value);
+                    row.Cells[1].Value = existingQuantity + quantity;
+                    return; // Exit the method after updating
+                }
+            }
+
+            // If the item does not exist, add a new row
+            dataGridView1.Rows.Add(selectfood, quantity);
+
+            //Ensure columns are created before adding rows
+            //if (dataGridView1.Columns.Count == 0)
+            //{
+            //    dataGridView1.Columns.Add("ItemID", "Item ID");
+            //    dataGridView1.Columns.Add("ItemName", "Item Name");
+            //    dataGridView1.Columns.Add("ItemPrice", "Item Price");
+            //    dataGridView1.Columns.Add("ItemCategory", "Item Category");
+            //}
+            //dataGridView1.Rows.Add(itemID, itemName, itemPrice, itemCategory);
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'foodiepointDbDataSet.OrderItem' table. You can move, or remove it, as needed.
-            this.orderItemTableAdapter.Fill(this.foodiepointDbDataSet.OrderItem);
-            // TODO: This line of code loads data into the 'foodiepointDbDataSet.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.foodiepointDbDataSet.Orders);
 
-            // Create a DataTable for the cart
-            DataTable cartTable = new DataTable();
-            cartTable.Columns.Add("Food", typeof(string));
-            cartTable.Columns.Add("Quantity", typeof(int));
-
-            // Populate with items from Form2’s CartItems list
-            foreach (string food in form2menu.CartItems)
-            {
-                cartTable.Rows.Add(food, 1); // Default quantity = 1
-            }
-
-            // Bind the table to DataGridView
-            dataGridView1.DataSource = cartTable;
         }
 
         private void button4_Click(object sender, EventArgs e)
