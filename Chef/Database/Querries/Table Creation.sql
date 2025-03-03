@@ -52,14 +52,14 @@ CREATE TABLE Halls (
 CREATE TABLE Inventory (
     IngredientID NVARCHAR(10) PRIMARY KEY,
     IngredientName NVARCHAR(100) NOT NULL,
-    QuantityInStock INT DEFAULT 0,
+    QuantityInStock FLOAT DEFAULT 0,
     Unit NVARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Recipes (
     ItemID NVARCHAR(10) NOT NULL,
     IngredientID NVARCHAR(10) NOT NULL,
-    Quantity INT NOT NULL,
+    Quantity FLOAT NOT NULL,
     PRIMARY KEY (ItemID, IngredientID),
     CONSTRAINT FK_Recipes_Item FOREIGN KEY (ItemID) REFERENCES Menu(ItemID),
     CONSTRAINT FK_Recipes_Ingredient FOREIGN KEY (IngredientID) REFERENCES Inventory(IngredientID)
