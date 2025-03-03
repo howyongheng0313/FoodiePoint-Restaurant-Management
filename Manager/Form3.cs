@@ -62,6 +62,8 @@ namespace FoodieUI
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'foodieDbDataSet.Reservations' table. You can move, or remove it, as needed.
+            this.reservationsTableAdapter.Fill(this.foodieDbDataSet.Reservations);
 
         }
 
@@ -83,6 +85,26 @@ namespace FoodieUI
         private void button10_Click(object sender, EventArgs e)
         {
             button.Profile();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            button.MainMenu();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            button.Reservations();
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            button.Profile();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            button.HallMgmt();
         }
     }
 }

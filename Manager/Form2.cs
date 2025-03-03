@@ -57,5 +57,12 @@ namespace FoodieUI
         {
             button.Profile();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'foodieDbDataSet.Halls' table. You can move, or remove it, as needed.
+            this.hallsTableAdapter.Fill(this.foodieDbDataSet.Halls);
+
+        }
     }
 }

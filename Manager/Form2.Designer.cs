@@ -36,19 +36,29 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
+            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hallsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.HallsTableAdapter();
+            this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hallNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hallPartyTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hallCapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -103,8 +113,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.listView1);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
@@ -166,41 +177,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Hall Management Overview";
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(33, 73);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(440, 323);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Hall Number";
-            this.columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Hall Name";
-            this.columnHeader2.Width = 200;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Capacity";
-            this.columnHeader3.Width = 75;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Party Type";
-            this.columnHeader4.Width = 80;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -215,6 +191,80 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hallIDDataGridViewTextBoxColumn,
+            this.hallNameDataGridViewTextBoxColumn,
+            this.hallPartyTypeDataGridViewTextBoxColumn,
+            this.hallCapacityDataGridViewTextBoxColumn,
+            this.availabilityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.hallsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(22, 73);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(542, 322);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // foodieDbDataSet
+            // 
+            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
+            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // foodieDbDataSetBindingSource
+            // 
+            this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
+            this.foodieDbDataSetBindingSource.Position = 0;
+            // 
+            // hallsBindingSource
+            // 
+            this.hallsBindingSource.DataMember = "Halls";
+            this.hallsBindingSource.DataSource = this.foodieDbDataSetBindingSource;
+            // 
+            // hallsTableAdapter
+            // 
+            this.hallsTableAdapter.ClearBeforeFill = true;
+            // 
+            // hallIDDataGridViewTextBoxColumn
+            // 
+            this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            // 
+            // hallNameDataGridViewTextBoxColumn
+            // 
+            this.hallNameDataGridViewTextBoxColumn.DataPropertyName = "HallName";
+            this.hallNameDataGridViewTextBoxColumn.HeaderText = "HallName";
+            this.hallNameDataGridViewTextBoxColumn.Name = "hallNameDataGridViewTextBoxColumn";
+            // 
+            // hallPartyTypeDataGridViewTextBoxColumn
+            // 
+            this.hallPartyTypeDataGridViewTextBoxColumn.DataPropertyName = "HallPartyType";
+            this.hallPartyTypeDataGridViewTextBoxColumn.HeaderText = "HallPartyType";
+            this.hallPartyTypeDataGridViewTextBoxColumn.Name = "hallPartyTypeDataGridViewTextBoxColumn";
+            // 
+            // hallCapacityDataGridViewTextBoxColumn
+            // 
+            this.hallCapacityDataGridViewTextBoxColumn.DataPropertyName = "HallCapacity";
+            this.hallCapacityDataGridViewTextBoxColumn.HeaderText = "HallCapacity";
+            this.hallCapacityDataGridViewTextBoxColumn.Name = "hallCapacityDataGridViewTextBoxColumn";
+            // 
+            // availabilityDataGridViewTextBoxColumn
+            // 
+            this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(471, 401);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Add Halls";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +273,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -230,6 +281,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,13 +298,19 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource foodieDbDataSetBindingSource;
+        private FoodieDbDataSet foodieDbDataSet;
+        private System.Windows.Forms.BindingSource hallsBindingSource;
+        private FoodieDbDataSetTableAdapters.HallsTableAdapter hallsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hallNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hallPartyTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hallCapacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availabilityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }

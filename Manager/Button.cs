@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,80 +10,67 @@ namespace FoodieUI
 {
     internal class Button
     {
-        public void MainMenu()
+        //public Size Size { get; private set; }
+
+        //public void changeFormSize()
+        //{
+        //    MessageBox.Show(Size);
+        //}
+
+
+        public bool CheckFormOpen(string x)
         {
-            bool isForm1Open = false;
+            string formNum = x;
+            bool isFormOpen = false;
 
             foreach (Form form in Application.OpenForms)
             {
-                if (form is Form1)
+                if (form.Name == formNum)
                 {
-                    isForm1Open = true;
+                    isFormOpen = true;
                     form.BringToFront();
                     break;
                 }
             }
+            return isFormOpen;
+        }
 
-            if (isForm1Open == false)
+        public void MainMenu()
+        {
+            bool isFormOpen = CheckFormOpen("Main_Menu");
+            if (isFormOpen == false)
             {
-                Form1 fm = new Form1();
+                Main_Menu fm = new Main_Menu();
                 fm.Show();
             }
         }
 
         public void HallMgmt()
         {
-            bool isForm2Open = false;
-            foreach (Form form in Application.OpenForms)
+            bool isFormOpen = CheckFormOpen("Form2");
+            if (isFormOpen == false)
             {
-                if (form is Form2)
-                {
-                    isForm2Open = true;
-                    form.BringToFront();
-                    break;
-                }
-            }
-            if (isForm2Open == false)
-            {            
-                Form2 fm2 = new Form2();
-                fm2.Show();
+                Form2 fm = new Form2();
+                fm.Show();
             }
         }
 
         public void Reservations()
         {
-            bool isForm3Open = false;
-            foreach (Form form in Application.OpenForms)
+            bool isFormOpen = CheckFormOpen("Form3");
+            if (isFormOpen == false)
             {
-                if (form is Form3)
-                {
-                    isForm3Open = true;
-                    form.BringToFront();
-                    break;
-                }
-            }
-            if (isForm3Open == false)
-            {
-                Form3 fm3 = new Form3();
-                fm3.Show();
+                Form3 fm = new Form3();
+                fm.Show();
             }
         }
         public void Profile()
         {
-            bool isForm4Open = false;
-            foreach (Form form in Application.OpenForms)
+            bool isFormOpen = CheckFormOpen("Form4");
+            if (isFormOpen == false)
             {
-                if (form is Form4)
-                {
-                    isForm4Open = true;
-                    form.BringToFront();
-                    break;
-                }
-            }
-            if (isForm4Open == false)
-            {
-                Form4 fm4 = new Form4();
-                fm4.Show();
+                Form4 fm = new Form4();
+                fm.Show();
             }
         }
     }

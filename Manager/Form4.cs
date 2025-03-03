@@ -12,6 +12,7 @@ namespace FoodieUI
 {
     public partial class Form4 : Form
     {
+        Button button = new Button();
         public Form4()
         {
             InitializeComponent();
@@ -25,6 +26,26 @@ namespace FoodieUI
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button.Reservations();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button.MainMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            button.HallMgmt();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            button.Profile();
         }
     }
 }
