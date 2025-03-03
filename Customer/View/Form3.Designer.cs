@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -36,12 +37,20 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.orderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodiepointDbDataSet = new Customer.FoodiepointDbDataSet();
             this.button3 = new System.Windows.Forms.Button();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordersTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.OrdersTableAdapter();
+            this.orderItemTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.OrderItemTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -152,6 +161,16 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // orderItemBindingSource
+            // 
+            this.orderItemBindingSource.DataMember = "OrderItem";
+            this.orderItemBindingSource.DataSource = this.foodiepointDbDataSet;
+            // 
+            // foodiepointDbDataSet
+            // 
+            this.foodiepointDbDataSet.DataSetName = "FoodiepointDbDataSet";
+            this.foodiepointDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -163,6 +182,19 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Your Cart";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "Orders";
+            this.ordersBindingSource.DataSource = this.foodiepointDbDataSet;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
+            // 
+            // orderItemTableAdapter
+            // 
+            this.orderItemTableAdapter.ClearBeforeFill = true;
             // 
             // Form3
             // 
@@ -178,6 +210,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +228,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
+        private Customer.FoodiepointDbDataSet foodiepointDbDataSet;
+        private System.Windows.Forms.BindingSource ordersBindingSource;
+        private Customer.FoodiepointDbDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
+        private System.Windows.Forms.BindingSource orderItemBindingSource;
+        private Customer.FoodiepointDbDataSetTableAdapters.OrderItemTableAdapter orderItemTableAdapter;
     }
 }

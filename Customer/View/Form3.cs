@@ -27,6 +27,11 @@ namespace new_customer
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'foodiepointDbDataSet.OrderItem' table. You can move, or remove it, as needed.
+            this.orderItemTableAdapter.Fill(this.foodiepointDbDataSet.OrderItem);
+            // TODO: This line of code loads data into the 'foodiepointDbDataSet.Orders' table. You can move, or remove it, as needed.
+            this.ordersTableAdapter.Fill(this.foodiepointDbDataSet.Orders);
+
             // Create a DataTable for the cart
             DataTable cartTable = new DataTable();
             cartTable.Columns.Add("Food", typeof(string));

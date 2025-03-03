@@ -35,15 +35,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodiepointDbDataSet = new Customer.FoodiepointDbDataSet();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.menuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Customer.DataSet1();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.MenuTableAdapter();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -140,45 +142,11 @@
             this.itemPriceDataGridViewTextBoxColumn,
             this.itemCategoryDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.menuBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 78);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(376, 268);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // itemIDDataGridViewTextBoxColumn
-            // 
-            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.HeaderText = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            // 
-            // itemPriceDataGridViewTextBoxColumn
-            // 
-            this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
-            this.itemPriceDataGridViewTextBoxColumn.HeaderText = "ItemPrice";
-            this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
-            // 
-            // itemCategoryDataGridViewTextBoxColumn
-            // 
-            this.itemCategoryDataGridViewTextBoxColumn.DataPropertyName = "ItemCategory";
-            this.itemCategoryDataGridViewTextBoxColumn.HeaderText = "ItemCategory";
-            this.itemCategoryDataGridViewTextBoxColumn.Name = "itemCategoryDataGridViewTextBoxColumn";
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataMember = "Menu";
-            this.menuBindingSource.DataSource = this.foodiepointDbDataSet;
-            // 
-            // foodiepointDbDataSet
-            // 
-            this.foodiepointDbDataSet.DataSetName = "FoodiepointDbDataSet";
-            this.foodiepointDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -215,6 +183,45 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu";
             // 
+            // itemIDDataGridViewTextBoxColumn
+            // 
+            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID";
+            this.itemIDDataGridViewTextBoxColumn.HeaderText = "ItemID";
+            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            // 
+            // itemPriceDataGridViewTextBoxColumn
+            // 
+            this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
+            this.itemPriceDataGridViewTextBoxColumn.HeaderText = "ItemPrice";
+            this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
+            // 
+            // itemCategoryDataGridViewTextBoxColumn
+            // 
+            this.itemCategoryDataGridViewTextBoxColumn.DataPropertyName = "ItemCategory";
+            this.itemCategoryDataGridViewTextBoxColumn.HeaderText = "ItemCategory";
+            this.itemCategoryDataGridViewTextBoxColumn.Name = "itemCategoryDataGridViewTextBoxColumn";
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataMember = "Menu";
+            this.menuBindingSource.DataSource = this.foodiepointDbDataSet;
+            // 
+            // foodiepointDbDataSet
+            // 
+            this.foodiepointDbDataSet.DataSetName = "FoodiepointDbDataSet";
+            this.foodiepointDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menuBindingSource1
+            // 
+            this.menuBindingSource1.DataMember = "Menu";
+            this.menuBindingSource1.DataSource = this.foodiepointDbDataSet;
+            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
@@ -246,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -272,5 +280,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemCategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource menuBindingSource1;
     }
 }

@@ -14,7 +14,7 @@ namespace new_customer
 {
     public partial class Form2 : Form
     {
-        private Form3 _form3;
+        //private Form3 _form3;
 
         // In your Form2 constructor or Load event:
         public Form2() // or private void Form2_Load(object sender, EventArgs e)
@@ -22,8 +22,8 @@ namespace new_customer
             InitializeComponent();  // Important!  Call this first
 
             // Create the Form3 instance only once
-            _form3 = new Form3();
-            _form3.Hide(); // Initially hide Form3
+            //_form3 = new Form3();
+            //_form3.Hide(); // Initially hide Form3
         }
 
         public List<string> CartItems = new List<string>(); // Store selected food names
@@ -36,19 +36,19 @@ namespace new_customer
             DataTable table = new DataTable(); // Create a DataTable
 
             // Define columns
-            table.Columns.Add("Food", typeof(string));
-            table.Columns.Add("Cuisine", typeof(string));
+            //table.Columns.Add("Food", typeof(string));
+            //table.Columns.Add("Cuisine", typeof(string));
 
 
-            // Add data rows
-            table.Rows.Add("Chicken Chop", "Western");
-            table.Rows.Add("Fish and Chips", "Western");
-            table.Rows.Add("Burger", "Western");
-            table.Rows.Add("Fried Rice", "Chinese");
-            table.Rows.Add("Dumpling", "Chinese");
-            table.Rows.Add("Dim Sum", "Chinese");
-            table.Rows.Add("Bibimbap", "Korean");
-            table.Rows.Add("Bulgogi", "Korean");
+            //Add data rows
+            //table.Rows.Add("Chicken Chop", "Western");
+            //table.Rows.Add("Fish and Chips", "Western");
+            //table.Rows.Add("Burger", "Western");
+            //table.Rows.Add("Fried Rice", "Chinese");
+            //table.Rows.Add("Dumpling", "Chinese");
+            //table.Rows.Add("Dim Sum", "Chinese");
+            //table.Rows.Add("Bibimbap", "Korean");
+            //table.Rows.Add("Bulgogi", "Korean");
 
             // Bind the DataTable to a DataGridView
             //dataGridView1.DataSource = table;
@@ -94,10 +94,13 @@ namespace new_customer
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 // Get the selected food name from the first column (Food Name)
-                string selectedFood = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string ItemID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                
+
 
                 // Add it to the CartItems list
-                CartItems.Add(selectedFood);
+                CartItems.Add(ItemID);
+                
 
                 // Open Form3 and pass the cart data
                 Form3 cartForm = new Form3(this);
