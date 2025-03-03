@@ -13,6 +13,7 @@ namespace FoodieUI
     public partial class Main_Menu : Form
     {
         Button button = new Button();
+
         private float initialFormWidth;
         private float initialFormHeight;
         private float initialFontSize;
