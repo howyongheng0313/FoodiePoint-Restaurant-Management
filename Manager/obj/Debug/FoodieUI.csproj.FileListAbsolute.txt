@@ -29,3 +29,20 @@ C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\Foodi
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Main_Menu.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb.mdf
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb_log.ldf
+C:\vs\FoodiePoint Restaurent\Manager\bin\Debug\FoodieDb.mdf
+C:\vs\FoodiePoint Restaurent\Manager\bin\Debug\FoodieDb_log.ldf
+C:\vs\FoodiePoint Restaurent\Manager\bin\Debug\FoodieUI.exe.config
+C:\vs\FoodiePoint Restaurent\Manager\bin\Debug\FoodieUI.exe
+C:\vs\FoodiePoint Restaurent\Manager\bin\Debug\FoodieUI.pdb
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.csproj.AssemblyReference.cache
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Blank.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Form1.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Form2.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Form3.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Form4.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Form5.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.Main_Menu.resources
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.csproj.GenerateResource.cache
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.csproj.CoreCompileInputs.cache
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.exe
+C:\vs\FoodiePoint Restaurent\Manager\obj\Debug\FoodieUI.pdb
