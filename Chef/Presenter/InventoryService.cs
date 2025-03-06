@@ -27,8 +27,22 @@ namespace FoodiePointManagementSystem.Presenter
             return dbHelper.ExecuteQuery(query);
         }
 
+        public bool DetectQuery(string ingredientID)
+        {
+            string query = $"SELECT COUNT (*) FROM Inventory WHERE IngredientID = '{ingredientID}' ";
+            DataTable dt =  dbHelper.ExecuteQuery(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0][0]) > 0 ; 
+            }
+            return false; // No duplicate Ingredient ID
+        }
+
         public bool AddIngredient(string ingredientID, string ingredientName, float quantity, string unit)
         {
+            string detectQuery = $"SELECT * FROM Inventory WHERE IngredientID = '{ingredientID}' ";
+                
             string query = $"INSERT INTO Inventory(IngredientID, IngredientName, QuantityInStock, Unit) VALUES ('{ingredientID}', '{ingredientName}', '{quantity}', '{unit}')" ;
             return dbHelper.ExecuteNonQuery(query);
         }
