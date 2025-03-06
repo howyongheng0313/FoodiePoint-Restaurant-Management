@@ -26,20 +26,20 @@ INSERT INTO Halls (HallID, HallName, HallPartyType, HallCapacity, Availability) 
 ('H05', 'Banquet', 'Reception', 150, 'Available');
 
 INSERT INTO Inventory (IngredientID, IngredientName, QuantityInStock, Unit) VALUES
-('ING01', 'Spaghetti', 10, 'kg'),
-('ING02', 'Ground beef', 5, 'kg'),
-('ING03', 'Tomato Sauce', 10, 'L'),
-('ING04', 'Onion', 50, 'pcs'),
-('ING05', 'Garlic', 50, 'pcs'),
-('ING06', 'Salt', 2, 'kg'),
-('ING07', 'Black Pepper', 1, 'kg'),
-('ING08', 'Chicken Breast', 10, 'kg'),
-('ING09', 'Pineapple Chunks', 8, 'kg'),
-('ING10', 'Ketchup', 5, 'L'),
-('ING11', 'Sugar', 5, 'kg'),
-('ING12', 'Rice', 20, 'kg'),
-('ING13', 'Milk', 10, 'L'),
-('ING14', 'Tea Leaves', 2, 'kg');
+('ING01', 'Spaghetti', 10, 'kilogram'),
+('ING02', 'Ground beef', 5, 'kilogram'),
+('ING03', 'Tomato Sauce', 10, 'litre'),
+('ING04', 'Onion', 50, 'pieces'),
+('ING05', 'Garlic', 50, 'pieces'),
+('ING06', 'Salt', 2, 'kilogram'),
+('ING07', 'Black Pepper', 1, 'kilogram'),
+('ING08', 'Chicken Breast', 10, 'kilogram'),
+('ING09', 'Pineapple Chunks', 8, 'kilogram'),
+('ING10', 'Ketchup', 5, 'litre'),
+('ING11', 'Sugar', 5, 'kilogram'),
+('ING12', 'Rice', 20, 'kilogram'),
+('ING13', 'Milk', 10, 'litre'),
+('ING14', 'Tea Leaves', 2, 'kilogram');
 
 INSERT INTO Reservations (ReservationID, HallID, UserID, ReservationDate, ReservationType, ReservationStatus) VALUES
 ('RS01', 'H01', 'U05', '2025-02-17 00:00:00', 'Birthday Party', 'Completed'),
