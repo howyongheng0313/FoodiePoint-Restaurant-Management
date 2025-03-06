@@ -14,18 +14,18 @@ namespace new_customer
 {
     public partial class Form2 : Form
     {
-        private Form3 cartForm;
-        public Form2(Form3 form3Instance)
+       
+        public Form2()
         {
             InitializeComponent();
-            this.cartForm = form3Instance;
+            
         }
 
+        //DataTable table = new DataTable(); // Create a DataTable
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'foodiepointDbDataSet.Menu' table. You can move, or remove it, as needed.
             this.menuTableAdapter.Fill(this.foodiepointDbDataSet.Menu);
-            DataTable table = new DataTable(); // Create a DataTable
         }
 
 
@@ -43,12 +43,9 @@ namespace new_customer
 
         private void button4_Click(object sender, EventArgs e)
         {
-            cartForm.RefreshCart(); // Ensure the latest cart is shown
-            cartForm.Show();
-
-            //Form3 obj1 = new Form3();
-            //obj1.Show();
-            //this.Hide();
+            Form3 obj1 = new Form3();
+            obj1.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -63,24 +60,41 @@ namespace new_customer
 
         }
 
+        public List<string> selectedCellValue = new List<string>();
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedCells.Count > 0)
             {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                string selectfood = selectedRow.Cells[0].Value.ToString();
-                string quantity = selectedRow.Cells[1].Value.ToString();
-
-                cartForm.AddToCart(selectfood, quantity);
-                cartForm.RefreshCart(); // Update DataGridView
-
-                MessageBox.Show("Item added to cart!");
+                DataGridViewCell selectedCell = dataGridView1.SelectedCells[0];
+                string value = selectedCell.Value.ToString();
+                selectedCellValue.Add(value);
             }
-            else
-            {
-                MessageBox.Show("Please select a food item to add to the cart.");
-            }
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (e.RowIndex >= 0) // Ensure that the row index is valid
+            //{
+            //    // Retrieve the selected row
+            //    DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+
+            //    // Extract data from specific columns
+            //    column1Value = selectedRow.Cells[0].Value.ToString();
+            //    column2Value = selectedRow.Cells[1].Value.ToString();
+
+            //}
         }
     }
 }

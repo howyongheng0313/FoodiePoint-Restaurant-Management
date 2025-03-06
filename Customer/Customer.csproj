@@ -74,6 +74,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodiepointDbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FoodiepointDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Presenter\test.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -152,6 +157,17 @@
     </None>
     <None Include="FoodiepointDbDataSet.xss">
       <DependentUpon>FoodiepointDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodiepointDbDataSet1.xsc">
+      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FoodiepointDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodiepointDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodiepointDbDataSet1.xss">
+      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
