@@ -51,6 +51,7 @@
     <Reference Include="System">
       <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,53 +80,63 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\test.cs" />
-    <Compile Include="View\Form1.cs">
+    <Compile Include="PaymentPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PaymentPage.Designer.cs">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form2.cs">
+    <Compile Include="Presenter\DatabaseHelper.cs" />
+    <Compile Include="Presenter\OrderFood.cs" />
+    <Compile Include="View\frmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="View\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form3.cs">
+    <Compile Include="View\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="View\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form4.cs">
+    <Compile Include="View\frmOrderCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="View\frmOrderCart.Designer.cs">
+      <DependentUpon>frmOrderCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form5.cs">
+    <Compile Include="View\frmHallReservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="View\frmHallReservation.Designer.cs">
+      <DependentUpon>frmHallReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PaymentPage.resx">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmOrderCart.resx">
+      <DependentUpon>frmOrderCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmHallReservation.resx">
+      <DependentUpon>frmHallReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
