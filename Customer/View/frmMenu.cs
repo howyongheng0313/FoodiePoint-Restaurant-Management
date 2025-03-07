@@ -86,11 +86,11 @@ namespace new_customer
         private void Search_btn_Click(object sender, EventArgs e)
         {
 
-            string searchText = search_txt.Text.Trim(); // Get text from the TextBox
+            string searchText = search_txt.Text; // Get text from the TextBox
 
             if (!string.IsNullOrEmpty(searchText))
             {
-                DataTable dt = dataGridView1.DataSource as DataTable; // Get DataTable from DataSource
+                List<string> dt = dataGridView1.DataSource as List<string>; // Get DataTable from DataSource
                 if (dt != null)
                 {
                     DataView dv = dt.DefaultView;

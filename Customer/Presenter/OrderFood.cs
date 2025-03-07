@@ -32,22 +32,22 @@ namespace Customer.Presenter
             return dbHelper.ExecuteQuery(query);
         }
 
-        public bool addItem()
-        {
-            string query = "" ;
-            return;
-        }
+        //public bool addItem()
+        //{
+        //    string query = "";
+        //    return ;
+        //}
 
-        public bool editItem()
-        {
-            string query = "UPDATE" ;
-            return;
-        }
+        //public bool editItem()
+        //{
+        //    string query = "UPDATE";
+        //    return;
+        //}
 
-        public bool deleteItem()
-        {
-            string query = "DELETE FROM  ";
-            return;
+        //public bool deleteItem()
+        //{
+        //    string query = "DELETE FROM  ";
+        //    return;
         }
     }
-}
+
