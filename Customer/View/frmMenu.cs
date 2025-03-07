@@ -16,6 +16,7 @@ namespace new_customer
     public partial class frmMenuPage : Form
     {
         private DatabaseHelper dbhelper;
+        OrderFood ordermethod = new OrderFood();
 
         private List<string[]> selectedRows = new List<string[]>();
 
@@ -84,16 +85,36 @@ namespace new_customer
 
         private void Search_btn_Click(object sender, EventArgs e)
         {
-            string searchText = search.Text.Trim(); // Get text from TextBox
+
+            string searchText = search_txt.Text.Trim(); // Get text from the TextBox
 
             if (!string.IsNullOrEmpty(searchText))
             {
-                searchItem(searchText); // Call the method with input
+                DataTable dt = dataGridView1.DataSource as DataTable; // Get DataTable from DataSource
+                if (dt != null)
+                {
+                    DataView dv = dt.DefaultView;
+                    dv.RowFilter = $"ItemName LIKE '%{searchText}%' OR ItemCategory LIKE '%{searchText}%'";
+                    dataGridView1.DataSource = dv; // Apply the filter
+                }
             }
             else
             {
-                MessageBox.Show("Please enter an item name to search.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter an item name or category to search.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            //string searchText = Search_btn.Text;
+
+            //ordermethod.searchItem(searchText);
+            //dataGridView1.DataSource = ordermethod.searchItem(searchText);
+
+
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -34,6 +34,8 @@
             this.btnMenuToHallReservation = new System.Windows.Forms.Button();
             this.btnMenuToProfile = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.Search_btn = new System.Windows.Forms.Button();
+            this.search_txt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +55,6 @@
             this.dataSet1 = new Customer.DataSet1();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.MenuTableAdapter();
-            this.search_txt = new System.Windows.Forms.TextBox();
-            this.Search_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -146,6 +146,24 @@
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
+            // Search_btn
+            // 
+            this.Search_btn.Location = new System.Drawing.Point(185, 33);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(75, 23);
+            this.Search_btn.TabIndex = 11;
+            this.Search_btn.Text = "Search";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
+            // 
+            // search_txt
+            // 
+            this.search_txt.Location = new System.Drawing.Point(20, 36);
+            this.search_txt.Name = "search_txt";
+            this.search_txt.Size = new System.Drawing.Size(100, 20);
+            this.search_txt.TabIndex = 10;
+            this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -160,6 +178,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(521, 223);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // itemIDDataGridViewTextBoxColumn
             // 
@@ -269,24 +288,6 @@
             // menuTableAdapter
             // 
             this.menuTableAdapter.ClearBeforeFill = true;
-            // 
-            // search_txt
-            // 
-            this.search_txt.Location = new System.Drawing.Point(19, 33);
-            this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(100, 20);
-            this.search_txt.TabIndex = 10;
-            this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // Search_btn
-            // 
-            this.Search_btn.Location = new System.Drawing.Point(185, 33);
-            this.Search_btn.Name = "Search_btn";
-            this.Search_btn.Size = new System.Drawing.Size(75, 23);
-            this.Search_btn.TabIndex = 11;
-            this.Search_btn.Text = "Search";
-            this.Search_btn.UseVisualStyleBackColor = true;
-            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
             // 
             // frmMenuPage
             // 

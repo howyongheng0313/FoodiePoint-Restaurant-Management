@@ -30,5 +30,10 @@ namespace new_customer
             obj1.Show();
             this.Hide();
         }
+
+        private void frmCustomerMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

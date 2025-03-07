@@ -13,7 +13,7 @@ namespace new_customer
 {
     public partial class frmOrderCart: Form
     {
-        private string connectionString = 
+        //private string connectionString = 
 
         public frmOrderCart(List<string[]> selectedRows)
         {
