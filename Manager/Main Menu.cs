@@ -13,10 +13,8 @@ namespace FoodieUI
     public partial class Main_Menu : Form
     {
         Button button = new Button();
+        private DataTable menuDataTable;
 
-        private float initialFormWidth;
-        private float initialFormHeight;
-        private float initialFontSize;
         Database db = new Database();
         public Main_Menu()
         {
@@ -61,8 +59,6 @@ namespace FoodieUI
         {
             // TODO: This line of code loads data into the 'foodieDbDataSet.Menu' table. You can move, or remove it, as needed.
             this.menuTableAdapter.Fill(this.foodieDbDataSet.Menu);
-            // TODO: This line of code loads data into the 'foodieDbDataSet.Menu' table. You can move, or remove it, as needed.
-            this.menuTableAdapter.Fill(this.foodieDbDataSet.Menu);
         }
 
         //private void Form_Resize(object sender, EventArgs e)
@@ -97,18 +93,28 @@ namespace FoodieUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string x = itemIDtxt.Text;
-            string name = itemNametxt.Text;
-            double price = double.Parse(itemPricetxt.Text);
-            string category = itemCategorycmb.Text;
-            
-            db.AddItem(x, name, price, category);
-            db.LoadData(dataGridViewMenu);
+            try
+            {
+                string x = itemIDtxt.Text;
+                string name = itemNametxt.Text;
+                double price = double.Parse(itemPricetxt.Text);
+                string category = itemCategorycmb.Text;
+                db.AddItem(x, name, price, category);
+                db.LoadData(dataGridViewMenu, "Menu");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dataGridViewMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            button.EditMenu();
         }
     }
 }

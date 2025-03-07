@@ -36,40 +36,41 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.itemCategorycmb = new System.Windows.Forms.ComboBox();
+            this.itemPricetxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.itemNametxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.itemIDtxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewMenu = new System.Windows.Forms.DataGridView();
-            this.menuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.menuTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.MenuTableAdapter();
-            this.label7 = new System.Windows.Forms.Label();
-            this.itemIDtxt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.itemNametxt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.itemPricetxt = new System.Windows.Forms.TextBox();
-            this.itemCategorycmb = new System.Windows.Forms.ComboBox();
-            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.menuTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.MenuTableAdapter();
+            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -111,6 +112,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.itemCategorycmb);
             this.splitContainer1.Panel2.Controls.Add(this.itemPricetxt);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
@@ -190,6 +192,97 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(520, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Edit Items";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // itemCategorycmb
+            // 
+            this.itemCategorycmb.FormattingEnabled = true;
+            this.itemCategorycmb.Items.AddRange(new object[] {
+            "Western",
+            "Chinese"});
+            this.itemCategorycmb.Location = new System.Drawing.Point(25, 268);
+            this.itemCategorycmb.Name = "itemCategorycmb";
+            this.itemCategorycmb.Size = new System.Drawing.Size(100, 21);
+            this.itemCategorycmb.TabIndex = 34;
+            // 
+            // itemPricetxt
+            // 
+            this.itemPricetxt.Location = new System.Drawing.Point(25, 212);
+            this.itemPricetxt.Name = "itemPricetxt";
+            this.itemPricetxt.Size = new System.Drawing.Size(100, 20);
+            this.itemPricetxt.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(22, 241);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 18);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Item Category";
+            // 
+            // itemNametxt
+            // 
+            this.itemNametxt.Location = new System.Drawing.Point(25, 156);
+            this.itemNametxt.Name = "itemNametxt";
+            this.itemNametxt.Size = new System.Drawing.Size(100, 20);
+            this.itemNametxt.TabIndex = 30;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 18);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Item Price";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Item Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // itemIDtxt
+            // 
+            this.itemIDtxt.Location = new System.Drawing.Point(25, 100);
+            this.itemIDtxt.Name = "itemIDtxt";
+            this.itemIDtxt.Size = new System.Drawing.Size(100, 20);
+            this.itemIDtxt.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 18);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Item ID";
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(32, 335);
@@ -217,10 +310,34 @@
             this.dataGridViewMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuItem_CellClick);
             this.dataGridViewMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMenu_CellContentClick);
             // 
-            // menuBindingSource1
+            // dataGridViewTextBoxColumn1
             // 
-            this.menuBindingSource1.DataMember = "Menu";
-            this.menuBindingSource1.DataSource = this.foodieDbDataSet;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ItemID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ItemID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ItemName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ItemName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ItemPrice";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ItemPrice";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ItemCategory";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ItemCategory";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // menuBindingSource2
+            // 
+            this.menuBindingSource2.DataMember = "Menu";
+            this.menuBindingSource2.DataSource = this.foodieDbDataSet;
             // 
             // foodieDbDataSet
             // 
@@ -249,6 +366,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
+            // menuBindingSource1
+            // 
+            this.menuBindingSource1.DataMember = "Menu";
+            this.menuBindingSource1.DataSource = this.foodieDbDataSet;
+            // 
             // menuBindingSource
             // 
             this.menuBindingSource.DataMember = "Menu";
@@ -257,120 +379,10 @@
             // 
             this.menuTableAdapter.ClearBeforeFill = true;
             // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 18);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Item ID";
-            // 
-            // itemIDtxt
-            // 
-            this.itemIDtxt.Location = new System.Drawing.Point(25, 100);
-            this.itemIDtxt.Name = "itemIDtxt";
-            this.itemIDtxt.Size = new System.Drawing.Size(100, 20);
-            this.itemIDtxt.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 18);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Item Name";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 185);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 18);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Item Price";
-            // 
-            // itemNametxt
-            // 
-            this.itemNametxt.Location = new System.Drawing.Point(25, 156);
-            this.itemNametxt.Name = "itemNametxt";
-            this.itemNametxt.Size = new System.Drawing.Size(100, 20);
-            this.itemNametxt.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 18);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Item Category";
-            // 
-            // itemPricetxt
-            // 
-            this.itemPricetxt.Location = new System.Drawing.Point(25, 212);
-            this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(100, 20);
-            this.itemPricetxt.TabIndex = 32;
-            // 
-            // itemCategorycmb
-            // 
-            this.itemCategorycmb.FormattingEnabled = true;
-            this.itemCategorycmb.Items.AddRange(new object[] {
-            "Western",
-            "Chinese"});
-            this.itemCategorycmb.Location = new System.Drawing.Point(25, 268);
-            this.itemCategorycmb.Name = "itemCategorycmb";
-            this.itemCategorycmb.Size = new System.Drawing.Size(100, 21);
-            this.itemCategorycmb.TabIndex = 34;
-            // 
             // foodieDbDataSetBindingSource
             // 
             this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
             this.foodieDbDataSetBindingSource.Position = 0;
-            // 
-            // menuBindingSource2
-            // 
-            this.menuBindingSource2.DataMember = "Menu";
-            this.menuBindingSource2.DataSource = this.foodieDbDataSet;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ItemID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ItemID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ItemName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ItemName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ItemPrice";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ItemPrice";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ItemCategory";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ItemCategory";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // Main_Menu
             // 
@@ -389,11 +401,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -434,5 +446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource menuBindingSource2;
         private System.Windows.Forms.BindingSource foodieDbDataSetBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }

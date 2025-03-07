@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace FoodieUI
 {
+
     public partial class Form3 : Form
     {
+        Database db = new Database();
         Button button = new Button();
 
         public Form3()
         {
+            InitializeComponent();
             InitializeComponent();
         }
 
@@ -64,7 +67,6 @@ namespace FoodieUI
         {
             // TODO: This line of code loads data into the 'foodieDbDataSet.Reservations' table. You can move, or remove it, as needed.
             this.reservationsTableAdapter.Fill(this.foodieDbDataSet.Reservations);
-
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -105,6 +107,50 @@ namespace FoodieUI
         private void button8_Click_1(object sender, EventArgs e)
         {
             button.HallMgmt();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void chkinput()
+        {
+            if (rsvTxt.Text == "" || hallIdTxt.Text == "" || userIdTxt.Text == "" || rsDateTxt.Text == "" || rsTypetxt.Text == "" || rsStatusCmb.Text == "")
+            {
+                MessageBox.Show("Please enter all inputs.");
+                return;
+            }
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //chkinput();
+            string ReservationID = rsvTxt.Text;
+            string HallID = hallIdTxt.Text;
+            string UserID = userIdTxt.Text;
+            string ReservationDate = rsDateTxt.Text;
+            string ReservationType = rsTypetxt.Text;
+            string ReservationStatus = rsStatusCmb.Text;
+            db.AddReservation(ReservationID, HallID, UserID, ReservationDate, ReservationType, ReservationStatus);
+            db.LoadData(dataGridView1, "Reservations");
+        }
+        EditMenu edm = new EditMenu();
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateListBox()
+        {
+            listBox1.Items.Clear();
+            foreach (string item in edm.Idarray)
+            {
+                MessageBox.Show(item);
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            UpdateListBox();
         }
     }
 }

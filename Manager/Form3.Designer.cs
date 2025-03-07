@@ -39,13 +39,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.rsStatusCmb = new System.Windows.Forms.ComboBox();
+            this.rsTypetxt = new System.Windows.Forms.TextBox();
+            this.rsDateTxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.userIdTxt = new System.Windows.Forms.TextBox();
+            this.hallIdTxt = new System.Windows.Forms.TextBox();
+            this.rsvTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
-            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reservationsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.ReservationsTableAdapter();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.MenuTableAdapter();
             this.reservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +72,12 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -69,7 +86,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 34);
             this.button1.TabIndex = 22;
-            this.button1.Text = "Enter";
+            this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -80,6 +97,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
@@ -181,6 +199,20 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
+            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.rsStatusCmb);
+            this.splitContainer1.Panel2.Controls.Add(this.rsTypetxt);
+            this.splitContainer1.Panel2.Controls.Add(this.rsDateTxt);
+            this.splitContainer1.Panel2.Controls.Add(this.label9);
+            this.splitContainer1.Panel2.Controls.Add(this.label8);
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.userIdTxt);
+            this.splitContainer1.Panel2.Controls.Add(this.hallIdTxt);
+            this.splitContainer1.Panel2.Controls.Add(this.rsvTxt);
+            this.splitContainer1.Panel2.Controls.Add(this.label5);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
@@ -208,9 +240,142 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // errorProvider1
+            // button4
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.button4.Location = new System.Drawing.Point(500, 318);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(295, 348);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 40;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // rsStatusCmb
+            // 
+            this.rsStatusCmb.FormattingEnabled = true;
+            this.rsStatusCmb.Items.AddRange(new object[] {
+            "Confirmed",
+            "Uncomfirmed"});
+            this.rsStatusCmb.Location = new System.Drawing.Point(321, 321);
+            this.rsStatusCmb.Name = "rsStatusCmb";
+            this.rsStatusCmb.Size = new System.Drawing.Size(130, 21);
+            this.rsStatusCmb.TabIndex = 39;
+            // 
+            // rsTypetxt
+            // 
+            this.rsTypetxt.Location = new System.Drawing.Point(168, 375);
+            this.rsTypetxt.Name = "rsTypetxt";
+            this.rsTypetxt.Size = new System.Drawing.Size(120, 20);
+            this.rsTypetxt.TabIndex = 38;
+            // 
+            // rsDateTxt
+            // 
+            this.rsDateTxt.Location = new System.Drawing.Point(17, 375);
+            this.rsDateTxt.Name = "rsDateTxt";
+            this.rsDateTxt.Size = new System.Drawing.Size(119, 20);
+            this.rsDateTxt.TabIndex = 37;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(318, 300);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(133, 18);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Reservation Status";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(165, 354);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 18);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Reservation Type";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 18);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Reservation Date";
+            // 
+            // userIdTxt
+            // 
+            this.userIdTxt.Location = new System.Drawing.Point(233, 321);
+            this.userIdTxt.Name = "userIdTxt";
+            this.userIdTxt.Size = new System.Drawing.Size(55, 20);
+            this.userIdTxt.TabIndex = 32;
+            // 
+            // hallIdTxt
+            // 
+            this.hallIdTxt.Location = new System.Drawing.Point(152, 321);
+            this.hallIdTxt.Name = "hallIdTxt";
+            this.hallIdTxt.Size = new System.Drawing.Size(48, 20);
+            this.hallIdTxt.TabIndex = 31;
+            // 
+            // rsvTxt
+            // 
+            this.rsvTxt.Location = new System.Drawing.Point(17, 321);
+            this.rsvTxt.Name = "rsvTxt";
+            this.rsvTxt.Size = new System.Drawing.Size(102, 20);
+            this.rsvTxt.TabIndex = 30;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(230, 300);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 18);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "User ID";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(149, 300);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 18);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Hall ID";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 18);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Reservation ID";
             // 
             // dataGridView1
             // 
@@ -224,29 +389,43 @@
             this.reservationTypeDataGridViewTextBoxColumn,
             this.reservationStatusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.reservationsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 73);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(596, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 213);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // foodieDbDataSet
-            // 
-            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
-            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // foodieDbDataSetBindingSource
-            // 
-            this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
-            this.foodieDbDataSetBindingSource.Position = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // reservationsBindingSource
             // 
             this.reservationsBindingSource.DataMember = "Reservations";
             this.reservationsBindingSource.DataSource = this.foodieDbDataSetBindingSource;
             // 
+            // foodieDbDataSetBindingSource
+            // 
+            this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
+            this.foodieDbDataSetBindingSource.Position = 0;
+            // 
+            // foodieDbDataSet
+            // 
+            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
+            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // reservationsTableAdapter
             // 
             this.reservationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataMember = "Menu";
+            this.menuBindingSource.DataSource = this.foodieDbDataSetBindingSource;
+            // 
+            // menuTableAdapter
+            // 
+            this.menuTableAdapter.ClearBeforeFill = true;
             // 
             // reservationIDDataGridViewTextBoxColumn
             // 
@@ -259,7 +438,6 @@
             this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
-            this.hallIDDataGridViewTextBoxColumn.Width = 50;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -284,7 +462,6 @@
             this.reservationStatusDataGridViewTextBoxColumn.DataPropertyName = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
-            this.reservationStatusDataGridViewTextBoxColumn.Width = 105;
             // 
             // Form3
             // 
@@ -301,11 +478,12 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,6 +507,22 @@
         private FoodieDbDataSet foodieDbDataSet;
         private System.Windows.Forms.BindingSource reservationsBindingSource;
         private FoodieDbDataSetTableAdapters.ReservationsTableAdapter reservationsTableAdapter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox rsTypetxt;
+        private System.Windows.Forms.TextBox rsDateTxt;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox userIdTxt;
+        private System.Windows.Forms.TextBox hallIdTxt;
+        private System.Windows.Forms.TextBox rsvTxt;
+        private System.Windows.Forms.ComboBox rsStatusCmb;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource menuBindingSource;
+        private FoodieDbDataSetTableAdapters.MenuTableAdapter menuTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;

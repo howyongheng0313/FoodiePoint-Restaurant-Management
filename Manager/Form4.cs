@@ -47,5 +47,12 @@ namespace FoodieUI
         {
             button.Profile();
         }
+
+        EditMenu edm = new EditMenu();
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            edm.Seend();
+        }
     }
 }

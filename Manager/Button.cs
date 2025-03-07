@@ -50,17 +50,26 @@ namespace FoodieUI
             bool isFormOpen = CheckFormOpen("Form2");
             if (isFormOpen == false)
             {
-                Form2 fm = new Form2();
+                frmHall fm = new frmHall();
                 fm.Show();
             }
         }
 
         public void Reservations()
         {
-            bool isFormOpen = CheckFormOpen("Form3");
+            bool isFormOpen = CheckFormOpen("frmReservation");
             if (isFormOpen == false)
             {
-                Form3 fm = new Form3();
+                frmReservations fm = new frmReservations();
+                fm.Show();
+            }
+        }
+        public void EditReservations()
+        {
+            bool isFormOpen = CheckFormOpen("frmEditReservation");
+            if (isFormOpen == false)
+            {
+                frmReservation fm = new frmReservation();
                 fm.Show();
             }
         }
@@ -73,5 +82,26 @@ namespace FoodieUI
                 fm.Show();
             }
         }
+
+        public void EditMenu()
+        {
+            bool isFormOpen = CheckFormOpen("EditMenu");
+            if (isFormOpen == false)
+            {
+                EditMenu fm = new EditMenu();
+                fm.Show();
+            }
+        }
+
+        public void EditHall()
+        {
+            bool isFormOpen = CheckFormOpen("EditHall");
+            if (isFormOpen == false)
+            {
+                EditHalls fm = new EditHalls();
+                fm.Show();
+            }
+        }
+
     }
 }

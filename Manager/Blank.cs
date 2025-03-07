@@ -26,5 +26,11 @@ namespace FoodieUI
         {
 
         }
+        EditMenu edm = new EditMenu();
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
