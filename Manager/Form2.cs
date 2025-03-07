@@ -64,5 +64,15 @@ namespace FoodieUI
             this.hallsTableAdapter.Fill(this.foodieDbDataSet.Halls);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

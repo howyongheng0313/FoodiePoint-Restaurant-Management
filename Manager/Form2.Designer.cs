@@ -35,30 +35,30 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
-            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hallsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.HallsTableAdapter();
             this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallPartyTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallCapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
+            this.hallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.hallsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.HallsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -167,29 +167,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
             // 
-            // label3
+            // button2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Hall Management Overview";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome, Mr. David";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.button2.Location = new System.Drawing.Point(471, 401);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Add Halls";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -206,25 +192,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(542, 322);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // foodieDbDataSet
-            // 
-            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
-            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // foodieDbDataSetBindingSource
-            // 
-            this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
-            this.foodieDbDataSetBindingSource.Position = 0;
-            // 
-            // hallsBindingSource
-            // 
-            this.hallsBindingSource.DataMember = "Halls";
-            this.hallsBindingSource.DataSource = this.foodieDbDataSetBindingSource;
-            // 
-            // hallsTableAdapter
-            // 
-            this.hallsTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // hallIDDataGridViewTextBoxColumn
             // 
@@ -256,14 +224,48 @@
             this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
             this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
             // 
-            // button2
+            // hallsBindingSource
             // 
-            this.button2.Location = new System.Drawing.Point(471, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Add Halls";
-            this.button2.UseVisualStyleBackColor = true;
+            this.hallsBindingSource.DataMember = "Halls";
+            this.hallsBindingSource.DataSource = this.foodieDbDataSetBindingSource;
+            // 
+            // foodieDbDataSetBindingSource
+            // 
+            this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
+            this.foodieDbDataSetBindingSource.Position = 0;
+            // 
+            // foodieDbDataSet
+            // 
+            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
+            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Hall Management Overview";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome, Mr. David";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // hallsTableAdapter
+            // 
+            this.hallsTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -280,11 +282,11 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
