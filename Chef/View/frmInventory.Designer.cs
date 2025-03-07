@@ -54,7 +54,7 @@
             this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Location = new System.Drawing.Point(145, 10);
-            this.dgvInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInventory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
@@ -64,7 +64,7 @@
             // tbxIngredient
             // 
             this.tbxIngredient.Location = new System.Drawing.Point(85, 27);
-            this.tbxIngredient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.tbxIngredient.Name = "tbxIngredient";
             this.tbxIngredient.Size = new System.Drawing.Size(93, 20);
             this.tbxIngredient.TabIndex = 1;
@@ -82,7 +82,7 @@
             // btnAddIngredient
             // 
             this.btnAddIngredient.Location = new System.Drawing.Point(5, 91);
-            this.btnAddIngredient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddIngredient.Name = "btnAddIngredient";
             this.btnAddIngredient.Size = new System.Drawing.Size(79, 41);
             this.btnAddIngredient.TabIndex = 3;
@@ -93,7 +93,7 @@
             // btnEditIngredient
             // 
             this.btnEditIngredient.Location = new System.Drawing.Point(93, 90);
-            this.btnEditIngredient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditIngredient.Name = "btnEditIngredient";
             this.btnEditIngredient.Size = new System.Drawing.Size(88, 41);
             this.btnEditIngredient.TabIndex = 5;
@@ -109,9 +109,9 @@
             this.gbxAddEdit.Controls.Add(this.lblIngredient);
             this.gbxAddEdit.Controls.Add(this.btnAddIngredient);
             this.gbxAddEdit.Location = new System.Drawing.Point(405, 24);
-            this.gbxAddEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxAddEdit.Margin = new System.Windows.Forms.Padding(2);
             this.gbxAddEdit.Name = "gbxAddEdit";
-            this.gbxAddEdit.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxAddEdit.Padding = new System.Windows.Forms.Padding(2);
             this.gbxAddEdit.Size = new System.Drawing.Size(186, 141);
             this.gbxAddEdit.TabIndex = 8;
             this.gbxAddEdit.TabStop = false;
@@ -120,7 +120,7 @@
             // tbx
             // 
             this.tbx.Location = new System.Drawing.Point(85, 52);
-            this.tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbx.Margin = new System.Windows.Forms.Padding(2);
             this.tbx.Name = "tbx";
             this.tbx.Size = new System.Drawing.Size(93, 20);
             this.tbx.TabIndex = 7;
@@ -142,9 +142,9 @@
             this.gbxSearchDelete.Controls.Add(this.lblSearchDelete);
             this.gbxSearchDelete.Controls.Add(this.btnSearchIngredient);
             this.gbxSearchDelete.Location = new System.Drawing.Point(405, 188);
-            this.gbxSearchDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxSearchDelete.Margin = new System.Windows.Forms.Padding(2);
             this.gbxSearchDelete.Name = "gbxSearchDelete";
-            this.gbxSearchDelete.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxSearchDelete.Padding = new System.Windows.Forms.Padding(2);
             this.gbxSearchDelete.Size = new System.Drawing.Size(186, 142);
             this.gbxSearchDelete.TabIndex = 9;
             this.gbxSearchDelete.TabStop = false;
@@ -153,7 +153,7 @@
             // btnDeleteIngredient
             // 
             this.btnDeleteIngredient.Location = new System.Drawing.Point(93, 92);
-            this.btnDeleteIngredient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteIngredient.Name = "btnDeleteIngredient";
             this.btnDeleteIngredient.Size = new System.Drawing.Size(88, 41);
             this.btnDeleteIngredient.TabIndex = 5;
@@ -164,7 +164,7 @@
             // tbxSearchDelete
             // 
             this.tbxSearchDelete.Location = new System.Drawing.Point(26, 54);
-            this.tbxSearchDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxSearchDelete.Margin = new System.Windows.Forms.Padding(2);
             this.tbxSearchDelete.Name = "tbxSearchDelete";
             this.tbxSearchDelete.Size = new System.Drawing.Size(93, 20);
             this.tbxSearchDelete.TabIndex = 1;
@@ -183,7 +183,7 @@
             // btnSearchIngredient
             // 
             this.btnSearchIngredient.Location = new System.Drawing.Point(7, 92);
-            this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchIngredient.Name = "btnSearchIngredient";
             this.btnSearchIngredient.Size = new System.Drawing.Size(77, 41);
             this.btnSearchIngredient.TabIndex = 3;
@@ -193,7 +193,7 @@
             // btnInventoryToChef
             // 
             this.btnInventoryToChef.Location = new System.Drawing.Point(20, 62);
-            this.btnInventoryToChef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryToChef.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryToChef.Name = "btnInventoryToChef";
             this.btnInventoryToChef.Size = new System.Drawing.Size(108, 39);
             this.btnInventoryToChef.TabIndex = 6;
@@ -204,7 +204,7 @@
             // btnInventoryToProfile
             // 
             this.btnInventoryToProfile.Location = new System.Drawing.Point(20, 188);
-            this.btnInventoryToProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryToProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryToProfile.Name = "btnInventoryToProfile";
             this.btnInventoryToProfile.Size = new System.Drawing.Size(108, 39);
             this.btnInventoryToProfile.TabIndex = 10;
@@ -215,7 +215,7 @@
             // btnInventoryToOrder
             // 
             this.btnInventoryToOrder.Location = new System.Drawing.Point(20, 125);
-            this.btnInventoryToOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryToOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryToOrder.Name = "btnInventoryToOrder";
             this.btnInventoryToOrder.Size = new System.Drawing.Size(108, 39);
             this.btnInventoryToOrder.TabIndex = 11;
@@ -234,9 +234,10 @@
             this.Controls.Add(this.gbxSearchDelete);
             this.Controls.Add(this.gbxAddEdit);
             this.Controls.Add(this.dgvInventory);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInventory";
             this.Text = "Inventory Page";
+            this.Load += new System.EventHandler(this.frmInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.gbxAddEdit.ResumeLayout(false);
             this.gbxAddEdit.PerformLayout();

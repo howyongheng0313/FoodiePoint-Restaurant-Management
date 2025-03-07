@@ -52,5 +52,10 @@ namespace FoodiePointManagementSystem
         {
 
         }
+
+        private void frmInventory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
