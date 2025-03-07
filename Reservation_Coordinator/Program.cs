@@ -16,7 +16,7 @@ namespace Reservation_Coordinator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.frmMainTemp());
+            Application.Run(new View.frmMainTool());
         }
     }
 }

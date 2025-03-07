@@ -1,6 +1,6 @@
 ﻿namespace Reservation_Coordinator.View
 {
-    partial class frmMainTemp
+    partial class frmMainTool
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.splMain = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewRev = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
             this.splMain.Panel2.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             this.splMain.Panel1.AutoScroll = true;
             this.splMain.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.splMain.Panel1.Controls.Add(this.button1);
+            this.splMain.Panel1.Controls.Add(this.btnViewRev);
             this.splMain.Panel1.Controls.Add(this.lblLogo);
             this.splMain.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
@@ -64,22 +64,23 @@
             this.splMain.SplitterWidth = 1;
             this.splMain.TabIndex = 0;
             // 
-            // button1
+            // btnViewRev
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(10, 98);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(230, 80);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewRev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnViewRev.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewRev.FlatAppearance.BorderSize = 0;
+            this.btnViewRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRev.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewRev.Location = new System.Drawing.Point(10, 98);
+            this.btnViewRev.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewRev.Name = "btnViewRev";
+            this.btnViewRev.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnViewRev.Size = new System.Drawing.Size(230, 80);
+            this.btnViewRev.TabIndex = 2;
+            this.btnViewRev.Text = "View Reservations";
+            this.btnViewRev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewRev.UseVisualStyleBackColor = true;
+            this.btnViewRev.Click += new System.EventHandler(this.btnViewRev_Click);
             // 
             // lblLogo
             // 
@@ -93,18 +94,6 @@
             this.lblLogo.Text = "Foodie Point";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(3, 31);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(937, 67);
-            this.lblTitle.TabIndex = 8;
-            this.lblTitle.Text = "TITLE";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlContent
             // 
             this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -116,7 +105,19 @@
             this.pnlContent.Size = new System.Drawing.Size(931, 655);
             this.pnlContent.TabIndex = 9;
             // 
-            // frmMainTemp
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(3, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(943, 67);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = "TITLE";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frmMainTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +128,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "frmMainTemp";
+            this.Name = "frmMainTool";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Template";
             this.splMain.Panel1.ResumeLayout(false);
@@ -141,7 +142,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splMain;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewRev;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlContent;

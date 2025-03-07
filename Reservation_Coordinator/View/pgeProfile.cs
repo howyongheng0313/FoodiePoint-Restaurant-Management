@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Reservation_Coordinator.View
 {
-    public partial class UserControl1: UserControl
+    public partial class pgeProfile: UserControl
     {
-        public UserControl1()
+        public pgeProfile()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
     }
 }

@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -54,17 +58,47 @@
     <Compile Include="View\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmMainTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMainTool.Designer.cs">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmMainTemp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmMainTemp.Designer.cs">
       <DependentUpon>frmMainTemp.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UserControl1.cs">
+    <Compile Include="View\frmSubReservationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSubReservationDetail.Designer.cs">
+      <DependentUpon>frmSubReservationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmTinyHallPick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmTinyHallPick.Designer.cs">
+      <DependentUpon>frmTinyHallPick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgeProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="View\pgeProfile.Designer.cs">
+      <DependentUpon>pgeProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgeViewRev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\pgeViewRev.Designer.cs">
+      <DependentUpon>pgeViewRev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\pgeWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\pgeWelcome.Designer.cs">
+      <DependentUpon>pgeWelcome.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,11 +112,26 @@
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMainTool.resx">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMainTemp.resx">
       <DependentUpon>frmMainTemp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmSubReservationDetail.resx">
+      <DependentUpon>frmSubReservationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmTinyHallPick.resx">
+      <DependentUpon>frmTinyHallPick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\pgeProfile.resx">
+      <DependentUpon>pgeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\pgeViewRev.resx">
+      <DependentUpon>pgeViewRev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\pgeWelcome.resx">
+      <DependentUpon>pgeWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

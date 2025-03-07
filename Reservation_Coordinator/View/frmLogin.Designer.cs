@@ -32,13 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblLoginDepart = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +66,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(226)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.lblLoginDepart);
+            this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.lblPassword);
@@ -103,17 +102,17 @@
             this.btnLogin.Text = "Log in";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // lblLoginDepart
+            // lblTitle
             // 
-            this.lblLoginDepart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLoginDepart.Font = new System.Drawing.Font("Segoe UI", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginDepart.Location = new System.Drawing.Point(3, 46);
-            this.lblLoginDepart.Name = "lblLoginDepart";
-            this.lblLoginDepart.Size = new System.Drawing.Size(538, 67);
-            this.lblLoginDepart.TabIndex = 4;
-            this.lblLoginDepart.Text = "Coordinator";
-            this.lblLoginDepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(3, 46);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(538, 67);
+            this.lblTitle.TabIndex = 4;
+            this.lblTitle.Text = "LOG IN";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPassword
             // 
@@ -166,18 +165,6 @@
             this.lblLogo.Text = "Foodie Point";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(12, 31);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1158, 67);
-            this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "LOG IN";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -185,7 +172,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.lblLogo);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -206,11 +192,10 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblLoginDepart;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Label lblTitle;
     }
 }
