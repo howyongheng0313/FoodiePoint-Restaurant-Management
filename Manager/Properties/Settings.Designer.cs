@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodieUI.Properties {
+namespace Manager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,11 +26,12 @@ namespace FoodieUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\FoodieDb.mdf;" +
-            "Integrated Security=True")]
-        public string FoodieDbConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\heeth\\OneDrive - As" +
+            "ia Pacific University\\Degree 1st Year (Sem 2)\\Object-oriented\\Chef\\Chef\\Database" +
+            "\\FoodiePoint.mdf\";Integrated Security=True")]
+        public string FoodiePointConnectionString {
             get {
-                return ((string)(this["FoodieDbConnectionString"]));
+                return ((string)(this["FoodiePointConnectionString"]));
             }
         }
     }

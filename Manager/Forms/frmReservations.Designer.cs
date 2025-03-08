@@ -1,4 +1,7 @@
-﻿namespace FoodieUI
+﻿
+using FoodiePointManagementSystem;
+
+namespace FoodieUI
 {
     partial class frmReservations
     {
@@ -35,6 +38,9 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.monthCmbBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.reservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +50,6 @@
             this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
             this.rsStatusCmb = new System.Windows.Forms.ComboBox();
             this.rsTypetxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,23 +65,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.reservationsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.ReservationsTableAdapter();
-            this.label10 = new System.Windows.Forms.Label();
-            this.monthCmbBox = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.reservationsTableAdapter = new FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.ReservationsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
+
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -112,8 +115,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 554);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 11;
             // 
             // button3
@@ -124,9 +128,10 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(13, 73);
+            this.button3.Location = new System.Drawing.Point(17, 90);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
+            this.button3.Size = new System.Drawing.Size(192, 38);
             this.button3.TabIndex = 12;
             this.button3.TabStop = false;
             this.button3.Text = "Menu";
@@ -141,9 +146,10 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(13, 235);
+            this.button10.Location = new System.Drawing.Point(17, 289);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(144, 31);
+            this.button10.Size = new System.Drawing.Size(192, 38);
             this.button10.TabIndex = 11;
             this.button10.TabStop = false;
             this.button10.Text = "My Profile";
@@ -158,9 +164,10 @@
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(13, 181);
+            this.button9.Location = new System.Drawing.Point(17, 223);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(144, 31);
+            this.button9.Size = new System.Drawing.Size(192, 38);
             this.button9.TabIndex = 10;
             this.button9.TabStop = false;
             this.button9.Text = "Reservations";
@@ -175,9 +182,10 @@
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(13, 127);
+            this.button8.Location = new System.Drawing.Point(17, 156);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(144, 31);
+            this.button8.Size = new System.Drawing.Size(192, 38);
             this.button8.TabIndex = 9;
             this.button8.TabStop = false;
             this.button8.Text = "Hall Mgmt";
@@ -189,18 +197,68 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 9);
+            this.label2.Location = new System.Drawing.Point(15, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 29);
+            this.label2.Size = new System.Drawing.Size(184, 36);
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(693, 427);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 31);
+            this.button4.TabIndex = 44;
+            this.button4.Text = "Clear Filter";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // monthCmbBox
+            // 
+            this.monthCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthCmbBox.FormattingEnabled = true;
+            this.monthCmbBox.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.monthCmbBox.Location = new System.Drawing.Point(693, 394);
+            this.monthCmbBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.monthCmbBox.Name = "monthCmbBox";
+            this.monthCmbBox.Size = new System.Drawing.Size(123, 24);
+            this.monthCmbBox.TabIndex = 43;
+            this.monthCmbBox.SelectedIndexChanged += new System.EventHandler(this.monthCmbBox_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(689, 368);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 24);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Filter Month";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "\"MM/dd/yyyy\"";
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 375);
+            this.dateTimePicker1.Location = new System.Drawing.Point(23, 462);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 41;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -221,63 +279,65 @@
             this.reservationTypeDataGridViewTextBoxColumn,
             this.reservationStatusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.reservationsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 90);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(596, 224);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(795, 276);
             this.dataGridView1.TabIndex = 40;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // reservationIDDataGridViewTextBoxColumn
             // 
             this.reservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
             this.reservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
+            this.reservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationIDDataGridViewTextBoxColumn.Name = "reservationIDDataGridViewTextBoxColumn";
+            this.reservationIDDataGridViewTextBoxColumn.Width = 122;
             // 
             // hallIDDataGridViewTextBoxColumn
             // 
             this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
-            this.hallIDDataGridViewTextBoxColumn.Width = 61;
+            this.hallIDDataGridViewTextBoxColumn.Width = 73;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.Width = 65;
+            this.userIDDataGridViewTextBoxColumn.Width = 78;
             // 
             // reservationDateDataGridViewTextBoxColumn
             // 
             this.reservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
             this.reservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
+            this.reservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationDateDataGridViewTextBoxColumn.Name = "reservationDateDataGridViewTextBoxColumn";
-            this.reservationDateDataGridViewTextBoxColumn.Width = 112;
+            this.reservationDateDataGridViewTextBoxColumn.Width = 138;
             // 
             // reservationTypeDataGridViewTextBoxColumn
             // 
             this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
             this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
+            this.reservationTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
-            this.reservationTypeDataGridViewTextBoxColumn.Width = 113;
+            this.reservationTypeDataGridViewTextBoxColumn.Width = 141;
             // 
             // reservationStatusDataGridViewTextBoxColumn
             // 
             this.reservationStatusDataGridViewTextBoxColumn.DataPropertyName = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
+            this.reservationStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
-            this.reservationStatusDataGridViewTextBoxColumn.Width = 119;
+            this.reservationStatusDataGridViewTextBoxColumn.Width = 146;
             // 
             // reservationsBindingSource
             // 
             this.reservationsBindingSource.DataMember = "Reservations";
-            this.reservationsBindingSource.DataSource = this.foodieDbDataSet;
-            // 
-            // foodieDbDataSet
-            // 
-            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
-            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rsStatusCmb
             // 
@@ -285,16 +345,18 @@
             this.rsStatusCmb.Items.AddRange(new object[] {
             "Confirmed",
             "Uncomfirmed"});
-            this.rsStatusCmb.Location = new System.Drawing.Point(321, 321);
+            this.rsStatusCmb.Location = new System.Drawing.Point(428, 395);
+            this.rsStatusCmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rsStatusCmb.Name = "rsStatusCmb";
-            this.rsStatusCmb.Size = new System.Drawing.Size(130, 21);
+            this.rsStatusCmb.Size = new System.Drawing.Size(172, 24);
             this.rsStatusCmb.TabIndex = 39;
             // 
             // rsTypetxt
             // 
-            this.rsTypetxt.Location = new System.Drawing.Point(272, 375);
+            this.rsTypetxt.Location = new System.Drawing.Point(363, 462);
+            this.rsTypetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rsTypetxt.Name = "rsTypetxt";
-            this.rsTypetxt.Size = new System.Drawing.Size(120, 20);
+            this.rsTypetxt.Size = new System.Drawing.Size(159, 22);
             this.rsTypetxt.TabIndex = 38;
             this.rsTypetxt.TextChanged += new System.EventHandler(this.rsTypetxt_TextChanged);
             // 
@@ -304,9 +366,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(318, 300);
+            this.label9.Location = new System.Drawing.Point(424, 369);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 18);
+            this.label9.Size = new System.Drawing.Size(164, 24);
             this.label9.TabIndex = 35;
             this.label9.Text = "Reservation Status";
             // 
@@ -316,9 +379,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(269, 354);
+            this.label8.Location = new System.Drawing.Point(359, 436);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 18);
+            this.label8.Size = new System.Drawing.Size(157, 24);
             this.label8.TabIndex = 34;
             this.label8.Text = "Reservation Type";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -329,31 +393,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 354);
+            this.label6.Location = new System.Drawing.Point(19, 436);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 18);
+            this.label6.Size = new System.Drawing.Size(152, 24);
             this.label6.TabIndex = 33;
             this.label6.Text = "Reservation Date";
             // 
             // userIdTxt
             // 
-            this.userIdTxt.Location = new System.Drawing.Point(233, 321);
+            this.userIdTxt.Location = new System.Drawing.Point(311, 395);
+            this.userIdTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userIdTxt.Name = "userIdTxt";
-            this.userIdTxt.Size = new System.Drawing.Size(55, 20);
+            this.userIdTxt.Size = new System.Drawing.Size(72, 22);
             this.userIdTxt.TabIndex = 32;
             // 
             // hallIdTxt
             // 
-            this.hallIdTxt.Location = new System.Drawing.Point(152, 321);
+            this.hallIdTxt.Location = new System.Drawing.Point(203, 395);
+            this.hallIdTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hallIdTxt.Name = "hallIdTxt";
-            this.hallIdTxt.Size = new System.Drawing.Size(48, 20);
+            this.hallIdTxt.Size = new System.Drawing.Size(63, 22);
             this.hallIdTxt.TabIndex = 31;
             // 
             // rsvTxt
             // 
-            this.rsvTxt.Location = new System.Drawing.Point(17, 321);
+            this.rsvTxt.Location = new System.Drawing.Point(23, 395);
+            this.rsvTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rsvTxt.Name = "rsvTxt";
-            this.rsvTxt.Size = new System.Drawing.Size(102, 20);
+            this.rsvTxt.Size = new System.Drawing.Size(135, 22);
             this.rsvTxt.TabIndex = 30;
             // 
             // label5
@@ -362,9 +430,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(230, 300);
+            this.label5.Location = new System.Drawing.Point(307, 369);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 18);
+            this.label5.Size = new System.Drawing.Size(71, 24);
             this.label5.TabIndex = 29;
             this.label5.Text = "User ID";
             // 
@@ -374,9 +443,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(149, 300);
+            this.label4.Location = new System.Drawing.Point(199, 369);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 18);
+            this.label4.Size = new System.Drawing.Size(64, 24);
             this.label4.TabIndex = 28;
             this.label4.Text = "Hall ID";
             // 
@@ -386,17 +456,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 300);
+            this.label7.Location = new System.Drawing.Point(19, 369);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 18);
+            this.label7.Size = new System.Drawing.Size(131, 24);
             this.label7.TabIndex = 27;
             this.label7.Text = "Reservation ID";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(421, 402);
+            this.button2.Location = new System.Drawing.Point(561, 495);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.Size = new System.Drawing.Size(124, 42);
             this.button2.TabIndex = 23;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
@@ -404,9 +476,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 402);
+            this.button1.Location = new System.Drawing.Point(693, 495);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.Size = new System.Drawing.Size(124, 42);
             this.button1.TabIndex = 22;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = true;
@@ -416,9 +489,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 50);
+            this.label3.Location = new System.Drawing.Point(17, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 20;
             this.label3.Text = "Reservation";
             // 
@@ -426,9 +500,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.Size = new System.Drawing.Size(228, 29);
             this.label1.TabIndex = 19;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -436,57 +511,13 @@
             // 
             this.reservationsTableAdapter.ClearBeforeFill = true;
             // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(517, 299);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 18);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "Filter Month";
-            // 
-            // monthCmbBox
-            // 
-            this.monthCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.monthCmbBox.FormattingEnabled = true;
-            this.monthCmbBox.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.monthCmbBox.Location = new System.Drawing.Point(520, 320);
-            this.monthCmbBox.Name = "monthCmbBox";
-            this.monthCmbBox.Size = new System.Drawing.Size(93, 21);
-            this.monthCmbBox.TabIndex = 43;
-            this.monthCmbBox.SelectedIndexChanged += new System.EventHandler(this.monthCmbBox_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(520, 347);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 25);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "Clear Filter";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // frmReservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReservations";
             this.Text = "frmRseservations";
             this.Load += new System.EventHandler(this.frmRseservations_Load);
@@ -498,7 +529,6 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,9 +557,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private FoodieDbDataSet foodieDbDataSet;
+        private FoodiePointDataSet foodieDbDataSet;
         private System.Windows.Forms.BindingSource reservationsBindingSource;
-        private FoodieDbDataSetTableAdapters.ReservationsTableAdapter reservationsTableAdapter;
+        private FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.ReservationsTableAdapter reservationsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;

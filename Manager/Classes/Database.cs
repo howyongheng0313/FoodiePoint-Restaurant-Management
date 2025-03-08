@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace FoodieUI
 {
@@ -14,7 +15,7 @@ namespace FoodieUI
         private string connectionString;
         public Database()
         {
-            connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDb.mdf\"; Integrated Security = True\r\n";
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
         }
         public void LoadData(DataGridView dataGridView, string x)
         {

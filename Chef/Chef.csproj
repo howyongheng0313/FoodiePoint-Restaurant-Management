@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -65,10 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DatabaseHelper.cs" />
-    <Compile Include="FoodiePointDataSet.Designer.cs">
+    <Compile Include="FoodiePointDataset.cs">
+      <DependentUpon>FoodiePointDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FoodiePointDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
+      <DependentUpon>FoodiePointDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Inventory.cs" />
     <Compile Include="Model\Order.cs" />
@@ -122,16 +125,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="FoodiePointDataSet.xsc">
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
+    <None Include="FoodiePointDataset.xsc">
+      <DependentUpon>FoodiePointDataset.xsd</DependentUpon>
     </None>
-    <None Include="FoodiePointDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FoodiePointDataSet.Designer.cs</LastGenOutput>
+    <None Include="FoodiePointDataset.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodiePointDataset.Designer.cs</LastGenOutput>
     </None>
-    <None Include="FoodiePointDataSet.xss">
-      <DependentUpon>FoodiePointDataSet.xsd</DependentUpon>
+    <None Include="FoodiePointDataset.xss">
+      <DependentUpon>FoodiePointDataset.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

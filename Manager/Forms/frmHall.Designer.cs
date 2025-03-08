@@ -55,12 +55,12 @@
             this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.foodieDbDataSet = new FoodieUI.FoodieDbDataSet();
+            this.foodieDbDataSet = new FoodiePointManagementSystem.FoodiePointDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.hallsTableAdapter = new FoodieUI.FoodieDbDataSetTableAdapters.HallsTableAdapter();
+            this.hallsTableAdapter = new FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.HallsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,9 +80,10 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(13, 73);
+            this.button3.Location = new System.Drawing.Point(17, 90);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
+            this.button3.Size = new System.Drawing.Size(192, 38);
             this.button3.TabIndex = 12;
             this.button3.TabStop = false;
             this.button3.Text = "Menu";
@@ -97,9 +98,10 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(13, 235);
+            this.button10.Location = new System.Drawing.Point(17, 289);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(144, 31);
+            this.button10.Size = new System.Drawing.Size(192, 38);
             this.button10.TabIndex = 11;
             this.button10.TabStop = false;
             this.button10.Text = "My Profile";
@@ -110,6 +112,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -140,8 +143,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 554);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 7;
             // 
             // button9
@@ -152,9 +156,10 @@
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(13, 181);
+            this.button9.Location = new System.Drawing.Point(17, 223);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(144, 31);
+            this.button9.Size = new System.Drawing.Size(192, 38);
             this.button9.TabIndex = 10;
             this.button9.TabStop = false;
             this.button9.Text = "Reservations";
@@ -169,9 +174,10 @@
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(13, 127);
+            this.button8.Location = new System.Drawing.Point(17, 156);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(144, 31);
+            this.button8.Size = new System.Drawing.Size(192, 38);
             this.button8.TabIndex = 9;
             this.button8.TabStop = false;
             this.button8.Text = "Hall Mgmt";
@@ -183,17 +189,19 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 9);
+            this.label2.Location = new System.Drawing.Point(15, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 29);
+            this.label2.Size = new System.Drawing.Size(184, 36);
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 404);
+            this.button1.Location = new System.Drawing.Point(693, 497);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.Size = new System.Drawing.Size(124, 42);
             this.button1.TabIndex = 51;
             this.button1.Text = "Edit Halls";
             this.button1.UseVisualStyleBackColor = true;
@@ -205,9 +213,10 @@
             this.availabilityCmb.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.availabilityCmb.Location = new System.Drawing.Point(439, 337);
+            this.availabilityCmb.Location = new System.Drawing.Point(585, 415);
+            this.availabilityCmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.availabilityCmb.Name = "availabilityCmb";
-            this.availabilityCmb.Size = new System.Drawing.Size(85, 21);
+            this.availabilityCmb.Size = new System.Drawing.Size(112, 24);
             this.availabilityCmb.TabIndex = 50;
             // 
             // label9
@@ -216,17 +225,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(436, 316);
+            this.label9.Location = new System.Drawing.Point(581, 389);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 18);
+            this.label9.Size = new System.Drawing.Size(96, 24);
             this.label9.TabIndex = 49;
             this.label9.Text = "Availability";
             // 
             // hallCapacityTxt
             // 
-            this.hallCapacityTxt.Location = new System.Drawing.Point(323, 338);
+            this.hallCapacityTxt.Location = new System.Drawing.Point(431, 416);
+            this.hallCapacityTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hallCapacityTxt.Name = "hallCapacityTxt";
-            this.hallCapacityTxt.Size = new System.Drawing.Size(91, 20);
+            this.hallCapacityTxt.Size = new System.Drawing.Size(120, 22);
             this.hallCapacityTxt.TabIndex = 47;
             // 
             // label6
@@ -235,31 +246,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(320, 316);
+            this.label6.Location = new System.Drawing.Point(427, 389);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.Size = new System.Drawing.Size(118, 24);
             this.label6.TabIndex = 45;
             this.label6.Text = "Hall Capacity";
             // 
             // hallPartyTypeTxt
             // 
-            this.hallPartyTypeTxt.Location = new System.Drawing.Point(194, 337);
+            this.hallPartyTypeTxt.Location = new System.Drawing.Point(259, 415);
+            this.hallPartyTypeTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hallPartyTypeTxt.Name = "hallPartyTypeTxt";
-            this.hallPartyTypeTxt.Size = new System.Drawing.Size(104, 20);
+            this.hallPartyTypeTxt.Size = new System.Drawing.Size(137, 22);
             this.hallPartyTypeTxt.TabIndex = 44;
             // 
             // hallNametxt
             // 
-            this.hallNametxt.Location = new System.Drawing.Point(95, 338);
+            this.hallNametxt.Location = new System.Drawing.Point(127, 416);
+            this.hallNametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hallNametxt.Name = "hallNametxt";
-            this.hallNametxt.Size = new System.Drawing.Size(74, 20);
+            this.hallNametxt.Size = new System.Drawing.Size(97, 22);
             this.hallNametxt.TabIndex = 43;
             // 
             // hallIdTxt
             // 
-            this.hallIdTxt.Location = new System.Drawing.Point(22, 337);
+            this.hallIdTxt.Location = new System.Drawing.Point(29, 415);
+            this.hallIdTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hallIdTxt.Name = "hallIdTxt";
-            this.hallIdTxt.Size = new System.Drawing.Size(48, 20);
+            this.hallIdTxt.Size = new System.Drawing.Size(63, 22);
             this.hallIdTxt.TabIndex = 42;
             this.hallIdTxt.TextChanged += new System.EventHandler(this.hallIdTxt_TextChanged);
             // 
@@ -269,9 +284,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userIdLbl.AutoSize = true;
             this.userIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdLbl.Location = new System.Drawing.Point(191, 316);
+            this.userIdLbl.Location = new System.Drawing.Point(255, 389);
+            this.userIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userIdLbl.Name = "userIdLbl";
-            this.userIdLbl.Size = new System.Drawing.Size(107, 18);
+            this.userIdLbl.Size = new System.Drawing.Size(136, 24);
             this.userIdLbl.TabIndex = 41;
             this.userIdLbl.Text = "Hall Party Type";
             // 
@@ -281,9 +297,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 316);
+            this.label4.Location = new System.Drawing.Point(123, 389);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 18);
+            this.label4.Size = new System.Drawing.Size(98, 24);
             this.label4.TabIndex = 40;
             this.label4.Text = "Hall Name";
             // 
@@ -293,17 +310,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 316);
+            this.label7.Location = new System.Drawing.Point(25, 389);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 18);
+            this.label7.Size = new System.Drawing.Size(64, 24);
             this.label7.TabIndex = 39;
             this.label7.Text = "Hall ID";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(421, 404);
+            this.button2.Location = new System.Drawing.Point(561, 497);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.Size = new System.Drawing.Size(124, 42);
             this.button2.TabIndex = 25;
             this.button2.Text = "Add Halls";
             this.button2.UseVisualStyleBackColor = true;
@@ -324,11 +343,13 @@
             this.hallCapacityDataGridViewTextBoxColumn,
             this.availabilityDataGridViewTextBoxColumn});
             this.dataGridViewHall.DataSource = this.hallsBindingSource;
-            this.dataGridViewHall.Location = new System.Drawing.Point(22, 73);
+            this.dataGridViewHall.Location = new System.Drawing.Point(29, 90);
+            this.dataGridViewHall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewHall.MultiSelect = false;
             this.dataGridViewHall.Name = "dataGridViewHall";
             this.dataGridViewHall.ReadOnly = true;
-            this.dataGridViewHall.Size = new System.Drawing.Size(542, 228);
+            this.dataGridViewHall.RowHeadersWidth = 51;
+            this.dataGridViewHall.Size = new System.Drawing.Size(723, 281);
             this.dataGridViewHall.TabIndex = 13;
             this.dataGridViewHall.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHall_CellContentClick);
             // 
@@ -336,31 +357,46 @@
             // 
             this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            this.hallIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hallIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // hallNameDataGridViewTextBoxColumn
             // 
             this.hallNameDataGridViewTextBoxColumn.DataPropertyName = "HallName";
             this.hallNameDataGridViewTextBoxColumn.HeaderText = "HallName";
+            this.hallNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallNameDataGridViewTextBoxColumn.Name = "hallNameDataGridViewTextBoxColumn";
+            this.hallNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hallNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // hallPartyTypeDataGridViewTextBoxColumn
             // 
             this.hallPartyTypeDataGridViewTextBoxColumn.DataPropertyName = "HallPartyType";
             this.hallPartyTypeDataGridViewTextBoxColumn.HeaderText = "HallPartyType";
+            this.hallPartyTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallPartyTypeDataGridViewTextBoxColumn.Name = "hallPartyTypeDataGridViewTextBoxColumn";
+            this.hallPartyTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hallPartyTypeDataGridViewTextBoxColumn.Width = 125;
             // 
             // hallCapacityDataGridViewTextBoxColumn
             // 
             this.hallCapacityDataGridViewTextBoxColumn.DataPropertyName = "HallCapacity";
             this.hallCapacityDataGridViewTextBoxColumn.HeaderText = "HallCapacity";
+            this.hallCapacityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallCapacityDataGridViewTextBoxColumn.Name = "hallCapacityDataGridViewTextBoxColumn";
+            this.hallCapacityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hallCapacityDataGridViewTextBoxColumn.Width = 125;
             // 
             // availabilityDataGridViewTextBoxColumn
             // 
             this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
             this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            this.availabilityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.availabilityDataGridViewTextBoxColumn.Width = 125;
             // 
             // hallsBindingSource
             // 
@@ -381,9 +417,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 50);
+            this.label3.Location = new System.Drawing.Point(24, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 20);
+            this.label3.Size = new System.Drawing.Size(276, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "Hall Management Overview";
             // 
@@ -391,9 +428,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.Size = new System.Drawing.Size(228, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -407,10 +445,11 @@
             // 
             // frmHall
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHall";
             this.Text = "Halls";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -443,9 +482,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridView dataGridViewHall;
         private System.Windows.Forms.BindingSource foodieDbDataSetBindingSource;
-        private FoodieDbDataSet foodieDbDataSet;
+        private FoodiePointManagementSystem.FoodiePointDataSet foodieDbDataSet;
         private System.Windows.Forms.BindingSource hallsBindingSource;
-        private FoodieDbDataSetTableAdapters.HallsTableAdapter hallsTableAdapter;
+        private FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.HallsTableAdapter hallsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallPartyTypeDataGridViewTextBoxColumn;
