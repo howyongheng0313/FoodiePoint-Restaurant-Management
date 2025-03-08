@@ -69,24 +69,24 @@
     <Compile Include="Blank.Designer.cs">
       <DependentUpon>Blank.cs</DependentUpon>
     </Compile>
-    <Compile Include="Button.cs" />
-    <Compile Include="Database.cs" />
-    <Compile Include="EditHalls.cs">
+    <Compile Include="Classes\Button.cs" />
+    <Compile Include="Classes\Database.cs" />
+    <Compile Include="Forms\EditHalls.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditHalls.Designer.cs">
+    <Compile Include="Forms\EditHalls.Designer.cs">
       <DependentUpon>EditHalls.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditMenu.cs">
+    <Compile Include="Forms\EditMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditMenu.Designer.cs">
+    <Compile Include="Forms\EditMenu.Designer.cs">
       <DependentUpon>EditMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Menu.cs">
+    <Compile Include="Forms\Edit_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit_Menu.Designer.cs">
+    <Compile Include="Forms\Edit_Menu.Designer.cs">
       <DependentUpon>Edit_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="FoodieDbDataSet.Designer.cs">
@@ -94,90 +94,63 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodieDbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\frmHall.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHall.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHall.Designer.cs">
+    <Compile Include="Forms\frmHall.Designer.cs">
       <DependentUpon>frmHall.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Forms\frmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Forms\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="Forms\frmReservations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReservations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReservations.Designer.cs">
+    <Compile Include="Forms\frmReservations.Designer.cs">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main Menu.cs">
+    <Compile Include="Forms\frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main Menu.Designer.cs">
-      <DependentUpon>Main Menu.cs</DependentUpon>
+    <Compile Include="Forms\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmEditReservation.cs">
+    <Compile Include="Forms\frmEditReservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditReservation.Designer.cs">
+    <Compile Include="Forms\frmEditReservation.Designer.cs">
       <DependentUpon>frmEditReservation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Blank.resx">
       <DependentUpon>Blank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditHalls.resx">
+    <EmbeddedResource Include="Forms\EditHalls.resx">
       <DependentUpon>EditHalls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditMenu.resx">
+    <EmbeddedResource Include="Forms\EditMenu.resx">
       <DependentUpon>EditMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Menu.resx">
+    <EmbeddedResource Include="Forms\Edit_Menu.resx">
       <DependentUpon>Edit_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHall.resx">
+    <EmbeddedResource Include="Forms\frmHall.resx">
       <DependentUpon>frmHall.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReservations.resx">
+    <EmbeddedResource Include="Forms\frmReservations.resx">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main Menu.resx">
-      <DependentUpon>Main Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditReservation.resx">
+    <EmbeddedResource Include="Forms\frmEditReservation.resx">
       <DependentUpon>frmEditReservation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FoodieDbDataSet.xsc">
@@ -208,6 +181,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Database\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

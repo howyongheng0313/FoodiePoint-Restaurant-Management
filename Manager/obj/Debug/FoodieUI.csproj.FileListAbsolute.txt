@@ -12,8 +12,6 @@ C:\Users\User\source\repos\howyongheng0313\FoodieUI\FoodieUI\obj\Debug\FoodieUI.
 C:\Users\User\source\repos\howyongheng0313\FoodieUI\FoodieUI\obj\Debug\FoodieUI.exe
 C:\Users\User\source\repos\howyongheng0313\FoodieUI\FoodieUI\obj\Debug\FoodieUI.pdb
 C:\Users\User\source\repos\howyongheng0313\FoodieUI\FoodieUI\bin\Debug\FoodieUI.pdb
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb.mdf
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb_log.ldf
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieUI.exe.config
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieUI.exe
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieUI.pdb
@@ -21,10 +19,6 @@ C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\Foodi
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Blank.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.EditMenu.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Edit_Menu.resources
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Form1.resources
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Form3.resources
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Form4.resources
-C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Form5.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.Main_Menu.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.csproj.GenerateResource.cache
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.csproj.CoreCompileInputs.cache
@@ -34,3 +28,6 @@ C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\Foodi
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.frmHall.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.frmReservation.resources
 C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.frmReservations.resources
+C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\obj\Debug\FoodieUI.frmProfile.resources
+C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb.mdf
+C:\Users\User\OneDrive - Asia Pacific University\Manager\Manager\bin\Debug\FoodieDb_log.ldf

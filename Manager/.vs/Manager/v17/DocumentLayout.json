@@ -3,52 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\blank.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:blank.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\editmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:editmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\foodiedbdataset.xss||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:foodiedbdataset.xss||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\main menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:main menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\foodiedbdataset.xsc||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:foodiedbdataset.xsc||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\foodiedbdataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:foodiedbdataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\foodiedbdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:foodiedbdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\edithalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:edithalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\blank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:blank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\forms\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:forms\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\edithalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:edithalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|c:\\users\\user\\onedrive - asia pacific university\\manager\\manager\\forms\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C2861E6-4605-44C2-842B-1B805AFC1867}|FoodieUI.csproj|solutionrelative:forms\\frmeditreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,8 +42,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -74,154 +62,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmReservations.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmReservations.cs",
-              "RelativeDocumentMoniker": "frmReservations.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmReservations.cs [Design]",
-              "RelativeToolTip": "frmReservations.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:13:50.55Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Database.cs",
-              "RelativeDocumentMoniker": "Database.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Database.cs",
-              "RelativeToolTip": "Database.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:50:15.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditHalls.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditHalls.cs",
-              "RelativeDocumentMoniker": "EditHalls.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditHalls.cs [Design]",
-              "RelativeToolTip": "EditHalls.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:41:52.519Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmEditReservation.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmEditReservation.cs",
-              "RelativeDocumentMoniker": "frmEditReservation.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmEditReservation.cs",
-              "RelativeToolTip": "frmEditReservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:34:19.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmEditReservation.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmEditReservation.cs",
-              "RelativeDocumentMoniker": "frmEditReservation.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmEditReservation.cs [Design]",
-              "RelativeToolTip": "frmEditReservation.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:22:08.997Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:22:31.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Button.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Button.cs",
-              "RelativeDocumentMoniker": "Button.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Button.cs",
-              "RelativeToolTip": "Button.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAUwEsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:33:58.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmReservations.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmReservations.cs",
-              "RelativeDocumentMoniker": "frmReservations.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\frmReservations.cs",
-              "RelativeToolTip": "frmReservations.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwDcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:15:09.972Z",
+              "DocumentIndex": 1,
+              "Title": "FoodieDbDataSet.xss",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xss",
+              "RelativeDocumentMoniker": "FoodieDbDataSet.xss",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xss",
+              "RelativeToolTip": "FoodieDbDataSet.xss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVDhPlZI9coMwEIUfdIgm3CDmBmliaKl1Aah8hJwkTutU6biA7sA4jW\u002BA01PgzITVUG2KIGKJn8TfzI5Gb6UdvdUCK2itd0R0IiJ24qS13oGZPfeSgYj2dV0/VVWFsiytXJ7nSNMUcRy/WAlD27Z3TdPw4fDKl/ZzNvbPeyYi9t3L13Rd50ojX0NuzQJLKbG53\u002BBxu7Vy78cjzh9nKKXsAkTE13sAkFK60ohSChMLUsox/sOkwK1MCiilrPUvfAze5/xjKDRXLAxDwPyC6fgSSimrJ0mSoCiK30EiIs6yzB1XXtF/RhmAP/d0IcTsfPR9HwkhPCHEQxAEbzA9MM9zbbh6FEUX68DcL9yKt2RhSXe1b4wV0dNGMLxjAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-03-08T09:26:33.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Main Menu.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Main Menu.cs",
-              "RelativeDocumentMoniker": "Main Menu.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Main Menu.cs",
-              "RelativeToolTip": "Main Menu.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwGsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:42:13.872Z",
+              "Title": "FoodieDbDataSet.xsc",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xsc",
+              "RelativeDocumentMoniker": "FoodieDbDataSet.xsc",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xsc",
+              "RelativeToolTip": "FoodieDbDataSet.xsc",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001612|",
+              "WhenOpened": "2025-03-08T09:26:33.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditMenu.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditMenu.cs",
-              "RelativeDocumentMoniker": "EditMenu.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditMenu.cs",
-              "RelativeToolTip": "EditMenu.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAuwEcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FoodieDbDataSet.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.Designer.cs",
+              "RelativeDocumentMoniker": "FoodieDbDataSet.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.Designer.cs",
+              "RelativeToolTip": "FoodieDbDataSet.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:43:04.133Z",
+              "WhenOpened": "2025-03-08T09:26:33.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditHalls.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditHalls.cs",
-              "RelativeDocumentMoniker": "EditHalls.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\EditHalls.cs",
-              "RelativeToolTip": "EditHalls.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAADgv0UAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:41:56.904Z",
+              "DocumentIndex": 4,
+              "Title": "FoodieDbDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xsd",
+              "RelativeDocumentMoniker": "FoodieDbDataSet.xsd",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDbDataSet.xsd",
+              "RelativeToolTip": "FoodieDbDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-03-08T09:26:33.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form4.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Form4.cs",
-              "RelativeDocumentMoniker": "Form4.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Form4.cs [Design]",
-              "RelativeToolTip": "Form4.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Blank.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Blank.Designer.cs",
+              "RelativeDocumentMoniker": "Blank.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Blank.Designer.cs",
+              "RelativeToolTip": "Blank.Designer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwCAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:01:14.24Z",
+              "WhenOpened": "2025-03-08T09:24:52.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Blank.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Blank.cs",
+              "RelativeDocumentMoniker": "Blank.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Blank.cs",
+              "RelativeToolTip": "Blank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T09:24:52.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmEditReservation.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Forms\\frmEditReservation.cs",
+              "RelativeDocumentMoniker": "Forms\\frmEditReservation.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Forms\\frmEditReservation.cs",
+              "RelativeToolTip": "Forms\\frmEditReservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T09:22:19.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmEditReservation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Forms\\frmEditReservation.cs",
+              "RelativeDocumentMoniker": "Forms\\frmEditReservation.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\Forms\\frmEditReservation.cs [Design]",
+              "RelativeToolTip": "Forms\\frmEditReservation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T09:22:13.187Z",
               "EditorCaption": " [Design]"
             }
           ]
