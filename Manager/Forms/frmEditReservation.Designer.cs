@@ -205,6 +205,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -217,7 +221,9 @@
             this.reservationStatusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.reservationsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(17, 73);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(596, 224);
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -227,12 +233,14 @@
             this.reservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
             this.reservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
             this.reservationIDDataGridViewTextBoxColumn.Name = "reservationIDDataGridViewTextBoxColumn";
+            this.reservationIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hallIDDataGridViewTextBoxColumn
             // 
             this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            this.hallIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.hallIDDataGridViewTextBoxColumn.Width = 61;
             // 
             // userIDDataGridViewTextBoxColumn
@@ -240,6 +248,7 @@
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.userIDDataGridViewTextBoxColumn.Width = 65;
             // 
             // reservationDateDataGridViewTextBoxColumn
@@ -247,6 +256,7 @@
             this.reservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
             this.reservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
             this.reservationDateDataGridViewTextBoxColumn.Name = "reservationDateDataGridViewTextBoxColumn";
+            this.reservationDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.reservationDateDataGridViewTextBoxColumn.Width = 112;
             // 
             // reservationTypeDataGridViewTextBoxColumn
@@ -254,6 +264,7 @@
             this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
             this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
             this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
+            this.reservationTypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.reservationTypeDataGridViewTextBoxColumn.Width = 113;
             // 
             // reservationStatusDataGridViewTextBoxColumn
@@ -261,6 +272,7 @@
             this.reservationStatusDataGridViewTextBoxColumn.DataPropertyName = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
+            this.reservationStatusDataGridViewTextBoxColumn.ReadOnly = true;
             this.reservationStatusDataGridViewTextBoxColumn.Width = 119;
             // 
             // rsStatusCmb

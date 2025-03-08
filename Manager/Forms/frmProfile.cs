@@ -54,5 +54,13 @@ namespace FoodieUI
         {
             edm.Seend();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            edm.Seend();
+        }
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // Your code here
+        }
     }
 }

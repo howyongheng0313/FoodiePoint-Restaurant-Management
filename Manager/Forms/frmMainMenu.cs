@@ -13,7 +13,6 @@ namespace FoodieUI
     public partial class Main_Menu : System.Windows.Forms.Form
     {
         Button button = new Button();
-        private DataTable menuDataTable;
 
         Database db = new Database();
         public Main_Menu()
