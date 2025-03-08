@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -14,25 +15,58 @@ namespace FoodiePointManagementSystem
 {
     public partial class frmInventory : Form
     {
-        // InventoryService object
         private InventoryService inventoryService;
 
-        // Variables
-        private string ingredientID;
-        private string ingredientName;
-        private float quantityInStock;
-        private string unit;
+        private string _ingredientID;
+        private string _ingredientName;
+        private float _quantityInStock;
+        private string _unit;
+        private string _searchInput;
+        private int action = 0;
 
-        // Constructor
+        public string IngredientID
+        {
+            get { return _ingredientID; }
+            set { _ingredientID = value; tbxIngredientID.Text = value; }
+        }
+
+        public string IngredientName
+        {
+            get { return _ingredientName; }
+            set { _ingredientName = value; tbxIngredient.Text = value; }
+        }
+
+        public float QuantityInStock
+        {
+            get { return _quantityInStock; }
+            set { _quantityInStock = value; }
+        }
+
+        public string Unit
+        {
+            get { return _unit; }
+            set { _unit = value; cbxUnit.Text = value; }
+        }
+
+        public string SearchInput
+        {
+            get { return _searchInput; }
+            set { _searchInput = value;}
+        }
+
+
         public frmInventory()
         {
             InitializeComponent();
             inventoryService = new InventoryService();
         }
 
-        // Load the Inventory table
         private void frmInventory_Load(object sender, EventArgs e)
         {
+            LockTextBox();
+
+            btnConfirm.Hide();
+
             dgvInventory.AutoGenerateColumns = false;
             dgvInventory.Columns.Clear();
 
@@ -50,229 +84,218 @@ namespace FoodiePointManagementSystem
 
             dgvInventory.DataSource = inventoryService.GetAllInventory();
             dgvInventory.Refresh();
-
-            btnReturn.Hide();
         }
 
         private void btnAddIngredient_Click(object sender, EventArgs e)
         {
-            ingredientID = tbxIngredientID.Text;
-            ingredientName = tbxIngredient.Text;
-            unit = cbxUnit.Text;
+            btnConfirm.Show();
+            action = 1; UnlockTextBox(action);
 
-            // 检测Quantity的格式以及是否大于0
-            if (!float.TryParse(tbxQuantity.Text, out quantityInStock) || quantityInStock <= 0.0)
-            {
-                MessageBox.Show("Please enter a valid quantity.");
-                return;
-            }
+            string newId = GetNextIngredientId();
+            tbxIngredientID.Text = newId;
+        }
 
-            // 检测是否有空字段
-            if (ingredientID == "" || ingredientName == "" || unit == "")
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-
-            // 检测ID是否已经存在 (返回 true，表示数据库中已经存在这个IngredientID)
-            if (inventoryService.DetectQuery(ingredientID))
-            {
-                MessageBox.Show($"Ingredient ID: {ingredientID} already exists.");
-                return;
-            }
-
-            // 添加Ingredient到Inventory表
-            bool isAdded = inventoryService.AddIngredient(ingredientID, ingredientName, quantityInStock, unit);
-            if (isAdded)
-            {
-                MessageBox.Show($"{ingredientName} is succesfully added into the inventory!");
-
-                dgvInventory.DataSource = inventoryService.GetAllInventory();
-                dgvInventory.Refresh();
-
-                tbxIngredientID.Clear();
-                tbxIngredient.Clear();
-                tbxQuantity.Clear();
-                cbxUnit.ResetText();
-                tbxSearchInput.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Ingredient failed to add!");
-                return;
-            }
+        private void btnEditIngredient_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            action = 2; UnlockTextBox(action);
         }
 
         private void btnDeleteIngredient_Click(object sender, EventArgs e)
         {
-            ingredientID = tbxIngredientID.Text;
-
-            // 检测ID是否为空
-            if (ingredientID == "")
-            {
-                MessageBox.Show("Please fill in the Ingredient ID.");
-                return;
-            }
-
-            // 检测ID是否存在于数据库中 (返回 false，表示数据库中不存在这个IngredientID)
-            if (!inventoryService.DetectQuery(ingredientID))
-            {
-                MessageBox.Show($"Ingredient ID: {ingredientID} doe not exists.");
-                return;
-            }
-
-            // 删除Ingredient
-            bool isDeleted = inventoryService.DeleteIngredient(ingredientID);
-            if (isDeleted)
-            {
-                MessageBox.Show($"{ingredientID} is successfully delete from inventory.");
-
-                dgvInventory.DataSource = inventoryService.GetAllInventory();
-                dgvInventory.Refresh();
-
-                tbxIngredientID.Clear();
-                tbxIngredient.Clear();
-                tbxQuantity.Clear();
-                cbxUnit.ResetText();
-                tbxSearchInput.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Ingredient failed to delete!");
-                return;
-            }
-        }
-
-
-        private void btnEditIngredient_Click(object sender, EventArgs e)
-        {
-            ingredientID = tbxIngredientID.Text;
-            ingredientName = tbxIngredient.Text;
-            unit = cbxUnit.Text;
-
-            // 检测ID是否为空
-            if (string.IsNullOrEmpty(ingredientID))
-            {
-                MessageBox.Show("Please enter Ingredient ID.");
-                return;
-            }
-
-            // 检测ID是否存在于数据库中
-            if (!inventoryService.DetectQuery(ingredientID))
-            {
-                MessageBox.Show($"Ingredient ID: {ingredientID} does not exist.");
-                return;
-            }
-
-            // 设置变量来储存旧数据
-            string pre_ingredientName = "";
-            float pre_quantityInStock = 0;
-            string pre_unit = "";
-
-            // 查找DataGridView来找到对应的IngredientID，然后获取旧数据
-            foreach (DataGridViewRow row in dgvInventory.Rows)
-            {
-                if (row.Cells["IngredientID"].Value.ToString() == ingredientID)
-                {
-                    pre_ingredientName = row.Cells["IngredientName"].Value.ToString();
-                    pre_quantityInStock = float.Parse(row.Cells["QuantityInStock"].Value.ToString());
-                    pre_unit = row.Cells["Unit"].Value.ToString();
-                    break;
-                }
-            }
-
-            // 检测Quantity的格式以及是否大于0 (仅在用户有输入时才检测)
-            if (!string.IsNullOrEmpty(tbxQuantity.Text))
-            {
-                if (!float.TryParse(tbxQuantity.Text, out quantityInStock) || quantityInStock <= 0.0)
-                {
-                    MessageBox.Show("Please enter a valid quantity.");
-                    return;
-                }
-            }
-            else
-            {
-                quantityInStock = pre_quantityInStock; // 如果没有输入，就保留旧数据
-            }
-
-            // 检测是否有数据被修改
-            int changedFields = 0;
-            if (!string.IsNullOrEmpty(ingredientName) && ingredientName != pre_ingredientName)
-            {
-                pre_ingredientName = ingredientName;
-                changedFields++;
-            }
-            if (quantityInStock != pre_quantityInStock)
-            {
-                pre_quantityInStock = quantityInStock;
-                changedFields++;
-            }
-            if(!string.IsNullOrEmpty(unit) && unit != pre_unit)
-            {
-                pre_unit = unit;
-                changedFields++;
-            }
-
-            // 至少需要修改一个数据
-            if(changedFields < 1)
-            {
-                MessageBox.Show("Please modify at least one field.");
-                return;
-            }
-
-            // 执行修改
-            bool isEdited = inventoryService.EditIngredient(ingredientID, pre_ingredientName, pre_quantityInStock, pre_unit);
-            if (isEdited)
-            {
-                MessageBox.Show($"Details of {ingredientID} is successfully edited.");
-                dgvInventory.DataSource = inventoryService.GetAllInventory();
-                dgvInventory.Refresh();
-
-                tbxIngredientID.Clear();
-                tbxIngredient.Clear();
-                tbxQuantity.Clear();
-                cbxUnit.ResetText();
-                tbxSearchInput.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Order status failed to edit!");
-                return;
-            }
+            btnConfirm.Show();
+            action = 3; UnlockTextBox(action);
         }
 
         private void btnSearchIngredient_Click(object sender, EventArgs e)
         {
-            string searchInput = tbxSearchInput.Text;
+            SearchInput = tbxSearchInput.Text;
 
-            // 检测是否有输入
-            if (searchInput == "")
+            if (string.IsNullOrEmpty(SearchInput))
             {
-                MessageBox.Show("Please enter the search input.");
+                MessageBox.Show("Please enter something on search bar.");
                 return;
             }
 
-            // 搜索Ingredient
-            DataTable searchResult = inventoryService.SearchIngredient(searchInput);
+            DataTable searchResult = inventoryService.SearchIngredient(SearchInput);
 
-            // 检测是否有结果
             if (searchResult.Rows.Count > 0)
             {
-                dgvInventory.DataSource = inventoryService.SearchIngredient(searchInput);
+                dgvInventory.DataSource = inventoryService.SearchIngredient(SearchInput);
                 dgvInventory.Refresh();
                 btnReturn.Show();
 
-                tbxIngredientID.Clear();
-                tbxIngredient.Clear();
-                tbxQuantity.Clear();
-                cbxUnit.ResetText();
                 tbxSearchInput.Clear();
             }
             else
             {
-                MessageBox.Show("No result found.");
+                MessageBox.Show("No ingredient found.");
                 return;
+            }
+        }
 
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            if (action == 1)
+            {
+                IngredientID = tbxIngredientID.Text;
+                IngredientName = tbxIngredient.Text;
+                Unit = cbxUnit.Text;
+
+                // Validate quantity input.
+                // If not valid, show message box and return, else assign value to QuantityInStock (Global variable)
+                if (!float.TryParse(tbxQuantity.Text, out float quantityInStock))
+                {
+                    MessageBox.Show("Please enter quantity in the correct format.");
+                    return;
+                }
+                QuantityInStock = quantityInStock;
+
+                if (string.IsNullOrEmpty(IngredientID) || string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
+
+                if (inventoryService.DetectID(IngredientID))
+                {
+                    MessageBox.Show("Ingredient ID already exists. Please change Ingredient ID.");
+                    return;
+                }
+
+                bool isAdded = inventoryService.AddIngredient(IngredientID, IngredientName, quantityInStock, Unit);
+                if (isAdded)
+                {
+                    MessageBox.Show($"{IngredientName} is successfully added into the inventory!");
+                    dgvInventory.DataSource = inventoryService.GetAllInventory();
+                    dgvInventory.Refresh();
+
+                    ClearAllInput();
+                    LockTextBox();
+                }
+                else
+                {
+                    MessageBox.Show("Ingredient failed to add!");
+                }
+            }
+
+
+            else if (action == 2)
+            {
+                IngredientID = tbxIngredientID.Text;
+                IngredientName = tbxIngredient.Text;
+                Unit = cbxUnit.Text;
+
+                if (string.IsNullOrEmpty(IngredientID))
+                {
+                    MessageBox.Show("Please enter Ingredient ID");
+                    return;
+                }
+
+                if (!inventoryService.DetectID(IngredientID))
+                {
+                    MessageBox.Show("Ingredient ID does not exists. Please change Ingredient ID.");
+                    return;
+                }
+
+                string store_IngredientName = "";
+                float store_QuantityInStock = 0;
+                string store_Unit = "";
+
+                foreach (DataGridViewRow row in dgvInventory.Rows)
+                {
+                    if (row.Cells["IngredientID"].Value.ToString() == IngredientID)
+                    {
+                        store_IngredientName = row.Cells["IngredientName"].Value.ToString();
+                        store_QuantityInStock = float.Parse(row.Cells["QuantityInStock"].Value.ToString());
+                        store_Unit = row.Cells["Unit"].Value.ToString();
+                        break;
+                    }
+                }
+
+                float quantityInStock = store_QuantityInStock;
+                if (!string.IsNullOrEmpty(tbxQuantity.Text))
+                {
+                    if (!float.TryParse(tbxQuantity.Text, out quantityInStock) || quantityInStock <= 0.0)
+                    {
+                        MessageBox.Show("Please enter a valid quantity.");
+                        return;
+                    }
+                }
+                QuantityInStock = quantityInStock; // Assign value to global variable
+
+
+                int changedFields = 0;
+                if (!string.IsNullOrEmpty(IngredientName) && IngredientName != store_IngredientName)
+                {
+                    store_IngredientName = IngredientName;
+                    changedFields++;
+                }
+                if (quantityInStock != store_QuantityInStock)
+                {
+                    store_QuantityInStock = quantityInStock;
+                    changedFields++;
+                }
+                if (!string.IsNullOrEmpty(Unit) && Unit != store_Unit)
+                {
+                    store_Unit = Unit;
+                    changedFields++;
+                }
+
+                if (changedFields < 1)
+                {
+                    MessageBox.Show("Please modify at least one field.");
+                    return;
+                }
+
+                bool isEdited = inventoryService.EditIngredient(IngredientID, store_IngredientName, store_QuantityInStock, store_Unit);
+                if (isEdited)
+                {
+                    MessageBox.Show($"Details of {IngredientID} is successfully edited.");
+                    dgvInventory.DataSource = inventoryService.GetAllInventory();
+                    dgvInventory.Refresh();
+
+                    ClearAllInput();
+                    LockTextBox();
+                }
+                else
+                {
+                    MessageBox.Show("Ingredient failed to edit!");
+                    return;
+                }
+
+            }
+
+            else if (action == 3)
+            {
+                //ingredientID = tbxIngredientID.Text;
+
+                if (string.IsNullOrEmpty(IngredientID))
+                {
+                    MessageBox.Show("Please enter Ingredient ID.");
+                    return;
+                }
+
+                if (!inventoryService.DetectID(IngredientID))
+                {
+                    MessageBox.Show("Ingredient ID not exists. Please change Ingredient ID.");
+                    return;
+                }
+
+                bool isDeleted = inventoryService.DeleteIngredient(IngredientID);
+                if (isDeleted)
+                {
+                    MessageBox.Show("Ingredient is successfully deleted.");
+                    dgvInventory.DataSource = inventoryService.GetAllInventory();
+                    dgvInventory.Refresh();
+
+                    ClearAllInput();
+                    LockTextBox();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete ingredient.");
+                }
             }
         }
 
@@ -280,10 +303,80 @@ namespace FoodiePointManagementSystem
         {
             dgvInventory.DataSource = inventoryService.GetAllInventory();
             dgvInventory.Refresh();
-
             MessageBox.Show("Inventory list is returned!");
-            btnReturn.Hide();
         }
+
+        private void ClearAllInput()
+        {
+            tbxIngredientID.Clear();
+            tbxIngredient.Clear();
+            tbxQuantity.Clear();
+            cbxUnit.ResetText();
+            tbxSearchInput.Clear();
+        }
+
+        private void LockTextBox()
+        {
+            tbxIngredientID.ReadOnly = true;
+            tbxIngredient.ReadOnly = true;
+            tbxQuantity.ReadOnly = true;
+            cbxUnit.Enabled = false;
+
+            tbxIngredientID.Text = "ING";
+            tbxIngredientID.SelectionStart = tbxIngredientID.Text.Length;
+        }
+
+        private void UnlockTextBox(int action)
+        {
+            LockTextBox();
+
+            switch(action)
+            {
+                case 1: 
+                    tbxIngredientID.ReadOnly = false;
+                    tbxIngredient.ReadOnly = false;
+                    tbxQuantity.ReadOnly = false;
+                    cbxUnit.Enabled = true;
+                    break;
+
+                case 2:
+                    tbxIngredientID.ReadOnly = false;
+                    tbxIngredient.ReadOnly = false;
+                    tbxQuantity.ReadOnly = false;
+                    cbxUnit.Enabled = true;
+                    break;
+
+                case 3:
+                    tbxIngredientID.ReadOnly = false;
+                    break;
+            }     
+        }
+
+        private string GetNextIngredientId()
+        {
+            string prefix = "ING";
+            int newNumber = 1;
+
+            if (dgvInventory.Rows.Count > 0)
+            {
+                var lastRow = dgvInventory.Rows[dgvInventory.Rows.Count - 2];
+                if (lastRow.Cells[0].Value != null)
+                {
+                    string lastId = lastRow.Cells[0].Value.ToString();
+
+                    if (lastId.StartsWith(prefix))
+                    {
+                        string numberPart = lastId.Substring(prefix.Length);
+                        if(int.TryParse(numberPart, out int lastNumber))
+                        {
+                            newNumber = lastNumber + 1;
+                        }
+                    }
+                }
+            }
+            return $"{prefix}{newNumber:D2}" ;
+        }
+
 
         private void btnInventoryToChef_Click(object sender, EventArgs e)
         {

@@ -27,7 +27,7 @@ namespace FoodiePointManagementSystem.Presenter
             return dbHelper.ExecuteQuery(query);
         }
 
-        public bool DetectQuery(string ingredientID)
+        public bool DetectID(string ingredientID)
         {
             string query = $"SELECT COUNT (*) FROM Inventory WHERE IngredientID = '{ingredientID}' ";
             DataTable dt =  dbHelper.ExecuteQuery(query);
@@ -61,7 +61,7 @@ namespace FoodiePointManagementSystem.Presenter
 
         public DataTable SearchIngredient(string searchInput)
         {
-            string query = $"SELECT * FROM Inventory WHERE IngredientID LIKE '{searchInput}' OR IngredientName LIKE '{searchInput}' OR QuantityInStock LIKE '{searchInput}' OR Unit LIKE '{searchInput}' ";
+            string query = $"SELECT * FROM Inventory WHERE IngredientID LIKE '%{searchInput}%' OR IngredientName LIKE '%{searchInput}%' OR QuantityInStock LIKE '%{searchInput}%' OR Unit LIKE '%{searchInput}%' ";
             return dbHelper.ExecuteQuery(query);
         }
     }
