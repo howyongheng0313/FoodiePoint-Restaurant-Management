@@ -47,5 +47,15 @@ namespace FoodiePointManagementSystem
             frmChefProfile.Show();
             this.Hide();
         }
+
+        private void btnAddIngredient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInventory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
