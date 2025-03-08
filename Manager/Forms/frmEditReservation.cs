@@ -94,5 +94,24 @@ namespace FoodieUI
         {
             bt.Profile();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCmbBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int month = 0;
+            string monthname = monthCmbBox.Text;
+            DateTime date = DateTime.ParseExact(monthname, "MMMM", System.Globalization.CultureInfo.InvariantCulture);
+            month = date.Month;
+            db.FilterMonth(dataGridView1, "Reservations", month);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            db.LoadData(dataGridView1, "Reservations");
+        }
     }
 }

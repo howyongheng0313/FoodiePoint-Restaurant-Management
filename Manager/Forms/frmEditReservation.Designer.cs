@@ -61,6 +61,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.monthCmbBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -102,6 +105,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
+            this.splitContainer1.Panel2.Controls.Add(this.monthCmbBox);
+            this.splitContainer1.Panel2.Controls.Add(this.label10);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.rsStatusCmb);
             this.splitContainer1.Panel2.Controls.Add(this.rsTypetxt);
@@ -433,6 +439,52 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Welcome, Mr. David";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(520, 347);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(93, 25);
+            this.button4.TabIndex = 47;
+            this.button4.Text = "Clear Filter";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // monthCmbBox
+            // 
+            this.monthCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthCmbBox.FormattingEnabled = true;
+            this.monthCmbBox.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.monthCmbBox.Location = new System.Drawing.Point(520, 320);
+            this.monthCmbBox.Name = "monthCmbBox";
+            this.monthCmbBox.Size = new System.Drawing.Size(93, 21);
+            this.monthCmbBox.TabIndex = 46;
+            this.monthCmbBox.SelectedIndexChanged += new System.EventHandler(this.monthCmbBox_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(517, 299);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 18);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Filter Month";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // frmReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,5 +540,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox monthCmbBox;
+        private System.Windows.Forms.Label label10;
     }
 }
