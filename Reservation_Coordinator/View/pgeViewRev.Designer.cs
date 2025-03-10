@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllRev = new System.Windows.Forms.DataGridView();
             this.cmbRevType = new System.Windows.Forms.ComboBox();
             this.txtHall = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.chkPending = new System.Windows.Forms.CheckBox();
             this.btnNotice = new System.Windows.Forms.Button();
-            this.ReservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReservationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HallName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReservationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReservationStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllRev)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,22 +50,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllRev.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllRev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllRev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllRev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllRev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ReservationID,
-            this.Username,
-            this.ReservationType,
-            this.HallName,
-            this.ReservationDate,
-            this.ReservationStatus});
             this.dgvAllRev.EnableHeadersVisualStyles = false;
             this.dgvAllRev.Location = new System.Drawing.Point(15, 110);
             this.dgvAllRev.Margin = new System.Windows.Forms.Padding(15);
@@ -131,18 +118,6 @@
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // chkPending
-            // 
-            this.chkPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkPending.AutoSize = true;
-            this.chkPending.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPending.Location = new System.Drawing.Point(811, 70);
-            this.chkPending.Name = "chkPending";
-            this.chkPending.Size = new System.Drawing.Size(105, 32);
-            this.chkPending.TabIndex = 6;
-            this.chkPending.Text = "Pending";
-            this.chkPending.UseVisualStyleBackColor = true;
-            // 
             // btnNotice
             // 
             this.btnNotice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,61 +132,29 @@
             this.btnNotice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNotice.UseVisualStyleBackColor = true;
             // 
-            // ReservationID
+            // cmbStatus
             // 
-            this.ReservationID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReservationID.HeaderText = "Reservation ID";
-            this.ReservationID.MinimumWidth = 6;
-            this.ReservationID.Name = "ReservationID";
-            this.ReservationID.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Username.HeaderText = "Customer";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // ReservationType
-            // 
-            this.ReservationType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReservationType.HeaderText = "Reservation Type";
-            this.ReservationType.MinimumWidth = 6;
-            this.ReservationType.Name = "ReservationType";
-            this.ReservationType.ReadOnly = true;
-            // 
-            // HallName
-            // 
-            this.HallName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HallName.HeaderText = "Hall";
-            this.HallName.MinimumWidth = 6;
-            this.HallName.Name = "HallName";
-            this.HallName.ReadOnly = true;
-            // 
-            // ReservationDate
-            // 
-            this.ReservationDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReservationDate.HeaderText = "Date";
-            this.ReservationDate.MinimumWidth = 6;
-            this.ReservationDate.Name = "ReservationDate";
-            this.ReservationDate.ReadOnly = true;
-            // 
-            // ReservationStatus
-            // 
-            this.ReservationStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReservationStatus.HeaderText = "Status";
-            this.ReservationStatus.MinimumWidth = 6;
-            this.ReservationStatus.Name = "ReservationStatus";
-            this.ReservationStatus.ReadOnly = true;
+            this.cmbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Comfirm",
+            "Complete"});
+            this.cmbStatus.Location = new System.Drawing.Point(761, 69);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbStatus.Size = new System.Drawing.Size(155, 31);
+            this.cmbStatus.TabIndex = 8;
             // 
             // pgeViewRev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.btnNotice);
-            this.Controls.Add(this.chkPending);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtCustomer);
@@ -222,6 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "pgeViewRev";
             this.Size = new System.Drawing.Size(931, 655);
+            this.Load += new System.EventHandler(this.pgeViewRev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllRev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,13 +180,7 @@
         private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.CheckBox chkPending;
         private System.Windows.Forms.Button btnNotice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HallName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationStatus;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }
