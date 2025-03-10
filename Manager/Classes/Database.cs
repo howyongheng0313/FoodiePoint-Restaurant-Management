@@ -14,7 +14,8 @@ namespace FoodieUI
         private string connectionString;
         public Database()
         {
-            connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDb.mdf\"; Integrated Security = True\r\n";
+            //connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"C:\\Users\\User\\OneDrive - Asia Pacific University\\Manager\\Manager\\FoodieDb.mdf\"; Integrated Security = True\r\n";
+            connectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
         }
         public void LoadData(DataGridView dataGridView, string x)
         {
