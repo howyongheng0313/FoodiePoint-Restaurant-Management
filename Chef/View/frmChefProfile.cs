@@ -17,6 +17,11 @@ namespace FoodiePointManagementSystem
             InitializeComponent();
         }
 
+        private void frmChefProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnProfileToChef_Click(object sender, EventArgs e)
         {
             frmChef frmChef = new frmChef();
@@ -26,7 +31,7 @@ namespace FoodiePointManagementSystem
 
         private void btnProfileToOrder_Click(object sender, EventArgs e)
         {
-            frmOrder frmOrder = new frmOrder();
+            frmOrderPage frmOrder = new frmOrderPage();
             frmOrder.Show();
             this.Hide();
         }
@@ -36,6 +41,11 @@ namespace FoodiePointManagementSystem
             frmInventory frmInventory = new frmInventory();
             frmInventory.Show();
             this.Hide();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
