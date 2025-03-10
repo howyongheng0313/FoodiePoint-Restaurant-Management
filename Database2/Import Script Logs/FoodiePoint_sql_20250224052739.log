@@ -1,0 +1,13 @@
+2/24/2025 1:27:39 PM	This log contains information about the import operation of the script 'FoodiePoint.sql' into project 'Database2' on computer 'LAPTOP-6GP70J07' by user'User.
+2/24/2025 1:27:39 PM	Started importing file: C:\Users\User\Downloads\FoodiePoint.sql 
+2/24/2025 1:27:39 PM	File name C:\Users\User\Downloads\FoodiePoint.sql (size: 31280)
+2/24/2025 1:27:39 PM	Parsing import script
+2/24/2025 1:27:39 PM	Total number of batches in script: 94
+2/24/2025 1:27:39 PM	Total number of statements in script: 27
+2/24/2025 1:27:39 PM	The script was successfully imported into the project.
+2/24/2025 1:27:39 PM	Analyzing schema objects...
+2/24/2025 1:27:39 PM	Scanning project for duplicate elements
+2/24/2025 1:27:39 PM	Finished duplicate element processing
+2/24/2025 1:27:40 PM	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+2/24/2025 1:27:40 PM	A summary of the import was saved to the following location: C:\Users\User\OneDrive - Asia Pacific University\Manager\Database2\Import Script Logs\FoodiePoint_sql_20250224052739.log
+2/24/2025 1:27:40 PM	Click Finish to continue...
