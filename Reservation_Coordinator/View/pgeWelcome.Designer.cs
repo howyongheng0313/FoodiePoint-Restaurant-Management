@@ -35,10 +35,10 @@
             // lblSubTitle
             // 
             this.lblSubTitle.AutoSize = true;
-            this.lblSubTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTitle.Location = new System.Drawing.Point(44, 68);
             this.lblSubTitle.Name = "lblSubTitle";
-            this.lblSubTitle.Size = new System.Drawing.Size(476, 38);
+            this.lblSubTitle.Size = new System.Drawing.Size(465, 38);
             this.lblSubTitle.TabIndex = 0;
             this.lblSubTitle.Text = "You are logged in as a Coordinator.";
             // 

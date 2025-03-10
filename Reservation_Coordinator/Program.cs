@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Reservation_Coordinator
 {
@@ -16,7 +18,7 @@ namespace Reservation_Coordinator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.frmMainTool());
+            Application.Run(new View.frmLogin());
         }
     }
 }
