@@ -9,6 +9,11 @@ namespace Reservation_Coordinator.Model.Item
 {
     public class ItemReservation
     {
+        public static ItemReservation NewReservation()
+        {
+            
+        }
+
         public string ReservationID     { get; }
         public string HallID            { get; set; }
         public string UserID            { get; }
