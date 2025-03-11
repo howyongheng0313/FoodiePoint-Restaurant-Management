@@ -79,15 +79,16 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(13, 73);
+            this.button3.Location = new System.Drawing.Point(10, 80);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
+            this.button3.Size = new System.Drawing.Size(208, 60);
             this.button3.TabIndex = 12;
             this.button3.TabStop = false;
             this.button3.Text = "Menu";
@@ -97,17 +98,20 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button10);
             this.splitContainer1.Panel1.Controls.Add(this.button9);
             this.splitContainer1.Panel1.Controls.Add(this.button8);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
@@ -126,21 +130,23 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 7;
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(13, 235);
+            this.button10.Location = new System.Drawing.Point(10, 260);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(144, 31);
+            this.button10.Size = new System.Drawing.Size(208, 60);
             this.button10.TabIndex = 11;
             this.button10.TabStop = false;
             this.button10.Text = "My Profile";
@@ -149,15 +155,16 @@
             // 
             // button9
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(13, 181);
+            this.button9.Location = new System.Drawing.Point(10, 200);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(144, 31);
+            this.button9.Size = new System.Drawing.Size(208, 60);
             this.button9.TabIndex = 10;
             this.button9.TabStop = false;
             this.button9.Text = "Reservations";
@@ -166,15 +173,16 @@
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(13, 127);
+            this.button8.Location = new System.Drawing.Point(10, 140);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(144, 31);
+            this.button8.Size = new System.Drawing.Size(208, 60);
             this.button8.TabIndex = 9;
             this.button8.TabStop = false;
             this.button8.Text = "Hall Mgmt";
@@ -183,20 +191,25 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 9);
+            this.label2.Location = new System.Drawing.Point(10, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 29);
+            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Size = new System.Drawing.Size(208, 80);
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 375);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(689, 581);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.Size = new System.Drawing.Size(137, 42);
             this.button1.TabIndex = 35;
             this.button1.Text = "Edit Items";
             this.button1.UseVisualStyleBackColor = true;
@@ -208,16 +221,18 @@
             this.itemCategorycmb.Items.AddRange(new object[] {
             "Western",
             "Chinese"});
-            this.itemCategorycmb.Location = new System.Drawing.Point(25, 268);
+            this.itemCategorycmb.Location = new System.Drawing.Point(33, 350);
+            this.itemCategorycmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.itemCategorycmb.Name = "itemCategorycmb";
-            this.itemCategorycmb.Size = new System.Drawing.Size(100, 21);
+            this.itemCategorycmb.Size = new System.Drawing.Size(140, 28);
             this.itemCategorycmb.TabIndex = 34;
             // 
             // itemPricetxt
             // 
-            this.itemPricetxt.Location = new System.Drawing.Point(25, 212);
+            this.itemPricetxt.Location = new System.Drawing.Point(33, 281);
+            this.itemPricetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(100, 20);
+            this.itemPricetxt.Size = new System.Drawing.Size(140, 27);
             this.itemPricetxt.TabIndex = 32;
             // 
             // label6
@@ -226,17 +241,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 241);
+            this.label6.Location = new System.Drawing.Point(29, 317);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 18);
+            this.label6.Size = new System.Drawing.Size(125, 24);
             this.label6.TabIndex = 31;
             this.label6.Text = "Item Category";
             // 
             // itemNametxt
             // 
-            this.itemNametxt.Location = new System.Drawing.Point(25, 156);
+            this.itemNametxt.Location = new System.Drawing.Point(33, 212);
+            this.itemNametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.itemNametxt.Name = "itemNametxt";
-            this.itemNametxt.Size = new System.Drawing.Size(100, 20);
+            this.itemNametxt.Size = new System.Drawing.Size(140, 27);
             this.itemNametxt.TabIndex = 30;
             // 
             // label5
@@ -245,9 +262,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 185);
+            this.label5.Location = new System.Drawing.Point(29, 248);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 18);
+            this.label5.Size = new System.Drawing.Size(93, 24);
             this.label5.TabIndex = 29;
             this.label5.Text = "Item Price";
             // 
@@ -257,18 +275,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 129);
+            this.label4.Location = new System.Drawing.Point(29, 179);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.Size = new System.Drawing.Size(101, 24);
             this.label4.TabIndex = 28;
             this.label4.Text = "Item Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // itemIDtxt
             // 
-            this.itemIDtxt.Location = new System.Drawing.Point(25, 100);
+            this.itemIDtxt.Location = new System.Drawing.Point(33, 143);
+            this.itemIDtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.itemIDtxt.Name = "itemIDtxt";
-            this.itemIDtxt.Size = new System.Drawing.Size(100, 20);
+            this.itemIDtxt.Size = new System.Drawing.Size(140, 27);
             this.itemIDtxt.TabIndex = 27;
             // 
             // label7
@@ -277,17 +297,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 73);
+            this.label7.Location = new System.Drawing.Point(29, 110);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 18);
+            this.label7.Size = new System.Drawing.Size(67, 24);
             this.label7.TabIndex = 26;
             this.label7.Text = "Item ID";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(32, 335);
+            this.button2.Location = new System.Drawing.Point(33, 432);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.Size = new System.Drawing.Size(140, 42);
             this.button2.TabIndex = 24;
             this.button2.Text = "Add Item";
             this.button2.UseVisualStyleBackColor = true;
@@ -299,7 +321,11 @@
             this.dataGridViewMenu.AllowUserToDeleteRows = false;
             this.dataGridViewMenu.AllowUserToResizeColumns = false;
             this.dataGridViewMenu.AllowUserToResizeRows = false;
+            this.dataGridViewMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewMenu.AutoGenerateColumns = false;
+            this.dataGridViewMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -307,11 +333,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataGridViewMenu.DataSource = this.menuBindingSource2;
-            this.dataGridViewMenu.Location = new System.Drawing.Point(169, 73);
+            this.dataGridViewMenu.Location = new System.Drawing.Point(206, 90);
+            this.dataGridViewMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewMenu.MultiSelect = false;
             this.dataGridViewMenu.Name = "dataGridViewMenu";
             this.dataGridViewMenu.ReadOnly = true;
-            this.dataGridViewMenu.Size = new System.Drawing.Size(444, 296);
+            this.dataGridViewMenu.RowHeadersVisible = false;
+            this.dataGridViewMenu.RowHeadersWidth = 51;
+            this.dataGridViewMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMenu.Size = new System.Drawing.Size(620, 483);
             this.dataGridViewMenu.TabIndex = 17;
             this.dataGridViewMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuItem_CellClick);
             this.dataGridViewMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMenu_CellContentClick);
@@ -320,6 +350,7 @@
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ItemID";
             this.dataGridViewTextBoxColumn1.HeaderText = "ItemID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -327,6 +358,7 @@
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ItemName";
             this.dataGridViewTextBoxColumn2.HeaderText = "ItemName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
@@ -334,6 +366,7 @@
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "ItemPrice";
             this.dataGridViewTextBoxColumn3.HeaderText = "ItemPrice";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
@@ -341,6 +374,7 @@
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "ItemCategory";
             this.dataGridViewTextBoxColumn4.HeaderText = "ItemCategory";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
@@ -359,20 +393,22 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 38);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 47);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Main Menu";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.Size = new System.Drawing.Size(267, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -396,16 +432,19 @@
             // 
             // Main_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Main_Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Main_Menu";
             this.Load += new System.EventHandler(this.Main_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

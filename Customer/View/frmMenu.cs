@@ -41,7 +41,8 @@ namespace Customer
 
         private void LoadTableData(string searchValue)
         {
-            string query = "SELECT * FROM Menu"; // Change "Customers" to your table name
+            //string query = "SELECT * FROM Menu"; // Change "Customers" to your table name //Kuek-Customer
+            string query = "SELECT ItemID, ItemName, ItemPrice, ItemCategory FROM Menu";    //Kuek-Customer
 
             if (!string.IsNullOrEmpty(searchValue))
             {

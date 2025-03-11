@@ -91,8 +91,9 @@ namespace FoodiePointManagementSystem
             btnConfirm.Show();
             action = 1; UnlockTextBox(action);
 
-            string newId = GetNextIngredientId();
-            tbxIngredientID.Text = newId;
+            //string newId = GetNextIngredientId(); //Kuek-Chef
+            //tbxIngredientID.Text = newId;         //Kuek-Chef
+            tbxIngredientID.Text = string.Empty;    //Kuek-Chef
         }
 
         private void btnEditIngredient_Click(object sender, EventArgs e)
@@ -138,7 +139,7 @@ namespace FoodiePointManagementSystem
         {
             if (action == 1)
             {
-                IngredientID = tbxIngredientID.Text;
+                //IngredientID = tbxIngredientID.Text;  //Kuek-Chef
                 IngredientName = tbxIngredient.Text;
                 Unit = cbxUnit.Text;
 
@@ -151,19 +152,21 @@ namespace FoodiePointManagementSystem
                 }
                 QuantityInStock = quantityInStock;
 
-                if (string.IsNullOrEmpty(IngredientID) || string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit))
-                {
+                //if (string.IsNullOrEmpty(IngredientID) || string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit)) //Kuek-Chef
+                if (string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit))   //Kuek-Chef
+                    {
                     MessageBox.Show("Please fill in all fields.");
                     return;
                 }
 
-                if (inventoryService.DetectID(IngredientID))
-                {
-                    MessageBox.Show("Ingredient ID already exists. Please change Ingredient ID.");
-                    return;
-                }
+                //if (inventoryService.DetectID(IngredientID))                                      //Kuek-Chef
+                //{
+                //    MessageBox.Show("Ingredient ID already exists. Please change Ingredient ID.");
+                //    return;
+                //}
 
-                bool isAdded = inventoryService.AddIngredient(IngredientID, IngredientName, quantityInStock, Unit);
+                //bool isAdded = inventoryService.AddIngredient(IngredientID, IngredientName, quantityInStock, Unit);   //Kuek-Chef
+                bool isAdded = inventoryService.AddIngredient(IngredientName, quantityInStock, Unit);                   //Kuek-Chef
                 if (isAdded)
                 {
                     MessageBox.Show($"{IngredientName} is successfully added into the inventory!");
@@ -269,6 +272,7 @@ namespace FoodiePointManagementSystem
             else if (action == 3)
             {
                 //ingredientID = tbxIngredientID.Text;
+                IngredientID = tbxIngredientID.Text;    //Kuek-Chef
 
                 if (string.IsNullOrEmpty(IngredientID))
                 {
@@ -333,7 +337,7 @@ namespace FoodiePointManagementSystem
             switch(action)
             {
                 case 1: 
-                    tbxIngredientID.ReadOnly = false;
+                    //tbxIngredientID.ReadOnly = false; //Kuek-Chef
                     tbxIngredient.ReadOnly = false;
                     tbxQuantity.ReadOnly = false;
                     cbxUnit.Enabled = true;

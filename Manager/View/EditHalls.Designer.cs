@@ -93,9 +93,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(421, 404);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(580, 616);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
+            this.button2.Size = new System.Drawing.Size(124, 42);
             this.button2.TabIndex = 25;
             this.button2.Text = "Save Changes";
             this.button2.UseVisualStyleBackColor = true;
@@ -104,24 +106,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.Size = new System.Drawing.Size(267, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(13, 73);
+            this.button3.Location = new System.Drawing.Point(10, 80);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
+            this.button3.Size = new System.Drawing.Size(208, 60);
             this.button3.TabIndex = 12;
             this.button3.TabStop = false;
             this.button3.Text = "Menu";
@@ -129,15 +133,16 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(13, 235);
+            this.button10.Location = new System.Drawing.Point(10, 260);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(144, 31);
+            this.button10.Size = new System.Drawing.Size(208, 60);
             this.button10.TabIndex = 11;
             this.button10.TabStop = false;
             this.button10.Text = "My Profile";
@@ -146,17 +151,20 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.button10);
             this.splitContainer1.Panel1.Controls.Add(this.button9);
             this.splitContainer1.Panel1.Controls.Add(this.button8);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
@@ -177,21 +185,23 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
             // button9
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(13, 181);
+            this.button9.Location = new System.Drawing.Point(10, 200);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(144, 31);
+            this.button9.Size = new System.Drawing.Size(208, 60);
             this.button9.TabIndex = 10;
             this.button9.TabStop = false;
             this.button9.Text = "Reservations";
@@ -199,15 +209,16 @@
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(13, 127);
+            this.button8.Location = new System.Drawing.Point(10, 140);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(144, 31);
+            this.button8.Size = new System.Drawing.Size(208, 60);
             this.button8.TabIndex = 9;
             this.button8.TabStop = false;
             this.button8.Text = "Hall Mgmt";
@@ -215,20 +226,25 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 9);
+            this.label2.Location = new System.Drawing.Point(10, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 29);
+            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Size = new System.Drawing.Size(208, 80);
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 404);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(712, 616);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.Size = new System.Drawing.Size(124, 42);
             this.button1.TabIndex = 53;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -240,7 +256,11 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hallIDDataGridViewTextBoxColumn,
@@ -249,11 +269,14 @@
             this.hallCapacityDataGridViewTextBoxColumn,
             this.availabilityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.hallsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 91);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 239);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(814, 425);
             this.dataGridView1.TabIndex = 52;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -262,138 +285,159 @@
             // 
             this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            this.hallIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hallNameDataGridViewTextBoxColumn
             // 
             this.hallNameDataGridViewTextBoxColumn.DataPropertyName = "HallName";
             this.hallNameDataGridViewTextBoxColumn.HeaderText = "HallName";
+            this.hallNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallNameDataGridViewTextBoxColumn.Name = "hallNameDataGridViewTextBoxColumn";
+            this.hallNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hallPartyTypeDataGridViewTextBoxColumn
             // 
             this.hallPartyTypeDataGridViewTextBoxColumn.DataPropertyName = "HallPartyType";
             this.hallPartyTypeDataGridViewTextBoxColumn.HeaderText = "HallPartyType";
+            this.hallPartyTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallPartyTypeDataGridViewTextBoxColumn.Name = "hallPartyTypeDataGridViewTextBoxColumn";
+            this.hallPartyTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hallCapacityDataGridViewTextBoxColumn
             // 
             this.hallCapacityDataGridViewTextBoxColumn.DataPropertyName = "HallCapacity";
             this.hallCapacityDataGridViewTextBoxColumn.HeaderText = "HallCapacity";
+            this.hallCapacityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallCapacityDataGridViewTextBoxColumn.Name = "hallCapacityDataGridViewTextBoxColumn";
+            this.hallCapacityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // availabilityDataGridViewTextBoxColumn
             // 
             this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
             this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            this.availabilityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // availabilityCmb
             // 
+            this.availabilityCmb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.availabilityCmb.FormattingEnabled = true;
             this.availabilityCmb.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.availabilityCmb.Location = new System.Drawing.Point(439, 337);
+            this.availabilityCmb.Location = new System.Drawing.Point(585, 560);
+            this.availabilityCmb.Margin = new System.Windows.Forms.Padding(4);
             this.availabilityCmb.Name = "availabilityCmb";
-            this.availabilityCmb.Size = new System.Drawing.Size(85, 21);
+            this.availabilityCmb.Size = new System.Drawing.Size(112, 28);
             this.availabilityCmb.TabIndex = 50;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(436, 316);
+            this.label9.Location = new System.Drawing.Point(581, 534);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 18);
+            this.label9.Size = new System.Drawing.Size(96, 24);
             this.label9.TabIndex = 49;
             this.label9.Text = "Availability";
             // 
             // hallCapacityTxt
             // 
-            this.hallCapacityTxt.Location = new System.Drawing.Point(323, 338);
+            this.hallCapacityTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.hallCapacityTxt.Location = new System.Drawing.Point(431, 561);
+            this.hallCapacityTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallCapacityTxt.Name = "hallCapacityTxt";
-            this.hallCapacityTxt.Size = new System.Drawing.Size(91, 20);
+            this.hallCapacityTxt.Size = new System.Drawing.Size(120, 27);
             this.hallCapacityTxt.TabIndex = 47;
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(320, 316);
+            this.label6.Location = new System.Drawing.Point(427, 534);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.Size = new System.Drawing.Size(118, 24);
             this.label6.TabIndex = 45;
             this.label6.Text = "Hall Capacity";
             // 
             // hallPartyTypeTxt
             // 
-            this.hallPartyTypeTxt.Location = new System.Drawing.Point(194, 337);
+            this.hallPartyTypeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.hallPartyTypeTxt.Location = new System.Drawing.Point(259, 560);
+            this.hallPartyTypeTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallPartyTypeTxt.Name = "hallPartyTypeTxt";
-            this.hallPartyTypeTxt.Size = new System.Drawing.Size(104, 20);
+            this.hallPartyTypeTxt.Size = new System.Drawing.Size(137, 27);
             this.hallPartyTypeTxt.TabIndex = 44;
             // 
             // hallNametxt
             // 
-            this.hallNametxt.Location = new System.Drawing.Point(95, 338);
+            this.hallNametxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.hallNametxt.Location = new System.Drawing.Point(127, 561);
+            this.hallNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallNametxt.Name = "hallNametxt";
-            this.hallNametxt.Size = new System.Drawing.Size(74, 20);
+            this.hallNametxt.Size = new System.Drawing.Size(97, 27);
             this.hallNametxt.TabIndex = 43;
             // 
             // hallIdTxt
             // 
-            this.hallIdTxt.Location = new System.Drawing.Point(22, 337);
+            this.hallIdTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.hallIdTxt.Location = new System.Drawing.Point(29, 560);
+            this.hallIdTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallIdTxt.Name = "hallIdTxt";
-            this.hallIdTxt.Size = new System.Drawing.Size(48, 20);
+            this.hallIdTxt.Size = new System.Drawing.Size(63, 27);
             this.hallIdTxt.TabIndex = 42;
             // 
             // userIdLbl
             // 
-            this.userIdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userIdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.userIdLbl.AutoSize = true;
             this.userIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdLbl.Location = new System.Drawing.Point(191, 316);
+            this.userIdLbl.Location = new System.Drawing.Point(255, 534);
+            this.userIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userIdLbl.Name = "userIdLbl";
-            this.userIdLbl.Size = new System.Drawing.Size(107, 18);
+            this.userIdLbl.Size = new System.Drawing.Size(136, 24);
             this.userIdLbl.TabIndex = 41;
             this.userIdLbl.Text = "Hall Party Type";
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 316);
+            this.label4.Location = new System.Drawing.Point(123, 534);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 18);
+            this.label4.Size = new System.Drawing.Size(98, 24);
             this.label4.TabIndex = 40;
             this.label4.Text = "Hall Name";
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 316);
+            this.label7.Location = new System.Drawing.Point(25, 534);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 18);
+            this.label7.Size = new System.Drawing.Size(64, 24);
             this.label7.TabIndex = 39;
             this.label7.Text = "Hall ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 50);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 12;
             this.label3.Text = "Edit Halls";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -423,17 +467,19 @@
             // 
             // EditHalls
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "EditHalls";
             this.Text = "EditHalls";
             this.Load += new System.EventHandler(this.EditHalls_Load);
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

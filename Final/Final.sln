@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chef", "..\Chef\Chef.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager", "..\Manager\Manager.csproj", "{1C2861E6-4605-44C2-842B-1B805AFC1867}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer", "..\Customer\Customer.csproj", "{D982519D-2676-41CD-8B21-1BE742E5856B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservation_Coordinator", "..\Reservation_Coordinator\Reservation_Coordinator.csproj", "{EEE672B1-6F20-4906-9332-ECF265C9734F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1C2861E6-4605-44C2-842B-1B805AFC1867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2861E6-4605-44C2-842B-1B805AFC1867}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C2861E6-4605-44C2-842B-1B805AFC1867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D982519D-2676-41CD-8B21-1BE742E5856B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D982519D-2676-41CD-8B21-1BE742E5856B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D982519D-2676-41CD-8B21-1BE742E5856B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D982519D-2676-41CD-8B21-1BE742E5856B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE672B1-6F20-4906-9332-ECF265C9734F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE672B1-6F20-4906-9332-ECF265C9734F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE672B1-6F20-4906-9332-ECF265C9734F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE672B1-6F20-4906-9332-ECF265C9734F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

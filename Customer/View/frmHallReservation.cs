@@ -28,7 +28,8 @@ namespace Customer
 
         private void LoadTableData(string searchValue)
         {
-            string query = "SELECT * FROM Halls"; // Change "Customers" to your table name
+            //string query = "SELECT * FROM Halls"; // Change "Customers" to your table name                //Kuek-Customer
+            string query = "SELECT HallID, HallName, HallPartyType, HallCapacity, Availability FROM Halls"; //Kuek-Customer
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
