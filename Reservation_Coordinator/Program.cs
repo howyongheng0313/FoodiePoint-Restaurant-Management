@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 
 namespace Reservation_Coordinator
 {
@@ -14,9 +17,12 @@ namespace Reservation_Coordinator
         [STAThread]
         static void Main()
         {
+            string gitRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../../.."));
+            AppDomain.CurrentDomain.SetData("DataDirectory", gitRoot);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new View.frmLogin());
         }
     }
 }
