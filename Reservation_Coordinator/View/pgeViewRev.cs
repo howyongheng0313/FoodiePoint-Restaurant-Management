@@ -49,7 +49,8 @@ namespace Reservation_Coordinator.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //ItemReservation newRev = ItemReservation.NewReservation();
+            ItemReservation newRev = ItemReservation.NewReservation();
+            
         }
     }
 }

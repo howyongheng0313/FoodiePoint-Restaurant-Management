@@ -10,6 +10,7 @@ namespace Reservation_Coordinator.Model.Item
     public class ItemUser
     {
         public static readonly string tb_code = "[dbo].[Users]";
+
         public static ItemUser Login(string usrnm, string paswd)
         {
             var login_cmd = new SqlCommand(

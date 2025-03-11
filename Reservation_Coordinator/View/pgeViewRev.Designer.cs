@@ -136,7 +136,8 @@
             "All",
             "Pending",
             "Confirmed",
-            "Completed"});
+            "Completed",
+            "Rejected"});
             this.cmbStatus.Location = new System.Drawing.Point(761, 69);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
