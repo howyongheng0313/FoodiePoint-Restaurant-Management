@@ -13,7 +13,7 @@ namespace Reservation_Coordinator.View
 {
     public partial class pgeViewRev: UserControl
     {
-        private DgvReservation dgvAllRevHelper;
+        private DgvReservationHelper dgvAllRevHelper;
 
         public pgeViewRev()
         {
@@ -23,7 +23,33 @@ namespace Reservation_Coordinator.View
 
         private void pgeViewRev_Load(object sender, EventArgs e)
         {
-            dgvAllRevHelper = new DgvReservation(dgvAllRev);
+            dgvAllRevHelper = new DgvReservationHelper(dgvAllRev);
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvAllRevHelper.Filter_Status(cmbStatus.Text);
+        }
+
+        private void txtRevID_TextChanged(object sender, EventArgs e)
+        {
+            dgvAllRevHelper.Filter_ID(txtRevID.Text);
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            dgvAllRevHelper.Filter_Name(txtName.Text);
+        }
+
+        private void dgvAllRev_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            dgvAllRev.Rows[e.RowIndex].Cells["Reservation ID"].Value.ToString();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ItemReservation newRev = ItemReservation.NewReservation();
         }
     }
 }
