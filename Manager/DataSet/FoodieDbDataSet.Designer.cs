@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FoodieUI {
+namespace Manager {
     
     
     /// <summary>
@@ -5111,7 +5111,7 @@ namespace FoodieUI {
         }
     }
 }
-namespace FoodieUI.FoodieDbDataSetTableAdapters {
+namespace Manager.FoodieDbDataSetTableAdapters {
     
     
     /// <summary>
@@ -5279,7 +5279,7 @@ SELECT FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5674,7 +5674,7 @@ SELECT HallID, HallName, HallPartyType, HallCapacity, Availability FROM Halls WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6081,7 +6081,7 @@ SELECT IngredientID, IngredientName, QuantityInStock, Unit FROM Inventory WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6486,7 +6486,7 @@ SELECT ItemID, ItemName, ItemPrice, ItemCategory FROM Menu WHERE (ItemID = @Item
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6883,7 +6883,7 @@ SELECT OrderID, ItemID, Quantity FROM OrderItem WHERE (ItemID = @ItemID) AND (Or
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7240,7 +7240,7 @@ SELECT OrderID, UserID, DateTime, OrderStatus FROM Orders WHERE (OrderID = @Orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7617,7 +7617,7 @@ SELECT ItemID, IngredientID, Quantity FROM Recipes WHERE (IngredientID = @Ingred
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7967,7 +7967,7 @@ SELECT RequestID, ReservationID, UserRequest, Reply FROM Requests WHERE (Request
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8351,7 +8351,7 @@ SELECT ReservationID, HallID, UserID, ReservationDate, ReservationType, Reservat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8794,7 +8794,7 @@ SELECT UserID, Username, Password, FullName, Email, Role FROM Users WHERE (UserI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FoodieUI.Properties.Settings.Default.FoodieDbConnectionString;
+            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
