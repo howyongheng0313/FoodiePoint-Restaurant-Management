@@ -51,7 +51,6 @@
             this.lblIngredient = new System.Windows.Forms.Label();
             this.tbxIngredient = new System.Windows.Forms.TextBox();
             this.tbxIngredientID = new System.Windows.Forms.TextBox();
-            this.feedbacksTableAdapter1 = new FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.FeedbacksTableAdapter();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
@@ -334,10 +333,6 @@
             this.tbxIngredientID.Size = new System.Drawing.Size(182, 30);
             this.tbxIngredientID.TabIndex = 1;
             // 
-            // feedbacksTableAdapter1
-            // 
-            this.feedbacksTableAdapter1.ClearBeforeFill = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -394,7 +389,6 @@
         private System.Windows.Forms.Button btnInventoryToOrder;
         private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private FoodiePointDataSetTableAdapters.FeedbacksTableAdapter feedbacksTableAdapter1;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Panel panel2;

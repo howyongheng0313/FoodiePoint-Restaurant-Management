@@ -35,11 +35,6 @@
             this.btnOrderToChef = new System.Windows.Forms.Button();
             this.btnOrderToInventory = new System.Windows.Forms.Button();
             this.btnOrderToProfile = new System.Windows.Forms.Button();
-            this.foodiePointDataSet = new FoodiePointManagementSystem.FoodiePointDataSet();
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersTableAdapter = new FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.OrdersTableAdapter();
-            this.tableAdapterManager = new FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.TableAdapterManager();
-            this.foodiePointDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.btnReturnOrder = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -49,9 +44,6 @@
             this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiePointDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiePointDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -137,40 +129,6 @@
             this.btnOrderToProfile.UseVisualStyleBackColor = true;
             this.btnOrderToProfile.Click += new System.EventHandler(this.btnOrderToProfile_Click);
             // 
-            // foodiePointDataSet
-            // 
-            this.foodiePointDataSet.DataSetName = "FoodiePointDataSet";
-            this.foodiePointDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersBindingSource
-            // 
-            this.ordersBindingSource.DataMember = "Orders";
-            this.ordersBindingSource.DataSource = this.foodiePointDataSet;
-            // 
-            // ordersTableAdapter
-            // 
-            this.ordersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.FeedbacksTableAdapter = null;
-            this.tableAdapterManager.HallsTableAdapter = null;
-            this.tableAdapterManager.InventoryTableAdapter = null;
-            this.tableAdapterManager.MenuTableAdapter = null;
-            this.tableAdapterManager.OrderItemTableAdapter = null;
-            this.tableAdapterManager.OrdersTableAdapter = this.ordersTableAdapter;
-            this.tableAdapterManager.RecipesTableAdapter = null;
-            this.tableAdapterManager.RequestsTableAdapter = null;
-            this.tableAdapterManager.ReservationsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = FoodiePointManagementSystem.FoodiePointDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsersTableAdapter = null;
-            // 
-            // foodiePointDataSetBindingSource
-            // 
-            this.foodiePointDataSetBindingSource.DataSource = this.foodiePointDataSet;
-            this.foodiePointDataSetBindingSource.Position = 0;
-            // 
             // dgvOrders
             // 
             this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -183,7 +141,6 @@
             this.userIDDataGridViewTextBoxColumn,
             this.dateTimeDataGridViewTextBoxColumn,
             this.orderStatusDataGridViewTextBoxColumn});
-            this.dgvOrders.DataSource = this.ordersBindingSource;
             this.dgvOrders.Location = new System.Drawing.Point(32, 26);
             this.dgvOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvOrders.Name = "dgvOrders";
@@ -283,9 +240,6 @@
             this.Text = "Orders Page";
             this.Load += new System.EventHandler(this.frmOrder_Load);
             this.gbxOrder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.foodiePointDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiePointDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -303,11 +257,6 @@
         private System.Windows.Forms.Button btnOrderToChef;
         private System.Windows.Forms.Button btnOrderToInventory;
         private System.Windows.Forms.Button btnOrderToProfile;
-        private FoodiePointDataSet foodiePointDataSet;
-        private System.Windows.Forms.BindingSource ordersBindingSource;
-        private FoodiePointDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
-        private FoodiePointDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource foodiePointDataSetBindingSource;
         private System.Windows.Forms.DataGridView dgvOrders;
         private System.Windows.Forms.Button btnReturnOrder;
         private System.Windows.Forms.SplitContainer splitContainer1;
