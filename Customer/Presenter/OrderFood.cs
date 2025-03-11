@@ -20,17 +20,17 @@ namespace Customer.Presenter
             dbHelper = new DatabaseHelper();
         }
 
-        public DataTable GetAllItem()
-        {
-            string query = "SELECT * FROM Menu";
-            return dbHelper.ExecuteQuery(query);
-        }
+        //public DataTable GetAllItem()
+        //{
+        //    string query = "SELECT * FROM Menu";
+        //    return dbHelper.ExecuteQuery(query);
+        //}
 
-        public DataTable searchItem(string searchItemName)
-        {
-            string query = $"SELECT * FROM Menu WHERE ItemName = '{searchItemName}' " ;
-            return dbHelper.ExecuteQuery(query);
-        }
+        //public DataTable searchItem(string searchItemName)
+        //{
+        //    string query = $"SELECT * FROM Menu WHERE ItemName = '{searchItemName}' " ;
+        //    return dbHelper.ExecuteQuery(query);
+        //}
 
         //public bool addItem()
         //{
@@ -46,8 +46,9 @@ namespace Customer.Presenter
 
         //public bool deleteItem()
         //{
-        //    string query = "DELETE FROM  ";
+        //    string query = "DELETE FROM Menu WHERE ItemName = ";
         //    return;
-        }
+        //}
     }
+}
 

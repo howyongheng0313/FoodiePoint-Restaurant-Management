@@ -22,24 +22,24 @@ namespace Customer.Presenter
         }
 
         // Execute SQL query that returns data in the form of DataTable (SELECT)
-        public DataTable ExecuteQuery(string query)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                DataTable dt = new DataTable();
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    adapter.Fill(dt);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Exception error:" + ex.Message);
-                }
-                return dt;
-            }
-        }
+        //public DataTable ExecuteQuery(string query)
+        //{
+        //    using (SqlConnection conn = new SqlConnection(connectionString))
+        //    {
+        //        DataTable dt = new DataTable();
+        //        try
+        //        {
+        //            conn.Open();
+        //            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+        //            adapter.Fill(dt);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Exception error:" + ex.Message);
+        //        }
+        //        return dt;
+        //    }
+        //}
 
         // Execute SQL query that does not return any data (INSERT, UPDATE, DELETE)
         public bool ExecuteNonQuery(string query)

@@ -37,10 +37,6 @@
             this.Search_btn = new System.Windows.Forms.Button();
             this.search_txt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.foodiepointDbDataSet = new Customer.FoodiepointDbDataSet();
             this.btnViewOrder = new System.Windows.Forms.Button();
@@ -166,43 +162,12 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemIDDataGridViewTextBoxColumn,
-            this.itemNameDataGridViewTextBoxColumn,
-            this.itemPriceDataGridViewTextBoxColumn,
-            this.itemCategoryDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.menuBindingSource6;
             this.dataGridView1.Location = new System.Drawing.Point(3, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(521, 223);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // itemIDDataGridViewTextBoxColumn
-            // 
-            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.HeaderText = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            // 
-            // itemPriceDataGridViewTextBoxColumn
-            // 
-            this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
-            this.itemPriceDataGridViewTextBoxColumn.HeaderText = "ItemPrice";
-            this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
-            // 
-            // itemCategoryDataGridViewTextBoxColumn
-            // 
-            this.itemCategoryDataGridViewTextBoxColumn.DataPropertyName = "ItemCategory";
-            this.itemCategoryDataGridViewTextBoxColumn.HeaderText = "ItemCategory";
-            this.itemCategoryDataGridViewTextBoxColumn.Name = "itemCategoryDataGridViewTextBoxColumn";
             // 
             // menuBindingSource6
             // 
@@ -338,10 +303,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource menuBindingSource3;
         private System.Windows.Forms.BindingSource foodiepointDbDataSetBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemCategoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource menuBindingSource6;
         private System.Windows.Forms.BindingSource menuBindingSource4;
         private System.Windows.Forms.BindingSource menuBindingSource5;

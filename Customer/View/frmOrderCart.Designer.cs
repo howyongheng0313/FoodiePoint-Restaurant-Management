@@ -50,6 +50,8 @@
             this.orderItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.MenuTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,6 +82,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.btnDelete);
             this.splitContainer1.Panel2.Controls.Add(this.btnPay);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
@@ -142,7 +146,7 @@
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDelete.Location = new System.Drawing.Point(14, 371);
+            this.btnDelete.Location = new System.Drawing.Point(55, 372);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(101, 40);
             this.btnDelete.TabIndex = 16;
@@ -240,6 +244,28 @@
             // 
             this.menuTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(14, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 39);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(162, 371);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 39);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // frmOrderCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,5 +315,7 @@
         private Customer.FoodiepointDbDataSet1 foodiepointDbDataSet1;
         private System.Windows.Forms.BindingSource menuBindingSource1;
         private Customer.FoodiepointDbDataSet1TableAdapters.MenuTableAdapter menuTableAdapter1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

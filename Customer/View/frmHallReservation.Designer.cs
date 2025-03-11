@@ -33,26 +33,14 @@
             this.btnHallReservation = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.cbxNumberOfPeople = new System.Windows.Forms.ComboBox();
             this.btnBook = new System.Windows.Forms.Button();
-            this.lblRequests = new System.Windows.Forms.Label();
-            this.rtbxRequest = new System.Windows.Forms.RichTextBox();
-            this.tbxPhoneNo = new System.Windows.Forms.TextBox();
-            this.lblPhoneNo = new System.Windows.Forms.Label();
-            this.tbxLastName = new System.Windows.Forms.TextBox();
-            this.tbxFirstName = new System.Windows.Forms.TextBox();
-            this.tbxTime = new System.Windows.Forms.TextBox();
-            this.tbxDate = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblNumberOfPeople = new System.Windows.Forms.Label();
             this.lblReservation = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -70,21 +58,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.cbxNumberOfPeople);
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.btnBook);
-            this.splitContainer1.Panel2.Controls.Add(this.lblRequests);
-            this.splitContainer1.Panel2.Controls.Add(this.rtbxRequest);
-            this.splitContainer1.Panel2.Controls.Add(this.tbxPhoneNo);
-            this.splitContainer1.Panel2.Controls.Add(this.lblPhoneNo);
-            this.splitContainer1.Panel2.Controls.Add(this.tbxLastName);
-            this.splitContainer1.Panel2.Controls.Add(this.tbxFirstName);
-            this.splitContainer1.Panel2.Controls.Add(this.tbxTime);
-            this.splitContainer1.Panel2.Controls.Add(this.tbxDate);
-            this.splitContainer1.Panel2.Controls.Add(this.lblLastName);
-            this.splitContainer1.Panel2.Controls.Add(this.lblDate);
-            this.splitContainer1.Panel2.Controls.Add(this.lblFirstName);
-            this.splitContainer1.Panel2.Controls.Add(this.lblTime);
-            this.splitContainer1.Panel2.Controls.Add(this.lblNumberOfPeople);
             this.splitContainer1.Panel2.Controls.Add(this.lblReservation);
             this.splitContainer1.Size = new System.Drawing.Size(776, 426);
             this.splitContainer1.SplitterDistance = 230;
@@ -110,7 +85,7 @@
             this.btnHallReservation.Name = "btnHallReservation";
             this.btnHallReservation.Size = new System.Drawing.Size(101, 40);
             this.btnHallReservation.TabIndex = 11;
-            this.btnHallReservation.Text = "Reservation";
+            this.btnHallReservation.Text = "Hall Reservation";
             this.btnHallReservation.UseVisualStyleBackColor = false;
             // 
             // btnProfile
@@ -137,14 +112,6 @@
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
-            // cbxNumberOfPeople
-            // 
-            this.cbxNumberOfPeople.FormattingEnabled = true;
-            this.cbxNumberOfPeople.Location = new System.Drawing.Point(342, 116);
-            this.cbxNumberOfPeople.Name = "cbxNumberOfPeople";
-            this.cbxNumberOfPeople.Size = new System.Drawing.Size(121, 21);
-            this.cbxNumberOfPeople.TabIndex = 14;
-            // 
             // btnBook
             // 
             this.btnBook.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -156,122 +123,24 @@
             this.btnBook.TabIndex = 13;
             this.btnBook.Text = "Book";
             this.btnBook.UseVisualStyleBackColor = false;
-            // 
-            // lblRequests
-            // 
-            this.lblRequests.AutoSize = true;
-            this.lblRequests.Location = new System.Drawing.Point(31, 292);
-            this.lblRequests.Name = "lblRequests";
-            this.lblRequests.Size = new System.Drawing.Size(165, 13);
-            this.lblRequests.TabIndex = 13;
-            this.lblRequests.Text = "Comments / Request **Optional**";
-            // 
-            // rtbxRequest
-            // 
-            this.rtbxRequest.Location = new System.Drawing.Point(31, 327);
-            this.rtbxRequest.Name = "rtbxRequest";
-            this.rtbxRequest.Size = new System.Drawing.Size(353, 65);
-            this.rtbxRequest.TabIndex = 12;
-            this.rtbxRequest.Text = "";
-            // 
-            // tbxPhoneNo
-            // 
-            this.tbxPhoneNo.Location = new System.Drawing.Point(342, 232);
-            this.tbxPhoneNo.Name = "tbxPhoneNo";
-            this.tbxPhoneNo.Size = new System.Drawing.Size(100, 20);
-            this.tbxPhoneNo.TabIndex = 11;
-            this.tbxPhoneNo.Text = "+60";
-            // 
-            // lblPhoneNo
-            // 
-            this.lblPhoneNo.AutoSize = true;
-            this.lblPhoneNo.Location = new System.Drawing.Point(339, 191);
-            this.lblPhoneNo.Name = "lblPhoneNo";
-            this.lblPhoneNo.Size = new System.Drawing.Size(58, 13);
-            this.lblPhoneNo.TabIndex = 10;
-            this.lblPhoneNo.Text = "Phone No.";
-            // 
-            // tbxLastName
-            // 
-            this.tbxLastName.Location = new System.Drawing.Point(183, 232);
-            this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(100, 20);
-            this.tbxLastName.TabIndex = 9;
-            // 
-            // tbxFirstName
-            // 
-            this.tbxFirstName.Location = new System.Drawing.Point(31, 232);
-            this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(100, 20);
-            this.tbxFirstName.TabIndex = 8;
-            // 
-            // tbxTime
-            // 
-            this.tbxTime.Location = new System.Drawing.Point(183, 118);
-            this.tbxTime.Name = "tbxTime";
-            this.tbxTime.Size = new System.Drawing.Size(100, 20);
-            this.tbxTime.TabIndex = 7;
-            // 
-            // tbxDate
-            // 
-            this.tbxDate.Location = new System.Drawing.Point(31, 118);
-            this.tbxDate.Name = "tbxDate";
-            this.tbxDate.Size = new System.Drawing.Size(100, 20);
-            this.tbxDate.TabIndex = 6;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(180, 191);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(62, 13);
-            this.lblLastName.TabIndex = 5;
-            this.lblLastName.Text = "Last Name*";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(28, 79);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(34, 13);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "Date*";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(28, 191);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(61, 13);
-            this.lblFirstName.TabIndex = 3;
-            this.lblFirstName.Text = "First Name*";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(180, 79);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(34, 13);
-            this.lblTime.TabIndex = 2;
-            this.lblTime.Text = "Time*";
-            // 
-            // lblNumberOfPeople
-            // 
-            this.lblNumberOfPeople.AutoSize = true;
-            this.lblNumberOfPeople.Location = new System.Drawing.Point(339, 79);
-            this.lblNumberOfPeople.Name = "lblNumberOfPeople";
-            this.lblNumberOfPeople.Size = new System.Drawing.Size(92, 13);
-            this.lblNumberOfPeople.TabIndex = 1;
-            this.lblNumberOfPeople.Text = "Number of People";
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // lblReservation
             // 
             this.lblReservation.AutoSize = true;
-            this.lblReservation.Location = new System.Drawing.Point(28, 28);
+            this.lblReservation.Location = new System.Drawing.Point(28, 36);
             this.lblReservation.Name = "lblReservation";
             this.lblReservation.Size = new System.Drawing.Size(64, 13);
             this.lblReservation.TabIndex = 0;
             this.lblReservation.Text = "Reservation";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(484, 253);
+            this.dataGridView1.TabIndex = 14;
             // 
             // frmHallReservation
             // 
@@ -281,11 +150,13 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmHallReservation";
             this.Text = "Hall Reservation Page";
+            this.Load += new System.EventHandler(this.frmHallReservation_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,21 +168,8 @@
         private System.Windows.Forms.Button btnHallReservation;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblNumberOfPeople;
         private System.Windows.Forms.Label lblReservation;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.ComboBox cbxNumberOfPeople;
         private System.Windows.Forms.Button btnBook;
-        private System.Windows.Forms.Label lblRequests;
-        private System.Windows.Forms.RichTextBox rtbxRequest;
-        private System.Windows.Forms.TextBox tbxPhoneNo;
-        private System.Windows.Forms.Label lblPhoneNo;
-        private System.Windows.Forms.TextBox tbxLastName;
-        private System.Windows.Forms.TextBox tbxFirstName;
-        private System.Windows.Forms.TextBox tbxTime;
-        private System.Windows.Forms.TextBox tbxDate;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

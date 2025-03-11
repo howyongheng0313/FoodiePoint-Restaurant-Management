@@ -16,7 +16,7 @@ namespace new_customer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenuPage());
+            Application.Run(new frmCustomerMain());
         }
     }
 }
