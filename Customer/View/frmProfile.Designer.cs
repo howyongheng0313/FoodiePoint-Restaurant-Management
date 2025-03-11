@@ -34,7 +34,6 @@
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
             this.lblFeedback = new System.Windows.Forms.Label();
-            this.btnReservationStatus = new System.Windows.Forms.Button();
             this.lblReservationStatus = new System.Windows.Forms.Label();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -65,7 +64,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.lblFeedback);
-            this.splitContainer1.Panel2.Controls.Add(this.btnReservationStatus);
             this.splitContainer1.Panel2.Controls.Add(this.lblReservationStatus);
             this.splitContainer1.Panel2.Controls.Add(this.tbxPassword);
             this.splitContainer1.Panel2.Controls.Add(this.lblPassword);
@@ -135,18 +133,6 @@
             this.lblFeedback.Size = new System.Drawing.Size(55, 13);
             this.lblFeedback.TabIndex = 16;
             this.lblFeedback.Text = "Feedback";
-            // 
-            // btnReservationStatus
-            // 
-            this.btnReservationStatus.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnReservationStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservationStatus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReservationStatus.Location = new System.Drawing.Point(176, 118);
-            this.btnReservationStatus.Name = "btnReservationStatus";
-            this.btnReservationStatus.Size = new System.Drawing.Size(101, 20);
-            this.btnReservationStatus.TabIndex = 13;
-            this.btnReservationStatus.Text = "Book now";
-            this.btnReservationStatus.UseVisualStyleBackColor = false;
             // 
             // lblReservationStatus
             // 
@@ -247,7 +233,6 @@
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnCustomerToMenu;
         private System.Windows.Forms.Label lblFeedback;
-        private System.Windows.Forms.Button btnReservationStatus;
         private System.Windows.Forms.Label lblReservationStatus;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.Label lblPassword;

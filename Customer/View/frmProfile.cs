@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace Customer
 
         private void btnCustomerToHallReservation_Click(object sender, EventArgs e)
         {
-            frmHallReservation obj1 = new frmHallReservation();
+            frmBooking obj1 = new frmBooking(); 
             obj1.Show();
             this.Hide();
         }

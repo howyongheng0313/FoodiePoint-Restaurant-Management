@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer.Presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -21,12 +22,12 @@ namespace Customer
             InitializeComponent();
 
             // Ensure DataGridView2 has columns (Adjust based on your database)
-            dataGridView1.ColumnCount = 5;
-            dataGridView1.Columns[0].Name = "Item ID";
-            dataGridView1.Columns[1].Name = "Item Name";
-            dataGridView1.Columns[2].Name = "Item Price";
-            dataGridView1.Columns[3].Name = "Item Category";
-            dataGridView1.Columns[4].Name = "Quantity";
+            dgv.ColumnCount = 5;
+            dgv.Columns[0].Name = "Item ID";
+            dgv.Columns[1].Name = "Item Name";
+            dgv.Columns[2].Name = "Item Price";
+            dgv.Columns[3].Name = "Item Category";
+            dgv.Columns[4].Name = "Quantity";
 
 
             // Add selected rows to DataGridView2
@@ -36,9 +37,9 @@ namespace Customer
                 bool itemExists = false;
 
                 // Loop through existing rows to check for duplicates
-                foreach (DataGridViewRow existingRow in dataGridView1.Rows)
+                foreach (DataGridViewRow existingRow in dgv.Rows)
                 {
-                    if (!existingRow.IsNewRow && existingRow.Cells[0].Value.ToString() == itemID)
+                    if (!existingRow.IsNewRow && existingRow.Cells[0].Value.ToString() == itemID) 
                     {
                         // Update quantity column
                         int currentQuantity = Convert.ToInt32(existingRow.Cells[4].Value);
@@ -51,7 +52,7 @@ namespace Customer
                 // If the item is new, add it with quantity 1
                 if (!itemExists)
                 {
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], 1);
+                    dgv.Rows.Add(row[0], row[1], row[2], row[3], 1);
                 }
 
                 //dataGridView1.Rows.Add(row);
@@ -72,7 +73,7 @@ namespace Customer
             {
                 conn.Open();
 
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                foreach (DataGridViewRow row in dgv.Rows)
                 {
                     if (!row.IsNewRow) // Ignore empty rows
                     {
@@ -98,7 +99,7 @@ namespace Customer
                 }
 
                 MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView1.Rows.Clear(); // Clear cart after placing order
+                dgv.Rows.Clear(); 
             }
             frmPayment obj1 = new frmPayment();
             obj1.Show();
@@ -139,36 +140,12 @@ namespace Customer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                {
-                    if (!row.IsNewRow) // Ensure we don't delete a new empty row
-                    {
-                        dataGridView1.Rows.Remove(row);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a row to delete.", "Delete Row", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            OrderFood.dlt_rowitem(dgv);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0) // Ensure a row is selected
-            {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                // Get current quantity, ensure it's not null
-                int currentQuantity = selectedRow.Cells[4].Value != null
-                    ? Convert.ToInt32(selectedRow.Cells[4].Value)
-                    : 0;
-
-                // Increase quantity
-                selectedRow.Cells[4].Value = currentQuantity + 1;
-            }
+            OrderFood.add_oneitem(dgv);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -178,22 +155,7 @@ namespace Customer
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.ColumnIndex == 0) // Ensure an Item ID cell is clicked
-            {
-                int rowIndex = dataGridView1.CurrentCell.RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[rowIndex];
-
-                int currentQuantity = Convert.ToInt32(selectedRow.Cells[4].Value);
-                if (currentQuantity > 1)
-                {
-                    selectedRow.Cells[4].Value = currentQuantity - 1; // Decrease quantity
-                }
-                else
-                {
-                    // Optional: Remove item if quantity reaches 1
-                    dataGridView1.Rows.RemoveAt(rowIndex);
-                }
-            }
+            OrderFood.dlt_oneitem(dgv);
         }
     }
 }

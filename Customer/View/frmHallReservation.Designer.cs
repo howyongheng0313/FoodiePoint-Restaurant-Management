@@ -33,9 +33,9 @@
             this.btnHallReservation = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBook = new System.Windows.Forms.Button();
             this.lblReservation = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -111,6 +111,15 @@
             this.btnMenu.TabIndex = 9;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(484, 253);
+            this.dataGridView1.TabIndex = 14;
             // 
             // btnBook
             // 
@@ -128,19 +137,11 @@
             // lblReservation
             // 
             this.lblReservation.AutoSize = true;
-            this.lblReservation.Location = new System.Drawing.Point(28, 36);
+            this.lblReservation.Location = new System.Drawing.Point(28, 26);
             this.lblReservation.Name = "lblReservation";
             this.lblReservation.Size = new System.Drawing.Size(64, 13);
             this.lblReservation.TabIndex = 0;
             this.lblReservation.Text = "Reservation";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(484, 253);
-            this.dataGridView1.TabIndex = 14;
             // 
             // frmHallReservation
             // 

@@ -101,6 +101,11 @@ namespace Customer
             }
         }
 
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void LoadHallsData()
         //{
         //    string query = "SELECT * FROM Halls"; // Fetch all halls from the database
