@@ -79,14 +79,15 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(161)))), ((int)(((byte)(188)))));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(10, 80);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 60);
             this.button3.TabIndex = 12;
@@ -100,7 +101,7 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -144,7 +145,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(10, 260);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(208, 60);
             this.button10.TabIndex = 11;
@@ -162,7 +163,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(10, 200);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(208, 60);
             this.button9.TabIndex = 10;
@@ -180,7 +181,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(10, 140);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(208, 60);
             this.button8.TabIndex = 9;
@@ -206,8 +207,8 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(689, 581);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(692, 581);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 42);
             this.button1.TabIndex = 35;
@@ -222,7 +223,7 @@
             "Western",
             "Chinese"});
             this.itemCategorycmb.Location = new System.Drawing.Point(33, 350);
-            this.itemCategorycmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemCategorycmb.Margin = new System.Windows.Forms.Padding(4);
             this.itemCategorycmb.Name = "itemCategorycmb";
             this.itemCategorycmb.Size = new System.Drawing.Size(140, 28);
             this.itemCategorycmb.TabIndex = 34;
@@ -230,7 +231,7 @@
             // itemPricetxt
             // 
             this.itemPricetxt.Location = new System.Drawing.Point(33, 281);
-            this.itemPricetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemPricetxt.Margin = new System.Windows.Forms.Padding(4);
             this.itemPricetxt.Name = "itemPricetxt";
             this.itemPricetxt.Size = new System.Drawing.Size(140, 27);
             this.itemPricetxt.TabIndex = 32;
@@ -251,7 +252,7 @@
             // itemNametxt
             // 
             this.itemNametxt.Location = new System.Drawing.Point(33, 212);
-            this.itemNametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.itemNametxt.Name = "itemNametxt";
             this.itemNametxt.Size = new System.Drawing.Size(140, 27);
             this.itemNametxt.TabIndex = 30;
@@ -286,7 +287,7 @@
             // itemIDtxt
             // 
             this.itemIDtxt.Location = new System.Drawing.Point(33, 143);
-            this.itemIDtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemIDtxt.Margin = new System.Windows.Forms.Padding(4);
             this.itemIDtxt.Name = "itemIDtxt";
             this.itemIDtxt.Size = new System.Drawing.Size(140, 27);
             this.itemIDtxt.TabIndex = 27;
@@ -307,7 +308,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(33, 432);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 42);
             this.button2.TabIndex = 24;
@@ -334,14 +335,14 @@
             this.dataGridViewTextBoxColumn4});
             this.dataGridViewMenu.DataSource = this.menuBindingSource2;
             this.dataGridViewMenu.Location = new System.Drawing.Point(206, 90);
-            this.dataGridViewMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMenu.MultiSelect = false;
             this.dataGridViewMenu.Name = "dataGridViewMenu";
             this.dataGridViewMenu.ReadOnly = true;
             this.dataGridViewMenu.RowHeadersVisible = false;
             this.dataGridViewMenu.RowHeadersWidth = 51;
             this.dataGridViewMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMenu.Size = new System.Drawing.Size(620, 483);
+            this.dataGridViewMenu.Size = new System.Drawing.Size(623, 483);
             this.dataGridViewMenu.TabIndex = 17;
             this.dataGridViewMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuItem_CellClick);
             this.dataGridViewMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMenu_CellContentClick);
@@ -437,7 +438,7 @@
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Main_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

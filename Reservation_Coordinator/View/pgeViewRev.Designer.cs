@@ -68,7 +68,7 @@
             this.dgvAllRev.RowHeadersWidth = 51;
             this.dgvAllRev.RowTemplate.Height = 24;
             this.dgvAllRev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllRev.Size = new System.Drawing.Size(901, 475);
+            this.dgvAllRev.Size = new System.Drawing.Size(832, 395);
             this.dgvAllRev.TabIndex = 0;
             this.dgvAllRev.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllRev_CellDoubleClick);
             // 
@@ -92,7 +92,7 @@
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(736, 600);
+            this.btnAdd.Location = new System.Drawing.Point(667, 520);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 40);
@@ -105,7 +105,7 @@
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(541, 600);
+            this.btnRemove.Location = new System.Drawing.Point(472, 520);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(180, 40);
@@ -118,7 +118,7 @@
             this.btnNotice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNotice.AutoSize = true;
             this.btnNotice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotice.Location = new System.Drawing.Point(836, 15);
+            this.btnNotice.Location = new System.Drawing.Point(767, 15);
             this.btnNotice.Margin = new System.Windows.Forms.Padding(15);
             this.btnNotice.Name = "btnNotice";
             this.btnNotice.Size = new System.Drawing.Size(80, 40);
@@ -138,7 +138,7 @@
             "Confirmed",
             "Completed",
             "Rejected"});
-            this.cmbStatus.Location = new System.Drawing.Point(761, 69);
+            this.cmbStatus.Location = new System.Drawing.Point(692, 69);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbStatus.Size = new System.Drawing.Size(155, 31);
@@ -160,7 +160,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "pgeViewRev";
-            this.Size = new System.Drawing.Size(931, 655);
+            this.Size = new System.Drawing.Size(862, 575);
             this.Load += new System.EventHandler(this.pgeViewRev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllRev)).EndInit();
             this.ResumeLayout(false);

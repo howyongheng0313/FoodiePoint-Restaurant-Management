@@ -170,9 +170,10 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(161)))), ((int)(((byte)(188)))));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,7 +204,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(712, 616);
+            this.button1.Location = new System.Drawing.Point(715, 616);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 42);
@@ -325,7 +326,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(580, 616);
+            this.button2.Location = new System.Drawing.Point(583, 616);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 42);
@@ -361,7 +362,7 @@
             this.dataGridViewHall.RowHeadersVisible = false;
             this.dataGridViewHall.RowHeadersWidth = 51;
             this.dataGridViewHall.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHall.Size = new System.Drawing.Size(814, 400);
+            this.dataGridViewHall.Size = new System.Drawing.Size(817, 400);
             this.dataGridViewHall.TabIndex = 13;
             this.dataGridViewHall.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHall_CellContentClick);
             // 

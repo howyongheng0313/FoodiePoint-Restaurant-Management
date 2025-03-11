@@ -61,8 +61,8 @@
             // 
             this.splMain.Panel2.Controls.Add(this.pnlContent);
             this.splMain.Panel2.Controls.Add(this.lblTitle);
-            this.splMain.Size = new System.Drawing.Size(1182, 753);
-            this.splMain.SplitterDistance = 250;
+            this.splMain.Size = new System.Drawing.Size(1082, 673);
+            this.splMain.SplitterDistance = 228;
             this.splMain.SplitterWidth = 1;
             this.splMain.TabIndex = 0;
             // 
@@ -77,7 +77,7 @@
             this.btnViewRev.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewRev.Name = "btnViewRev";
             this.btnViewRev.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnViewRev.Size = new System.Drawing.Size(230, 80);
+            this.btnViewRev.Size = new System.Drawing.Size(208, 80);
             this.btnViewRev.TabIndex = 4;
             this.btnViewRev.Text = "View Reservations";
             this.btnViewRev.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnProfile.Size = new System.Drawing.Size(230, 80);
+            this.btnProfile.Size = new System.Drawing.Size(208, 80);
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Owner Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,7 +109,7 @@
             this.lblLogo.Location = new System.Drawing.Point(10, 0);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(230, 98);
+            this.lblLogo.Size = new System.Drawing.Size(208, 98);
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "Foodie Point";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,7 +122,7 @@
             this.pnlContent.Location = new System.Drawing.Point(0, 98);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(937, 655);
+            this.pnlContent.Size = new System.Drawing.Size(862, 575);
             this.pnlContent.TabIndex = 9;
             // 
             // lblTitle
@@ -132,7 +132,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(3, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(949, 67);
+            this.lblTitle.Size = new System.Drawing.Size(874, 67);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "TITLE";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splMain);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;

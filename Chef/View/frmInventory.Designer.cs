@@ -34,48 +34,55 @@
             this.btnInventoryToOrder = new System.Windows.Forms.Button();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tbxSearchInput = new System.Windows.Forms.TextBox();
+            this.btnSearchIngredient = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.gbxActions = new System.Windows.Forms.GroupBox();
             this.btnAddIngredient = new System.Windows.Forms.Button();
             this.btnEditIngredient = new System.Windows.Forms.Button();
             this.btnDeleteIngredient = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.tbxSearchInput = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.lblIngredientID = new System.Windows.Forms.Label();
             this.cbxUnit = new System.Windows.Forms.ComboBox();
-            this.btnSearchIngredient = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
             this.tbxQuantity = new System.Windows.Forms.TextBox();
             this.lblIngredient = new System.Windows.Forms.Label();
             this.tbxIngredient = new System.Windows.Forms.TextBox();
             this.tbxIngredientID = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnOrderToInventory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.gbxActions.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.gbxActions.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvInventory
             // 
-            this.dgvInventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvInventory.AllowUserToAddRows = false;
+            this.dgvInventory.AllowUserToDeleteRows = false;
+            this.dgvInventory.AllowUserToResizeRows = false;
+            this.dgvInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Location = new System.Drawing.Point(31, 91);
             this.dgvInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.ReadOnly = true;
+            this.dgvInventory.RowHeadersVisible = false;
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
-            this.dgvInventory.Size = new System.Drawing.Size(843, 347);
+            this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInventory.Size = new System.Drawing.Size(788, 267);
             this.dgvInventory.TabIndex = 0;
             // 
             // btnInventoryToChef
@@ -83,10 +90,10 @@
             this.btnInventoryToChef.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToChef.FlatAppearance.BorderSize = 0;
             this.btnInventoryToChef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToChef.Location = new System.Drawing.Point(10, 150);
+            this.btnInventoryToChef.Location = new System.Drawing.Point(10, 225);
             this.btnInventoryToChef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToChef.Name = "btnInventoryToChef";
-            this.btnInventoryToChef.Size = new System.Drawing.Size(225, 75);
+            this.btnInventoryToChef.Size = new System.Drawing.Size(208, 75);
             this.btnInventoryToChef.TabIndex = 6;
             this.btnInventoryToChef.Text = "Chef Main Page";
             this.btnInventoryToChef.UseVisualStyleBackColor = true;
@@ -97,10 +104,10 @@
             this.btnInventoryToProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToProfile.FlatAppearance.BorderSize = 0;
             this.btnInventoryToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToProfile.Location = new System.Drawing.Point(10, 75);
+            this.btnInventoryToProfile.Location = new System.Drawing.Point(10, 150);
             this.btnInventoryToProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToProfile.Name = "btnInventoryToProfile";
-            this.btnInventoryToProfile.Size = new System.Drawing.Size(225, 75);
+            this.btnInventoryToProfile.Size = new System.Drawing.Size(208, 75);
             this.btnInventoryToProfile.TabIndex = 10;
             this.btnInventoryToProfile.Text = "Update Profile Page";
             this.btnInventoryToProfile.UseVisualStyleBackColor = true;
@@ -111,10 +118,10 @@
             this.btnInventoryToOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToOrder.FlatAppearance.BorderSize = 0;
             this.btnInventoryToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToOrder.Location = new System.Drawing.Point(10, 0);
+            this.btnInventoryToOrder.Location = new System.Drawing.Point(10, 75);
             this.btnInventoryToOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToOrder.Name = "btnInventoryToOrder";
-            this.btnInventoryToOrder.Size = new System.Drawing.Size(225, 75);
+            this.btnInventoryToOrder.Size = new System.Drawing.Size(208, 75);
             this.btnInventoryToOrder.TabIndex = 11;
             this.btnInventoryToOrder.Text = "Orders Page";
             this.btnInventoryToOrder.UseVisualStyleBackColor = true;
@@ -136,13 +143,14 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToChef);
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToOrder);
+            this.splitContainer1.Panel1.Controls.Add(this.btnOrderToInventory);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnConfirm);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.gbxActions);
-            this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.lblIngredientID);
             this.splitContainer1.Panel2.Controls.Add(this.dgvInventory);
             this.splitContainer1.Panel2.Controls.Add(this.cbxUnit);
@@ -152,17 +160,87 @@
             this.splitContainer1.Panel2.Controls.Add(this.lblIngredient);
             this.splitContainer1.Panel2.Controls.Add(this.tbxIngredient);
             this.splitContainer1.Panel2.Controls.Add(this.tbxIngredientID);
-            this.splitContainer1.Size = new System.Drawing.Size(1182, 753);
-            this.splitContainer1.SplitterDistance = 245;
-            this.splitContainer1.SplitterWidth = 6;
+            this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirm.Location = new System.Drawing.Point(673, 571);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(146, 59);
+            this.btnConfirm.TabIndex = 14;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.tbxSearchInput, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearchIngredient, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnReturn, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 23);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(828, 40);
+            this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // tbxSearchInput
+            // 
+            this.tbxSearchInput.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbxSearchInput.Location = new System.Drawing.Point(4, 5);
+            this.tbxSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbxSearchInput.Name = "tbxSearchInput";
+            this.tbxSearchInput.Size = new System.Drawing.Size(500, 30);
+            this.tbxSearchInput.TabIndex = 11;
+            // 
+            // btnSearchIngredient
+            // 
+            this.btnSearchIngredient.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSearchIngredient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearchIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchIngredient.Location = new System.Drawing.Point(512, 5);
+            this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearchIngredient.Name = "btnSearchIngredient";
+            this.btnSearchIngredient.Size = new System.Drawing.Size(152, 30);
+            this.btnSearchIngredient.TabIndex = 3;
+            this.btnSearchIngredient.Text = "Search";
+            this.btnSearchIngredient.UseVisualStyleBackColor = false;
+            this.btnSearchIngredient.Click += new System.EventHandler(this.btnSearchIngredient_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReturn.Location = new System.Drawing.Point(672, 5);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(152, 30);
+            this.btnReturn.TabIndex = 12;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // gbxActions
             // 
+            this.gbxActions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gbxActions.Controls.Add(this.btnAddIngredient);
             this.gbxActions.Controls.Add(this.btnEditIngredient);
             this.gbxActions.Controls.Add(this.btnDeleteIngredient);
-            this.gbxActions.Location = new System.Drawing.Point(31, 457);
+            this.gbxActions.Location = new System.Drawing.Point(31, 377);
             this.gbxActions.Name = "gbxActions";
             this.gbxActions.Size = new System.Drawing.Size(488, 134);
             this.gbxActions.TabIndex = 15;
@@ -202,51 +280,11 @@
             this.btnDeleteIngredient.UseVisualStyleBackColor = true;
             this.btnDeleteIngredient.Click += new System.EventHandler(this.btnDeleteIngredient_Click);
             // 
-            // btnReturn
-            // 
-            this.btnReturn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReturn.Location = new System.Drawing.Point(721, 5);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(146, 30);
-            this.btnReturn.TabIndex = 12;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
-            // tbxSearchInput
-            // 
-            this.tbxSearchInput.Location = new System.Drawing.Point(21, 5);
-            this.tbxSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbxSearchInput.Name = "tbxSearchInput";
-            this.tbxSearchInput.Size = new System.Drawing.Size(491, 30);
-            this.tbxSearchInput.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btnConfirm);
-            this.panel2.Location = new System.Drawing.Point(728, 654);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 63);
-            this.panel2.TabIndex = 14;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.Location = new System.Drawing.Point(6, 4);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(146, 59);
-            this.btnConfirm.TabIndex = 14;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
             // lblIngredientID
             // 
+            this.lblIngredientID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblIngredientID.AutoSize = true;
-            this.lblIngredientID.Location = new System.Drawing.Point(34, 634);
+            this.lblIngredientID.Location = new System.Drawing.Point(34, 554);
             this.lblIngredientID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngredientID.Name = "lblIngredientID";
             this.lblIngredientID.Size = new System.Drawing.Size(123, 25);
@@ -255,34 +293,23 @@
             // 
             // cbxUnit
             // 
+            this.cbxUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbxUnit.FormattingEnabled = true;
             this.cbxUnit.Items.AddRange(new object[] {
             "kilogram",
             "pieces",
             "litre"});
-            this.cbxUnit.Location = new System.Drawing.Point(476, 677);
+            this.cbxUnit.Location = new System.Drawing.Point(476, 597);
             this.cbxUnit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxUnit.Name = "cbxUnit";
             this.cbxUnit.Size = new System.Drawing.Size(180, 33);
             this.cbxUnit.TabIndex = 9;
             // 
-            // btnSearchIngredient
-            // 
-            this.btnSearchIngredient.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearchIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIngredient.Location = new System.Drawing.Point(537, 5);
-            this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearchIngredient.Name = "btnSearchIngredient";
-            this.btnSearchIngredient.Size = new System.Drawing.Size(159, 30);
-            this.btnSearchIngredient.TabIndex = 3;
-            this.btnSearchIngredient.Text = "Search";
-            this.btnSearchIngredient.UseVisualStyleBackColor = false;
-            this.btnSearchIngredient.Click += new System.EventHandler(this.btnSearchIngredient_Click);
-            // 
             // lblAmount
             // 
+            this.lblAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(66, 680);
+            this.lblAmount.Location = new System.Drawing.Point(66, 600);
             this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(91, 25);
@@ -291,8 +318,9 @@
             // 
             // lblUnit
             // 
+            this.lblUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUnit.AutoSize = true;
-            this.lblUnit.Location = new System.Drawing.Point(416, 680);
+            this.lblUnit.Location = new System.Drawing.Point(416, 600);
             this.lblUnit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnit.Name = "lblUnit";
             this.lblUnit.Size = new System.Drawing.Size(52, 25);
@@ -301,7 +329,8 @@
             // 
             // tbxQuantity
             // 
-            this.tbxQuantity.Location = new System.Drawing.Point(165, 680);
+            this.tbxQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbxQuantity.Location = new System.Drawing.Point(165, 600);
             this.tbxQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxQuantity.Name = "tbxQuantity";
             this.tbxQuantity.Size = new System.Drawing.Size(182, 30);
@@ -309,8 +338,9 @@
             // 
             // lblIngredient
             // 
+            this.lblIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblIngredient.AutoSize = true;
-            this.lblIngredient.Location = new System.Drawing.Point(364, 632);
+            this.lblIngredient.Location = new System.Drawing.Point(364, 552);
             this.lblIngredient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngredient.Name = "lblIngredient";
             this.lblIngredient.Size = new System.Drawing.Size(104, 25);
@@ -319,7 +349,8 @@
             // 
             // tbxIngredient
             // 
-            this.tbxIngredient.Location = new System.Drawing.Point(476, 629);
+            this.tbxIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbxIngredient.Location = new System.Drawing.Point(476, 549);
             this.tbxIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxIngredient.Name = "tbxIngredient";
             this.tbxIngredient.Size = new System.Drawing.Size(182, 30);
@@ -327,39 +358,33 @@
             // 
             // tbxIngredientID
             // 
-            this.tbxIngredientID.Location = new System.Drawing.Point(165, 629);
+            this.tbxIngredientID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbxIngredientID.Location = new System.Drawing.Point(165, 549);
             this.tbxIngredientID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxIngredientID.Name = "tbxIngredientID";
             this.tbxIngredientID.Size = new System.Drawing.Size(182, 30);
             this.tbxIngredientID.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // btnOrderToInventory
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 499F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.tbxSearchInput, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSearchIngredient, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnReturn, 5, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 23);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(888, 43);
-            this.tableLayoutPanel1.TabIndex = 16;
+            this.btnOrderToInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOrderToInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrderToInventory.Enabled = false;
+            this.btnOrderToInventory.FlatAppearance.BorderSize = 0;
+            this.btnOrderToInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderToInventory.Location = new System.Drawing.Point(10, 0);
+            this.btnOrderToInventory.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnOrderToInventory.Name = "btnOrderToInventory";
+            this.btnOrderToInventory.Size = new System.Drawing.Size(208, 75);
+            this.btnOrderToInventory.TabIndex = 12;
+            this.btnOrderToInventory.Text = "Inventory Page";
+            this.btnOrderToInventory.UseVisualStyleBackColor = false;
             // 
             // frmInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -373,10 +398,9 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.gbxActions.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.gbxActions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -391,7 +415,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbxSearchInput;
         private System.Windows.Forms.Button btnAddIngredient;
         private System.Windows.Forms.Label lblIngredientID;
@@ -407,5 +430,6 @@
         private System.Windows.Forms.TextBox tbxIngredientID;
         private System.Windows.Forms.GroupBox gbxActions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnOrderToInventory;
     }
 }

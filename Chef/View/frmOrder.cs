@@ -102,7 +102,8 @@ namespace FoodiePointManagementSystem
         }
 
         // Button to update order status to "Cancelled"
-        private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)       //Kuek-Chef
+        private void dgvOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)   //Kuek-Chef
         {
             if (e.RowIndex >= 0)
             {

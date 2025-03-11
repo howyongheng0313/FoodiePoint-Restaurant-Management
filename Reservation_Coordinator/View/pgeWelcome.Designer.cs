@@ -48,10 +48,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblText.Location = new System.Drawing.Point(3, 480);
+            this.lblText.Location = new System.Drawing.Point(3, 400);
             this.lblText.Name = "lblText";
             this.lblText.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.lblText.Size = new System.Drawing.Size(925, 149);
+            this.lblText.Size = new System.Drawing.Size(856, 149);
             this.lblText.TabIndex = 1;
             this.lblText.Text = "As a coordinator, you can manage reservations, respond to customer requests, and " +
     "oversee booking details.";
@@ -67,7 +67,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "pgeWelcome";
-            this.Size = new System.Drawing.Size(931, 655);
+            this.Size = new System.Drawing.Size(862, 575);
             this.ResumeLayout(false);
             this.PerformLayout();
 

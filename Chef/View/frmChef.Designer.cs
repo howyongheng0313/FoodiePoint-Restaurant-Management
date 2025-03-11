@@ -47,7 +47,7 @@
             this.lblChefDashboard.Location = new System.Drawing.Point(13, 42);
             this.lblChefDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChefDashboard.Name = "lblChefDashboard";
-            this.lblChefDashboard.Size = new System.Drawing.Size(1236, 22);
+            this.lblChefDashboard.Size = new System.Drawing.Size(1056, 22);
             this.lblChefDashboard.TabIndex = 0;
             this.lblChefDashboard.Text = "Chef Dashboard";
             this.lblChefDashboard.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,10 +56,10 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(483, 384);
+            this.pictureBox1.Location = new System.Drawing.Point(429, 384);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 345);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -68,7 +68,7 @@
             // 
             this.btnUpdateProfile.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(163, 5);
+            this.btnUpdateProfile.Location = new System.Drawing.Point(118, 5);
             this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.Size = new System.Drawing.Size(192, 194);
@@ -81,7 +81,7 @@
             // 
             this.btnInventory.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInventory.Location = new System.Drawing.Point(522, 5);
+            this.btnInventory.Location = new System.Drawing.Point(432, 5);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(192, 194);
@@ -94,7 +94,7 @@
             // 
             this.btnOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOrder.Location = new System.Drawing.Point(881, 5);
+            this.btnOrder.Location = new System.Drawing.Point(746, 5);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(192, 194);
@@ -123,14 +123,14 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1236, 204);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1056, 204);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // frmChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 753);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblChefDashboard);
