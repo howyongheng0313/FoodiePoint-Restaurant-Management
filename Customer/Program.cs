@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace new_customer
+namespace Customer
 {
     static class Program
     {

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace new_customer
+namespace Customer
 {
     public partial class frmHallReservation: Form
     {

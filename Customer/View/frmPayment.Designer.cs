@@ -1,4 +1,4 @@
-﻿namespace new_customer
+﻿namespace Customer
 {
     partial class frmPayment
     {

@@ -1,4 +1,4 @@
-﻿namespace new_customer
+﻿namespace Customer
 {
     partial class frmMenuPage
     {
@@ -37,36 +37,13 @@
             this.Search_btn = new System.Windows.Forms.Button();
             this.search_txt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.foodiepointDbDataSet = new Customer.FoodiepointDbDataSet();
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.menuBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.foodiepointDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new Customer.DataSet1();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuTableAdapter = new Customer.FoodiepointDbDataSetTableAdapters.MenuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -169,16 +146,6 @@
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // menuBindingSource6
-            // 
-            this.menuBindingSource6.DataMember = "Menu";
-            this.menuBindingSource6.DataSource = this.foodiepointDbDataSet;
-            // 
-            // foodiepointDbDataSet
-            // 
-            this.foodiepointDbDataSet.DataSetName = "FoodiepointDbDataSet";
-            this.foodiepointDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // btnViewOrder
             // 
             this.btnViewOrder.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -205,55 +172,6 @@
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
-            // menuBindingSource3
-            // 
-            this.menuBindingSource3.DataMember = "Menu";
-            this.menuBindingSource3.DataSource = this.foodiepointDbDataSetBindingSource;
-            // 
-            // foodiepointDbDataSetBindingSource
-            // 
-            this.foodiepointDbDataSetBindingSource.DataSource = this.foodiepointDbDataSet;
-            this.foodiepointDbDataSetBindingSource.Position = 0;
-            // 
-            // menuBindingSource4
-            // 
-            this.menuBindingSource4.DataMember = "Menu";
-            this.menuBindingSource4.DataSource = this.foodiepointDbDataSetBindingSource;
-            // 
-            // menuBindingSource5
-            // 
-            this.menuBindingSource5.DataMember = "Menu";
-            this.menuBindingSource5.DataSource = this.foodiepointDbDataSetBindingSource;
-            // 
-            // menuBindingSource2
-            // 
-            this.menuBindingSource2.DataMember = "Menu";
-            this.menuBindingSource2.DataSource = this.foodiepointDbDataSet;
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataMember = "Menu";
-            this.menuBindingSource.DataSource = this.foodiepointDbDataSet;
-            // 
-            // menuBindingSource1
-            // 
-            this.menuBindingSource1.DataMember = "Menu";
-            this.menuBindingSource1.DataSource = this.foodiepointDbDataSet;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
-            // 
-            // menuTableAdapter
-            // 
-            this.menuTableAdapter.ClearBeforeFill = true;
-            // 
             // frmMenuPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,17 +187,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodiepointDbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,19 +200,7 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnViewOrder;
         private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private Customer.DataSet1 dataSet1;
-        private Customer.FoodiepointDbDataSet foodiepointDbDataSet;
-        private System.Windows.Forms.BindingSource menuBindingSource;
-        private Customer.FoodiepointDbDataSetTableAdapters.MenuTableAdapter menuTableAdapter;
-        private System.Windows.Forms.BindingSource menuBindingSource1;
-        private System.Windows.Forms.BindingSource menuBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource menuBindingSource3;
-        private System.Windows.Forms.BindingSource foodiepointDbDataSetBindingSource;
-        private System.Windows.Forms.BindingSource menuBindingSource6;
-        private System.Windows.Forms.BindingSource menuBindingSource4;
-        private System.Windows.Forms.BindingSource menuBindingSource5;
         private System.Windows.Forms.TextBox search_txt;
         private System.Windows.Forms.Button Search_btn;
     }

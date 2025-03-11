@@ -65,31 +65,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="database.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FoodiepointDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FoodiepointDbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FoodiepointDbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="frmBooking.cs">
+    <Compile Include="View\frmBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBooking.Designer.cs">
+    <Compile Include="View\frmBooking.Designer.cs">
       <DependentUpon>frmBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentPage.cs">
+    <Compile Include="View\PaymentPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentPage.Designer.cs">
+    <Compile Include="View\PaymentPage.Designer.cs">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenter\DatabaseHelper.cs" />
@@ -126,10 +111,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBooking.resx">
+    <EmbeddedResource Include="View\frmBooking.resx">
       <DependentUpon>frmBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaymentPage.resx">
+    <EmbeddedResource Include="View\PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProfile.resx">
@@ -137,12 +122,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmOrderCart.resx">
       <DependentUpon>frmOrderCart.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHallReservation.resx">
       <DependentUpon>frmHallReservation.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPayment.resx">
       <DependentUpon>frmPayment.cs</DependentUpon>
@@ -156,39 +144,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="FoodiepointDbDataSet.xsc">
-      <DependentUpon>FoodiepointDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FoodiepointDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FoodiepointDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FoodiepointDbDataSet.xss">
-      <DependentUpon>FoodiepointDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FoodiepointDbDataSet1.xsc">
-      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="FoodiepointDbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FoodiepointDbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FoodiepointDbDataSet1.xss">
-      <DependentUpon>FoodiepointDbDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
