@@ -43,6 +43,7 @@
             this.reservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guestCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,7 +211,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(715, 549);
+            this.button4.Location = new System.Drawing.Point(718, 549);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 31);
@@ -237,7 +238,7 @@
             "October",
             "November",
             "December"});
-            this.monthCmbBox.Location = new System.Drawing.Point(715, 513);
+            this.monthCmbBox.Location = new System.Drawing.Point(718, 513);
             this.monthCmbBox.Margin = new System.Windows.Forms.Padding(4);
             this.monthCmbBox.Name = "monthCmbBox";
             this.monthCmbBox.Size = new System.Drawing.Size(123, 28);
@@ -249,7 +250,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(711, 490);
+            this.label10.Location = new System.Drawing.Point(714, 490);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 24);
@@ -283,6 +284,7 @@
             this.reservationIDDataGridViewTextBoxColumn,
             this.hallIDDataGridViewTextBoxColumn,
             this.userIDDataGridViewTextBoxColumn,
+            this.guestCountDataGridViewTextBoxColumn,
             this.reservationDateDataGridViewTextBoxColumn,
             this.reservationTypeDataGridViewTextBoxColumn,
             this.reservationStatusDataGridViewTextBoxColumn});
@@ -291,10 +293,11 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(820, 395);
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -304,6 +307,7 @@
             this.reservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
             this.reservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationIDDataGridViewTextBoxColumn.Name = "reservationIDDataGridViewTextBoxColumn";
+            this.reservationIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hallIDDataGridViewTextBoxColumn
             // 
@@ -311,6 +315,7 @@
             this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
             this.hallIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            this.hallIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -318,6 +323,15 @@
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
             this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // guestCountDataGridViewTextBoxColumn
+            // 
+            this.guestCountDataGridViewTextBoxColumn.DataPropertyName = "GuestCount";
+            this.guestCountDataGridViewTextBoxColumn.HeaderText = "GuestCount";
+            this.guestCountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.guestCountDataGridViewTextBoxColumn.Name = "guestCountDataGridViewTextBoxColumn";
+            this.guestCountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reservationDateDataGridViewTextBoxColumn
             // 
@@ -325,6 +339,7 @@
             this.reservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
             this.reservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationDateDataGridViewTextBoxColumn.Name = "reservationDateDataGridViewTextBoxColumn";
+            this.reservationDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reservationTypeDataGridViewTextBoxColumn
             // 
@@ -332,6 +347,7 @@
             this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
             this.reservationTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
+            this.reservationTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reservationStatusDataGridViewTextBoxColumn
             // 
@@ -339,6 +355,7 @@
             this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
             this.reservationStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
+            this.reservationStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // reservationsBindingSource
             // 
@@ -476,7 +493,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(583, 614);
+            this.button2.Location = new System.Drawing.Point(586, 614);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 42);
@@ -488,7 +505,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(715, 614);
+            this.button1.Location = new System.Drawing.Point(718, 614);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 42);
@@ -578,6 +595,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guestCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationStatusDataGridViewTextBoxColumn;

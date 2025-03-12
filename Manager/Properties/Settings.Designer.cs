@@ -33,5 +33,16 @@ namespace Manager.Properties {
                 return ((string)(this["FoodieDbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\Food" +
+            "iePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True")]
+        public string FoodiePointConnectionString {
+            get {
+                return ((string)(this["FoodiePointConnectionString"]));
+            }
+        }
     }
 }
