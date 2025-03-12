@@ -40,12 +40,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.reservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodieDbDataSet = new Manager.FoodieDbDataSet();
             this.rsStatusCmb = new System.Windows.Forms.ComboBox();
@@ -65,6 +59,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.reservationsTableAdapter = new Manager.FoodieDbDataSetTableAdapters.ReservationsTableAdapter();
             this.reservationsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.reservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -300,48 +300,6 @@
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // reservationIDDataGridViewTextBoxColumn
-            // 
-            this.reservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
-            this.reservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
-            this.reservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reservationIDDataGridViewTextBoxColumn.Name = "reservationIDDataGridViewTextBoxColumn";
-            // 
-            // hallIDDataGridViewTextBoxColumn
-            // 
-            this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
-            this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
-            this.hallIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            // 
-            // reservationDateDataGridViewTextBoxColumn
-            // 
-            this.reservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
-            this.reservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
-            this.reservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reservationDateDataGridViewTextBoxColumn.Name = "reservationDateDataGridViewTextBoxColumn";
-            // 
-            // reservationTypeDataGridViewTextBoxColumn
-            // 
-            this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
-            this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
-            this.reservationTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
-            // 
-            // reservationStatusDataGridViewTextBoxColumn
-            // 
-            this.reservationStatusDataGridViewTextBoxColumn.DataPropertyName = "ReservationStatus";
-            this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
-            this.reservationStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
-            // 
             // reservationsBindingSource
             // 
             this.reservationsBindingSource.DataMember = "Reservations";
@@ -530,6 +488,42 @@
             this.reservationsBindingSource1.DataMember = "Reservations";
             this.reservationsBindingSource1.DataSource = this.foodieDbDataSet;
             // 
+            // reservationIDDataGridViewTextBoxColumn
+            // 
+            this.reservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
+            this.reservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
+            this.reservationIDDataGridViewTextBoxColumn.Name = "reservationIDDataGridViewTextBoxColumn";
+            // 
+            // hallIDDataGridViewTextBoxColumn
+            // 
+            this.hallIDDataGridViewTextBoxColumn.DataPropertyName = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.HeaderText = "HallID";
+            this.hallIDDataGridViewTextBoxColumn.Name = "hallIDDataGridViewTextBoxColumn";
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            // 
+            // reservationDateDataGridViewTextBoxColumn
+            // 
+            this.reservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
+            this.reservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
+            this.reservationDateDataGridViewTextBoxColumn.Name = "reservationDateDataGridViewTextBoxColumn";
+            // 
+            // reservationTypeDataGridViewTextBoxColumn
+            // 
+            this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
+            this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
+            this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
+            // 
+            // reservationStatusDataGridViewTextBoxColumn
+            // 
+            this.reservationStatusDataGridViewTextBoxColumn.DataPropertyName = "ReservationStatus";
+            this.reservationStatusDataGridViewTextBoxColumn.HeaderText = "ReservationStatus";
+            this.reservationStatusDataGridViewTextBoxColumn.Name = "reservationStatusDataGridViewTextBoxColumn";
+            // 
             // frmReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -583,16 +577,16 @@
         private FoodieDbDataSet foodieDbDataSet;
         private System.Windows.Forms.BindingSource reservationsBindingSource;
         private FoodieDbDataSetTableAdapters.ReservationsTableAdapter reservationsTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox monthCmbBox;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource reservationsBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hallIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox monthCmbBox;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.BindingSource reservationsBindingSource1;
     }
 }

@@ -65,6 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet\FoodieDbDataSet.cs">
+      <DependentUpon>FoodieDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Blank.cs">
       <SubType>Form</SubType>
     </Compile>
