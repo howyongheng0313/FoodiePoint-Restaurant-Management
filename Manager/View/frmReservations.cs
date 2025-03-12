@@ -41,14 +41,13 @@ namespace Manager
         {
             try
             {
-                string rsid = rsvTxt.Text;
                 string hallid = hallIdTxt.Text;
                 string userid = userIdTxt.Text;
                 DateTime rsdate = dateTimePicker1.Value;
                 string formattedDate = rsdate.ToString("MM/dd/yyyy");
                 string rstype = rsTypetxt.Text;
                 string rsstatus = rsStatusCmb.Text;
-                db.AddReservation(rsid, hallid, userid, formattedDate, rstype, rsstatus);
+                db.AddReservation(hallid,userid, formattedDate, rstype, rsstatus);
                 db.LoadData(dataGridView1, "Reservations");
             }
             catch (Exception ex)

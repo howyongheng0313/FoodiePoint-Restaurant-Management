@@ -34,11 +34,11 @@ namespace Manager
             }
         }
 
-        public void AddItem(string id, string name, double price, string category)
+        public void AddItem(string name, double price, string category)
         {
             try
             {
-                string query = $"INSERT INTO Menu (ItemID, ItemName, ItemPrice, ItemCategory) VALUES ('{id}', '{name}', {price}, '{category}')";
+                string query = $"INSERT INTO Menu (ItemName, ItemPrice, ItemCategory) VALUES ('{name}', {price}, '{category}')";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 connection.Open();
@@ -82,11 +82,11 @@ namespace Manager
         }
 
 
-        public void AddReservation(string reservationID, string hallID, string userID, string reservationDate, string reservationType, string reservationStatus)
+        public void AddReservation(string hallID, string userID, string reservationDate, string reservationType, string reservationStatus)
         {
             try
             {
-                string query = $"INSERT INTO Reservations (ReservationID,HallID,UserID,ReservationDate,ReservationType,ReservationStatus) VALUES ('{reservationID}', '{hallID}', '{userID}', '{reservationDate}','{reservationType}','{reservationStatus}')";
+                string query = $"INSERT INTO Reservations (HallID,UserID,ReservationDate,ReservationType,ReservationStatus) VALUES ('{hallID}', '{userID}', '{reservationDate}','{reservationType}','{reservationStatus}')";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 connection.Open();
@@ -98,16 +98,12 @@ namespace Manager
             }
         }
 
-        public void AddHall(string hallID, string hallName, string hallPartyType, int hallCapacity, string availability)
+        public void AddHall(string hallName, string hallPartyType, int hallCapacity, string availability)
         {
             try
             // Validate input parameters
             {
-                if (string.IsNullOrEmpty(hallID) || string.IsNullOrEmpty(hallName) || string.IsNullOrEmpty(hallPartyType) || string.IsNullOrEmpty(availability) || hallCapacity <= 0)
-                {
-                    throw new ArgumentException("One or more input parameters are empty or invalid.");
-                }
-                string query = $"INSERT INTO Halls (HallID,HallName,HallPartyType,HallCapacity,Availability) VALUES ('{hallID}', '{hallName}', '{hallPartyType}', '{hallCapacity}','{availability}')";
+                string query = $"INSERT INTO Halls (HallName,HallPartyType,HallCapacity,Availability) VALUES ('{hallName}', '{hallPartyType}', '{hallCapacity}','{availability}')";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 connection.Open();

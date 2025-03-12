@@ -15,15 +15,20 @@ namespace Manager
         Button button = new Button();
 
         Database db = new Database();
+        string FoodID;
         public Main_Menu()
         {
             InitializeComponent();
-            //this.Resize += new EventHandler(Form_Resize);
-            //initialFormWidth = this.Width;
-            //initialFormHeight = this.Height;
-            //initialFontSize = this.Font.Size;
+            this.Shown += new EventHandler(initializeFoodItemID);
         }
-
+        private void initializeFoodItemID(object sender, EventArgs e)
+        {
+            int rows = dataGridViewMenu.Rows.Count+1;
+   
+            string row = rows.ToString("D3");
+            FoodID = $"I{row}";
+            lblItemID.Text = FoodID;
+        }
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -60,21 +65,6 @@ namespace Manager
             this.menuTableAdapter.Fill(this.foodieDbDataSet.Menu);
         }
 
-        //private void Form_Resize(object sender, EventArgs e)
-        //{
-        //    float scaleFactorWidth = this.Width / initialFormWidth;
-        //    float scaleFactorHeight = this.Height / initialFormHeight;
-        //    float scaleFactor = Math.Min(scaleFactorWidth, scaleFactorHeight);
-
-        //    float newFontSize = initialFontSize * scaleFactor;
-
-        //    // Ensure the new font size is valid
-        //    if (newFontSize > 0)
-        //    {
-        //        this.Font = new Font(this.Font.FontFamily, newFontSize);
-        //    }
-        //}
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -94,17 +84,17 @@ namespace Manager
         {
             try
             {
-                string x = itemIDtxt.Text;
                 string name = itemNametxt.Text;
                 double price = double.Parse(itemPricetxt.Text);
                 string category = itemCategorycmb.Text;
-                db.AddItem(x, name, price, category);
+                db.AddItem(name, price, category);
                 db.LoadData(dataGridViewMenu, "Menu");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.button2.Click += new EventHandler(this.initializeFoodItemID);
         }
 
         private void dataGridViewMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -114,6 +104,11 @@ namespace Manager
         private void button1_Click_1(object sender, EventArgs e)
         {
             button.EditMenu();
+        }
+
+        private void itemIDtxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
