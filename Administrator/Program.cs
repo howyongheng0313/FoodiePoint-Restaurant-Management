@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Customers
+namespace Admin
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Customers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_Customer());
+            Application.Run(new frmLogin());
         }
     }
 }
