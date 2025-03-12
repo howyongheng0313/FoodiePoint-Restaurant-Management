@@ -188,12 +188,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodieDbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\Blank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Blank.Designer.cs">
-      <DependentUpon>Blank.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presenter\Button.cs" />
     <Compile Include="Presenter\Database.cs" />
     <Compile Include="View\EditHalls.cs">
@@ -240,9 +234,6 @@
     <Compile Include="View\frmEditReservation.Designer.cs">
       <DependentUpon>frmEditReservation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Blank.resx">
-      <DependentUpon>Blank.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\EditHalls.resx">
       <DependentUpon>EditHalls.cs</DependentUpon>
     </EmbeddedResource>
