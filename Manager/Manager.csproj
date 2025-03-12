@@ -85,12 +85,6 @@
     <Compile Include="View\EditMenu.Designer.cs">
       <DependentUpon>EditMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Edit_Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Edit_Menu.Designer.cs">
-      <DependentUpon>Edit_Menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataSet\FoodieDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditMenu.resx">
       <DependentUpon>EditMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Edit_Menu.resx">
-      <DependentUpon>Edit_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHall.resx">
       <DependentUpon>frmHall.cs</DependentUpon>

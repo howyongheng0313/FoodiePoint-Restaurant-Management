@@ -12,6 +12,7 @@ namespace Manager
 {
     public partial class EditHalls : System.Windows.Forms.Form
     {
+        Button bt = new Button();
         Database db = new Database();
         public EditHalls()
         {
@@ -81,6 +82,26 @@ namespace Manager
             string hallid = hallIdTxt.Text;
             db.DeleteHall(hallid);
             db.LoadData(dataGridView1, "Halls");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bt.MainMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            bt.HallMgmt();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            bt.Reservations();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            bt.Profile();
         }
     }
     
