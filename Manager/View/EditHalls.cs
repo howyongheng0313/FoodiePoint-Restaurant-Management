@@ -103,6 +103,11 @@ namespace Manager
         {
             bt.Profile();
         }
+
+        private void hallIdTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

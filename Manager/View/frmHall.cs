@@ -86,7 +86,7 @@ namespace Manager
             string HallPartyType = hallPartyTypeTxt.Text;
             int HallCapacity = int.Parse(hallCapacityTxt.Text);
             string Availability = availabilityCmb.Text;
-            db.AddHall(HallID, HallName, HallPartyType, HallCapacity, Availability);
+            db.AddHall(HallName, HallPartyType, HallCapacity, Availability);
             db.LoadData(dataGridViewHall, "Halls");
         }
 

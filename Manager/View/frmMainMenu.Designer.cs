@@ -43,7 +43,6 @@
             this.itemNametxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.itemIDtxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewMenu = new System.Windows.Forms.DataGridView();
@@ -60,6 +59,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuTableAdapter = new Manager.FoodieDbDataSetTableAdapters.MenuTableAdapter();
             this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblItemID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -117,6 +117,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblItemID);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.itemCategorycmb);
             this.splitContainer1.Panel2.Controls.Add(this.itemPricetxt);
@@ -124,7 +125,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.itemNametxt);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Panel2.Controls.Add(this.itemIDtxt);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewMenu);
@@ -207,7 +207,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(692, 581);
+            this.button1.Location = new System.Drawing.Point(695, 581);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 42);
@@ -225,7 +225,7 @@
             this.itemCategorycmb.Location = new System.Drawing.Point(33, 350);
             this.itemCategorycmb.Margin = new System.Windows.Forms.Padding(4);
             this.itemCategorycmb.Name = "itemCategorycmb";
-            this.itemCategorycmb.Size = new System.Drawing.Size(140, 28);
+            this.itemCategorycmb.Size = new System.Drawing.Size(140, 25);
             this.itemCategorycmb.TabIndex = 34;
             // 
             // itemPricetxt
@@ -233,7 +233,7 @@
             this.itemPricetxt.Location = new System.Drawing.Point(33, 281);
             this.itemPricetxt.Margin = new System.Windows.Forms.Padding(4);
             this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(140, 27);
+            this.itemPricetxt.Size = new System.Drawing.Size(140, 23);
             this.itemPricetxt.TabIndex = 32;
             // 
             // label6
@@ -245,7 +245,7 @@
             this.label6.Location = new System.Drawing.Point(29, 317);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 24);
+            this.label6.Size = new System.Drawing.Size(100, 18);
             this.label6.TabIndex = 31;
             this.label6.Text = "Item Category";
             // 
@@ -254,7 +254,7 @@
             this.itemNametxt.Location = new System.Drawing.Point(33, 212);
             this.itemNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.itemNametxt.Name = "itemNametxt";
-            this.itemNametxt.Size = new System.Drawing.Size(140, 27);
+            this.itemNametxt.Size = new System.Drawing.Size(140, 23);
             this.itemNametxt.TabIndex = 30;
             // 
             // label5
@@ -266,7 +266,7 @@
             this.label5.Location = new System.Drawing.Point(29, 248);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 24);
+            this.label5.Size = new System.Drawing.Size(74, 18);
             this.label5.TabIndex = 29;
             this.label5.Text = "Item Price";
             // 
@@ -279,18 +279,10 @@
             this.label4.Location = new System.Drawing.Point(29, 179);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 24);
+            this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 28;
             this.label4.Text = "Item Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // itemIDtxt
-            // 
-            this.itemIDtxt.Location = new System.Drawing.Point(33, 143);
-            this.itemIDtxt.Margin = new System.Windows.Forms.Padding(4);
-            this.itemIDtxt.Name = "itemIDtxt";
-            this.itemIDtxt.Size = new System.Drawing.Size(140, 27);
-            this.itemIDtxt.TabIndex = 27;
             // 
             // label7
             // 
@@ -301,7 +293,7 @@
             this.label7.Location = new System.Drawing.Point(29, 110);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 24);
+            this.label7.Size = new System.Drawing.Size(54, 18);
             this.label7.TabIndex = 26;
             this.label7.Text = "Item ID";
             // 
@@ -342,7 +334,7 @@
             this.dataGridViewMenu.RowHeadersVisible = false;
             this.dataGridViewMenu.RowHeadersWidth = 51;
             this.dataGridViewMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMenu.Size = new System.Drawing.Size(623, 483);
+            this.dataGridViewMenu.Size = new System.Drawing.Size(626, 483);
             this.dataGridViewMenu.TabIndex = 17;
             this.dataGridViewMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuItem_CellClick);
             this.dataGridViewMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMenu_CellContentClick);
@@ -398,7 +390,7 @@
             this.label3.Location = new System.Drawing.Point(20, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 29);
+            this.label3.Size = new System.Drawing.Size(114, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "Main Menu";
             // 
@@ -409,7 +401,7 @@
             this.label1.Location = new System.Drawing.Point(17, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 32);
+            this.label1.Size = new System.Drawing.Size(209, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -431,9 +423,17 @@
             this.foodieDbDataSetBindingSource.DataSource = this.foodieDbDataSet;
             this.foodieDbDataSetBindingSource.Position = 0;
             // 
+            // lblItemID
+            // 
+            this.lblItemID.AutoSize = true;
+            this.lblItemID.Location = new System.Drawing.Point(30, 140);
+            this.lblItemID.Name = "lblItemID";
+            this.lblItemID.Size = new System.Drawing.Size(0, 17);
+            this.lblItemID.TabIndex = 36;
+            // 
             // Main_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
@@ -483,7 +483,6 @@
         private System.Windows.Forms.BindingSource menuBindingSource1;
         private FoodieDbDataSetTableAdapters.MenuTableAdapter menuTableAdapter;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox itemIDtxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox itemCategorycmb;
         private System.Windows.Forms.TextBox itemPricetxt;
@@ -497,5 +496,6 @@
         private System.Windows.Forms.BindingSource menuBindingSource2;
         private System.Windows.Forms.BindingSource foodieDbDataSetBindingSource;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblItemID;
     }
 }
