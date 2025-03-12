@@ -44,13 +44,8 @@ namespace Reservation_Coordinator.View
         private void dgvAllRev_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            dgvAllRev.Rows[e.RowIndex].Cells["Reservation ID"].Value.ToString();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            ItemReservation newRev = ItemReservation.NewReservation();
-            
+            string selectedID = dgvAllRev.Rows[e.RowIndex].Cells["Reservation ID"].Value.ToString();
+            ItemReservation selectedRev = ItemReservation.GetByID(selectedID);
         }
     }
 }

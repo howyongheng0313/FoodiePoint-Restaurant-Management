@@ -12,33 +12,80 @@ namespace Reservation_Coordinator.Model.Item
     {
         public static readonly string tb_code = "[dbo].[Reservations]";
 
-        public static ItemReservation NewReservation()
+        public static ItemReservation GetByID(string revID)
         {
-            string newID;
-            var holder_cmd = new SqlCommand(
-                $"INSERT INTO {tb_code} " +
-                "OUTPUT INSERTED.[ReservationID] " +
-                "DEFAULT VALUES", DataHelper.conn);
+            var get_cmd = new SqlCommand(
+                "SELECT " +
+                "[ReservationID], " +
+                "[HallID], " +
+                "[UserID], " +
+                "[GuestCount], " +
+                "[ReservationDate], " +
+                "[ReservationType], " +
+                "[ReservationStatus], " +
+                "[FullName], " +
+                "[HallName] " +
+                $"FROM {tb_code} " +
+                $"LEFT JOIN {ItemUser.tb_code} AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
+                $"LEFT JOIN {ItemHall.tb_code} AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID] " +
+                "WHERE [ReservationID] = @revid", DataHelper.conn);
+            get_cmd.Parameters.AddWithValue("@revid", revID);
 
             DataHelper.conn.Open();
-            newID = (string)holder_cmd.ExecuteScalar();
-            DataHelper.conn.Close();
+            SqlDataReader reader = get_cmd.ExecuteReader();
 
-            return new ItemReservation(newID);
+            if (reader.Read())
+            {
+                var reservation = new ItemReservation(
+                    reader.GetString(0),
+                    reader.GetString(1),
+                    reader.GetString(2),
+                    (int)reader.GetInt32(3),
+                    (DateTime)reader.GetDateTime(4),
+                    reader.GetString(5),
+                    reader.GetString(6),
+                    reader.GetString(7),
+                    reader.GetString(8));
+                DataHelper.conn.Close();
+                return reservation;
+            }
+            else
+            {
+                DataHelper.conn.Close();
+                return null;
+            }
         }
 
-        public string ReservationID     { get; }
-        public string HallID            { get; set; }
-        public string UserID            { get; }
-        public object ReservationDate   { get; }
-        public string ReservationType   { get; }
-        public string ReservationStatus { get; set; }
-        public string FullName          { get; }
-        public string HallName          { get; set; }
+        public string   ReservationID     { get; }
+        public string   HallID            { get; set; }
+        public string   UserID            { get; }
+        public int      GuestCount        { get; }
+        public DateTime ReservationDate   { get; }
+        public string   ReservationType   { get; }
+        public string   ReservationStatus { get; set; }
+        public string   FullName          { get; }
+        public string   HallName          { get; set; }
 
-        public ItemReservation(string reservationID)
+        public ItemReservation(
+            string   reservationID,
+            string   hallID,
+            string   userID,
+            int      guestCount,
+            DateTime reservationDate,
+            string   reservationType,
+            string   reservationStatus,
+            string   fullName,
+            string   hallName)
         {
-            ReservationID = reservationID;
+            ReservationID     = reservationID;
+            HallID            = hallID;
+            UserID            = userID;
+            GuestCount        = guestCount;
+            ReservationDate   = reservationDate;
+            ReservationType   = reservationType;
+            ReservationStatus = reservationStatus;
+            FullName          = fullName;
+            HallName          = hallName;
         }
     }
 }

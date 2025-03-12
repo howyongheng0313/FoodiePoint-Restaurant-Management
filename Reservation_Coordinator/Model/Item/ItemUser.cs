@@ -15,7 +15,7 @@ namespace Reservation_Coordinator.Model.Item
         {
             var login_cmd = new SqlCommand(
                 $"SELECT * FROM {tb_code} " +
-                $"WHERE [Username] = @usrnm AND [Password] = @paswd", DataHelper.conn);
+                "WHERE [Username] = @usrnm AND [Password] = @paswd", DataHelper.conn);
             login_cmd.Parameters.AddWithValue("@usrnm", usrnm);
             login_cmd.Parameters.AddWithValue("@paswd", paswd);
 
@@ -25,12 +25,12 @@ namespace Reservation_Coordinator.Model.Item
             if (reader.Read())
             {
                 var user =  new ItemUser(
-                    reader.GetString(0),
                     reader.GetString(1),
                     reader.GetString(2),
                     reader.GetString(3),
                     reader.GetString(4),
-                    reader.GetString(5));
+                    reader.GetString(5),
+                    reader.GetString(6));
                 DataHelper.conn.Close();
                 return user;
             }

@@ -8,6 +8,8 @@ namespace Reservation_Coordinator.Model.Item
 {
     class ItemHall
     {
+        public static readonly string tb_code = "[dbo].[Halls]";
+
         public string HallID        { get; }
         public string HallName      { get; }
         public string HallPartyType { get; }

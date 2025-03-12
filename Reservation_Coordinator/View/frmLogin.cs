@@ -27,6 +27,7 @@ namespace Reservation_Coordinator.View
             {
                 var mainPage = new frmMainTool();
                 mainPage.SetUser(user);
+                this.Hide();
                 mainPage.ShowDialog();
                 this.Close();
             }

@@ -32,9 +32,6 @@
             this.dgvAllRev = new System.Windows.Forms.DataGridView();
             this.txtRevID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnNotice = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllRev)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +56,7 @@
             this.dgvAllRev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllRev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllRev.EnableHeadersVisualStyles = false;
-            this.dgvAllRev.Location = new System.Drawing.Point(15, 110);
+            this.dgvAllRev.Location = new System.Drawing.Point(17, 59);
             this.dgvAllRev.Margin = new System.Windows.Forms.Padding(15);
             this.dgvAllRev.MultiSelect = false;
             this.dgvAllRev.Name = "dgvAllRev";
@@ -68,13 +65,13 @@
             this.dgvAllRev.RowHeadersWidth = 51;
             this.dgvAllRev.RowTemplate.Height = 24;
             this.dgvAllRev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllRev.Size = new System.Drawing.Size(832, 395);
+            this.dgvAllRev.Size = new System.Drawing.Size(832, 490);
             this.dgvAllRev.TabIndex = 0;
             this.dgvAllRev.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllRev_CellDoubleClick);
             // 
             // txtRevID
             // 
-            this.txtRevID.Location = new System.Drawing.Point(15, 70);
+            this.txtRevID.Location = new System.Drawing.Point(17, 19);
             this.txtRevID.Name = "txtRevID";
             this.txtRevID.Size = new System.Drawing.Size(112, 30);
             this.txtRevID.TabIndex = 2;
@@ -82,50 +79,11 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(133, 70);
+            this.txtName.Location = new System.Drawing.Point(135, 19);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 30);
             this.txtName.TabIndex = 3;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(667, 520);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(180, 40);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(472, 520);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(180, 40);
-            this.btnRemove.TabIndex = 5;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            // 
-            // btnNotice
-            // 
-            this.btnNotice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNotice.AutoSize = true;
-            this.btnNotice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotice.Location = new System.Drawing.Point(767, 15);
-            this.btnNotice.Margin = new System.Windows.Forms.Padding(15);
-            this.btnNotice.Name = "btnNotice";
-            this.btnNotice.Size = new System.Drawing.Size(80, 40);
-            this.btnNotice.TabIndex = 7;
-            this.btnNotice.Text = "Notice";
-            this.btnNotice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNotice.UseVisualStyleBackColor = true;
             // 
             // cmbStatus
             // 
@@ -138,7 +96,7 @@
             "Confirmed",
             "Completed",
             "Rejected"});
-            this.cmbStatus.Location = new System.Drawing.Point(692, 69);
+            this.cmbStatus.Location = new System.Drawing.Point(694, 18);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbStatus.Size = new System.Drawing.Size(155, 31);
@@ -151,9 +109,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.btnNotice);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtRevID);
             this.Controls.Add(this.dgvAllRev);
@@ -173,9 +128,6 @@
         private System.Windows.Forms.DataGridView dgvAllRev;
         private System.Windows.Forms.TextBox txtRevID;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnNotice;
         private System.Windows.Forms.ComboBox cmbStatus;
     }
 }

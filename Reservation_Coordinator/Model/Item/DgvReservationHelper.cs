@@ -25,9 +25,9 @@ namespace Reservation_Coordinator.Model.Item
             "[ReservationType] AS [Reservation Type], " +
             "[ReservationDate] AS [Date], " +
             "[ReservationStatus] AS [Status] " +
-            "FROM [dbo].[Reservations] AS [ResTB] " +
-            "LEFT JOIN [dbo].[Users] AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
-            "LEFT JOIN [dbo].[Halls] AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID]", DataHelper.conn);
+            $"FROM {ItemReservation.tb_code} AS [ResTB] " +
+            $"LEFT JOIN {ItemUser.tb_code} AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
+            $"LEFT JOIN {ItemHall.tb_code} AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID]", DataHelper.conn);
 
         public DgvReservationHelper(DataGridView dgv)
         {
