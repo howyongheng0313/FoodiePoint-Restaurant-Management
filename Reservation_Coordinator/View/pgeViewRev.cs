@@ -13,7 +13,7 @@ namespace Reservation_Coordinator.View
 {
     public partial class pgeViewRev: UserControl
     {
-        private DgvReservationHelper dgvAllRevHelper;
+        private ReservationHelper dgvAllRevHelper;
 
         public pgeViewRev()
         {
@@ -23,7 +23,7 @@ namespace Reservation_Coordinator.View
 
         private void pgeViewRev_Load(object sender, EventArgs e)
         {
-            dgvAllRevHelper = new DgvReservationHelper(dgvAllRev);
+            dgvAllRevHelper = new ReservationHelper(dgvAllRev);
         }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,6 +46,23 @@ namespace Reservation_Coordinator.View
             if (e.RowIndex < 0) return;
             string selectedID = dgvAllRev.Rows[e.RowIndex].Cells["Reservation ID"].Value.ToString();
             ItemReservation selectedRev = ItemReservation.GetByID(selectedID);
+
+            if (selectedRev != null)
+            {
+                Form parentForm = this.FindForm();
+                var detailPage = new frmSubReservationDetail();
+                detailPage.SetRev(selectedRev);
+
+                parentForm.Hide();
+                detailPage.ShowDialog();
+                dgvAllRevHelper.Refresh();
+                parentForm.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Cannot found the Reservation {selectedID}.");
+                return;
+            }
         }
     }
 }

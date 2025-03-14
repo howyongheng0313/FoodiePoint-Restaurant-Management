@@ -58,7 +58,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\DataHelper.cs" />
-    <Compile Include="Model\Item\DgvReservationHelper.cs" />
+    <Compile Include="Model\Item\ReplyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Item\ReplyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Item\RequestBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Item\RequestHelper.cs" />
+    <Compile Include="Model\Item\ReservationHelper.cs" />
     <Compile Include="Model\Item\ItemHall.cs" />
     <Compile Include="Model\Item\ItemRequest.cs" />
     <Compile Include="Model\Item\ItemReservation.cs" />

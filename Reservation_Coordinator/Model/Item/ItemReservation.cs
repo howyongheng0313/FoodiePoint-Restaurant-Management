@@ -10,24 +10,22 @@ namespace Reservation_Coordinator.Model.Item
 {
     public class ItemReservation
     {
-        public static readonly string tb_code = "[dbo].[Reservations]";
-
         public static ItemReservation GetByID(string revID)
         {
             var get_cmd = new SqlCommand(
                 "SELECT " +
                 "[ReservationID], " +
-                "[HallID], " +
-                "[UserID], " +
+                "[RevTB].[HallID], " +
+                "[RevTB].[UserID], " +
                 "[GuestCount], " +
                 "[ReservationDate], " +
                 "[ReservationType], " +
                 "[ReservationStatus], " +
                 "[FullName], " +
                 "[HallName] " +
-                $"FROM {tb_code} " +
-                $"LEFT JOIN {ItemUser.tb_code} AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
-                $"LEFT JOIN {ItemHall.tb_code} AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID] " +
+                $"FROM {DataHelper.RevT} AS [RevTB]" +
+                $"LEFT JOIN {DataHelper.UserT} AS [UsrTB] ON [RevTB].[UserID] = [UsrTB].[UserID] " +
+                $"LEFT JOIN {DataHelper.HallT} AS [HalTB] ON [RevTB].[HallID] = [HalTB].[HallID] " +
                 "WHERE [ReservationID] = @revid", DataHelper.conn);
             get_cmd.Parameters.AddWithValue("@revid", revID);
 

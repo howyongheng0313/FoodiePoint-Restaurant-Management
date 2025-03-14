@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace Reservation_Coordinator.Model.Item
 {
-    public class DgvReservationHelper
+    public class ReservationHelper
     {
         private string filterStatus = "";
         private string filterID = "";
@@ -25,19 +25,20 @@ namespace Reservation_Coordinator.Model.Item
             "[ReservationType] AS [Reservation Type], " +
             "[ReservationDate] AS [Date], " +
             "[ReservationStatus] AS [Status] " +
-            $"FROM {ItemReservation.tb_code} AS [ResTB] " +
-            $"LEFT JOIN {ItemUser.tb_code} AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
-            $"LEFT JOIN {ItemHall.tb_code} AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID]", DataHelper.conn);
+            $"FROM {DataHelper.RevT} AS [ResTB] " +
+            $"LEFT JOIN {DataHelper.UserT} AS [UsrTB] ON [ResTB].[UserID] = [UsrTB].[UserID] " +
+            $"LEFT JOIN {DataHelper.HallT} AS [HalTB] ON [ResTB].[HallID] = [HalTB].[HallID]", DataHelper.conn);
 
-        public DgvReservationHelper(DataGridView dgv)
+        public ReservationHelper(DataGridView dgv)
         {
             this.dGridv = dgv;
             dGridv.DataSource = dTable;
-            dAdapter.Fill(dTable);
+            Refresh();
         }
 
         public void Refresh()
         {
+            dTable.Clear();
             dAdapter.Fill(dTable);
         }
 
