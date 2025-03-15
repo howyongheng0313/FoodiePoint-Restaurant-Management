@@ -222,5 +222,23 @@ namespace Manager
                 dataGridView.Refresh();
             }
         }
+        public void SearchReservationType(DataGridView dataGridView, string x, string search)
+        {
+
+            string query = $"SELECT * FROM {x} WHERE ReservationType LIKE @search";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + search + "%");
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+                dataGridView.DataSource = table;
+                dataGridView.Refresh();
+            }
+        }
     }
 }

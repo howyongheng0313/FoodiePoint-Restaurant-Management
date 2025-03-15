@@ -82,21 +82,25 @@ namespace Manager
         private void button3_Click(object sender, EventArgs e)
         {
             bt.MainMenu();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             bt.HallMgmt();
+            this.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             bt.Reservations();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             bt.Profile();
+            this.Hide();
         }
 
         public string[] Idarray = new string[0];
@@ -121,6 +125,12 @@ namespace Manager
             //string id = itemIDtxt.Text;
             //Array.Resize(ref Idarray, Idarray.Length + 1);
             //Idarray[Idarray.Length - 1] = id;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            bt.MainMenu();
+            this.Hide();
         }
     }
 }

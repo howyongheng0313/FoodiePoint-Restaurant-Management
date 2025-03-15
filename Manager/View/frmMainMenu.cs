@@ -42,21 +42,25 @@ namespace Manager
         private void button3_Click(object sender, EventArgs e)
         {
             button.MainMenu();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             button.HallMgmt();
+            this.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             button.Reservations();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             button.Profile();
+            this.Hide();
         }
 
         private void Main_Menu_Load(object sender, EventArgs e)
@@ -104,6 +108,7 @@ namespace Manager
         private void button1_Click_1(object sender, EventArgs e)
         {
             button.EditMenu();
+            this.Hide();
         }
 
         private void itemIDtxt_TextChanged(object sender, EventArgs e)
