@@ -58,13 +58,13 @@
             this.floChatList = new System.Windows.Forms.FlowLayoutPanel();
             this.lblFlowSpace = new System.Windows.Forms.Label();
             this.txtChat = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblInfoBar = new System.Windows.Forms.TableLayoutPanel();
             this.grpCustomer.SuspendLayout();
             this.grpDetail.SuspendLayout();
             this.grpHall.SuspendLayout();
             this.tblStatusBar.SuspendLayout();
             this.floChatList.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tblInfoBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblRevIDTitle
@@ -282,6 +282,7 @@
             this.btnMatch.TabIndex = 8;
             this.btnMatch.Text = "Match";
             this.btnMatch.UseVisualStyleBackColor = true;
+            this.btnMatch.Click += new System.EventHandler(this.btnMatch_Click);
             // 
             // lblHallIDTitle
             // 
@@ -312,6 +313,7 @@
             this.btnComfirm.TabIndex = 13;
             this.btnComfirm.Text = "Comfirm";
             this.btnComfirm.UseVisualStyleBackColor = true;
+            this.btnComfirm.Click += new System.EventHandler(this.btnComfirm_Click);
             // 
             // btnComplete
             // 
@@ -323,6 +325,7 @@
             this.btnComplete.TabIndex = 14;
             this.btnComplete.Text = "Complete";
             this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // btnReject
             // 
@@ -334,6 +337,7 @@
             this.btnReject.TabIndex = 15;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
             // tblStatusBar
             // 
@@ -379,7 +383,7 @@
             this.lblFlowSpace.Margin = new System.Windows.Forms.Padding(3);
             this.lblFlowSpace.MaximumSize = new System.Drawing.Size(0, 1);
             this.lblFlowSpace.Name = "lblFlowSpace";
-            this.lblFlowSpace.Size = new System.Drawing.Size(587, 1);
+            this.lblFlowSpace.Size = new System.Drawing.Size(607, 1);
             this.lblFlowSpace.TabIndex = 2;
             this.lblFlowSpace.Text = resources.GetString("lblFlowSpace.Text");
             // 
@@ -395,25 +399,25 @@
             this.txtChat.Size = new System.Drawing.Size(618, 58);
             this.txtChat.TabIndex = 18;
             // 
-            // tableLayoutPanel1
+            // tblInfoBar
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblInfoBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.grpCustomer, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.grpDetail, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.grpHall, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 101);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.44F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.78F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.78F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(393, 499);
-            this.tableLayoutPanel1.TabIndex = 19;
+            this.tblInfoBar.ColumnCount = 1;
+            this.tblInfoBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblInfoBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblInfoBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblInfoBar.Controls.Add(this.grpCustomer, 0, 0);
+            this.tblInfoBar.Controls.Add(this.grpDetail, 0, 1);
+            this.tblInfoBar.Controls.Add(this.grpHall, 0, 2);
+            this.tblInfoBar.Location = new System.Drawing.Point(27, 101);
+            this.tblInfoBar.Name = "tblInfoBar";
+            this.tblInfoBar.RowCount = 3;
+            this.tblInfoBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.44F));
+            this.tblInfoBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.78F));
+            this.tblInfoBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.78F));
+            this.tblInfoBar.Size = new System.Drawing.Size(393, 499);
+            this.tblInfoBar.TabIndex = 19;
             // 
             // frmSubReservationDetail
             // 
@@ -421,7 +425,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1082, 673);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tblInfoBar);
             this.Controls.Add(this.txtChat);
             this.Controls.Add(this.floChatList);
             this.Controls.Add(this.tblStatusBar);
@@ -444,7 +448,7 @@
             this.tblStatusBar.ResumeLayout(false);
             this.floChatList.ResumeLayout(false);
             this.floChatList.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tblInfoBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +485,6 @@
         private System.Windows.Forms.FlowLayoutPanel floChatList;
         private System.Windows.Forms.Label lblFlowSpace;
         private System.Windows.Forms.TextBox txtChat;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tblInfoBar;
     }
 }

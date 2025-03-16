@@ -97,7 +97,7 @@ INSERT INTO [dbo].[Feedbacks] (OrderID, Feedback, Rating) VALUES
 
 -- HALL Branch (using USER)
 INSERT INTO [dbo].[Halls] (HallName, HallCapacity, [Availability], HallPartyType) VALUES
-('Grand Hall', 200, 'Available'  , 'Wedding'),
+('Grand Hall', 200, 'Inavailable'  , 'Wedding'),
 ('Small Room', 50 , 'Inavailable', 'Meeting'),
 ('VIP Lounge', 30 , 'Available'  , 'Private Party'),
 ('Conference', 100, 'Available'  , 'Business'),

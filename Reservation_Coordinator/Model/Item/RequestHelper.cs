@@ -15,14 +15,20 @@ namespace Reservation_Coordinator.Model.Item
         private string revID;
         private string lasID = "RQ000";
 
+        private Timer chatTimer = new Timer();
+        public bool ChatTimer { get => chatTimer.Enabled; set => chatTimer.Enabled = value; }
+
         public RequestHelper(FlowLayoutPanel chatList, TextBox source, string revID)
         {
             this.chatList = chatList;
             this.source  = source;
             this.revID   = revID;
+
+            chatTimer.Interval = 3000;
+            chatTimer.Tick += (s,e) => Refresh();
         }
 
-        public void renderList()
+        public void Refresh()
         {
             var req_cmd = new SqlCommand(
                 "SELECT [RequestID], [UserRequest], [Reply] " +
@@ -51,12 +57,14 @@ namespace Reservation_Coordinator.Model.Item
                 var replyBtn = new ReplyButton();
                 replyBtn.Click += (object sender, EventArgs e) =>
                 {
+                    if (string.IsNullOrEmpty(source.Text)) return;
                     if (ItemRequest.SendReply(reqid, source.Text) < 1)
                     {
                         MessageBox.Show("Failed to Send The Message.");
                         return;
                     }
                     var newReply = new ReplyBox(source.Text);
+                    source.Text = string.Empty;
                     chatList.Controls.RemoveAt(btnPos);
                     chatList.Controls.Add(newReply);
                     chatList.Controls.SetChildIndex(newReply, btnPos);

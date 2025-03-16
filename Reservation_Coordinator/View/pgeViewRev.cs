@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Reservation_Coordinator.Model.Item;
+using Reservation_Coordinator.Model;
 
 namespace Reservation_Coordinator.View
 {
@@ -47,22 +48,16 @@ namespace Reservation_Coordinator.View
             string selectedID = dgvAllRev.Rows[e.RowIndex].Cells["Reservation ID"].Value.ToString();
             ItemReservation selectedRev = ItemReservation.GetByID(selectedID);
 
-            if (selectedRev != null)
-            {
-                Form parentForm = this.FindForm();
-                var detailPage = new frmSubReservationDetail();
-                detailPage.SetRev(selectedRev);
-
-                parentForm.Hide();
-                detailPage.ShowDialog();
-                dgvAllRevHelper.Refresh();
-                parentForm.Show();
-            }
-            else
+            if (selectedRev == null)
             {
                 MessageBox.Show($"Cannot found the Reservation {selectedID}.");
                 return;
             }
+            var detailPage = new frmSubReservationDetail();
+            detailPage.SetRev(selectedRev);
+
+            Jumper.Dive(detailPage);
+            dgvAllRevHelper.Refresh();
         }
     }
 }

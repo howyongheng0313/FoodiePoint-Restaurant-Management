@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reservation_Coordinator.Model;
 using Reservation_Coordinator.Model.Item;
 
 namespace Reservation_Coordinator.View
@@ -16,6 +17,7 @@ namespace Reservation_Coordinator.View
         public frmLogin()
         {
             InitializeComponent();
+            Jumper.Look(this);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,9 +29,7 @@ namespace Reservation_Coordinator.View
             {
                 var mainPage = new frmMainTool();
                 mainPage.SetUser(user);
-                this.Hide();
-                mainPage.ShowDialog();
-                this.Close();
+                Jumper.Dive(mainPage);
             }
             else
             {
