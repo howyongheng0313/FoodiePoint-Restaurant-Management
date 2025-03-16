@@ -15,6 +15,10 @@ namespace Reservation_Coordinator.Model.Item
         private string filterStatus = "";
         private string filterID = "";
         private string filterName = "";
+
+        private Timer revTimer = new Timer();
+        public bool RevTimer { get => revTimer.Enabled; set => revTimer.Enabled = value; }
+
         private DataGridView dGridv;
         private DataTable dTable = new DataTable();
         private SqlDataAdapter dAdapter = new SqlDataAdapter(
@@ -33,7 +37,9 @@ namespace Reservation_Coordinator.Model.Item
         {
             this.dGridv = dgv;
             dGridv.DataSource = dTable;
-            Refresh();
+
+            revTimer.Interval = 5000;
+            revTimer.Tick += (s, e) => Refresh();
         }
 
         public void Refresh()

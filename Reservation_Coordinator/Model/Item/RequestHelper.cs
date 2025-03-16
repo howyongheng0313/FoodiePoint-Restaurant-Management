@@ -25,7 +25,7 @@ namespace Reservation_Coordinator.Model.Item
             this.revID   = revID;
 
             chatTimer.Interval = 3000;
-            chatTimer.Tick += (s,e) => Refresh();
+            chatTimer.Tick += (s, e) => Refresh();
         }
 
         public void Refresh()

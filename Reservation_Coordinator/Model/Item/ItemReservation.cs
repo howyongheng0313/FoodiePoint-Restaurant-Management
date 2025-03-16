@@ -164,7 +164,7 @@ namespace Reservation_Coordinator.Model.Item
                 return "Failed to update database.";
 
             this.ReservationStatus = Completed;
-            // TODO: Available Hall
+            ItemHall.SetAvailability(this.HallID, true);
             return null;
         }
 
@@ -177,7 +177,7 @@ namespace Reservation_Coordinator.Model.Item
                 return "Failed to update database.";
 
             this.ReservationStatus = Rejected;
-            // TODO: Available Hall
+            UpdateHall(null);
             return null;
         }
     }

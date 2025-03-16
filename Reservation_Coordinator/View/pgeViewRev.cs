@@ -15,6 +15,7 @@ namespace Reservation_Coordinator.View
     public partial class pgeViewRev: UserControl
     {
         private ReservationHelper dgvAllRevHelper;
+        private NoticeHelper floNoticeHelper;
 
         public pgeViewRev()
         {
@@ -24,7 +25,11 @@ namespace Reservation_Coordinator.View
 
         private void pgeViewRev_Load(object sender, EventArgs e)
         {
+            floNoticeHelper = new NoticeHelper(floNotice);
             dgvAllRevHelper = new ReservationHelper(dgvAllRev);
+            dgvAllRevHelper.Refresh();
+            dgvAllRevHelper.RevTimer = true;
+
         }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,6 +63,15 @@ namespace Reservation_Coordinator.View
 
             Jumper.Dive(detailPage);
             dgvAllRevHelper.Refresh();
+        }
+
+        private void btnNotice_Click(object sender, EventArgs e)
+        {
+            floNotice.Visible = !floNotice.Visible;
+            if (floNotice.Visible)
+            {
+                floNoticeHelper.Refresh();
+            }
         }
     }
 }
