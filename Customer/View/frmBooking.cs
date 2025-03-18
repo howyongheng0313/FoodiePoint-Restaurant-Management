@@ -32,9 +32,9 @@ namespace Customer
         {
             string userID = textBox1.Text;
             string reservationDate = textBox2.Text;
-            string reservationType = comboBox1.SelectedItem.ToString(); //For user to enter the booking details
+            string reservationType = comboBox1.SelectedItem.ToString(); 
             string request = rtbxRequest.ToString();
-            string hallID = textBox3.Text;
+            string hallID = textBox3.Text;                               //for user to user booking credentials 
             
             if (string.IsNullOrEmpty(reservationDate) || string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(request))
             {
@@ -43,14 +43,14 @@ namespace Customer
             }
 
             string query = "INSERT INTO Requests (RequestID, ReservationID, UserRequest) " + "VALUES (@RequestID, @ReservationID, @UserRequest)";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
             {
                 try
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@HallID", "H01");  // Change as needed
+                        cmd.Parameters.AddWithValue("@HallID", "H01"); 
                         cmd.Parameters.AddWithValue("@UserID", userID);
                         cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
 
@@ -72,7 +72,7 @@ namespace Customer
             }
 
             string another = "INSERT INTO Reservation (ReservationType, HallID)" + "VALUES (@ReservationType, @HallID)";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 2 variables goes to Re table
             {
                 try
                 {

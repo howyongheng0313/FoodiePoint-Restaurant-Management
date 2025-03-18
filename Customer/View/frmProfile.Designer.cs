@@ -206,6 +206,7 @@
             this.btnSendFeedback.TabIndex = 7;
             this.btnSendFeedback.Text = "Send Feedback";
             this.btnSendFeedback.UseVisualStyleBackColor = false;
+            this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
             // 
             // frmCustomerMain
             // 
