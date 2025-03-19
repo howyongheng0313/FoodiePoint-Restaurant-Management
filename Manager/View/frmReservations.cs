@@ -37,24 +37,6 @@ namespace Manager
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string hallid = hallIdTxt.Text;
-                string userid = userIdTxt.Text;
-                DateTime rsdate = dateTimePicker1.Value;
-                string formattedDate = rsdate.ToString("MM/dd/yyyy");
-                string rstype = rsTypetxt.Text;
-                string rsstatus = rsStatusCmb.Text;
-                db.AddReservation(hallid,userid, formattedDate, rstype, rsstatus);
-                db.LoadData(dataGridView1, "Reservations");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -97,21 +79,36 @@ namespace Manager
         private void button3_Click(object sender, EventArgs e)
         {
             bt.MainMenu();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             bt.HallMgmt();
+            this.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             bt.Reservations();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             bt.Profile();
+            this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text;
+            db.SearchReservationType(dataGridView1, "Reservations", search);
         }
     }
 }

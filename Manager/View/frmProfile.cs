@@ -31,21 +31,25 @@ namespace Manager
         private void button9_Click(object sender, EventArgs e)
         {
             button.Reservations();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             button.MainMenu();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             button.HallMgmt();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             button.Profile();
+            this.Hide();
         }
 
         EditMenu edm = new EditMenu();
