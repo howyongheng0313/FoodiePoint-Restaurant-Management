@@ -14,8 +14,15 @@ namespace FoodiePointManagementSystem.Database
 {
     public class DatabaseHelper
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\heeth\OneDrive - Asia Pacific University\Degree 1st Year (Sem 2)\Object-oriented\Chef\Chef\Database\FoodiePoint.mdf;Integrated Security=True";
+        private string connectionString;
 
+        public DatabaseHelper()
+        {
+            // Get connection string from App.config
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+        }
+
+        // Execute SQL query that returns data in the form of DataTable (SELECT)
         public DataTable ExecuteQuery(string query)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -34,25 +41,24 @@ namespace FoodiePointManagementSystem.Database
                 return dt;
             }
         }
-            
 
-        public int ExecuteNonQuery(string query)
+        // Execute SQL query that does not return any data (INSERT, UPDATE, DELETE)
+        public bool ExecuteNonQuery(string query)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    return cmd.ExecuteNonQuery();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    return cmd.ExecuteNonQuery() > 0;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("SQL Execution Failure" + ex.Message);
-                    return 0;
+                    return false;
                 }
             }
-        }
 
             
         }

@@ -17,18 +17,14 @@ namespace FoodiePointManagementSystem
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmChef_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            frmOrder frmOrder = new frmOrder();
+            frmOrderPage frmOrder = new frmOrderPage();
             frmOrder.Show();
             this.Hide();
         }
