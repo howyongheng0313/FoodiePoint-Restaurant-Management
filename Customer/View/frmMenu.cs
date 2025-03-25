@@ -16,32 +16,22 @@ namespace Customer
 {
     public partial class frmMenuPage : Form
     {
-        //private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
         private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
-        private DatabaseHelper dbhelper;
-        OrderFood ordermethod = new OrderFood();
 
-        private List<string[]> selectedRows = new List<string[]>();
-
+        private List<OrderFood> selectedRows = new List<OrderFood>();
         public frmMenuPage()
         {
             InitializeComponent();
         }
 
-        //DataTable table = new DataTable(); // Create a DataTable
         private void frmMenuPage_Load(object sender, EventArgs e)
         {
-
-            // TODO: This line of code loads data into the 'foodiepointDbDataSet.Menu' table. You can move, or remove it, as needed.
             //this.menuTableAdapter.Fill(this.foodiepointDbDataSet.Menu);
             LoadTableData("");
-
-
         }
 
         private void LoadTableData(string searchValue)
         {
-            //string query = "SELECT * FROM Menu"; // Change "Customers" to your table name //Kuek-Customer
             string query = "SELECT ItemID, ItemName, ItemPrice, ItemCategory FROM Menu";    //Kuek-Customer
 
             if (!string.IsNullOrEmpty(searchValue))
@@ -81,6 +71,7 @@ namespace Customer
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
+
             frmOrderCart form3 = new frmOrderCart(selectedRows);
             form3.ShowDialog();
         }
@@ -93,8 +84,6 @@ namespace Customer
             this.Hide();
         }
 
-        public List<string> selectedCellValue = new List<string>();
-
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
 
@@ -102,15 +91,23 @@ namespace Customer
             {
                 if (!row.IsNewRow) // Ignore new empty rows
                 {
-                    string[] rowData = new string[]
-                    {
+                    OrderFood rowData = new OrderFood(
                         row.Cells[0].Value.ToString(), // Item ID
                         row.Cells[1].Value.ToString(), // Item Name
-                        row.Cells[2].Value.ToString(), // Item Price
+                        Convert.ToDecimal(row.Cells[2].Value), // Item Price
                         row.Cells[3].Value.ToString()  // Item Category
-                    };
-
-                    selectedRows.Add(rowData);
+                    );
+                    bool isExists = false;
+                    foreach (OrderFood order in selectedRows)
+                    {
+                        if (order.ID == rowData.ID)
+                        {
+                            order.Quantity += 1;
+                            isExists = true;
+                            break;
+                        }
+                    }
+                    if (!isExists) selectedRows.Add(rowData);
 
                 }
             }
@@ -123,34 +120,8 @@ namespace Customer
 
         private void Search_btn_Click(object sender, EventArgs e)
         {
-
             string searchText = search_txt.Text.Trim();
             LoadTableData(searchText); 
-            // Reload the data based on search input
-            //string searchText = search_txt.Text; // Get text from the TextBox
-
-            //if (!string.IsNullOrEmpty(searchText))
-            //{
-            //    List<string> dt = dataGridView1.DataSource as List<string>; // Get DataTable from DataSource
-            //    if (dt != null)
-            //    {
-            //        DataView dv = dt.DefaultView;
-            //        dv.RowFilter = $"ItemName LIKE '%{searchText}%' OR ItemCategory LIKE '%{searchText}%'";
-            //        dataGridView1.DataSource = dv; // Apply the filter
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please enter an item name or category to search.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //string searchText = Search_btn.Text;
-
-            //ordermethod.searchItem(searchText);
-            //dataGridView1.DataSource = ordermethod.searchItem(searchText);
-
-
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

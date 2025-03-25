@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnMenuToHallReservation = new System.Windows.Forms.Button();
             this.btnMenuToProfile = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -53,8 +51,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.splitContainer1.Panel1.Controls.Add(this.button6);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.splitContainer1.Panel1.Controls.Add(this.btnMenuToHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenuToProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenu);
@@ -70,25 +67,14 @@
             this.splitContainer1.SplitterDistance = 230;
             this.splitContainer1.TabIndex = 4;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(60, 292);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 40);
-            this.button6.TabIndex = 12;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // btnMenuToHallReservation
             // 
             this.btnMenuToHallReservation.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMenuToHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuToHallReservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuToHallReservation.Location = new System.Drawing.Point(60, 212);
+            this.btnMenuToHallReservation.Location = new System.Drawing.Point(3, 327);
             this.btnMenuToHallReservation.Name = "btnMenuToHallReservation";
-            this.btnMenuToHallReservation.Size = new System.Drawing.Size(101, 40);
+            this.btnMenuToHallReservation.Size = new System.Drawing.Size(224, 96);
             this.btnMenuToHallReservation.TabIndex = 11;
             this.btnMenuToHallReservation.Text = "Hall Reservation";
             this.btnMenuToHallReservation.UseVisualStyleBackColor = false;
@@ -99,9 +85,9 @@
             this.btnMenuToProfile.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMenuToProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuToProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuToProfile.Location = new System.Drawing.Point(60, 52);
+            this.btnMenuToProfile.Location = new System.Drawing.Point(3, 123);
             this.btnMenuToProfile.Name = "btnMenuToProfile";
-            this.btnMenuToProfile.Size = new System.Drawing.Size(101, 40);
+            this.btnMenuToProfile.Size = new System.Drawing.Size(224, 96);
             this.btnMenuToProfile.TabIndex = 10;
             this.btnMenuToProfile.Text = "Profile";
             this.btnMenuToProfile.UseVisualStyleBackColor = false;
@@ -112,18 +98,18 @@
             this.btnMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenu.Location = new System.Drawing.Point(60, 134);
+            this.btnMenu.Location = new System.Drawing.Point(3, 225);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(101, 40);
+            this.btnMenu.Size = new System.Drawing.Size(224, 96);
             this.btnMenu.TabIndex = 9;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
             // Search_btn
             // 
-            this.Search_btn.Location = new System.Drawing.Point(185, 33);
+            this.Search_btn.Location = new System.Drawing.Point(411, 15);
             this.Search_btn.Name = "Search_btn";
-            this.Search_btn.Size = new System.Drawing.Size(75, 23);
+            this.Search_btn.Size = new System.Drawing.Size(101, 40);
             this.Search_btn.TabIndex = 11;
             this.Search_btn.Text = "Search";
             this.Search_btn.UseVisualStyleBackColor = true;
@@ -131,18 +117,21 @@
             // 
             // search_txt
             // 
-            this.search_txt.Location = new System.Drawing.Point(20, 36);
+            this.search_txt.Location = new System.Drawing.Point(20, 20);
             this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(100, 20);
+            this.search_txt.Size = new System.Drawing.Size(330, 20);
             this.search_txt.TabIndex = 10;
             this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(521, 223);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(493, 302);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -151,7 +140,7 @@
             this.btnViewOrder.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnViewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewOrder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewOrder.Location = new System.Drawing.Point(138, 358);
+            this.btnViewOrder.Location = new System.Drawing.Point(141, 369);
             this.btnViewOrder.Name = "btnViewOrder";
             this.btnViewOrder.Size = new System.Drawing.Size(101, 40);
             this.btnViewOrder.TabIndex = 8;
@@ -164,7 +153,7 @@
             this.btnAddToCart.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddToCart.Location = new System.Drawing.Point(19, 358);
+            this.btnAddToCart.Location = new System.Drawing.Point(19, 369);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(101, 40);
             this.btnAddToCart.TabIndex = 7;
@@ -194,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnMenuToHallReservation;
         private System.Windows.Forms.Button btnMenuToProfile;
         private System.Windows.Forms.Button btnMenu;

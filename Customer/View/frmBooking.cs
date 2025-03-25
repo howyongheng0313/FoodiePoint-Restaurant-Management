@@ -16,11 +16,17 @@ namespace Customer
     public partial class frmBooking : Form
     {
         //private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
-        private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
 
-        public frmBooking()
+        private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
+        private Reservation reservation;
+        private frmHallReservation mainForm;
+
+        public frmBooking(Reservation reservation)
         {
             InitializeComponent();
+            //this.reservation = reservation;
+            //this.mainForm = mainForm;
+            lblReservationID.Text = reservation.ReservationID;
         }
 
         private void frmBooking_Load(object sender, EventArgs e)
@@ -29,67 +35,78 @@ namespace Customer
         }
 
         private void btnReservationStatus_Click(object sender, EventArgs e)
+
         {
-            string userID = textBox1.Text;
-            string reservationDate = textBox2.Text;
-            string reservationType = comboBox1.SelectedItem.ToString(); 
-            string request = rtbxRequest.ToString();
-            string hallID = textBox3.Text;                               //for user to user booking credentials 
-            
-            if (string.IsNullOrEmpty(reservationDate) || string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(request))
+            // Get user inputs and update the reservation object
+            reservation.ReservationDate = textBox1.Text;
+            reservation.ReservationType = comboBox1.SelectedItem.ToString();
+            reservation.GuestCount = textBox2.Text;
+            reservation.Request = rtbxRequest.Text;
+            reservation.ReservationStatus = "Booked";
+
+            if (string.IsNullOrEmpty(reservation.ReservationDate) || string.IsNullOrEmpty(reservation.GuestCount) || string.IsNullOrEmpty(reservation.Request))
             {
-                MessageBox.Show("Please fill in all fields.");
+               MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
-            string query = "INSERT INTO Requests (RequestID, ReservationID, UserRequest) " + "VALUES (@RequestID, @ReservationID, @UserRequest)";
-            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
+            string query = "INSERT INTO Reservations (ReservationDate, ReservationType, GuestCount) " +
+                           "OUTPUT INSERTED.ReservationID " +
+                           "VALUES (@ReservationDate, @ReservationDate, @GuestCount)";
+            using (SqlConnection conn = new SqlConnection(connectionString))//^^ ensure the 3 variables goes to Reservation table
             {
                 try
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@HallID", "H01"); 
-                        cmd.Parameters.AddWithValue("@UserID", userID);
-                        cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
+                        cmd.Parameters.AddWithValue("@UserID", "U001");
+                        cmd.Parameters.AddWithValue("@GuestCount", reservation.GuestCount); 
+                        cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservation.ReservationDate));
+                        cmd.Parameters.AddWithValue("@ReservationType", reservation.ReservationType);
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Reservation successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Reservation failed.");
-                        }
+                        reservation.ReservationID = (string) cmd.ExecuteScalar();
+                        //if (rowsAffected > 0)
+                        //{
+                        //    MessageBox.Show("Reservation successful!");
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Reservation failed.");
+                        //}
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+                mainForm.UpdateReservation(reservation);
+
+                MessageBox.Show("Booking confirmed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
 
-            string another = "INSERT INTO Reservation (ReservationType, HallID)" + "VALUES (@ReservationType, @HallID)";
-            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 2 variables goes to Re table
+            string another = "INSERT INTO Requests (ReservationID, UserRequest)" + 
+                             "VALUES (@RequestID, @Request)";
+            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the variable goes to Request table
             {
                 try
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(another, conn))
                     {
-                        cmd.Parameters.AddWithValue("@ReservationType", reservationType);
+                        cmd.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
+                        cmd.Parameters.AddWithValue("@UserRequest", reservation.Request);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Reservation successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Reservation failed.");
-                        }
+                        //if (rowsAffected > 0)
+                        //{
+                        //    MessageBox.Show("Reservation successful!");
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Reservation failed.");
+                        //}
                     }
                 }
                 catch (Exception ex)
@@ -97,34 +114,6 @@ namespace Customer
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-
-            //string[] lines = rtbxRequest.Lines;
-
-            //// Extract up to 3 requests
-            //string request1 = lines.Length > 0 ? lines[0] : "";
-            //string request2 = lines.Length > 1 ? lines[1] : "";
-            //string request3 = lines.Length > 2 ? lines[2] : "";
-
-           
-            //string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
-
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-            //    conn.Open();
-            //    string requestlines = "INSERT INTO RequestTable (Request1, Request2, Request3) VALUES (@Request1, @Request2, @Request3)";
-
-            //    using (SqlCommand cmd = new SqlCommand(requestlines, conn))
-            //    {
-            //        cmd.Parameters.AddWithValue("@Request1", request1);
-            //        cmd.Parameters.AddWithValue("@Request2", request2);
-            //        cmd.Parameters.AddWithValue("@Request3", request3);
-
-            //        cmd.ExecuteNonQuery();
-            //    }
-            //}
-
-            //MessageBox.Show("Requests saved successfully!");
-
 
         }
         
