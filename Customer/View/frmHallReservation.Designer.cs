@@ -34,6 +34,7 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblReservation = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.lblReservation);
             this.splitContainer1.Size = new System.Drawing.Size(776, 426);
@@ -119,6 +121,16 @@
             this.lblReservation.TabIndex = 0;
             this.lblReservation.Text = "Reservation";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(198, 354);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 43);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Make a reservation now";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmHallReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label lblReservation;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

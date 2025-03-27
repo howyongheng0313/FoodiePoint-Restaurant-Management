@@ -9,23 +9,19 @@ namespace Customer
 {
     public class Reservation
     {
-        public string ReservationID;
-        public string HallID;
-        public string UserID;   
-        public string GuestCount;
-        public string ReservationStatus;        
-        public string ReservationDate;
-        public string Request;
-        public string ReservationType;
+        public string ReservationID { get; set; }
+        public string HallID { get; set; }
+        public string UserID { get; set; }
+        public int GuestCount { get; set; }
+        public string ReservationStatus { get; set; }
+        public string ReservationDate { get; set; }
+        public string Request { get; set; }
+        public string ReservationType { get; set; }
 
 
-        public Reservation(string reservationID, string hallID, string userID, string reservationstatus) //parameterless initialization ??? from gpt
+        public Reservation() //parameterless initialization ??? from gpt
         {
-            //string reservationID, string hallID, string userID, string reservationstatus
-            ReservationID = reservationID;
-            HallID = hallID;
-            UserID = userID;
-            ReservationStatus = reservationstatus;
+
         }
 
         

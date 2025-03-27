@@ -15,38 +15,34 @@ namespace Customer
     public partial class frmHallReservation : Form
     {
         //private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
+        private SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
 
-        private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
+
         public frmHallReservation()
         {
             InitializeComponent();
+            //Show_Reservation();
         }
         private void frmHallReservation_Load(object sender, EventArgs e)
         {
-            LoadTableData();
+            
         }
 
-        private void LoadTableData()
+        public void RefreshData()
         {
-            //string query = "SELECT * FROM Halls"; // Change "Customers" to your table name            //Kuek-Customer
-            string query = "SELECT ReservationID, HallID, UserID, ReservationStatus FROM Reservations"; //Kuek-Customer
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string query = "SELECT * FROM Reservations WHERE UserID = 'U001'";
+            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
             {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
         }
+
+
+
 
         private void btnBook_Click(object sender, EventArgs e)
         {
@@ -62,48 +58,34 @@ namespace Customer
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
- 
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show("Total reservations: " + reservations.Count);
-            if (e.RowIndex >= 0) // Ensure a valid row is clicked
+            if (e.RowIndex >= 0) // Ensure the row index is valid
             {
-                string reservationID = dataGridView1.Rows[e.RowIndex].Cells["ReservationID"].Value?.ToString();
-                string userID = dataGridView1.Rows[e.RowIndex].Cells["UserID"].Value?.ToString();
-                string hallID = dataGridView1.Rows[e.RowIndex].Cells["HallID"].Value?.ToString();
-                string reservationstatus = dataGridView1.Rows[e.RowIndex].Cells["ReservationStatus"].Value?.ToString();
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                Reservation selectedReservation = new Reservation(reservationID, userID, hallID, reservationstatus);
+
+                Reservation selectedReservation = new Reservation
+                {
+                    HallID = row.Cells["HallID"].Value.ToString(),
+                    ReservationID = row.Cells["reservationID"].Value.ToString(),
+                    ReservationType = row.Cells["ReservationType"].Value.ToString(),
+                    ReservationDate = row.Cells["ReservationDate"].Value.ToString(),
+                    GuestCount = int.Parse(row.Cells["GuestCount"].Value.ToString()),
+                    UserID = row.Cells["UserID"].Value.ToString(),
+                    ReservationStatus = row.Cells["reservationStatus"].Value.ToString()
+                };
+
+                // Open frmBooking with the existing reservation
                 frmBooking bookingForm = new frmBooking(selectedReservation);
+                this.Hide();
                 bookingForm.ShowDialog();
+                this.RefreshData();
+                this.Show();
             }
-        }
-
-        
-
-        public void UpdateReservation(Reservation updatedReservation)
-        {
-            // Update the reservation in the list
-            for (int i = 0; i < reservations.Count; i++)
-            {
-                if (reservations[i].ReservationID == updatedReservation.ReservationID)
-                {
-                    reservations[i] = updatedReservation; // Replace with updated object
-                    break;
-                }
-            }
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells["ReservationID"].Value.ToString() == updatedReservation.ReservationID)
-                {
-                    row.Cells["ReservationStatus"].Value = "Booked"; // Update status
-                    break;
-                }
-            }
-
-
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -111,6 +93,26 @@ namespace Customer
             frmCustomerMain obj1 = new frmCustomerMain();
             obj1.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reservation newReservation = new Reservation
+            {
+                ReservationID = "",
+                ReservationType = "",
+                ReservationDate = "",
+                HallID = "",
+                GuestCount = 0,
+                UserID = "U001",
+                ReservationStatus = "Pending"
+            };
+            frmBooking bookingForm = new frmBooking(newReservation);
+            this.Hide();
+            bookingForm.ShowDialog();
+            this.RefreshData();
+            this.Show();
+            
         }
     }
 }

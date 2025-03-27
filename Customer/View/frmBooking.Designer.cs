@@ -32,16 +32,22 @@
             this.btnCutomerToHallReservation = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
-            this.lblReservationID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HallID = new System.Windows.Forms.Label();
+            this.lblreservationStatus = new System.Windows.Forms.Label();
+            this.lblresID = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.reqtxtbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtResType = new System.Windows.Forms.TextBox();
+            this.txtGuestCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtResDate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.btnReservationBook = new System.Windows.Forms.Button();
-            this.lblReservationStatus = new System.Windows.Forms.Label();
-            this.rtbxRequest = new System.Windows.Forms.RichTextBox();
+            this.lblReservationType = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,16 +68,23 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.lblReservationID);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.richTextBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.HallID);
+            this.splitContainer1.Panel2.Controls.Add(this.lblreservationStatus);
+            this.splitContainer1.Panel2.Controls.Add(this.lblresID);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.reqtxtbox);
+            this.splitContainer1.Panel2.Controls.Add(this.label3);
+            this.splitContainer1.Panel2.Controls.Add(this.txtResType);
+            this.splitContainer1.Panel2.Controls.Add(this.txtGuestCount);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.txtResDate);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel2.Controls.Add(this.lblFeedback);
             this.splitContainer1.Panel2.Controls.Add(this.btnReservationBook);
-            this.splitContainer1.Panel2.Controls.Add(this.lblReservationStatus);
-            this.splitContainer1.Panel2.Controls.Add(this.rtbxRequest);
+            this.splitContainer1.Panel2.Controls.Add(this.lblReservationType);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(776, 426);
             this.splitContainer1.SplitterDistance = 230;
             this.splitContainer1.TabIndex = 6;
@@ -114,65 +127,111 @@
             this.btnCustomerToMenu.UseVisualStyleBackColor = false;
             this.btnCustomerToMenu.Click += new System.EventHandler(this.btnCustomerToMenu_Click);
             // 
-            // lblReservationID
+            // label4
             // 
-            this.lblReservationID.AutoSize = true;
-            this.lblReservationID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblReservationID.Location = new System.Drawing.Point(22, 41);
-            this.lblReservationID.Name = "lblReservationID";
-            this.lblReservationID.Size = new System.Drawing.Size(2, 15);
-            this.lblReservationID.TabIndex = 24;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 244);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "HallID";
             // 
-            // textBox1
+            // HallID
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 212);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Put amount of people here...";
+            this.HallID.AutoSize = true;
+            this.HallID.Location = new System.Drawing.Point(150, 244);
+            this.HallID.Name = "HallID";
+            this.HallID.Size = new System.Drawing.Size(0, 13);
+            this.HallID.TabIndex = 33;
+            // 
+            // lblreservationStatus
+            // 
+            this.lblreservationStatus.AutoSize = true;
+            this.lblreservationStatus.Location = new System.Drawing.Point(140, 209);
+            this.lblreservationStatus.Name = "lblreservationStatus";
+            this.lblreservationStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblreservationStatus.TabIndex = 32;
+            // 
+            // lblresID
+            // 
+            this.lblresID.AutoSize = true;
+            this.lblresID.Location = new System.Drawing.Point(19, 65);
+            this.lblresID.Name = "lblresID";
+            this.lblresID.Size = new System.Drawing.Size(0, 13);
+            this.lblresID.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(481, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = ">";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // reqtxtbox
+            // 
+            this.reqtxtbox.Location = new System.Drawing.Point(302, 309);
+            this.reqtxtbox.Name = "reqtxtbox";
+            this.reqtxtbox.Size = new System.Drawing.Size(148, 20);
+            this.reqtxtbox.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Reservation Status";
+            // 
+            // txtResType
+            // 
+            this.txtResType.Location = new System.Drawing.Point(143, 114);
+            this.txtResType.Name = "txtResType";
+            this.txtResType.Size = new System.Drawing.Size(121, 20);
+            this.txtResType.TabIndex = 25;
+            this.txtResType.Text = "Put date here...";
+            // 
+            // txtGuestCount
+            // 
+            this.txtGuestCount.Location = new System.Drawing.Point(143, 178);
+            this.txtGuestCount.Name = "txtGuestCount";
+            this.txtGuestCount.Size = new System.Drawing.Size(121, 20);
+            this.txtGuestCount.TabIndex = 23;
+            this.txtGuestCount.Text = "Put amount of people here...";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 179);
+            this.label2.Location = new System.Drawing.Point(19, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Gueast Count*";
             // 
-            // textBox2
+            // txtResDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "Put date here...";
+            this.txtResDate.Location = new System.Drawing.Point(143, 147);
+            this.txtResDate.Name = "txtResDate";
+            this.txtResDate.Size = new System.Drawing.Size(121, 20);
+            this.txtResDate.TabIndex = 21;
+            this.txtResDate.Text = "Put date here...";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 98);
+            this.label1.Location = new System.Drawing.Point(19, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Reservation Date*";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Wedding",
-            "Corperate Meeting",
-            "Birthday Party"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
-            // 
             // lblFeedback
             // 
             this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Location = new System.Drawing.Point(19, 251);
+            this.lblFeedback.Location = new System.Drawing.Point(299, 42);
             this.lblFeedback.Name = "lblFeedback";
             this.lblFeedback.Size = new System.Drawing.Size(47, 13);
             this.lblFeedback.TabIndex = 16;
@@ -183,7 +242,7 @@
             this.btnReservationBook.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReservationBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservationBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReservationBook.Location = new System.Drawing.Point(407, 370);
+            this.btnReservationBook.Location = new System.Drawing.Point(407, 357);
             this.btnReservationBook.Name = "btnReservationBook";
             this.btnReservationBook.Size = new System.Drawing.Size(101, 42);
             this.btnReservationBook.TabIndex = 13;
@@ -191,23 +250,23 @@
             this.btnReservationBook.UseVisualStyleBackColor = false;
             this.btnReservationBook.Click += new System.EventHandler(this.btnReservationStatus_Click);
             // 
-            // lblReservationStatus
+            // lblReservationType
             // 
-            this.lblReservationStatus.AutoSize = true;
-            this.lblReservationStatus.Location = new System.Drawing.Point(191, 98);
-            this.lblReservationStatus.Name = "lblReservationStatus";
-            this.lblReservationStatus.Size = new System.Drawing.Size(95, 13);
-            this.lblReservationStatus.TabIndex = 15;
-            this.lblReservationStatus.Text = "Reservation Type*";
+            this.lblReservationType.AutoSize = true;
+            this.lblReservationType.Location = new System.Drawing.Point(19, 114);
+            this.lblReservationType.Name = "lblReservationType";
+            this.lblReservationType.Size = new System.Drawing.Size(95, 13);
+            this.lblReservationType.TabIndex = 15;
+            this.lblReservationType.Text = "Reservation Type*";
             // 
-            // rtbxRequest
+            // richTextBox1
             // 
-            this.rtbxRequest.Location = new System.Drawing.Point(22, 280);
-            this.rtbxRequest.Name = "rtbxRequest";
-            this.rtbxRequest.Size = new System.Drawing.Size(486, 75);
-            this.rtbxRequest.TabIndex = 10;
-            this.rtbxRequest.Text = "";
-            this.rtbxRequest.TextChanged += new System.EventHandler(this.rtbxFeedback_TextChanged);
+            this.richTextBox1.Location = new System.Drawing.Point(302, 71);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(206, 222);
+            this.richTextBox1.TabIndex = 35;
+            this.richTextBox1.Text = "";
             // 
             // frmBooking
             // 
@@ -216,7 +275,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmBooking";
-            this.Text = "0";
+            this.Text = "frmBooking";
             this.Load += new System.EventHandler(this.frmBooking_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -235,13 +294,19 @@
         private System.Windows.Forms.Button btnCustomerToMenu;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Button btnReservationBook;
-        private System.Windows.Forms.Label lblReservationStatus;
-        private System.Windows.Forms.RichTextBox rtbxRequest;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblReservationType;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtResDate;
+        private System.Windows.Forms.TextBox txtGuestCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblReservationID;
+        private System.Windows.Forms.TextBox txtResType;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox reqtxtbox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblresID;
+        private System.Windows.Forms.Label lblreservationStatus;
+        private System.Windows.Forms.Label HallID;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
