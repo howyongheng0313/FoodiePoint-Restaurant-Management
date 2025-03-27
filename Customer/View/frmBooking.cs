@@ -65,16 +65,54 @@ namespace Customer
             {
                 currentReservation = new Reservation(); // Ensure it is initialized
             }
-            // Store user input in the reservation object
-            currentReservation.ReservationDate = txtResDate.Text;
-            currentReservation.ReservationType = txtResType.Text;
-            currentReservation.GuestCount = int.Parse(txtGuestCount.Text);
-            currentReservation.UserID = "U001"; // Assign default user ID
 
-            // Save to database
-            SaveReservationToDatabase(currentReservation);
+            if (!int.TryParse(txtGuestCount.Text, out int guestCount) || guestCount > 1000)
+            {
+                MessageBox.Show("Guest count cannot exceed 1000.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop further execution
+            }
 
-            this.Close();
+            string query = "SELECT * FROM Reservations WHERE ReservationID = @ReservationID";
+            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ReservationID", lblresID.Text);
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0) // If ReservationID exists, UPDATE instead of INSERT
+                    {
+                        string updateQuery = "UPDATE Reservations SET ReservationType = @ResType, ReservationDate = @ResDate, GuestCount = @GuestCount WHERE ReservationID = @ReservationID";
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@ReservationID", lblresID.Text);
+                            updateCmd.Parameters.AddWithValue("@ResType", txtResType.Text);
+                            updateCmd.Parameters.AddWithValue("@ResDate", txtResDate.Text);
+                            updateCmd.Parameters.AddWithValue("@GuestCount", guestCount);
+
+                            updateCmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Reservation updated successfully!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    { // If ReservationID doesn't exist, INSERT a new reservation
+
+                        currentReservation.ReservationDate = txtResDate.Text;
+                        currentReservation.ReservationType = txtResType.Text;
+                        currentReservation.GuestCount = int.Parse(txtGuestCount.Text);
+                        currentReservation.UserID = "U001"; // Assign default user ID
+
+                        // Save to database
+                        SaveReservationToDatabase(currentReservation);
+
+                        
+                    }
+
+                    this.Close();
+                }
+            }
         }
 
         private void SaveReservationToDatabase(Reservation res)
