@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer.Presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -25,13 +26,13 @@ namespace Customer
         }
         private void frmHallReservation_Load(object sender, EventArgs e)
         {
-            
+            this.RefreshData();
         }
 
         public void RefreshData()
         {
             string query = "SELECT * FROM Reservations WHERE UserID = 'U001'";
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -71,7 +72,7 @@ namespace Customer
                 Reservation selectedReservation = new Reservation
                 {
                     HallID = row.Cells["HallID"].Value.ToString(),
-                    ReservationID = row.Cells["reservationID"].Value.ToString(),
+                    ReservationID = row.Cells["ReservationID"].Value.ToString(),
                     ReservationType = row.Cells["ReservationType"].Value.ToString(),
                     ReservationDate = row.Cells["ReservationDate"].Value.ToString(),
                     GuestCount = int.Parse(row.Cells["GuestCount"].Value.ToString()),

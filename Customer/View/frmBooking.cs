@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer.Presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -22,7 +23,7 @@ namespace Customer
         {
             InitializeComponent();
 
-
+            this.currentReservation = currentReservation;
             lblresID.Text = currentReservation.ReservationID;
             txtResType.Text = currentReservation.ReservationType;
             txtResDate.Text = currentReservation.ReservationDate;
@@ -34,7 +35,7 @@ namespace Customer
 
 
             string query = $"SELECT UserRequest, Reply FROM Requests WHERE ReservationID = '{currentReservation.ReservationID}'";
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
                
                 conn.Open();
@@ -81,7 +82,7 @@ namespace Customer
             string query = "INSERT INTO Reservations (UserID, GuestCount, ReservationDate, ReservationType) " +
                            "VALUES (@user, @count, @date, @type)";
 
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -133,26 +134,22 @@ namespace Customer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string request_text = reqtxtbox.Text;
+            if (string.IsNullOrEmpty(currentReservation.ReservationID)) return;
 
+            string request_text = reqtxtbox.Text;
             if (!string.IsNullOrEmpty(request_text))
             {
-                if (currentReservation == null)
-                {
-                    currentReservation = new Reservation(); // Ensure it is initialized
-                }
                 richTextBox1.Text += ("[Request]\n"+ request_text + "\n[Reply]\n...\n");
-                string thereservationID = currentReservation.ReservationID;    //<--- test only
                 string query = "INSERT INTO Requests (ReservationID, UserRequest) " +
                           "VALUES (@reservationID, @userrequest)";
 
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+                using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
 
-                        cmd.Parameters.AddWithValue("@reservationID", thereservationID);
+                        cmd.Parameters.AddWithValue("@reservationID", currentReservation.ReservationID);
                         cmd.Parameters.AddWithValue("@userrequest", reqtxtbox.Text); // Ensure this is correct
                         
 
