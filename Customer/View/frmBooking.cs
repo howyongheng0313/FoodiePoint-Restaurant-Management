@@ -16,7 +16,7 @@ namespace Customer
     public partial class frmBooking : Form
     {
         private Reservation currentReservation;
-        private string connectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
+        //private string connectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
 
         public frmBooking(Reservation currentReservation)
         {
@@ -29,6 +29,8 @@ namespace Customer
             txtGuestCount.Text = currentReservation.GuestCount.ToString();
             lblreservationStatus.Text = currentReservation.ReservationStatus;
             HallID.Text = currentReservation.HallID;
+
+            
 
 
             string query = $"SELECT UserRequest, Reply FROM Requests WHERE ReservationID = '{currentReservation.ReservationID}'";
@@ -58,6 +60,10 @@ namespace Customer
         private void btnReservationStatus_Click(object sender, EventArgs e)
 
         {
+            if (currentReservation == null)
+            {
+                currentReservation = new Reservation(); // Ensure it is initialized
+            }
             // Store user input in the reservation object
             currentReservation.ReservationDate = txtResDate.Text;
             currentReservation.ReservationType = txtResType.Text;
@@ -131,10 +137,14 @@ namespace Customer
 
             if (!string.IsNullOrEmpty(request_text))
             {
-                
+                if (currentReservation == null)
+                {
+                    currentReservation = new Reservation(); // Ensure it is initialized
+                }
                 richTextBox1.Text += ("[Request]\n"+ request_text + "\n[Reply]\n...\n");
-                string query = "INSERT INTO Requests (UserRequest, ReservationID) " +
-                          "VALUES (@userrequest, @reservationID)";
+                string thereservationID = currentReservation.ReservationID;    //<--- test only
+                string query = "INSERT INTO Requests (ReservationID, UserRequest) " +
+                          "VALUES (@reservationID, @userrequest)";
 
                 using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
                 {
@@ -142,11 +152,12 @@ namespace Customer
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
 
-
-                        cmd.Parameters.AddWithValue("@userrequest", request_text);
-                        cmd.Parameters.AddWithValue("@reservationID", currentReservation.ReservationID);
+                        cmd.Parameters.AddWithValue("@reservationID", thereservationID);
+                        cmd.Parameters.AddWithValue("@userrequest", reqtxtbox.Text); // Ensure this is correct
+                        
 
                         reqtxtbox.Clear();
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }

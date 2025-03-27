@@ -32,6 +32,7 @@
             this.btnCutomerToHallReservation = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.HallID = new System.Windows.Forms.Label();
             this.lblreservationStatus = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.lblFeedback = new System.Windows.Forms.Label();
             this.btnReservationBook = new System.Windows.Forms.Button();
             this.lblReservationType = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -126,6 +126,15 @@
             this.btnCustomerToMenu.Text = "Menu";
             this.btnCustomerToMenu.UseVisualStyleBackColor = false;
             this.btnCustomerToMenu.Click += new System.EventHandler(this.btnCustomerToMenu_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(302, 71);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(206, 222);
+            this.richTextBox1.TabIndex = 35;
+            this.richTextBox1.Text = "";
             // 
             // label4
             // 
@@ -244,7 +253,7 @@
             this.btnReservationBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnReservationBook.Location = new System.Drawing.Point(407, 357);
             this.btnReservationBook.Name = "btnReservationBook";
-            this.btnReservationBook.Size = new System.Drawing.Size(101, 42);
+            this.btnReservationBook.Size = new System.Drawing.Size(101, 47);
             this.btnReservationBook.TabIndex = 13;
             this.btnReservationBook.Text = "Book now";
             this.btnReservationBook.UseVisualStyleBackColor = false;
@@ -258,15 +267,6 @@
             this.lblReservationType.Size = new System.Drawing.Size(95, 13);
             this.lblReservationType.TabIndex = 15;
             this.lblReservationType.Text = "Reservation Type*";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(302, 71);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(206, 222);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
             // 
             // frmBooking
             // 
