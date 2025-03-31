@@ -180,5 +180,20 @@ namespace Reservation_Coordinator.Model.Item
             UpdateHall(null);
             return null;
         }
+
+        public void Delete()
+        {
+            var del_cmd = new SqlCommand(
+                $"DELETE FROM {DataHelper.RevT} " +
+                "WHERE [ReservationID] = @revid", DataHelper.conn);
+            del_cmd.Parameters.AddWithValue("@revid", this.ReservationID);
+
+            if (this.HallID != null)
+                ItemHall.SetAvailability(this.HallID, true);
+
+            DataHelper.conn.Open();
+            del_cmd.ExecuteNonQuery();
+            DataHelper.conn.Close();
+        }
     }
 }

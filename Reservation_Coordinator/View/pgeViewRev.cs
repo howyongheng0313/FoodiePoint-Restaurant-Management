@@ -73,5 +73,23 @@ namespace Reservation_Coordinator.View
                 floNoticeHelper.Refresh();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvAllRev.SelectedRows.Count < 1) return;
+            DialogResult confirm = MessageBox.Show("Are you confirm to delete reservation?", "Delete Reservation", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.No) return;
+
+            string selectedID = dgvAllRev.SelectedRows[0].Cells["Reservation ID"].Value.ToString();
+            ItemReservation selectedRev = ItemReservation.GetByID(selectedID);
+
+            if (selectedRev == null)
+            {
+                MessageBox.Show($"Cannot found the Reservation {selectedID}.");
+                return;
+            }
+            selectedRev.Delete();
+            dgvAllRevHelper.Refresh();
+        }
     }
 }
