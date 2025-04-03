@@ -63,21 +63,21 @@ namespace Reservation_Coordinator.View
         {
             if (txtUsername.Text != user.Username && ItemUser.ExistUsername(txtUsername.Text))
                 txtUsername.Text = string.Empty;
+
             if (txtEmail.Text != user.Email && ItemUser.ExistUsername(txtEmail.Text))
                 txtEmail.Text = string.Empty;
-            if (new[] { txtUsername.Text, txtFullName.Text, txtEmail.Text }.Any(string.IsNullOrEmpty))
-            {
-                MessageBox.Show("Invalid Values.");
-                return;
-            }
+
             if (!(
                 txtNewPassword.Text != string.Empty &&
                 MessageBox.Show("Are you sure you want to change your password?", "Change Password", MessageBoxButtons.YesNo) == DialogResult.Yes
-            ))
-                txtNewPassword.Text = string.Empty;
+            ))  txtNewPassword.Text = string.Empty;
 
-            user.Update(txtUsername.Text, txtFullName.Text, txtEmail.Text, txtNewPassword.Text);
-            RenderInfo();
+            string result = user.SaveEdit(txtUsername.Text, txtFullName.Text, txtEmail.Text, txtNewPassword.Text);
+
+            if (result == null)
+                RenderInfo();
+            else
+                MessageBox.Show(result);
         }
 
         private void btnCencel_Click(object sender, EventArgs e)

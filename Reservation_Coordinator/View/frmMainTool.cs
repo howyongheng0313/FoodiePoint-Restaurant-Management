@@ -13,7 +13,8 @@ namespace Reservation_Coordinator.View
 {
     public partial class frmMainTool : Form
     {
-        private ItemUser user; 
+        private ItemUser user;
+
         public frmMainTool()
         {
             InitializeComponent();

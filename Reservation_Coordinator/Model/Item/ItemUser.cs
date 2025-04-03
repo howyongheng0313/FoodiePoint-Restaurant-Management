@@ -78,16 +78,19 @@ namespace Reservation_Coordinator.Model.Item
 
         public ItemUser(string userID, string username, string password, string fullName, string email, string role)
         {
-            UserID = userID;
+            UserID   = userID;
             Username = username;
             Password = password;
             FullName = fullName;
-            Email = email;
-            Role = role;
+            Email    = email;
+            Role     = role;
         }
 
-        public void Update(string username, string fullName, string email, string newPassword)
+        public string SaveEdit(string username, string fullName, string email, string newPassword)
         {
+            if (new[] { username, fullName, email }.Any(string.IsNullOrEmpty))
+                return "Invallid Values";
+
             var update_cmd = new SqlCommand(
                 $"UPDATE {tb_code} SET " +
                 "[Username] = @usrnm" +
@@ -104,14 +107,18 @@ namespace Reservation_Coordinator.Model.Item
             update_cmd.Parameters.AddWithValue("@paswd", newPassword);
             update_cmd.Parameters.AddWithValue("@usrid", UserID);
 
+            DataHelper.conn.Open();
+            int count = update_cmd.ExecuteNonQuery();
+            DataHelper.conn.Close();
+
+            if (count < 1)
+                return "Failed to update database.";
+
             Username = username;
             FullName = fullName;
-            Email = email;
+            Email    = email;
             Password = (newPassword != string.Empty) ? newPassword : Password;
-
-            DataHelper.conn.Open();
-            update_cmd.ExecuteNonQuery();
-            DataHelper.conn.Close();
+            return null;
         }
     }
 }
