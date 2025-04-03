@@ -40,6 +40,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.hallIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +65,6 @@
             this.foodieDbDataSet1 = new Manager.FoodieDbDataSet();
             this.foodieDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hallsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -95,7 +95,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(466, 618);
+            this.button2.Location = new System.Drawing.Point(461, 618);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 42);
@@ -111,7 +111,7 @@
             this.label1.Location = new System.Drawing.Point(17, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 26);
+            this.label1.Size = new System.Drawing.Size(267, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -123,7 +123,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(10, 80);
+            this.button3.Location = new System.Drawing.Point(10, 98);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 60);
@@ -141,7 +141,7 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(10, 260);
+            this.button10.Location = new System.Drawing.Point(10, 278);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(208, 60);
@@ -202,7 +202,7 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(10, 200);
+            this.button9.Location = new System.Drawing.Point(10, 218);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(208, 60);
@@ -221,7 +221,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(10, 140);
+            this.button8.Location = new System.Drawing.Point(10, 158);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(208, 60);
@@ -235,20 +235,32 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(10, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Size = new System.Drawing.Size(208, 80);
+            this.label2.Size = new System.Drawing.Size(208, 98);
             this.label2.TabIndex = 0;
             this.label2.Text = "Foodie Point";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(719, 618);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 42);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "Return";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(595, 618);
+            this.button1.Location = new System.Drawing.Point(590, 618);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 42);
@@ -284,7 +296,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(826, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(821, 425);
             this.dataGridView1.TabIndex = 52;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -339,7 +351,7 @@
             this.availabilityCmb.Location = new System.Drawing.Point(585, 560);
             this.availabilityCmb.Margin = new System.Windows.Forms.Padding(4);
             this.availabilityCmb.Name = "availabilityCmb";
-            this.availabilityCmb.Size = new System.Drawing.Size(112, 25);
+            this.availabilityCmb.Size = new System.Drawing.Size(112, 28);
             this.availabilityCmb.TabIndex = 50;
             // 
             // label9
@@ -350,7 +362,7 @@
             this.label9.Location = new System.Drawing.Point(581, 534);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 18);
+            this.label9.Size = new System.Drawing.Size(96, 24);
             this.label9.TabIndex = 49;
             this.label9.Text = "Availability";
             // 
@@ -360,7 +372,7 @@
             this.hallCapacityTxt.Location = new System.Drawing.Point(431, 561);
             this.hallCapacityTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallCapacityTxt.Name = "hallCapacityTxt";
-            this.hallCapacityTxt.Size = new System.Drawing.Size(120, 23);
+            this.hallCapacityTxt.Size = new System.Drawing.Size(120, 27);
             this.hallCapacityTxt.TabIndex = 47;
             // 
             // label6
@@ -371,7 +383,7 @@
             this.label6.Location = new System.Drawing.Point(427, 534);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.Size = new System.Drawing.Size(118, 24);
             this.label6.TabIndex = 45;
             this.label6.Text = "Hall Capacity";
             // 
@@ -381,7 +393,7 @@
             this.hallPartyTypeTxt.Location = new System.Drawing.Point(259, 560);
             this.hallPartyTypeTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallPartyTypeTxt.Name = "hallPartyTypeTxt";
-            this.hallPartyTypeTxt.Size = new System.Drawing.Size(137, 23);
+            this.hallPartyTypeTxt.Size = new System.Drawing.Size(137, 27);
             this.hallPartyTypeTxt.TabIndex = 44;
             // 
             // hallNametxt
@@ -390,7 +402,7 @@
             this.hallNametxt.Location = new System.Drawing.Point(127, 561);
             this.hallNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallNametxt.Name = "hallNametxt";
-            this.hallNametxt.Size = new System.Drawing.Size(97, 23);
+            this.hallNametxt.Size = new System.Drawing.Size(97, 27);
             this.hallNametxt.TabIndex = 43;
             // 
             // hallIdTxt
@@ -399,7 +411,7 @@
             this.hallIdTxt.Location = new System.Drawing.Point(29, 560);
             this.hallIdTxt.Margin = new System.Windows.Forms.Padding(4);
             this.hallIdTxt.Name = "hallIdTxt";
-            this.hallIdTxt.Size = new System.Drawing.Size(63, 23);
+            this.hallIdTxt.Size = new System.Drawing.Size(63, 27);
             this.hallIdTxt.TabIndex = 42;
             this.hallIdTxt.TextChanged += new System.EventHandler(this.hallIdTxt_TextChanged);
             // 
@@ -411,7 +423,7 @@
             this.userIdLbl.Location = new System.Drawing.Point(255, 534);
             this.userIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userIdLbl.Name = "userIdLbl";
-            this.userIdLbl.Size = new System.Drawing.Size(107, 18);
+            this.userIdLbl.Size = new System.Drawing.Size(136, 24);
             this.userIdLbl.TabIndex = 41;
             this.userIdLbl.Text = "Hall Party Type";
             // 
@@ -423,7 +435,7 @@
             this.label4.Location = new System.Drawing.Point(123, 534);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 18);
+            this.label4.Size = new System.Drawing.Size(98, 24);
             this.label4.TabIndex = 40;
             this.label4.Text = "Hall Name";
             // 
@@ -435,7 +447,7 @@
             this.label7.Location = new System.Drawing.Point(25, 534);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 18);
+            this.label7.Size = new System.Drawing.Size(64, 24);
             this.label7.TabIndex = 39;
             this.label7.Text = "Hall ID";
             // 
@@ -446,7 +458,7 @@
             this.label3.Location = new System.Drawing.Point(24, 62);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 24);
+            this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 12;
             this.label3.Text = "Edit Halls";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -474,21 +486,9 @@
             this.bindingSource1.DataMember = "Halls";
             this.bindingSource1.DataSource = this.foodieDbDataSetBindingSource;
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(724, 618);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 42);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "Return";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // EditHalls
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
