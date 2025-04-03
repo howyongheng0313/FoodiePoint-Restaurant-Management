@@ -1,6 +1,6 @@
 ﻿namespace Admin
 {
-    partial class frmSales
+    partial class frmCheckSales
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(35, 29);
+            this.lblTitle.Location = new System.Drawing.Point(483, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(212, 37);
             this.lblTitle.TabIndex = 2;
@@ -59,7 +59,7 @@
             this.grpReport.Controls.Add(this.btnChef);
             this.grpReport.Location = new System.Drawing.Point(59, 82);
             this.grpReport.Name = "grpReport";
-            this.grpReport.Size = new System.Drawing.Size(678, 418);
+            this.grpReport.Size = new System.Drawing.Size(1056, 618);
             this.grpReport.TabIndex = 27;
             this.grpReport.TabStop = false;
             this.grpReport.Text = "Generate by:";
@@ -72,21 +72,21 @@
             legend1.Name = "Sales (RM)";
             legend1.Title = "Sales (RM)";
             this.chartReport.Legends.Add(legend1);
-            this.chartReport.Location = new System.Drawing.Point(45, 89);
+            this.chartReport.Location = new System.Drawing.Point(83, 89);
             this.chartReport.Name = "chartReport";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Sales (RM)";
             series1.Name = "Series1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chartReport.Series.Add(series1);
-            this.chartReport.Size = new System.Drawing.Size(580, 313);
+            this.chartReport.Size = new System.Drawing.Size(897, 499);
             this.chartReport.TabIndex = 17;
             this.chartReport.Text = "chart1";
             this.chartReport.Click += new System.EventHandler(this.chartReport_Click);
             // 
             // btnMonth
             // 
-            this.btnMonth.Location = new System.Drawing.Point(45, 44);
+            this.btnMonth.Location = new System.Drawing.Point(151, 44);
             this.btnMonth.Name = "btnMonth";
             this.btnMonth.Size = new System.Drawing.Size(162, 31);
             this.btnMonth.TabIndex = 16;
@@ -95,7 +95,7 @@
             // 
             // btnCategory
             // 
-            this.btnCategory.Location = new System.Drawing.Point(257, 44);
+            this.btnCategory.Location = new System.Drawing.Point(444, 44);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(162, 31);
             this.btnCategory.TabIndex = 15;
@@ -104,22 +104,23 @@
             // 
             // btnChef
             // 
-            this.btnChef.Location = new System.Drawing.Point(463, 44);
+            this.btnChef.Location = new System.Drawing.Point(769, 44);
             this.btnChef.Name = "btnChef";
             this.btnChef.Size = new System.Drawing.Size(162, 31);
             this.btnChef.TabIndex = 14;
             this.btnChef.Text = "Chef";
             this.btnChef.UseVisualStyleBackColor = true;
             // 
-            // frmSales
+            // frmCheckSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 512);
+            this.ClientSize = new System.Drawing.Size(1178, 744);
             this.Controls.Add(this.grpReport);
             this.Controls.Add(this.lblTitle);
-            this.Name = "frmSales";
+            this.Name = "frmCheckSales";
             this.Text = "Admin_Sales";
+            this.Load += new System.EventHandler(this.frmSales_Load);
             this.grpReport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
             this.ResumeLayout(false);

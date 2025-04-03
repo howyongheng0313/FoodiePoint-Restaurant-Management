@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Admin
+namespace Admin.Presenter
 {
-    internal class Admin
+    public interface UserForm
     {
+        void SetUser(Presenter.LoginCredent user);
     }
 }

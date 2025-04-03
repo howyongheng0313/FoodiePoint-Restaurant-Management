@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Admin
 {
-    public partial class frmChef: Form
+    public partial class frmCheckSales: Form
     {
-        public frmChef()
+        public frmCheckSales()
         {
             InitializeComponent();
         }
 
-        private void frmChef_Load(object sender, EventArgs e)
+        private void chartReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmSales_Load(object sender, EventArgs e)
         {
 
         }
