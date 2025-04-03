@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer.Presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -15,13 +16,42 @@ namespace Customer
 {
     public partial class frmBooking : Form
     {
-        //private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
-        private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
+        private Reservation currentReservation;
+        //private string connectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
 
-        public frmBooking()
+        public frmBooking(Reservation currentReservation)
         {
             InitializeComponent();
+
+            this.currentReservation = currentReservation;
+            lblresID.Text = currentReservation.ReservationID;
+            txtResType.Text = currentReservation.ReservationType;
+            txtResDate.Text = currentReservation.ReservationDate;
+            txtGuestCount.Text = currentReservation.GuestCount.ToString();
+            lblreservationStatus.Text = currentReservation.ReservationStatus;
+            HallID.Text = currentReservation.HallID;
+
+            
+
+
+            string query = $"SELECT UserRequest, Reply FROM Requests WHERE ReservationID = '{currentReservation.ReservationID}'";
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
+            {
+               
+                conn.Open();
+                SqlCommand chat = new SqlCommand(query, conn);
+                SqlDataReader chatread = chat.ExecuteReader();
+
+                while (chatread.Read())
+                {
+                    string req = chatread.IsDBNull(0) ? "" : chatread.GetString(0);
+                    string rep = chatread.IsDBNull(1) ? "" : chatread.GetString(1);
+                    richTextBox1.Text += ("[Request]\n" + req + "\n[Reply]\n" + rep + "\n");
+
+                }
+            }
         }
+
 
         private void frmBooking_Load(object sender, EventArgs e)
         {
@@ -29,105 +59,49 @@ namespace Customer
         }
 
         private void btnReservationStatus_Click(object sender, EventArgs e)
+
         {
-            string userID = textBox1.Text;
-            string reservationDate = textBox2.Text;
-            string reservationType = comboBox1.SelectedItem.ToString(); 
-            string request = rtbxRequest.ToString();
-            string hallID = textBox3.Text;                               //for user to user booking credentials 
-            
-            if (string.IsNullOrEmpty(reservationDate) || string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(request))
+            if (currentReservation == null)
             {
-                MessageBox.Show("Please fill in all fields.");
-                return;
+                currentReservation = new Reservation(); // Ensure it is initialized
             }
+            // Store user input in the reservation object
+            currentReservation.ReservationDate = txtResDate.Text;
+            currentReservation.ReservationType = txtResType.Text;
+            currentReservation.GuestCount = int.Parse(txtGuestCount.Text);
+            currentReservation.UserID = "U001"; // Assign default user ID
 
-            string query = "INSERT INTO Requests (RequestID, ReservationID, UserRequest) " + "VALUES (@RequestID, @ReservationID, @UserRequest)";
-            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
-            {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@HallID", "H01"); 
-                        cmd.Parameters.AddWithValue("@UserID", userID);
-                        cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
+            // Save to database
+            SaveReservationToDatabase(currentReservation);
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Reservation successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Reservation failed.");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-
-            string another = "INSERT INTO Reservation (ReservationType, HallID)" + "VALUES (@ReservationType, @HallID)";
-            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 2 variables goes to Re table
-            {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(another, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@ReservationType", reservationType);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Reservation successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Reservation failed.");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-
-            //string[] lines = rtbxRequest.Lines;
-
-            //// Extract up to 3 requests
-            //string request1 = lines.Length > 0 ? lines[0] : "";
-            //string request2 = lines.Length > 1 ? lines[1] : "";
-            //string request3 = lines.Length > 2 ? lines[2] : "";
-
-           
-            //string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
-
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-            //    conn.Open();
-            //    string requestlines = "INSERT INTO RequestTable (Request1, Request2, Request3) VALUES (@Request1, @Request2, @Request3)";
-
-            //    using (SqlCommand cmd = new SqlCommand(requestlines, conn))
-            //    {
-            //        cmd.Parameters.AddWithValue("@Request1", request1);
-            //        cmd.Parameters.AddWithValue("@Request2", request2);
-            //        cmd.Parameters.AddWithValue("@Request3", request3);
-
-            //        cmd.ExecuteNonQuery();
-            //    }
-            //}
-
-            //MessageBox.Show("Requests saved successfully!");
-
-
+            this.Close();
         }
-        
+
+        private void SaveReservationToDatabase(Reservation res)
+        {
+            string query = "INSERT INTO Reservations (UserID, GuestCount, ReservationDate, ReservationType) " +
+                           "VALUES (@user, @count, @date, @type)";
+
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+
+                    cmd.Parameters.AddWithValue("@user", res.UserID);
+                    cmd.Parameters.AddWithValue("@count", res.GuestCount);
+                    cmd.Parameters.AddWithValue("@date", res.ReservationDate);
+                    cmd.Parameters.AddWithValue("@type", res.ReservationType);
+
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
 
         private void btnSendFeedback_Click(object sender, EventArgs e)
         {
@@ -152,5 +126,47 @@ namespace Customer
             obj1.Show();
             this.Hide();
         }
-    }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(currentReservation.ReservationID)) return;
+
+            string request_text = reqtxtbox.Text;
+            if (!string.IsNullOrEmpty(request_text))
+            {
+                richTextBox1.Text += ("[Request]\n"+ request_text + "\n[Reply]\n...\n");
+                string query = "INSERT INTO Requests (ReservationID, UserRequest) " +
+                          "VALUES (@reservationID, @userrequest)";
+
+                using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+
+                        cmd.Parameters.AddWithValue("@reservationID", currentReservation.ReservationID);
+                        cmd.Parameters.AddWithValue("@userrequest", reqtxtbox.Text); // Ensure this is correct
+                        
+
+                        reqtxtbox.Clear();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter text before sending request.");
+            }
+        }
+    } 
 }
+
+
+
+
+

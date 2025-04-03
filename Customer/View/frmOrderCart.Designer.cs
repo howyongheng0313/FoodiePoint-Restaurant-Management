@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnHallReservation = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -53,14 +54,15 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.splitContainer1.Panel1.Controls.Add(this.button6);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.splitContainer1.Panel1.Controls.Add(this.btnHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenu);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.lbltotal);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.btnDelete);
@@ -71,25 +73,14 @@
             this.splitContainer1.SplitterDistance = 230;
             this.splitContainer1.TabIndex = 5;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(60, 292);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 40);
-            this.button6.TabIndex = 12;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // btnHallReservation
             // 
             this.btnHallReservation.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHallReservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHallReservation.Location = new System.Drawing.Point(60, 212);
+            this.btnHallReservation.Location = new System.Drawing.Point(3, 327);
             this.btnHallReservation.Name = "btnHallReservation";
-            this.btnHallReservation.Size = new System.Drawing.Size(101, 40);
+            this.btnHallReservation.Size = new System.Drawing.Size(224, 96);
             this.btnHallReservation.TabIndex = 11;
             this.btnHallReservation.Text = "Hall Reservation";
             this.btnHallReservation.UseVisualStyleBackColor = false;
@@ -100,9 +91,9 @@
             this.btnProfile.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProfile.Location = new System.Drawing.Point(60, 52);
+            this.btnProfile.Location = new System.Drawing.Point(3, 123);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(101, 40);
+            this.btnProfile.Size = new System.Drawing.Size(224, 96);
             this.btnProfile.TabIndex = 10;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -113,12 +104,31 @@
             this.btnMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenu.Location = new System.Drawing.Point(60, 134);
+            this.btnMenu.Location = new System.Drawing.Point(3, 225);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(101, 40);
+            this.btnMenu.Size = new System.Drawing.Size(224, 96);
             this.btnMenu.TabIndex = 9;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(259, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Total Price:    ";
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Location = new System.Drawing.Point(281, 383);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(0, 13);
+            this.lbltotal.TabIndex = 19;
+            this.lbltotal.Click += new System.EventHandler(this.lbltotal_Click);
             // 
             // button2
             // 
@@ -173,6 +183,8 @@
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(14, 63);
             this.dgv.Name = "dgv";
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(493, 302);
             this.dgv.TabIndex = 14;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -200,6 +212,7 @@
             this.Load += new System.EventHandler(this.frmOrderCart_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
@@ -210,7 +223,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnHallReservation;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnMenu;
@@ -220,5 +232,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbltotal;
+        private System.Windows.Forms.Label label1;
     }
 }

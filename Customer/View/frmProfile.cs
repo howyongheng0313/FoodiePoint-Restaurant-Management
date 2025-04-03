@@ -32,7 +32,7 @@ namespace Customer
 
         private void btnCustomerToHallReservation_Click(object sender, EventArgs e)
         {
-            frmBooking obj1 = new frmBooking();
+            frmHallReservation obj1 = new frmHallReservation();
             obj1.Show();
             this.Hide();
         }
@@ -45,7 +45,7 @@ namespace Customer
         {
             //string userID = tbxUsername.Text;
             //string userpass = tbxPassword.Text;
-            string feedbacks = rtbxFeedback.ToString();
+            string feedbacks = rtbxFeedback.Text;
 
             if (string.IsNullOrEmpty(feedbacks)) //string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(userpass) ||
             {
@@ -53,7 +53,8 @@ namespace Customer
                 return;
             }
 
-            string query = "INSERT INTO Requests (RequestID, ReservationID, UserRequest) " + "VALUES (@RequestID, @ReservationID, @UserRequest)";
+            string query = "INSERT INTO Feedbacks (FeedbackID) " + 
+                           "VALUES (@Feedback)";
             using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
             {
                 try
@@ -61,7 +62,7 @@ namespace Customer
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Feedback", "LOL");
+                        cmd.Parameters.AddWithValue("@Feedback", feedbacks);
                         //cmd.Parameters.AddWithValue("@UserID", userID);
                         //cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
 
@@ -77,6 +78,21 @@ namespace Customer
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void lblFeedback_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtbxFeedback_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

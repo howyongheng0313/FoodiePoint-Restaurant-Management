@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Customer.Presenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -12,119 +13,107 @@ using System.Windows.Forms;
 
 namespace Customer
 {
-    public partial class frmHallReservation: Form
+    public partial class frmHallReservation : Form
     {
         //private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Customer\\FoodiepointDb.mdf;Integrated Security=True";
-        private string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString();
+        //private SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
+
+
         public frmHallReservation()
         {
             InitializeComponent();
+            
         }
-
         private void frmHallReservation_Load(object sender, EventArgs e)
         {
-            LoadTableData("");
+            this.RefreshData();
         }
 
-        private void LoadTableData(string searchValue)
+        public void RefreshData()
         {
-            //string query = "SELECT * FROM Halls"; // Change "Customers" to your table name                //Kuek-Customer
-            string query = "SELECT HallID, HallName, HallPartyType, HallCapacity, Availability FROM Halls"; //Kuek-Customer
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string query = "SELECT * FROM Reservations WHERE UserID = 'U001'";
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
         }
+
+
+
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0) // Ensure a row is selected
-            {
-                // Get the selected row
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-                // Extract Hall Name and Availability
-                string hallID = selectedRow.Cells["HallID"].Value.ToString();
-                string hallName = selectedRow.Cells["HallName"].Value.ToString();
-                string availability = selectedRow.Cells["Availability"].Value.ToString(); // Change column name if different
-
-                // Check if the hall is available
-                if (availability.ToLower() == "available")
-                {
-                    UpdateHallAvailability(hallID);
-                    //LoadHallsData();
-                    MessageBox.Show(hallName + " booked!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                }
-                else
-                {
-                    MessageBox.Show(hallName + " isn't available!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a hall before booking!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void UpdateHallAvailability(string hallID)
-        {
-            string query = "UPDATE Halls SET Availability = 'Unavailable' WHERE HallID = @HallID";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@HallID", hallID);
-                        cmd.ExecuteNonQuery(); // Execute the update
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating hall: " + ex.Message);
-                }
-            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
+            frmMenuPage obj1 = new frmMenuPage();
+            obj1.Show();
+            this.Hide();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        //private void LoadHallsData()
-        //{
-        //    string query = "SELECT * FROM Halls"; // Fetch all halls from the database
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure the row index is valid
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-        //    using (SqlConnection conn = new SqlConnection(connectionString))
-        //    {
-        //        try
-        //        {
-        //            conn.Open();
-        //            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-        //            DataTable dt = new DataTable();
-        //            adapter.Fill(dt);
-        //            dataGridViewHalls.DataSource = dt; // Display in DataGridView
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show("Error loading halls: " + ex.Message);
-        //        }
-        //    }
-        //}
+
+                Reservation selectedReservation = new Reservation
+                {
+                    HallID = row.Cells["HallID"].Value.ToString(),
+                    ReservationID = row.Cells["ReservationID"].Value.ToString(),
+                    ReservationType = row.Cells["ReservationType"].Value.ToString(),
+                    ReservationDate = row.Cells["ReservationDate"].Value.ToString(),
+                    GuestCount = int.Parse(row.Cells["GuestCount"].Value.ToString()),
+                    UserID = row.Cells["UserID"].Value.ToString(),
+                    ReservationStatus = row.Cells["reservationStatus"].Value.ToString()
+                };
+
+                // Open frmBooking with the existing reservation
+                frmBooking bookingForm = new frmBooking(selectedReservation);
+                this.Hide();
+                bookingForm.ShowDialog();
+                this.RefreshData();
+                this.Show();
+            }
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reservation newReservation = new Reservation
+            {
+                ReservationID = "",
+                ReservationType = "",
+                ReservationDate = "",
+                HallID = "",
+                GuestCount = 0,
+                UserID = "U001",
+                ReservationStatus = "Pending"
+            };
+            frmBooking bookingForm = new frmBooking(newReservation);
+            this.Hide();
+            bookingForm.ShowDialog();
+            this.RefreshData();
+            this.Show();
+            
+        }
     }
 }
