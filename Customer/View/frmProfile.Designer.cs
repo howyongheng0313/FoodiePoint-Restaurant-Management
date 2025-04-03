@@ -44,15 +44,19 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 12);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.splitContainer1.Panel1.Controls.Add(this.btnCutomerToHallReservation);
-            this.splitContainer1.Panel1.Controls.Add(this.btnProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnCustomerToMenu);
+            this.splitContainer1.Panel1.Controls.Add(this.btnProfile);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
             // 
@@ -60,18 +64,23 @@
             this.splitContainer1.Panel2.Controls.Add(this.rtbxFeedback);
             this.splitContainer1.Panel2.Controls.Add(this.button7);
             this.splitContainer1.Panel2.Controls.Add(this.btnSendFeedback);
-            this.splitContainer1.Size = new System.Drawing.Size(776, 426);
-            this.splitContainer1.SplitterDistance = 230;
+            this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 5;
             // 
             // btnCutomerToHallReservation
             // 
-            this.btnCutomerToHallReservation.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCutomerToHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCutomerToHallReservation.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCutomerToHallReservation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCutomerToHallReservation.FlatAppearance.BorderSize = 0;
+            this.btnCutomerToHallReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCutomerToHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCutomerToHallReservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCutomerToHallReservation.Location = new System.Drawing.Point(3, 327);
+            this.btnCutomerToHallReservation.Location = new System.Drawing.Point(10, 160);
+            this.btnCutomerToHallReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnCutomerToHallReservation.Name = "btnCutomerToHallReservation";
-            this.btnCutomerToHallReservation.Size = new System.Drawing.Size(224, 96);
+            this.btnCutomerToHallReservation.Size = new System.Drawing.Size(208, 80);
             this.btnCutomerToHallReservation.TabIndex = 11;
             this.btnCutomerToHallReservation.Text = "Hall Reservation";
             this.btnCutomerToHallReservation.UseVisualStyleBackColor = false;
@@ -79,12 +88,16 @@
             // 
             // btnProfile
             // 
-            this.btnProfile.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(156)))), ((int)(((byte)(216)))));
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProfile.Location = new System.Drawing.Point(3, 123);
+            this.btnProfile.Location = new System.Drawing.Point(10, 0);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(224, 96);
+            this.btnProfile.Size = new System.Drawing.Size(208, 80);
             this.btnProfile.TabIndex = 10;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -92,12 +105,16 @@
             // 
             // btnCustomerToMenu
             // 
-            this.btnCustomerToMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCustomerToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerToMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCustomerToMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerToMenu.FlatAppearance.BorderSize = 0;
+            this.btnCustomerToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerToMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCustomerToMenu.Location = new System.Drawing.Point(3, 225);
+            this.btnCustomerToMenu.Location = new System.Drawing.Point(10, 80);
+            this.btnCustomerToMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerToMenu.Name = "btnCustomerToMenu";
-            this.btnCustomerToMenu.Size = new System.Drawing.Size(224, 96);
+            this.btnCustomerToMenu.Size = new System.Drawing.Size(208, 80);
             this.btnCustomerToMenu.TabIndex = 9;
             this.btnCustomerToMenu.Text = "Menu";
             this.btnCustomerToMenu.UseVisualStyleBackColor = false;
@@ -106,18 +123,20 @@
             // lblFeedback
             // 
             this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Location = new System.Drawing.Point(19, 228);
+            this.lblFeedback.Location = new System.Drawing.Point(25, 281);
+            this.lblFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(55, 13);
+            this.lblFeedback.Size = new System.Drawing.Size(81, 20);
             this.lblFeedback.TabIndex = 16;
             this.lblFeedback.Text = "Feedback";
             this.lblFeedback.Click += new System.EventHandler(this.lblFeedback_Click);
             // 
             // rtbxFeedback
             // 
-            this.rtbxFeedback.Location = new System.Drawing.Point(22, 257);
+            this.rtbxFeedback.Location = new System.Drawing.Point(29, 316);
+            this.rtbxFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbxFeedback.Name = "rtbxFeedback";
-            this.rtbxFeedback.Size = new System.Drawing.Size(486, 75);
+            this.rtbxFeedback.Size = new System.Drawing.Size(647, 91);
             this.rtbxFeedback.TabIndex = 10;
             this.rtbxFeedback.Text = "";
             this.rtbxFeedback.TextChanged += new System.EventHandler(this.rtbxFeedback_TextChanged);
@@ -127,9 +146,10 @@
             this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(41, 79);
+            this.button7.Location = new System.Drawing.Point(55, 97);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(431, 95);
+            this.button7.Size = new System.Drawing.Size(575, 117);
             this.button7.TabIndex = 9;
             this.button7.Text = "Welcome to FoodiePoint Restaurant!";
             this.button7.UseVisualStyleBackColor = false;
@@ -139,9 +159,10 @@
             this.btnSendFeedback.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSendFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendFeedback.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSendFeedback.Location = new System.Drawing.Point(407, 338);
+            this.btnSendFeedback.Location = new System.Drawing.Point(543, 416);
+            this.btnSendFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSendFeedback.Name = "btnSendFeedback";
-            this.btnSendFeedback.Size = new System.Drawing.Size(101, 40);
+            this.btnSendFeedback.Size = new System.Drawing.Size(135, 49);
             this.btnSendFeedback.TabIndex = 7;
             this.btnSendFeedback.Text = "Send Feedback";
             this.btnSendFeedback.UseVisualStyleBackColor = false;
@@ -149,11 +170,15 @@
             // 
             // frmCustomerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmCustomerMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customer Main Page";
             this.Load += new System.EventHandler(this.frmCustomerMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
