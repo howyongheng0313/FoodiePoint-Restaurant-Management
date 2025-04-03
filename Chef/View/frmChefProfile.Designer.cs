@@ -44,9 +44,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnOrderToProfile = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnOrderToProfile = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -133,7 +134,7 @@
             this.btnProfileToChef.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfileToChef.FlatAppearance.BorderSize = 0;
             this.btnProfileToChef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileToChef.Location = new System.Drawing.Point(10, 225);
+            this.btnProfileToChef.Location = new System.Drawing.Point(10, 323);
             this.btnProfileToChef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProfileToChef.Name = "btnProfileToChef";
             this.btnProfileToChef.Size = new System.Drawing.Size(208, 75);
@@ -165,7 +166,7 @@
             this.btnProfileToInventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfileToInventory.FlatAppearance.BorderSize = 0;
             this.btnProfileToInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileToInventory.Location = new System.Drawing.Point(10, 0);
+            this.btnProfileToInventory.Location = new System.Drawing.Point(10, 98);
             this.btnProfileToInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProfileToInventory.Name = "btnProfileToInventory";
             this.btnProfileToInventory.Size = new System.Drawing.Size(208, 75);
@@ -179,7 +180,7 @@
             this.btnProfileToOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfileToOrder.FlatAppearance.BorderSize = 0;
             this.btnProfileToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfileToOrder.Location = new System.Drawing.Point(10, 75);
+            this.btnProfileToOrder.Location = new System.Drawing.Point(10, 173);
             this.btnProfileToOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProfileToOrder.Name = "btnProfileToOrder";
             this.btnProfileToOrder.Size = new System.Drawing.Size(208, 75);
@@ -200,7 +201,7 @@
             this.groupBox1.Controls.Add(this.tbxChefNewName);
             this.groupBox1.Controls.Add(this.tbxChefNewEmail);
             this.groupBox1.Controls.Add(this.tbxChefNewPassword);
-            this.groupBox1.Location = new System.Drawing.Point(78, 5);
+            this.groupBox1.Location = new System.Drawing.Point(79, 5);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -211,7 +212,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(315, 5);
+            this.btnSave.Location = new System.Drawing.Point(317, 5);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(154, 70);
@@ -232,6 +233,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnOrderToProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnProfileToOrder);
             this.splitContainer1.Panel1.Controls.Add(this.btnProfileToInventory);
+            this.splitContainer1.Panel1.Controls.Add(this.lblLogo);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
@@ -242,6 +244,21 @@
             this.splitContainer1.SplitterDistance = 228;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 18;
+            // 
+            // btnOrderToProfile
+            // 
+            this.btnOrderToProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOrderToProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrderToProfile.Enabled = false;
+            this.btnOrderToProfile.FlatAppearance.BorderSize = 0;
+            this.btnOrderToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderToProfile.Location = new System.Drawing.Point(10, 248);
+            this.btnOrderToProfile.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnOrderToProfile.Name = "btnOrderToProfile";
+            this.btnOrderToProfile.Size = new System.Drawing.Size(208, 75);
+            this.btnOrderToProfile.TabIndex = 16;
+            this.btnOrderToProfile.Text = "Update Profile Page";
+            this.btnOrderToProfile.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -256,7 +273,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(785, 81);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 81);
             this.tableLayoutPanel2.TabIndex = 19;
             // 
             // tableLayoutPanel1
@@ -274,23 +291,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 508F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 508F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 508F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(785, 508);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(788, 508);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
-            // btnOrderToProfile
+            // lblLogo
             // 
-            this.btnOrderToProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.btnOrderToProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrderToProfile.Enabled = false;
-            this.btnOrderToProfile.FlatAppearance.BorderSize = 0;
-            this.btnOrderToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderToProfile.Location = new System.Drawing.Point(10, 150);
-            this.btnOrderToProfile.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnOrderToProfile.Name = "btnOrderToProfile";
-            this.btnOrderToProfile.Size = new System.Drawing.Size(208, 75);
-            this.btnOrderToProfile.TabIndex = 16;
-            this.btnOrderToProfile.Text = "Update Profile Page";
-            this.btnOrderToProfile.UseVisualStyleBackColor = false;
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(10, 0);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(208, 98);
+            this.lblLogo.TabIndex = 17;
+            this.lblLogo.Text = "Foodie Point";
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmChefProfile
             // 
@@ -336,5 +350,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnOrderToProfile;
+        private System.Windows.Forms.Label lblLogo;
     }
 }

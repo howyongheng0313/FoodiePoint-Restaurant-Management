@@ -34,6 +34,7 @@
             this.btnInventoryToOrder = new System.Windows.Forms.Button();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnOrderToInventory = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tbxSearchInput = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.lblIngredient = new System.Windows.Forms.Label();
             this.tbxIngredient = new System.Windows.Forms.TextBox();
             this.tbxIngredientID = new System.Windows.Forms.TextBox();
-            this.btnOrderToInventory = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,7 +83,7 @@
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
             this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventory.Size = new System.Drawing.Size(788, 267);
+            this.dgvInventory.Size = new System.Drawing.Size(791, 267);
             this.dgvInventory.TabIndex = 0;
             // 
             // btnInventoryToChef
@@ -90,7 +91,7 @@
             this.btnInventoryToChef.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToChef.FlatAppearance.BorderSize = 0;
             this.btnInventoryToChef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToChef.Location = new System.Drawing.Point(10, 225);
+            this.btnInventoryToChef.Location = new System.Drawing.Point(10, 323);
             this.btnInventoryToChef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToChef.Name = "btnInventoryToChef";
             this.btnInventoryToChef.Size = new System.Drawing.Size(208, 75);
@@ -104,7 +105,7 @@
             this.btnInventoryToProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToProfile.FlatAppearance.BorderSize = 0;
             this.btnInventoryToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToProfile.Location = new System.Drawing.Point(10, 150);
+            this.btnInventoryToProfile.Location = new System.Drawing.Point(10, 248);
             this.btnInventoryToProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToProfile.Name = "btnInventoryToProfile";
             this.btnInventoryToProfile.Size = new System.Drawing.Size(208, 75);
@@ -118,7 +119,7 @@
             this.btnInventoryToOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventoryToOrder.FlatAppearance.BorderSize = 0;
             this.btnInventoryToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryToOrder.Location = new System.Drawing.Point(10, 75);
+            this.btnInventoryToOrder.Location = new System.Drawing.Point(10, 173);
             this.btnInventoryToOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInventoryToOrder.Name = "btnInventoryToOrder";
             this.btnInventoryToOrder.Size = new System.Drawing.Size(208, 75);
@@ -144,6 +145,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToOrder);
             this.splitContainer1.Panel1.Controls.Add(this.btnOrderToInventory);
+            this.splitContainer1.Panel1.Controls.Add(this.lblLogo);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
@@ -165,10 +167,25 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 13;
             // 
+            // btnOrderToInventory
+            // 
+            this.btnOrderToInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOrderToInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrderToInventory.Enabled = false;
+            this.btnOrderToInventory.FlatAppearance.BorderSize = 0;
+            this.btnOrderToInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderToInventory.Location = new System.Drawing.Point(10, 98);
+            this.btnOrderToInventory.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnOrderToInventory.Name = "btnOrderToInventory";
+            this.btnOrderToInventory.Size = new System.Drawing.Size(208, 75);
+            this.btnOrderToInventory.TabIndex = 12;
+            this.btnOrderToInventory.Text = "Inventory Page";
+            this.btnOrderToInventory.UseVisualStyleBackColor = false;
+            // 
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.Location = new System.Drawing.Point(673, 571);
+            this.btnConfirm.Location = new System.Drawing.Point(676, 571);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(146, 59);
             this.btnConfirm.TabIndex = 14;
@@ -195,7 +212,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(828, 40);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(831, 40);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tbxSearchInput
@@ -204,7 +221,7 @@
             this.tbxSearchInput.Location = new System.Drawing.Point(4, 5);
             this.tbxSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxSearchInput.Name = "tbxSearchInput";
-            this.tbxSearchInput.Size = new System.Drawing.Size(500, 30);
+            this.tbxSearchInput.Size = new System.Drawing.Size(503, 30);
             this.tbxSearchInput.TabIndex = 11;
             // 
             // btnSearchIngredient
@@ -212,7 +229,7 @@
             this.btnSearchIngredient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearchIngredient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearchIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIngredient.Location = new System.Drawing.Point(512, 5);
+            this.btnSearchIngredient.Location = new System.Drawing.Point(515, 5);
             this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchIngredient.Name = "btnSearchIngredient";
             this.btnSearchIngredient.Size = new System.Drawing.Size(152, 30);
@@ -225,7 +242,7 @@
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReturn.Location = new System.Drawing.Point(672, 5);
+            this.btnReturn.Location = new System.Drawing.Point(675, 5);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(152, 30);
@@ -365,20 +382,17 @@
             this.tbxIngredientID.Size = new System.Drawing.Size(182, 30);
             this.tbxIngredientID.TabIndex = 1;
             // 
-            // btnOrderToInventory
+            // lblLogo
             // 
-            this.btnOrderToInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.btnOrderToInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrderToInventory.Enabled = false;
-            this.btnOrderToInventory.FlatAppearance.BorderSize = 0;
-            this.btnOrderToInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderToInventory.Location = new System.Drawing.Point(10, 0);
-            this.btnOrderToInventory.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnOrderToInventory.Name = "btnOrderToInventory";
-            this.btnOrderToInventory.Size = new System.Drawing.Size(208, 75);
-            this.btnOrderToInventory.TabIndex = 12;
-            this.btnOrderToInventory.Text = "Inventory Page";
-            this.btnOrderToInventory.UseVisualStyleBackColor = false;
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(10, 0);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(208, 98);
+            this.lblLogo.TabIndex = 13;
+            this.lblLogo.Text = "Foodie Point";
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmInventory
             // 
@@ -431,5 +445,6 @@
         private System.Windows.Forms.GroupBox gbxActions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnOrderToInventory;
+        private System.Windows.Forms.Label lblLogo;
     }
 }
