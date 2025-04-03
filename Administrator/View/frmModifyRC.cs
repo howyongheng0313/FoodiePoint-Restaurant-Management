@@ -27,10 +27,7 @@ namespace Admin.View
 
         private void LoadRCs()
         {
-            // Create DataTable to hold managers
             RCsTable = new DataTable();
-
-            // Connect to database and load managers (Role = 'Manager')
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -166,7 +163,13 @@ namespace Admin.View
                 }
             }
         }
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            var mainForm = new frmDashboard();
+            this.Close();
+        }
+
+        private void picSearch_Click(object sender, EventArgs e)
         {
             string searchText = txtSearch.Text.Trim().ToLower();
 

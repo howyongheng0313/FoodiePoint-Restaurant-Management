@@ -38,8 +38,8 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.grrpUsers = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSalesReport = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
+            this.btnFeedbacks = new System.Windows.Forms.Button();
             this.grpSales = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(41, 31);
             this.lblTitle.Name = "lblTitle";
@@ -60,6 +61,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Image = global::Admin.Properties.Resources.img;
             this.pictureBox1.Location = new System.Drawing.Point(1045, 25);
             this.pictureBox1.Name = "pictureBox1";
@@ -79,6 +81,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Location = new System.Drawing.Point(811, 25);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(201, 46);
@@ -89,6 +92,7 @@
             // 
             // btnManager
             // 
+            this.btnManager.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnManager.Location = new System.Drawing.Point(76, 83);
             this.btnManager.Name = "btnManager";
             this.btnManager.Size = new System.Drawing.Size(171, 61);
@@ -99,6 +103,7 @@
             // 
             // btnRC
             // 
+            this.btnRC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRC.Location = new System.Drawing.Point(76, 207);
             this.btnRC.Name = "btnRC";
             this.btnRC.Size = new System.Drawing.Size(171, 61);
@@ -109,6 +114,7 @@
             // 
             // btnChef
             // 
+            this.btnChef.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChef.Location = new System.Drawing.Point(358, 83);
             this.btnChef.Name = "btnChef";
             this.btnChef.Size = new System.Drawing.Size(171, 61);
@@ -119,6 +125,7 @@
             // 
             // btnCustomer
             // 
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustomer.Location = new System.Drawing.Point(358, 207);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(171, 61);
@@ -134,6 +141,7 @@
             this.grrpUsers.Controls.Add(this.btnChef);
             this.grrpUsers.Controls.Add(this.btnManager);
             this.grrpUsers.Controls.Add(this.btnRC);
+            this.grrpUsers.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grrpUsers.Location = new System.Drawing.Point(48, 200);
             this.grrpUsers.Name = "grrpUsers";
             this.grrpUsers.Size = new System.Drawing.Size(621, 337);
@@ -150,29 +158,34 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Add/Edit/View/Remove";
             // 
-            // btnSalesReport
+            // btnSales
             // 
-            this.btnSalesReport.Location = new System.Drawing.Point(149, 207);
-            this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(171, 61);
-            this.btnSalesReport.TabIndex = 16;
-            this.btnSalesReport.Text = "Sales Report";
-            this.btnSalesReport.UseVisualStyleBackColor = true;
+            this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSales.Location = new System.Drawing.Point(149, 207);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(171, 61);
+            this.btnSales.TabIndex = 16;
+            this.btnSales.Text = "Sales Report";
+            this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
-            // btnFeedback
+            // btnFeedbacks
             // 
-            this.btnFeedback.Location = new System.Drawing.Point(149, 83);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(171, 61);
-            this.btnFeedback.TabIndex = 17;
-            this.btnFeedback.Text = "Feedbacks";
-            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedbacks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedbacks.Location = new System.Drawing.Point(149, 83);
+            this.btnFeedbacks.Name = "btnFeedbacks";
+            this.btnFeedbacks.Size = new System.Drawing.Size(171, 61);
+            this.btnFeedbacks.TabIndex = 17;
+            this.btnFeedbacks.Text = "Feedbacks";
+            this.btnFeedbacks.UseVisualStyleBackColor = true;
+            this.btnFeedbacks.Click += new System.EventHandler(this.btnFeedbacks_Click);
             // 
             // grpSales
             // 
             this.grpSales.Controls.Add(this.label2);
-            this.grpSales.Controls.Add(this.btnFeedback);
-            this.grpSales.Controls.Add(this.btnSalesReport);
+            this.grpSales.Controls.Add(this.btnFeedbacks);
+            this.grpSales.Controls.Add(this.btnSales);
+            this.grpSales.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grpSales.Location = new System.Drawing.Point(713, 200);
             this.grpSales.Name = "grpSales";
             this.grpSales.Size = new System.Drawing.Size(431, 337);
@@ -191,6 +204,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Location = new System.Drawing.Point(811, 81);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(201, 45);
@@ -211,7 +225,9 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitle);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adminstrator Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grrpUsers.ResumeLayout(false);
@@ -234,8 +250,8 @@
         private System.Windows.Forms.Button btnChef;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.GroupBox grrpUsers;
-        private System.Windows.Forms.Button btnSalesReport;
-        private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Button btnSales;
+        private System.Windows.Forms.Button btnFeedbacks;
         private System.Windows.Forms.GroupBox grpSales;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;

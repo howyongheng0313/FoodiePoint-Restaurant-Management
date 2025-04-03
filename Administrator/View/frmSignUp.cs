@@ -82,29 +82,23 @@ namespace Admin.View
                 MessageBox.Show("Email already exists. Please use another email.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            try
+
+            bool success = RegisterHelper.RegisterNewUser(
+                txtUsername.Text,
+                txtPassword.Text,
+                txtFullName.Text,
+                txtEmail.Text,
+                cmbRole.SelectedItem.ToString()
+            );
+            if (success)
             {
-                bool success = RegisterHelper.RegisterNewUser(
-                    txtUsername.Text,
-                    txtPassword.Text,
-                    txtFullName.Text,
-                    txtEmail.Text,
-                    cmbRole.SelectedItem.ToString()
-                );
-                if (success)
-                {
-                    MessageBox.Show("Registration successful! You can now log in.", "Registration Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to register user. Please try again.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Registration successful! You can now log in.", "Registration Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error during registration: {ex.Message}\n{ex.StackTrace}", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to register user. Please try again.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)

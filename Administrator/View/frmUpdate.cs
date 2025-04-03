@@ -32,6 +32,11 @@ namespace Admin.View
 
         public void SetUser(LoginCredent user)
         {
+            if (user == null)
+            {
+                MessageBox.Show("User data is not available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             this.user = user;
             RenderInfo();
             txtUserID.Enabled = false;
