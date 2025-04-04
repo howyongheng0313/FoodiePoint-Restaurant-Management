@@ -27,10 +27,7 @@ namespace Admin.View
 
         private void LoadCs()
         {
-            // Create DataTable to hold managers
             CsTable = new DataTable();
-
-            // Connect to database and load managers (Role = 'Manager')
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -74,7 +71,6 @@ namespace Admin.View
             }
             string userID = cellValue.ToString();
 
-            // Load the manager data
             LoginCredent customer = GetCustomerByUserID(userID);
             if (customer != null)
             {
@@ -166,7 +162,14 @@ namespace Admin.View
                 }
             }
         }
-        private void btnSearch_Click(object sender, EventArgs e)
+
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            var mainForm = new frmDashboard();
+            this.Close();
+        }
+
+        private void picSearch_Click(object sender, EventArgs e)
         {
             string searchText = txtSearch.Text.Trim().ToLower();
 

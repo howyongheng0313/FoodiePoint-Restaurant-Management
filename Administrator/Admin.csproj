@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\RatingAnalytics.cs" />
+    <Compile Include="Model\SalesAnalytics.cs" />
     <Compile Include="Presenter\DataHelper.cs" />
     <Compile Include="Presenter\RegisterHelper.cs" />
     <Compile Include="Presenter\UserForm.cs" />
@@ -200,6 +202,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

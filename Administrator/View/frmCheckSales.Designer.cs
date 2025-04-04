@@ -1,4 +1,4 @@
-﻿namespace Admin
+﻿namespace Admin.View
 {
     partial class frmCheckSales
     {
@@ -33,19 +33,21 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpReport = new System.Windows.Forms.GroupBox();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
             this.chartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnMonth = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
-            this.btnChef = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.grpReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(483, 31);
+            this.lblTitle.Location = new System.Drawing.Point(485, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(212, 37);
             this.lblTitle.TabIndex = 2;
@@ -53,16 +55,39 @@
             // 
             // grpReport
             // 
+            this.grpReport.Controls.Add(this.btnGenerate);
+            this.grpReport.Controls.Add(this.cmbYear);
             this.grpReport.Controls.Add(this.chartReport);
-            this.grpReport.Controls.Add(this.btnMonth);
             this.grpReport.Controls.Add(this.btnCategory);
-            this.grpReport.Controls.Add(this.btnChef);
             this.grpReport.Location = new System.Drawing.Point(59, 82);
             this.grpReport.Name = "grpReport";
             this.grpReport.Size = new System.Drawing.Size(1056, 618);
             this.grpReport.TabIndex = 27;
             this.grpReport.TabStop = false;
             this.grpReport.Text = "Generate by:";
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerate.Location = new System.Drawing.Point(286, 31);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(162, 41);
+            this.btnGenerate.TabIndex = 35;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
+            // cmbYear
+            // 
+            this.cmbYear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbYear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Location = new System.Drawing.Point(132, 38);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbYear.Size = new System.Drawing.Size(121, 28);
+            this.cmbYear.TabIndex = 20;
+            this.cmbYear.Text = "Year";
             // 
             // chartReport
             // 
@@ -82,47 +107,44 @@
             this.chartReport.Size = new System.Drawing.Size(897, 499);
             this.chartReport.TabIndex = 17;
             this.chartReport.Text = "chart1";
-            this.chartReport.Click += new System.EventHandler(this.chartReport_Click);
-            // 
-            // btnMonth
-            // 
-            this.btnMonth.Location = new System.Drawing.Point(151, 44);
-            this.btnMonth.Name = "btnMonth";
-            this.btnMonth.Size = new System.Drawing.Size(162, 31);
-            this.btnMonth.TabIndex = 16;
-            this.btnMonth.Text = "Month";
-            this.btnMonth.UseVisualStyleBackColor = true;
             // 
             // btnCategory
             // 
-            this.btnCategory.Location = new System.Drawing.Point(444, 44);
+            this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategory.Location = new System.Drawing.Point(767, 31);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(162, 31);
+            this.btnCategory.Size = new System.Drawing.Size(162, 41);
             this.btnCategory.TabIndex = 15;
             this.btnCategory.Text = "Dish Category";
             this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // btnChef
+            // picLogo
             // 
-            this.btnChef.Location = new System.Drawing.Point(769, 44);
-            this.btnChef.Name = "btnChef";
-            this.btnChef.Size = new System.Drawing.Size(162, 31);
-            this.btnChef.TabIndex = 14;
-            this.btnChef.Text = "Chef";
-            this.btnChef.UseVisualStyleBackColor = true;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Image = global::Admin.Properties.Resources.output_onlinepngtools;
+            this.picLogo.Location = new System.Drawing.Point(83, 18);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(275, 50);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 34;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
             // 
             // frmCheckSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 744);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.grpReport);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmCheckSales";
-            this.Text = "Admin_Sales";
-            this.Load += new System.EventHandler(this.frmSales_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sales Report Visualization";
             this.grpReport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,9 +154,10 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grpReport;
-        private System.Windows.Forms.Button btnMonth;
         private System.Windows.Forms.Button btnCategory;
-        private System.Windows.Forms.Button btnChef;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartReport;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.ComboBox cmbYear;
     }
 }

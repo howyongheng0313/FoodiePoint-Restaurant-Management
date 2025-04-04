@@ -162,6 +162,7 @@
             // 
             // cmbRole
             // 
+            this.cmbRole.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(398, 513);
             this.cmbRole.Name = "cmbRole";
@@ -170,9 +171,11 @@
             // 
             // btnRegister
             // 
+            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.Location = new System.Drawing.Point(352, 627);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(149, 36);
+            this.btnRegister.Size = new System.Drawing.Size(149, 52);
             this.btnRegister.TabIndex = 15;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -180,10 +183,12 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(673, 628);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(149, 36);
+            this.btnCancel.Size = new System.Drawing.Size(149, 51);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -212,6 +217,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtUsername);
             this.Name = "frmSignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";
             this.ResumeLayout(false);
             this.PerformLayout();
