@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.btnMenuToHallReservation = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnMenuToProfile = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.btnUpdateProfile = new System.Windows.Forms.Button();
+            this.lblFoodiePoint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,6 +61,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnMenuToHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenu);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenuToProfile);
+            this.splitContainer1.Panel1.Controls.Add(this.lblFoodiePoint);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
@@ -74,6 +76,23 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 4;
             // 
+            // btnUpdateProfile
+            // 
+            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
+            this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(10, 338);
+            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateProfile.Name = "btnUpdateProfile";
+            this.btnUpdateProfile.Size = new System.Drawing.Size(208, 80);
+            this.btnUpdateProfile.TabIndex = 13;
+            this.btnUpdateProfile.Text = "Update Profile";
+            this.btnUpdateProfile.UseVisualStyleBackColor = false;
+            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
+            // 
             // btnMenuToHallReservation
             // 
             this.btnMenuToHallReservation.BackColor = System.Drawing.Color.SteelBlue;
@@ -82,7 +101,7 @@
             this.btnMenuToHallReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuToHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuToHallReservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuToHallReservation.Location = new System.Drawing.Point(10, 160);
+            this.btnMenuToHallReservation.Location = new System.Drawing.Point(10, 258);
             this.btnMenuToHallReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenuToHallReservation.Name = "btnMenuToHallReservation";
             this.btnMenuToHallReservation.Size = new System.Drawing.Size(208, 80);
@@ -99,7 +118,7 @@
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenu.Location = new System.Drawing.Point(10, 80);
+            this.btnMenu.Location = new System.Drawing.Point(10, 178);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(208, 80);
@@ -115,7 +134,7 @@
             this.btnMenuToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuToProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuToProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenuToProfile.Location = new System.Drawing.Point(10, 0);
+            this.btnMenuToProfile.Location = new System.Drawing.Point(10, 98);
             this.btnMenuToProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenuToProfile.Name = "btnMenuToProfile";
             this.btnMenuToProfile.Size = new System.Drawing.Size(208, 80);
@@ -186,22 +205,17 @@
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
-            // btnUpdateProfile
+            // lblFoodiePoint
             // 
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
-            this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(10, 240);
-            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(208, 80);
-            this.btnUpdateProfile.TabIndex = 13;
-            this.btnUpdateProfile.Text = "Update Profile";
-            this.btnUpdateProfile.UseVisualStyleBackColor = false;
-            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
+            this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFoodiePoint.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodiePoint.Location = new System.Drawing.Point(10, 0);
+            this.lblFoodiePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFoodiePoint.Name = "lblFoodiePoint";
+            this.lblFoodiePoint.Size = new System.Drawing.Size(208, 98);
+            this.lblFoodiePoint.TabIndex = 15;
+            this.lblFoodiePoint.Text = "Foodie Point";
+            this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMenuPage
             // 
@@ -238,5 +252,6 @@
         private System.Windows.Forms.TextBox search_txt;
         private System.Windows.Forms.Button Search_btn;
         private System.Windows.Forms.Button btnUpdateProfile;
+        private System.Windows.Forms.Label lblFoodiePoint;
     }
 }

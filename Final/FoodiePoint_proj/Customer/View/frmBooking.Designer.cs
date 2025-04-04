@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.btnCutomerToHallReservation = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             this.lblFeedback = new System.Windows.Forms.Label();
             this.btnReservationBook = new System.Windows.Forms.Button();
             this.lblReservationType = new System.Windows.Forms.Label();
-            this.btnUpdateProfile = new System.Windows.Forms.Button();
+            this.lblFoodiePoint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnCutomerToHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnCustomerToMenu);
             this.splitContainer1.Panel1.Controls.Add(this.btnProfile);
+            this.splitContainer1.Panel1.Controls.Add(this.lblFoodiePoint);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             // 
             // splitContainer1.Panel2
@@ -96,6 +98,23 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 6;
             // 
+            // btnUpdateProfile
+            // 
+            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
+            this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(10, 338);
+            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateProfile.Name = "btnUpdateProfile";
+            this.btnUpdateProfile.Size = new System.Drawing.Size(208, 80);
+            this.btnUpdateProfile.TabIndex = 12;
+            this.btnUpdateProfile.Text = "Update Profile";
+            this.btnUpdateProfile.UseVisualStyleBackColor = false;
+            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
+            // 
             // btnCutomerToHallReservation
             // 
             this.btnCutomerToHallReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(156)))), ((int)(((byte)(216)))));
@@ -105,7 +124,7 @@
             this.btnCutomerToHallReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCutomerToHallReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCutomerToHallReservation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCutomerToHallReservation.Location = new System.Drawing.Point(10, 160);
+            this.btnCutomerToHallReservation.Location = new System.Drawing.Point(10, 258);
             this.btnCutomerToHallReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnCutomerToHallReservation.Name = "btnCutomerToHallReservation";
             this.btnCutomerToHallReservation.Size = new System.Drawing.Size(208, 80);
@@ -121,7 +140,7 @@
             this.btnCustomerToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerToMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCustomerToMenu.Location = new System.Drawing.Point(10, 80);
+            this.btnCustomerToMenu.Location = new System.Drawing.Point(10, 178);
             this.btnCustomerToMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerToMenu.Name = "btnCustomerToMenu";
             this.btnCustomerToMenu.Size = new System.Drawing.Size(208, 80);
@@ -138,7 +157,7 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProfile.Location = new System.Drawing.Point(10, 0);
+            this.btnProfile.Location = new System.Drawing.Point(10, 98);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(208, 80);
@@ -304,22 +323,17 @@
             this.lblReservationType.TabIndex = 15;
             this.lblReservationType.Text = "Reservation Type*";
             // 
-            // btnUpdateProfile
+            // lblFoodiePoint
             // 
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
-            this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(10, 240);
-            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(208, 80);
-            this.btnUpdateProfile.TabIndex = 12;
-            this.btnUpdateProfile.Text = "Update Profile";
-            this.btnUpdateProfile.UseVisualStyleBackColor = false;
-            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
+            this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFoodiePoint.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodiePoint.Location = new System.Drawing.Point(10, 0);
+            this.lblFoodiePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFoodiePoint.Name = "lblFoodiePoint";
+            this.lblFoodiePoint.Size = new System.Drawing.Size(208, 98);
+            this.lblFoodiePoint.TabIndex = 14;
+            this.lblFoodiePoint.Text = "Foodie Point";
+            this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmBooking
             // 
@@ -366,5 +380,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnUpdateProfile;
+        private System.Windows.Forms.Label lblFoodiePoint;
     }
 }
