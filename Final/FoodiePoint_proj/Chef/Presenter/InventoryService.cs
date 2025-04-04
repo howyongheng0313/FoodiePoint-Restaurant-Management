@@ -11,57 +11,53 @@ using System.Windows.Forms;
 
 namespace FoodiePointManagementSystem.Presenter
 {
-    // Chef (view, update) and update and customer (view, update, edit, delete)
     public class InventoryService 
     {
         private DatabaseHelper dbHelper;
 
+        // Constructor of InventoryService
         public InventoryService()
         {
             dbHelper = new DatabaseHelper();
         }
 
+        // Method to get all inventory
         public DataTable GetAllInventory()
         {
             string query = "SELECT * FROM Inventory";
             return dbHelper.ExecuteQuery(query);
         }
 
+        // Method to detect if an ingredient ID exists
         public bool DetectID(string ingredientID)
         {
             string query = $"SELECT COUNT (*) FROM Inventory WHERE IngredientID = '{ingredientID}' ";
             DataTable dt =  dbHelper.ExecuteQuery(query);
-
-            //if (dt.Rows.Count > 0)        //Kuek-Chef
-            //{
-            //    return Convert.ToInt32(dt.Rows[0][0]) > 0 ; 
-            //}
-            //return false; // No duplicate Ingredient ID   //Kuek-Chef
-            return dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0; //Kuek-Chef
+            return dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0; 
         }
 
-        //public bool AddIngredient(string ingredientID, string ingredientName, float quantity, string unit)    //Kuek-Chef
-        public bool AddIngredient(string ingredientName, float quantity, string unit)                           //Kuek-Chef
+        // Method to add an ingredient
+        public bool AddIngredient(string ingredientName, float quantity, string unit)                          
         {
-            //string detectQuery = $"SELECT * FROM Inventory WHERE IngredientID = '{ingredientID}' ";   //Kuek-Chef
-                
-            //string query = $"INSERT INTO Inventory(IngredientID, IngredientName, QuantityInStock, Unit) VALUES ('{ingredientID}', '{ingredientName}', '{quantity}', '{unit}')" ;  //Kuek-Chef
-            string query = $"INSERT INTO Inventory(IngredientName, QuantityInStock, Unit) VALUES ('{ingredientName}', '{quantity}', '{unit}')" ;                                    //Kuek-Chef
+            string query = $"INSERT INTO Inventory(IngredientName, QuantityInStock, Unit) VALUES ('{ingredientName}', '{quantity}', '{unit}')" ;                                  
             return dbHelper.ExecuteNonQuery(query);
         }
 
+        // Method to edit an ingredient
         public bool EditIngredient(string ingredientID, string ingredientName, float quantity, string unit)
         {
             string query = $"UPDATE Inventory SET IngredientName = '{ingredientName}', QuantityInStock = '{quantity}', Unit = '{unit}' WHERE IngredientID = '{ingredientID}' ";
             return dbHelper.ExecuteNonQuery(query);
         }
 
+        // Method to delete an ingredient
         public bool DeleteIngredient(string ingredientID)
         {
             string query = $"DELETE FROM Inventory WHERE IngredientID = '{ingredientID}' ";
             return dbHelper.ExecuteNonQuery(query);
         }
 
+        // Method to search for an ingredient
         public DataTable SearchIngredient(string searchInput)
         {
             string query = $"SELECT * FROM Inventory WHERE IngredientID LIKE '%{searchInput}%' OR IngredientName LIKE '%{searchInput}%' OR QuantityInStock LIKE '%{searchInput}%' OR Unit LIKE '%{searchInput}%' ";

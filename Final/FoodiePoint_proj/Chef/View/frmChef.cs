@@ -34,25 +34,23 @@ namespace FoodiePointManagementSystem
         {
             frmOrderPage frmOrder = new frmOrderPage();
             frmOrder.SetUser(_currentUser);
-            frmOrder.Show();
             this.Hide();
+            frmOrder.ShowDialog();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
             frmInventory frmInventory = new frmInventory();
             frmInventory.SetUser(_currentUser);
-            frmInventory.Show();
             this.Hide();
+            frmInventory.ShowDialog();
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
         {
             Admin.View.frmUpdate frmChefProfile = new Admin.View.frmUpdate();
             frmChefProfile.SetUser(_currentUser);
-            this.Hide();
             frmChefProfile.ShowDialog();
-            this.Show();
         }
     }
 }

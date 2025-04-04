@@ -261,9 +261,6 @@
     </EmbeddedResource>
     <!--############################## Chef-->
     <Compile Include="Chef\Database\DatabaseHelper.cs" />
-    <Compile Include="Chef\Model\Inventory.cs" />
-    <Compile Include="Chef\Model\Order.cs" />
-    <Compile Include="Chef\Model\OrderItem.cs" />
     <Compile Include="Chef\Presenter\InventoryService.cs" />
     <Compile Include="Chef\Presenter\OrderService.cs" />
     <Compile Include="Chef\View\frmChef.cs">
@@ -271,12 +268,6 @@
     </Compile>
     <Compile Include="Chef\View\frmChef.Designer.cs">
       <DependentUpon>frmChef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Chef\View\frmChefProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Chef\View\frmChefProfile.Designer.cs">
-      <DependentUpon>frmChefProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Chef\View\frmInventory.cs">
       <SubType>Form</SubType>
@@ -292,9 +283,6 @@
     </Compile>
     <EmbeddedResource Include="Chef\View\frmChef.resx">
       <DependentUpon>frmChef.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Chef\View\frmChefProfile.resx">
-      <DependentUpon>frmChefProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chef\View\frmInventory.resx">
       <DependentUpon>frmInventory.cs</DependentUpon>

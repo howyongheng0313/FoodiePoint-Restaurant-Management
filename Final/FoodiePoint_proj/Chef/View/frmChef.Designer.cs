@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChef));
             this.lblChefDashboard = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,25 +41,13 @@
             this.lblChefDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblChefDashboard.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChefDashboard.Location = new System.Drawing.Point(13, 42);
+            this.lblChefDashboard.Location = new System.Drawing.Point(13, 92);
             this.lblChefDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChefDashboard.Name = "lblChefDashboard";
             this.lblChefDashboard.Size = new System.Drawing.Size(1056, 22);
             this.lblChefDashboard.TabIndex = 0;
             this.lblChefDashboard.Text = "Chef Dashboard";
             this.lblChefDashboard.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(429, 384);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 265);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // btnUpdateProfile
             // 
@@ -118,7 +103,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnOrder, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnInventory, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdateProfile, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 139);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 241);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -132,14 +117,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblChefDashboard);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmChef";
             this.Text = "Chef Main Page";
             this.Load += new System.EventHandler(this.frmChef_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -148,7 +131,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblChefDashboard;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUpdateProfile;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnOrder;
