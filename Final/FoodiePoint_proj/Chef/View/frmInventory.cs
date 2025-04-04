@@ -96,29 +96,30 @@ namespace FoodiePointManagementSystem
         private void btnAddIngredient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            action = 1; UnlockTextBox(action);
-
-            //string newId = GetNextIngredientId(); //Kuek-Chef
-            //tbxIngredientID.Text = newId;         //Kuek-Chef
-            tbxIngredientID.Text = string.Empty;    //Kuek-Chef
+            action = 1; 
+            UnlockTextBox(action);
+            tbxIngredientID.Text = string.Empty;   
         }
 
         private void btnEditIngredient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            action = 2; UnlockTextBox(action);
+            action = 2; 
+            UnlockTextBox(action);
         }
 
         private void btnDeleteIngredient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            action = 3; UnlockTextBox(action);
+            action = 3; 
+            UnlockTextBox(action);
         }
 
         private void btnSearchIngredient_Click(object sender, EventArgs e)
         {
             SearchInput = tbxSearchInput.Text;
 
+            // Ensure that the search input is not empty
             if (string.IsNullOrEmpty(SearchInput))
             {
                 MessageBox.Show("Please enter something on search bar.");
@@ -127,6 +128,7 @@ namespace FoodiePointManagementSystem
 
             DataTable searchResult = inventoryService.SearchIngredient(SearchInput);
 
+            // Check if the search result is not empty
             if (searchResult.Rows.Count > 0)
             {
                 dgvInventory.DataSource = inventoryService.SearchIngredient(SearchInput);
@@ -144,14 +146,13 @@ namespace FoodiePointManagementSystem
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            // Add ingredient
             if (action == 1)
             {
-                //IngredientID = tbxIngredientID.Text;  //Kuek-Chef
                 IngredientName = tbxIngredient.Text;
                 Unit = cbxUnit.Text;
 
-                // Validate quantity input.
-                // If not valid, show message box and return, else assign value to QuantityInStock (Global variable)
+                // Ensure that the quantity is not empty and is a valid float
                 if (!float.TryParse(tbxQuantity.Text, out float quantityInStock))
                 {
                     MessageBox.Show("Please enter quantity in the correct format.");
@@ -159,21 +160,15 @@ namespace FoodiePointManagementSystem
                 }
                 QuantityInStock = quantityInStock;
 
-                //if (string.IsNullOrEmpty(IngredientID) || string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit)) //Kuek-Chef
-                if (string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit))   //Kuek-Chef
+                // Ensure that the ingredient name and unit are not empty
+                if (string.IsNullOrEmpty(IngredientName) || string.IsNullOrEmpty(Unit))  
                     {
                     MessageBox.Show("Please fill in all fields.");
                     return;
                 }
 
-                //if (inventoryService.DetectID(IngredientID))                                      //Kuek-Chef
-                //{
-                //    MessageBox.Show("Ingredient ID already exists. Please change Ingredient ID.");
-                //    return;
-                //}
-
-                //bool isAdded = inventoryService.AddIngredient(IngredientID, IngredientName, quantityInStock, Unit);   //Kuek-Chef
-                bool isAdded = inventoryService.AddIngredient(IngredientName, quantityInStock, Unit);                   //Kuek-Chef
+                // Call the AddIngredient method with the provided values
+                bool isAdded = inventoryService.AddIngredient(IngredientName, quantityInStock, Unit);                 
                 if (isAdded)
                 {
                     MessageBox.Show($"{IngredientName} is successfully added into the inventory!");
@@ -189,19 +184,21 @@ namespace FoodiePointManagementSystem
                 }
             }
 
-
+            // Edit ingredient
             else if (action == 2)
             {
                 IngredientID = tbxIngredientID.Text;
                 IngredientName = tbxIngredient.Text;
                 Unit = cbxUnit.Text;
 
+                // Ensure that the ingredient ID is not empty
                 if (string.IsNullOrEmpty(IngredientID))
                 {
                     MessageBox.Show("Please enter Ingredient ID");
                     return;
                 }
 
+                // Ensure that the ingredient ID exists
                 if (!inventoryService.DetectID(IngredientID))
                 {
                     MessageBox.Show("Ingredient ID does not exists. Please change Ingredient ID.");
@@ -212,6 +209,7 @@ namespace FoodiePointManagementSystem
                 float store_QuantityInStock = 0;
                 string store_Unit = "";
 
+                // Loop through the DataGridView to find the selected ingredient ID
                 foreach (DataGridViewRow row in dgvInventory.Rows)
                 {
                     if (row.Cells["IngredientID"].Value.ToString() == IngredientID)
@@ -223,6 +221,7 @@ namespace FoodiePointManagementSystem
                     }
                 }
 
+                // Ensure the quantity is a valid float and not negative
                 float quantityInStock = store_QuantityInStock;
                 if (!string.IsNullOrEmpty(tbxQuantity.Text))
                 {
@@ -234,8 +233,10 @@ namespace FoodiePointManagementSystem
                 }
                 QuantityInStock = quantityInStock; // Assign value to global variable
 
+                
+                int changedFields = 0; // Initialize a counter for changed fields
 
-                int changedFields = 0;
+                // Check if the fields have changed
                 if (!string.IsNullOrEmpty(IngredientName) && IngredientName != store_IngredientName)
                 {
                     store_IngredientName = IngredientName;
@@ -252,12 +253,14 @@ namespace FoodiePointManagementSystem
                     changedFields++;
                 }
 
+                // Ensure that at least one field has changed
                 if (changedFields < 1)
                 {
                     MessageBox.Show("Please modify at least one field.");
                     return;
                 }
 
+                // Call the EditIngredient method with the updated values
                 bool isEdited = inventoryService.EditIngredient(IngredientID, store_IngredientName, store_QuantityInStock, store_Unit);
                 if (isEdited)
                 {
@@ -276,23 +279,26 @@ namespace FoodiePointManagementSystem
 
             }
 
+            // Delete ingredient
             else if (action == 3)
             {
-                //ingredientID = tbxIngredientID.Text;
-                IngredientID = tbxIngredientID.Text;    //Kuek-Chef
+                IngredientID = tbxIngredientID.Text;
 
+                // Ensure that the ingredient ID is not empty
                 if (string.IsNullOrEmpty(IngredientID))
                 {
                     MessageBox.Show("Please enter Ingredient ID.");
                     return;
                 }
 
+                // Ensure that the ingredient ID exists
                 if (!inventoryService.DetectID(IngredientID))
                 {
                     MessageBox.Show("Ingredient ID not exists. Please change Ingredient ID.");
                     return;
                 }
 
+                // Call the DeleteIngredient method with the provided ingredient ID
                 bool isDeleted = inventoryService.DeleteIngredient(IngredientID);
                 if (isDeleted)
                 {
@@ -310,6 +316,7 @@ namespace FoodiePointManagementSystem
             }
         }
 
+        // Button to return to the full inventory list
         private void btnReturn_Click(object sender, EventArgs e)
         {
             dgvInventory.DataSource = inventoryService.GetAllInventory();
@@ -317,6 +324,7 @@ namespace FoodiePointManagementSystem
             MessageBox.Show("Inventory list is returned!");
         }
 
+        // Method to clear all input fields
         private void ClearAllInput()
         {
             tbxIngredientID.Clear();
@@ -326,6 +334,7 @@ namespace FoodiePointManagementSystem
             tbxSearchInput.Clear();
         }
 
+        // Method to lock the text box after an action is completed
         private void LockTextBox()
         {
             tbxIngredientID.ReadOnly = true;
@@ -337,6 +346,7 @@ namespace FoodiePointManagementSystem
             tbxIngredientID.SelectionStart = tbxIngredientID.Text.Length;
         }
 
+        // Method to unlock the text box for different actions (add, edit, delete)
         private void UnlockTextBox(int action)
         {
             LockTextBox();
@@ -344,7 +354,6 @@ namespace FoodiePointManagementSystem
             switch(action)
             {
                 case 1: 
-                    //tbxIngredientID.ReadOnly = false; //Kuek-Chef
                     tbxIngredient.ReadOnly = false;
                     tbxQuantity.ReadOnly = false;
                     cbxUnit.Enabled = true;
@@ -363,55 +372,27 @@ namespace FoodiePointManagementSystem
             }     
         }
 
-        private string GetNextIngredientId()
-        {
-            string prefix = "ING";
-            int newNumber = 1;
-
-            if (dgvInventory.Rows.Count > 0)
-            {
-                var lastRow = dgvInventory.Rows[dgvInventory.Rows.Count - 2];
-                if (lastRow.Cells[0].Value != null)
-                {
-                    string lastId = lastRow.Cells[0].Value.ToString();
-
-                    if (lastId.StartsWith(prefix))
-                    {
-                        string numberPart = lastId.Substring(prefix.Length);
-                        if(int.TryParse(numberPart, out int lastNumber))
-                        {
-                            newNumber = lastNumber + 1;
-                        }
-                    }
-                }
-            }
-            return $"{prefix}{newNumber:D2}" ;
-        }
-
-
         private void btnInventoryToChef_Click(object sender, EventArgs e)
         {
             frmChef frmChef = new frmChef();
             frmChef.SetUser(_currentUser);
-            frmChef.Show();
             this.Hide();
+            frmChef.ShowDialog();
         }
 
         private void btnInventoryToOrder_Click(object sender, EventArgs e)
         {
             frmOrderPage frmOrder = new frmOrderPage();
             frmOrder.SetUser(_currentUser);
-            frmOrder.Show();
             this.Hide();
+            frmOrder.ShowDialog();
         }
 
         private void btnInventoryToProfile_Click(object sender, EventArgs e)
         {
             Admin.View.frmUpdate frmChefProfile = new Admin.View.frmUpdate();
             frmChefProfile.SetUser(_currentUser);
-            this.Hide();
             frmChefProfile.ShowDialog();
-            this.Show();
         }
     }
 }

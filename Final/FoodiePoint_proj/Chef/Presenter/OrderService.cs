@@ -8,7 +8,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using FoodiePointManagementSystem.Database;
-using FoodiePointManagementSystem.Model;
 
 namespace FoodiePointManagementSystem.Presenter
 {
@@ -29,12 +28,14 @@ namespace FoodiePointManagementSystem.Presenter
             return dbHelper.ExecuteNonQuery(query);
         }
 
+        // Method to get all orders
         public DataTable GetAllOrders()
         {
             string query = "SELECT * FROM Orders";
             return dbHelper.ExecuteQuery(query);
         }
 
+        // Method to get order items based on order ID
         public DataTable GetOrderItem(string orderID)
         {
             string query 

@@ -51,9 +51,11 @@ namespace FoodiePointManagementSystem
             dgvOrders.DataSource = orderService.GetAllOrders();
             dgvOrders.Refresh();
 
+            /*
             // Testing purpose
             string columnNames = string.Join(", ", dgvOrders.Columns.Cast<DataGridViewColumn>().Select(c => c.Name));
             MessageBox.Show("Columns found: " + columnNames);
+            */
         }
 
         // Button to update order status to "In Progress"
@@ -109,8 +111,7 @@ namespace FoodiePointManagementSystem
         }
 
         // Button to update order status to "Cancelled"
-        //private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)       //Kuek-Chef
-        private void dgvOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)   //Kuek-Chef
+        private void dgvOrders_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)   
         {
             if (e.RowIndex >= 0)
             {
@@ -157,6 +158,8 @@ namespace FoodiePointManagementSystem
             dgvOrders.Refresh();
 
             MessageBox.Show("Order list is returned!");
+
+            btnReturnOrder.Visible = false;
         }
 
         // Button to navigate to chef form
@@ -164,8 +167,8 @@ namespace FoodiePointManagementSystem
         {
             frmChef frmChef = new frmChef();
             frmChef.SetUser(_currentUser);
-            frmChef.Show();
             this.Hide();
+            frmChef.ShowDialog();
         }
 
         // Button to navigate to inventory form
@@ -173,8 +176,8 @@ namespace FoodiePointManagementSystem
         {
             frmInventory frmInventory = new frmInventory();
             frmInventory.SetUser(_currentUser);
-            frmInventory.Show();
             this.Hide();
+            frmInventory.ShowDialog();
         }
 
         // Button to navigate to chef profile form
@@ -182,9 +185,7 @@ namespace FoodiePointManagementSystem
         {
             Admin.View.frmUpdate frmChefProfile = new Admin.View.frmUpdate();
             frmChefProfile.SetUser(_currentUser);
-            this.Hide();
             frmChefProfile.ShowDialog();
-            this.Show();
         }
     }
 }
