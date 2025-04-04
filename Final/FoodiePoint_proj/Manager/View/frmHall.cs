@@ -34,7 +34,7 @@ namespace Manager
             int rows = dataGridViewHall.Rows.Count;
             string row = rows.ToString("D2");
             HallID = $"H{row}";
-            hallIdTxt.Text = HallID;
+            lblHallID.Text = HallID;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -59,26 +59,25 @@ namespace Manager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            button.MainMenu();
             this.Hide();
+            button.MainMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            button.HallMgmt();
             this.Hide();
+            button.HallMgmt();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            button.Reservations();
             this.Hide();
+            button.Reservations();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             button.Profile();
-            this.Hide();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -112,8 +111,8 @@ namespace Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button.EditHall();
             this.Hide();
+            button.EditHall();
         }
 
         private void dataGridViewHall_CellContentClick(object sender, DataGridViewCellEventArgs e)

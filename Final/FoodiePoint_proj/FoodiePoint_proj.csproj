@@ -305,66 +305,66 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <!--############################## Customer-->
-	<Compile Include="Customer\Presenter\Reservation.cs" />
-	<Compile Include="Customer\View\frmBooking.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmBooking.Designer.cs">
-		<DependentUpon>frmBooking.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Customer\Presenter\DatabaseHelper.cs" />
-	<Compile Include="Customer\Presenter\OrderFood.cs" />
-	<Compile Include="Customer\View\frmProfile.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmProfile.Designer.cs">
-		<DependentUpon>frmProfile.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Customer\View\frmMenu.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmMenu.Designer.cs">
-		<DependentUpon>frmMenu.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Customer\View\frmOrderCart.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmOrderCart.Designer.cs">
-		<DependentUpon>frmOrderCart.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Customer\View\frmHallReservation.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmHallReservation.Designer.cs">
-		<DependentUpon>frmHallReservation.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Customer\View\frmPayment.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Customer\View\frmPayment.Designer.cs">
-		<DependentUpon>frmPayment.cs</DependentUpon>
-	</Compile>
-	<EmbeddedResource Include="Customer\View\frmBooking.resx">
-		<DependentUpon>frmBooking.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Customer\View\frmProfile.resx">
-		<DependentUpon>frmProfile.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Customer\View\frmMenu.resx">
-		<DependentUpon>frmMenu.cs</DependentUpon>
-		<SubType>Designer</SubType>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Customer\View\frmOrderCart.resx">
-		<DependentUpon>frmOrderCart.cs</DependentUpon>
-		<SubType>Designer</SubType>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Customer\View\frmHallReservation.resx">
-		<DependentUpon>frmHallReservation.cs</DependentUpon>
-		<SubType>Designer</SubType>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Customer\View\frmPayment.resx">
-		<DependentUpon>frmPayment.cs</DependentUpon>
-	</EmbeddedResource>
+    <Compile Include="Customer\Presenter\Reservation.cs" />
+    <Compile Include="Customer\View\frmBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmBooking.Designer.cs">
+      <DependentUpon>frmBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Presenter\DatabaseHelper.cs" />
+    <Compile Include="Customer\Presenter\OrderFood.cs" />
+    <Compile Include="Customer\View\frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\frmOrderCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmOrderCart.Designer.cs">
+      <DependentUpon>frmOrderCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\frmHallReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmHallReservation.Designer.cs">
+      <DependentUpon>frmHallReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customer\View\frmBooking.resx">
+      <DependentUpon>frmBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\frmOrderCart.resx">
+      <DependentUpon>frmOrderCart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\frmHallReservation.resx">
+      <DependentUpon>frmHallReservation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <!--############################## Manager-->
     <Compile Include="Manager\DataSet\FoodieDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -396,12 +396,6 @@
     <Compile Include="Manager\View\frmHall.Designer.cs">
       <DependentUpon>frmHall.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager\View\frmProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\View\frmProfile.Designer.cs">
-      <DependentUpon>frmProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manager\View\frmReservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,12 +408,6 @@
     <Compile Include="Manager\View\frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager\View\frmEditReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\View\frmEditReservation.Designer.cs">
-      <DependentUpon>frmEditReservation.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Manager\View\EditHalls.resx">
       <DependentUpon>EditHalls.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,17 +417,11 @@
     <EmbeddedResource Include="Manager\View\frmHall.resx">
       <DependentUpon>frmHall.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\View\frmProfile.resx">
-      <DependentUpon>frmProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manager\View\frmReservations.resx">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\View\frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manager\View\frmEditReservation.resx">
-      <DependentUpon>frmEditReservation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Manager\DataSet\FoodieDbDataSet.xsc">
       <DependentUpon>FoodieDbDataSet.xsd</DependentUpon>
@@ -453,100 +435,100 @@
       <DependentUpon>FoodieDbDataSet.xsd</DependentUpon>
     </None>
     <!--############################## Reservation_Coordinator-->
-	<Compile Include="Reservation_Coordinator\Model\DataHelper.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\HallHelper.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\NoticeBox.cs">
-		<SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\Model\Item\NoticeHelper.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ReplyBox.cs">
-		<SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\Model\Item\ReplyButton.cs">
-		<SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\Model\Item\RequestBox.cs">
-		<SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\Model\Item\RequestHelper.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ReservationHelper.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ItemHall.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ItemRequest.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ItemReservation.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Item\ItemUser.cs" />
-	<Compile Include="Reservation_Coordinator\Model\Jumper.cs" />
-	<Compile Include="Reservation_Coordinator\View\frmLogin.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmLogin.Designer.cs">
-		<DependentUpon>frmLogin.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmMainTool.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmMainTool.Designer.cs">
-		<DependentUpon>frmMainTool.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmMainTemp.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmMainTemp.Designer.cs">
-		<DependentUpon>frmMainTemp.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmSubReservationDetail.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmSubReservationDetail.Designer.cs">
-		<DependentUpon>frmSubReservationDetail.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmTinyHallPick.cs">
-		<SubType>Form</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\frmTinyHallPick.Designer.cs">
-		<DependentUpon>frmTinyHallPick.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeProfile.cs">
-		<SubType>UserControl</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeProfile.Designer.cs">
-		<DependentUpon>pgeProfile.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeViewRev.cs">
-		<SubType>UserControl</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeViewRev.Designer.cs">
-		<DependentUpon>pgeViewRev.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeWelcome.cs">
-		<SubType>UserControl</SubType>
-	</Compile>
-	<Compile Include="Reservation_Coordinator\View\pgeWelcome.Designer.cs">
-		<DependentUpon>pgeWelcome.cs</DependentUpon>
-	</Compile>
-	<EmbeddedResource Include="Reservation_Coordinator\View\frmLogin.resx">
-		<DependentUpon>frmLogin.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\frmMainTool.resx">
-		<DependentUpon>frmMainTool.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\frmMainTemp.resx">
-		<DependentUpon>frmMainTemp.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\frmSubReservationDetail.resx">
-		<DependentUpon>frmSubReservationDetail.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\frmTinyHallPick.resx">
-		<DependentUpon>frmTinyHallPick.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\pgeProfile.resx">
-		<DependentUpon>pgeProfile.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\pgeViewRev.resx">
-		<DependentUpon>pgeViewRev.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Reservation_Coordinator\View\pgeWelcome.resx">
-		<DependentUpon>pgeWelcome.cs</DependentUpon>
-	</EmbeddedResource>
+    <Compile Include="Reservation_Coordinator\Model\DataHelper.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\HallHelper.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\NoticeBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\Model\Item\NoticeHelper.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ReplyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\Model\Item\ReplyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\Model\Item\RequestBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\Model\Item\RequestHelper.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ReservationHelper.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ItemHall.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ItemRequest.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ItemReservation.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Item\ItemUser.cs" />
+    <Compile Include="Reservation_Coordinator\Model\Jumper.cs" />
+    <Compile Include="Reservation_Coordinator\View\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmMainTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmMainTool.Designer.cs">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmMainTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmMainTemp.Designer.cs">
+      <DependentUpon>frmMainTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmSubReservationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmSubReservationDetail.Designer.cs">
+      <DependentUpon>frmSubReservationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmTinyHallPick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\frmTinyHallPick.Designer.cs">
+      <DependentUpon>frmTinyHallPick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeProfile.Designer.cs">
+      <DependentUpon>pgeProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeViewRev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeViewRev.Designer.cs">
+      <DependentUpon>pgeViewRev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservation_Coordinator\View\pgeWelcome.Designer.cs">
+      <DependentUpon>pgeWelcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reservation_Coordinator\View\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\frmMainTool.resx">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\frmMainTemp.resx">
+      <DependentUpon>frmMainTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\frmSubReservationDetail.resx">
+      <DependentUpon>frmSubReservationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\frmTinyHallPick.resx">
+      <DependentUpon>frmTinyHallPick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\pgeProfile.resx">
+      <DependentUpon>pgeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\pgeViewRev.resx">
+      <DependentUpon>pgeViewRev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Coordinator\View\pgeWelcome.resx">
+      <DependentUpon>pgeWelcome.cs</DependentUpon>
+    </EmbeddedResource>
     <!--############################## Setting-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

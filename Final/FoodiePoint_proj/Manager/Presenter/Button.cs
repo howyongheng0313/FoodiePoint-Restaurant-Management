@@ -22,48 +22,42 @@ namespace Manager
         {
             Main_Menu fm = new Main_Menu();
             fm.SetUser(_currentUser);
-            fm.Show();
+            fm.ShowDialog();
         }
 
         public void HallMgmt()
         {
             frmHall fm = new frmHall();
             fm.SetUser(_currentUser);
-            fm.Show();
+            fm.ShowDialog();
         }
 
         public void Reservations()
         {
             frmReservations fm = new frmReservations();
             fm.SetUser(_currentUser);
-            fm.Show();
+            fm.ShowDialog();
         }
-        public void EditReservations()
-        {
-            frmReservation fm = new frmReservation();
-            fm.SetUser(_currentUser);
-            fm.Show();
-        }
+
         public void Profile()
         {
             Admin.View.frmUpdate fm = new Admin.View.frmUpdate();
             fm.SetUser(_currentUser);
-            fm.Show();
+            fm.ShowDialog();
         }
 
         public void EditMenu()
         {
             EditMenu fm = new EditMenu();
             fm.SetUser(_currentUser);
-            fm.Show();
-
+            fm.ShowDialog();
         }
 
         public void EditHall()
         {
             EditHalls fm = new EditHalls();
             fm.SetUser(_currentUser);
-            fm.Show();
+            fm.ShowDialog();
         }
     }
 }

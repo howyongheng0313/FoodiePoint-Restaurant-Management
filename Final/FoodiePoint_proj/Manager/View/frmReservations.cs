@@ -47,10 +47,6 @@ namespace Manager
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            bt.EditReservations();
-        }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -74,6 +70,11 @@ namespace Manager
         private void button4_Click(object sender, EventArgs e)
         {
             db.LoadData(dataGridView1, "Reservations");
+            txtHallID.Clear();
+            txtUserID.Clear();
+            txtReservationID.Clear();
+            txtStatus.Clear();
+            txtSearch.Clear();
         }
 
         private void monthCmbBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,26 +88,25 @@ namespace Manager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bt.MainMenu();
             this.Hide();
+            bt.MainMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            bt.HallMgmt();
             this.Hide();
+            bt.HallMgmt();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bt.Reservations();
             this.Hide();
+            bt.Reservations();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             bt.Profile();
-            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -116,8 +116,47 @@ namespace Manager
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string search = txtSearch.Text;
-            db.SearchReservationType(dataGridView1, "Reservations", search);
+            string searchid = txtReservationID.Text;
+            db.SearchReservationID(dataGridView1, "Reservations", searchid);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string searchhallid = txtHallID.Text;
+            db.SearchHallID(dataGridView1, "Reservations", searchhallid);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string searchuserid = txtUserID.Text;
+            db.SearchUserID(dataGridView1, "Reservations", searchuserid);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string searchtype = txtSearch.Text;
+            db.SearchReservationType(dataGridView1, "Reservations", searchtype);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string searchstatus = txtStatus.Text;
+            db.SearchReservationStatus(dataGridView1, "Reservations", searchstatus);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

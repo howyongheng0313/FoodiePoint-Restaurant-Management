@@ -240,5 +240,79 @@ namespace Manager
                 dataGridView.Refresh();
             }
         }
+
+        public void SearchReservationID(DataGridView dataGridView, string x, string search)
+        {
+
+            string query = $"SELECT * FROM {x} WHERE ReservationID LIKE @search";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + search + "%");
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+                dataGridView.DataSource = table;
+                dataGridView.Refresh();
+            }
+        }
+
+        public void SearchHallID(DataGridView dataGridView, string x, string search)
+        {
+
+            string query = $"SELECT * FROM {x} WHERE HallID LIKE @search";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + search + "%");
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+                dataGridView.DataSource = table;
+                dataGridView.Refresh();
+            }
+        }
+        public void SearchUserID(DataGridView dataGridView, string x, string search)
+        {
+
+            string query = $"SELECT * FROM {x} WHERE UserID LIKE @search";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + search + "%");
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+                dataGridView.DataSource = table;
+                dataGridView.Refresh();
+            }
+        }
+
+        public void SearchReservationStatus(DataGridView dataGridView, string x, string search)
+        {
+            string query = $"SELECT * FROM {x} WHERE ReservationStatus LIKE @search";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@search", "%" + search + "%");
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+                dataGridView.DataSource = table;
+                dataGridView.Refresh();
+            }
+        }
     }
 }

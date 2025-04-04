@@ -89,26 +89,25 @@ namespace Manager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bt.MainMenu();
             this.Hide();
+            bt.MainMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            bt.HallMgmt();
             this.Hide();
+            bt.HallMgmt();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bt.Reservations();
             this.Hide();
+            bt.Reservations();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             bt.Profile();
-            this.Hide();
         }
 
         public string[] Idarray = new string[0];
