@@ -73,6 +73,7 @@ namespace Customer
         private void btnMenuToProfile_Click(object sender, EventArgs e)
         {
             frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -81,6 +82,7 @@ namespace Customer
         {
 
             frmOrderCart form3 = new frmOrderCart(selectedRows);
+            form3.SetUser(_currentUser);
             form3.ShowDialog();
         }
        
@@ -88,6 +90,7 @@ namespace Customer
         private void btnMenuToHallReservation_Click(object sender, EventArgs e)
         {
             frmHallReservation obj1 = new frmHallReservation();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }

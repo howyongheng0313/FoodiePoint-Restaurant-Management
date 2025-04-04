@@ -34,7 +34,7 @@ namespace Customer
 
         public void RefreshData()
         {
-            string query = "SELECT * FROM Reservations WHERE UserID = 'U001'";
+            string query = $"SELECT * FROM Reservations WHERE UserID = '{_currentUser.UserID}'";
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
                 conn.Open();
@@ -56,6 +56,7 @@ namespace Customer
         private void btnMenu_Click(object sender, EventArgs e)
         {
             frmMenuPage obj1 = new frmMenuPage();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -85,6 +86,7 @@ namespace Customer
 
                 // Open frmBooking with the existing reservation
                 frmBooking bookingForm = new frmBooking(selectedReservation);
+                bookingForm.SetUser(_currentUser);
                 this.Hide();
                 bookingForm.ShowDialog();
                 this.RefreshData();
@@ -95,6 +97,7 @@ namespace Customer
         private void btnProfile_Click(object sender, EventArgs e)
         {
             frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -108,10 +111,11 @@ namespace Customer
                 ReservationDate = "",
                 HallID = "",
                 GuestCount = 0,
-                UserID = "U001",
+                UserID = _currentUser.UserID,
                 ReservationStatus = "Pending"
             };
             frmBooking bookingForm = new frmBooking(newReservation);
+            bookingForm.SetUser(_currentUser);
             this.Hide();
             bookingForm.ShowDialog();
             this.RefreshData();

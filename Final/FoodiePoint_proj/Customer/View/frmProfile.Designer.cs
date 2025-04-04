@@ -33,11 +33,13 @@
             this.btnCutomerToHallReservation = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.lblFoodiePoint = new System.Windows.Forms.Label();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.rtbxFeedback = new System.Windows.Forms.RichTextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.btnSendFeedback = new System.Windows.Forms.Button();
-            this.lblFoodiePoint = new System.Windows.Forms.Label();
+            this.cmbRating = new System.Windows.Forms.ComboBox();
+            this.lblRating = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,6 +66,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblRating);
+            this.splitContainer1.Panel2.Controls.Add(this.cmbRating);
             this.splitContainer1.Panel2.Controls.Add(this.lblFeedback);
             this.splitContainer1.Panel2.Controls.Add(this.rtbxFeedback);
             this.splitContainer1.Panel2.Controls.Add(this.button7);
@@ -141,6 +145,18 @@
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
+            // lblFoodiePoint
+            // 
+            this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFoodiePoint.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodiePoint.Location = new System.Drawing.Point(10, 0);
+            this.lblFoodiePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFoodiePoint.Name = "lblFoodiePoint";
+            this.lblFoodiePoint.Size = new System.Drawing.Size(208, 98);
+            this.lblFoodiePoint.TabIndex = 15;
+            this.lblFoodiePoint.Text = "Foodie Point";
+            this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblFeedback
             // 
             this.lblFeedback.AutoSize = true;
@@ -189,17 +205,30 @@
             this.btnSendFeedback.UseVisualStyleBackColor = false;
             this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
             // 
-            // lblFoodiePoint
+            // cmbRating
             // 
-            this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFoodiePoint.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodiePoint.Location = new System.Drawing.Point(10, 0);
-            this.lblFoodiePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFoodiePoint.Name = "lblFoodiePoint";
-            this.lblFoodiePoint.Size = new System.Drawing.Size(208, 98);
-            this.lblFoodiePoint.TabIndex = 15;
-            this.lblFoodiePoint.Text = "Foodie Point";
-            this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmbRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRating.FormattingEnabled = true;
+            this.cmbRating.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbRating.Location = new System.Drawing.Point(543, 278);
+            this.cmbRating.Name = "cmbRating";
+            this.cmbRating.Size = new System.Drawing.Size(133, 28);
+            this.cmbRating.Sorted = true;
+            this.cmbRating.TabIndex = 17;
+            // 
+            // lblRating
+            // 
+            this.lblRating.AutoSize = true;
+            this.lblRating.Location = new System.Drawing.Point(475, 281);
+            this.lblRating.Name = "lblRating";
+            this.lblRating.Size = new System.Drawing.Size(62, 20);
+            this.lblRating.TabIndex = 18;
+            this.lblRating.Text = "Rating:";
             // 
             // frmCustomerMain
             // 
@@ -235,6 +264,8 @@
         private System.Windows.Forms.Button btnSendFeedback;
         private System.Windows.Forms.Button btnUpdateProfile;
         private System.Windows.Forms.Label lblFoodiePoint;
+        private System.Windows.Forms.Label lblRating;
+        private System.Windows.Forms.ComboBox cmbRating;
     }
 }
 

@@ -34,6 +34,7 @@ namespace Customer
         private void btnCustomerToMenu_Click(object sender, EventArgs e)
         {
             frmMenuPage obj1 = new frmMenuPage();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -41,6 +42,7 @@ namespace Customer
         private void btnCustomerToHallReservation_Click(object sender, EventArgs e)
         {
             frmHallReservation obj1 = new frmHallReservation();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -54,15 +56,16 @@ namespace Customer
             //string userID = tbxUsername.Text;
             //string userpass = tbxPassword.Text;
             string feedbacks = rtbxFeedback.Text;
+            string rating = cmbRating.Text;
 
-            if (string.IsNullOrEmpty(feedbacks)) //string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(userpass) ||
+            if (string.IsNullOrEmpty(feedbacks) || string.IsNullOrEmpty(rating)) //string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(userpass) ||
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
-            string query = "INSERT INTO Feedbacks (FeedbackID) " + 
-                           "VALUES (@Feedback)";
+            string query = "INSERT INTO Feedbacks (UserID, Feedback, Rating) " + 
+                           "VALUES (@UserID, @Feedback, @Rating)";
             using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
             {
                 try
@@ -71,8 +74,8 @@ namespace Customer
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Feedback", feedbacks);
-                        //cmd.Parameters.AddWithValue("@UserID", userID);
-                        //cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
+                        cmd.Parameters.AddWithValue("@UserID", _currentUser.UserID);
+                        cmd.Parameters.AddWithValue("@Rating", int.Parse(rating));
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)

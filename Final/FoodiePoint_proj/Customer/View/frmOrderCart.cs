@@ -59,6 +59,7 @@ namespace Customer
         private void button5_Click(object sender, EventArgs e)
         {
             frmHallReservation obj1 = new frmHallReservation();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -66,6 +67,7 @@ namespace Customer
         private void btnProfile_Click(object sender, EventArgs e)
         {
             frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }

@@ -107,7 +107,7 @@ namespace Customer
                         currentReservation.ReservationDate = txtResDate.Text;
                         currentReservation.ReservationType = txtResType.Text;
                         currentReservation.GuestCount = int.Parse(txtGuestCount.Text);
-                        currentReservation.UserID = "U001"; // Assign default user ID
+                        currentReservation.UserID = _currentUser.UserID; // Assign default user ID
 
                         // Save to database
                         SaveReservationToDatabase(currentReservation);
@@ -159,6 +159,7 @@ namespace Customer
         private void btnCustomerToMenu_Click(object sender, EventArgs e)
         {
             frmMenuPage obj1 = new frmMenuPage();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
@@ -166,6 +167,7 @@ namespace Customer
         private void btnProfile_Click(object sender, EventArgs e)
         {
             frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.SetUser(_currentUser);
             obj1.Show();
             this.Hide();
         }
