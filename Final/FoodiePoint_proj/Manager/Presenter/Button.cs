@@ -11,22 +11,6 @@ namespace Manager
 {
     internal class Button
     {
-        //public bool CheckFormOpen(string x)
-        //{
-        //    string formNum = x;
-        //    bool isFormOpen = false;
-
-        //    foreach (System.Windows.Forms.Form form in Application.OpenForms)
-        //    {
-        //        if (form.Name == formNum)
-        //        {
-        //            isFormOpen = true;
-        //            form.BringToFront();
-        //            break;
-        //        }
-        //    }
-        //    return isFormOpen;
-        //}
         private LoginCredent _currentUser;
 
         public Button(LoginCredent user)
