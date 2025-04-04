@@ -15,7 +15,7 @@ namespace Admin.Model
 
         public RatingAnalytics()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["FoodiePoint"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
         }
         public decimal CalculateAverageRating()
         {
