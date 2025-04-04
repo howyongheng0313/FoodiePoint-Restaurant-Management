@@ -5644,7 +5644,7 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6160,7 +6160,7 @@ SELECT ID, HallID, HallName, HallPartyType, HallCapacity, Availability FROM Hall
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6688,7 +6688,7 @@ SELECT ID, IngredientID, IngredientName, QuantityInStock, Unit FROM Inventory WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7191,7 +7191,7 @@ SELECT ID, ItemID, ItemName, ItemPrice, ItemCategory FROM Menu WHERE (ItemID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7630,7 +7630,7 @@ SELECT OrderID, ItemID, Quantity FROM OrderItem WHERE (ItemID = @ItemID) AND (Or
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8112,7 +8112,7 @@ SELECT ID, OrderID, UserID, DateTime, OrderStatus FROM Orders WHERE (OrderID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8551,7 +8551,7 @@ SELECT ItemID, IngredientID, Quantity FROM Recipes WHERE (IngredientID = @Ingred
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9003,7 +9003,7 @@ SELECT ID, RequestID, ReservationID, UserRequest, Reply FROM Requests WHERE (Req
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9603,7 +9603,7 @@ SELECT ID, ReservationID, HallID, UserID, GuestCount, ReservationDate, Reservati
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10212,7 +10212,7 @@ SELECT ID, UserID, Username, Password, FullName, Email, Role FROM Users WHERE (U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

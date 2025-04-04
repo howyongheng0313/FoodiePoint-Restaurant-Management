@@ -44,7 +44,7 @@ namespace Admin.View
                 {
                     connection.Open();
 
-                    string query = "SELECT FeedbackID, OrderID, Feedback, Rating FROM Feedbacks";
+                    string query = "SELECT FeedbackID, UserID, Feedback, Rating FROM Feedbacks";
 
                     // Add sorting condition if provided
                     if (!string.IsNullOrEmpty(sortCondition))
@@ -73,7 +73,7 @@ namespace Admin.View
             if (dgvFeedbacks.Columns.Count > 0)
             {
                 dgvFeedbacks.Columns["FeedbackID"].HeaderText = "Feedback ID";
-                dgvFeedbacks.Columns["OrderID"].HeaderText = "Order ID";
+                dgvFeedbacks.Columns["UserID"].HeaderText = "User ID";
                 dgvFeedbacks.Columns["Feedback"].HeaderText = "Feedback";
                 dgvFeedbacks.Columns["Rating"].HeaderText = "Rating (★)";
                 dgvFeedbacks.AutoResizeColumns();

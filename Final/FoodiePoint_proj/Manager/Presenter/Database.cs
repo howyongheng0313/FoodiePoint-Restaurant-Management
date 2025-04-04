@@ -14,7 +14,7 @@ namespace Manager
         private string connectionString;
         public Database()
         {
-            connectionString = global::Manager.Properties.Settings.Default.FoodieDbConnectionString;
+            connectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodieDbConnectionString;
         }
         public void LoadData(DataGridView dataGridView, string x)
         {

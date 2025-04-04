@@ -15,8 +15,8 @@ namespace FoodiePoint_proj
         [STAThread]
         static void Main()
         {
-            string gitRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
-            AppDomain.CurrentDomain.SetData("DataDirectory", gitRoot);
+            //string gitRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+            //AppDomain.CurrentDomain.SetData("DataDirectory", gitRoot);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

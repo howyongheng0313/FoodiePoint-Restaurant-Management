@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Manager.DataSet {
+namespace FoodiePoint_proj.Manager.DataSet {
     
     
     /// <summary>
@@ -44,8 +44,6 @@ namespace Manager.DataSet {
         
         private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationFK_Feedbacks_Order;
-        
         private global::System.Data.DataRelation relationFK_OrderItem_Item;
         
         private global::System.Data.DataRelation relationFK_OrderItem_Order;
@@ -61,6 +59,8 @@ namespace Manager.DataSet {
         private global::System.Data.DataRelation relationFK_Reservations_Hall;
         
         private global::System.Data.DataRelation relationFK_Reservations_User;
+        
+        private global::System.Data.DataRelation relationFK_Feedbacks_Order;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -428,7 +428,6 @@ namespace Manager.DataSet {
                     this.tableUsers.InitVars();
                 }
             }
-            this.relationFK_Feedbacks_Order = this.Relations["FK_Feedbacks_Order"];
             this.relationFK_OrderItem_Item = this.Relations["FK_OrderItem_Item"];
             this.relationFK_OrderItem_Order = this.Relations["FK_OrderItem_Order"];
             this.relationFK_Orders_User = this.Relations["FK_Orders_User"];
@@ -437,6 +436,7 @@ namespace Manager.DataSet {
             this.relationFK_Requests_Reservation = this.Relations["FK_Requests_Reservation"];
             this.relationFK_Reservations_Hall = this.Relations["FK_Reservations_Hall"];
             this.relationFK_Reservations_User = this.Relations["FK_Reservations_User"];
+            this.relationFK_Feedbacks_Order = this.Relations["FK_Feedbacks_Order"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -467,10 +467,6 @@ namespace Manager.DataSet {
             base.Tables.Add(this.tableReservations);
             this.tableUsers = new UsersDataTable();
             base.Tables.Add(this.tableUsers);
-            this.relationFK_Feedbacks_Order = new global::System.Data.DataRelation("FK_Feedbacks_Order", new global::System.Data.DataColumn[] {
-                        this.tableOrders.OrderIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFeedbacks.OrderIDColumn}, false);
-            this.Relations.Add(this.relationFK_Feedbacks_Order);
             this.relationFK_OrderItem_Item = new global::System.Data.DataRelation("FK_OrderItem_Item", new global::System.Data.DataColumn[] {
                         this.tableMenu.ItemIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableOrderItem.ItemIDColumn}, false);
@@ -503,6 +499,10 @@ namespace Manager.DataSet {
                         this.tableUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReservations.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_Reservations_User);
+            this.relationFK_Feedbacks_Order = new global::System.Data.DataRelation("FK_Feedbacks_Order", new global::System.Data.DataColumn[] {
+                        this.tableUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFeedbacks.UserIDColumn}, false);
+            this.Relations.Add(this.relationFK_Feedbacks_Order);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -661,11 +661,11 @@ namespace Manager.DataSet {
             
             private global::System.Data.DataColumn columnFeedbackID;
             
-            private global::System.Data.DataColumn columnOrderID;
-            
             private global::System.Data.DataColumn columnFeedback;
             
             private global::System.Data.DataColumn columnRating;
+            
+            private global::System.Data.DataColumn columnUserID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -718,14 +718,6 @@ namespace Manager.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn OrderIDColumn {
-                get {
-                    return this.columnOrderID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn FeedbackColumn {
                 get {
                     return this.columnFeedback;
@@ -737,6 +729,14 @@ namespace Manager.DataSet {
             public global::System.Data.DataColumn RatingColumn {
                 get {
                     return this.columnRating;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
                 }
             }
             
@@ -777,16 +777,16 @@ namespace Manager.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FeedbacksRow AddFeedbacksRow(string FeedbackID, OrdersRow parentOrdersRowByFK_Feedbacks_Order, string Feedback, int Rating) {
+            public FeedbacksRow AddFeedbacksRow(string FeedbackID, string Feedback, int Rating, UsersRow parentUsersRowByFK_Feedbacks_Order) {
                 FeedbacksRow rowFeedbacksRow = ((FeedbacksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         FeedbackID,
-                        null,
                         Feedback,
-                        Rating};
-                if ((parentOrdersRowByFK_Feedbacks_Order != null)) {
-                    columnValuesArray[2] = parentOrdersRowByFK_Feedbacks_Order[1];
+                        Rating,
+                        null};
+                if ((parentUsersRowByFK_Feedbacks_Order != null)) {
+                    columnValuesArray[4] = parentUsersRowByFK_Feedbacks_Order[1];
                 }
                 rowFeedbacksRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFeedbacksRow);
@@ -812,9 +812,9 @@ namespace Manager.DataSet {
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
                 this.columnFeedbackID = base.Columns["FeedbackID"];
-                this.columnOrderID = base.Columns["OrderID"];
                 this.columnFeedback = base.Columns["Feedback"];
                 this.columnRating = base.Columns["Rating"];
+                this.columnUserID = base.Columns["UserID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -824,12 +824,12 @@ namespace Manager.DataSet {
                 base.Columns.Add(this.columnID);
                 this.columnFeedbackID = new global::System.Data.DataColumn("FeedbackID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFeedbackID);
-                this.columnOrderID = new global::System.Data.DataColumn("OrderID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOrderID);
                 this.columnFeedback = new global::System.Data.DataColumn("Feedback", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFeedback);
                 this.columnRating = new global::System.Data.DataColumn("Rating", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRating);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFeedbackID}, false));
                 this.columnID.AutoIncrement = true;
@@ -840,10 +840,10 @@ namespace Manager.DataSet {
                 this.columnFeedbackID.ReadOnly = true;
                 this.columnFeedbackID.Unique = true;
                 this.columnFeedbackID.MaxLength = 10;
-                this.columnOrderID.AllowDBNull = false;
-                this.columnOrderID.MaxLength = 10;
                 this.columnFeedback.MaxLength = 2147483647;
                 this.columnRating.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnUserID.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3939,17 +3939,6 @@ namespace Manager.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string OrderID {
-                get {
-                    return ((string)(this[this.tableFeedbacks.OrderIDColumn]));
-                }
-                set {
-                    this[this.tableFeedbacks.OrderIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Feedback {
                 get {
                     try {
@@ -3977,9 +3966,20 @@ namespace Manager.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrdersRow OrdersRow {
+            public string UserID {
                 get {
-                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Feedbacks_Order"])));
+                    return ((string)(this[this.tableFeedbacks.UserIDColumn]));
+                }
+                set {
+                    this[this.tableFeedbacks.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public UsersRow UsersRow {
+                get {
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Feedbacks_Order"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Feedbacks_Order"]);
@@ -4496,17 +4496,6 @@ namespace Manager.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FeedbacksRow[] GetFeedbacksRows() {
-                if ((this.Table.ChildRelations["FK_Feedbacks_Order"] == null)) {
-                    return new FeedbacksRow[0];
-                }
-                else {
-                    return ((FeedbacksRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Feedbacks_Order"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrderItemRow[] GetOrderItemRows() {
                 if ((this.Table.ChildRelations["FK_OrderItem_Order"] == null)) {
                     return new OrderItemRow[0];
@@ -5018,6 +5007,17 @@ namespace Manager.DataSet {
                     return ((ReservationsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Reservations_User"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FeedbacksRow[] GetFeedbacksRows() {
+                if ((this.Table.ChildRelations["FK_Feedbacks_Order"] == null)) {
+                    return new FeedbacksRow[0];
+                }
+                else {
+                    return ((FeedbacksRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Feedbacks_Order"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5361,7 +5361,7 @@ namespace Manager.DataSet {
         }
     }
 }
-namespace Manager.DataSet.FoodieDbDataSetTableAdapters {
+namespace FoodiePoint_proj.Manager.DataSet.FoodieDbDataSetTableAdapters {
     
     
     /// <summary>
@@ -5487,15 +5487,15 @@ namespace Manager.DataSet.FoodieDbDataSetTableAdapters {
             tableMapping.DataSetTable = "Feedbacks";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("FeedbackID", "FeedbackID");
-            tableMapping.ColumnMappings.Add("OrderID", "OrderID");
             tableMapping.ColumnMappings.Add("Feedback", "Feedback");
             tableMapping.ColumnMappings.Add("Rating", "Rating");
+            tableMapping.ColumnMappings.Add("UserID", "UserID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Feedbacks] WHERE (([ID] = @Original_ID) AND ((@IsNull_Feedback" +
                 "ID = 1 AND [FeedbackID] IS NULL) OR ([FeedbackID] = @Original_FeedbackID)) AND (" +
-                "[OrderID] = @Original_OrderID) AND ([Rating] = @Original_Rating))";
+                "[UserID] = @Original_UserID) AND ([Rating] = @Original_Rating))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Original_ID";
@@ -5522,10 +5522,10 @@ namespace Manager.DataSet.FoodieDbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
-            param.ParameterName = "@Original_OrderID";
+            param.ParameterName = "@Original_UserID";
             param.SqlDbType = global::System.Data.SqlDbType.NVarChar;
             param.IsNullable = true;
-            param.SourceColumn = "OrderID";
+            param.SourceColumn = "UserID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
@@ -5538,15 +5538,15 @@ namespace Manager.DataSet.FoodieDbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Feedbacks] ([OrderID], [Feedback], [Rating]) VALUES (@OrderID," +
-                " @Feedback, @Rating);\r\nSELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Fee" +
-                "dbacks WHERE (FeedbackID = @FeedbackID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Feedbacks] ([UserID], [Feedback], [Rating]) VALUES (@UserID, @" +
+                "Feedback, @Rating);\r\nSELECT ID, FeedbackID, UserID, Feedback, Rating FROM Feedba" +
+                "cks WHERE (FeedbackID = @FeedbackID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
-            param.ParameterName = "@OrderID";
+            param.ParameterName = "@UserID";
             param.SqlDbType = global::System.Data.SqlDbType.NVarChar;
             param.IsNullable = true;
-            param.SourceColumn = "OrderID";
+            param.SourceColumn = "UserID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Feedback";
@@ -5570,14 +5570,14 @@ namespace Manager.DataSet.FoodieDbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Feedbacks] SET [OrderID] = @OrderID, [Feedback] = @Feedback, [Rating] = @Rating WHERE (([ID] = @Original_ID) AND ((@IsNull_FeedbackID = 1 AND [FeedbackID] IS NULL) OR ([FeedbackID] = @Original_FeedbackID)) AND ([OrderID] = @Original_OrderID) AND ([Rating] = @Original_Rating));
-SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackID = @FeedbackID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Feedbacks] SET [UserID] = @UserID, [Feedback] = @Feedback, [Rating] = @Rating WHERE (([ID] = @Original_ID) AND ((@IsNull_FeedbackID = 1 AND [FeedbackID] IS NULL) OR ([FeedbackID] = @Original_FeedbackID)) AND ([UserID] = @Original_UserID) AND ([Rating] = @Original_Rating));
+SELECT ID, FeedbackID, UserID, Feedback, Rating FROM Feedbacks WHERE (FeedbackID = @FeedbackID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
-            param.ParameterName = "@OrderID";
+            param.ParameterName = "@UserID";
             param.SqlDbType = global::System.Data.SqlDbType.NVarChar;
             param.IsNullable = true;
-            param.SourceColumn = "OrderID";
+            param.SourceColumn = "UserID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Feedback";
@@ -5617,10 +5617,10 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
-            param.ParameterName = "@Original_OrderID";
+            param.ParameterName = "@Original_UserID";
             param.SqlDbType = global::System.Data.SqlDbType.NVarChar;
             param.IsNullable = true;
-            param.SourceColumn = "OrderID";
+            param.SourceColumn = "UserID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
@@ -5644,7 +5644,7 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5653,7 +5653,7 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
             this._commandCollection = new global::Microsoft.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM dbo.Feedbacks";
+            this._commandCollection[0].CommandText = "SELECT ID, FeedbackID, UserID, Feedback, Rating FROM dbo.Feedbacks";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5714,7 +5714,7 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_FeedbackID, string Original_OrderID, int Original_Rating) {
+        public virtual int Delete(int Original_ID, string Original_FeedbackID, string Original_UserID, int Original_Rating) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_FeedbackID == null)) {
                 throw new global::System.ArgumentNullException("Original_FeedbackID");
@@ -5723,11 +5723,11 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FeedbackID));
             }
-            if ((Original_OrderID == null)) {
-                throw new global::System.ArgumentNullException("Original_OrderID");
+            if ((Original_UserID == null)) {
+                throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_OrderID));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_UserID));
             }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Rating));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
@@ -5750,12 +5750,12 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string OrderID, string Feedback, int Rating, string FeedbackID) {
-            if ((OrderID == null)) {
-                throw new global::System.ArgumentNullException("OrderID");
+        public virtual int Insert(string UserID, string Feedback, int Rating, string FeedbackID) {
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(OrderID));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(UserID));
             }
             if ((Feedback == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5790,12 +5790,12 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string OrderID, string Feedback, int Rating, int Original_ID, string Original_FeedbackID, string Original_OrderID, int Original_Rating, string FeedbackID) {
-            if ((OrderID == null)) {
-                throw new global::System.ArgumentNullException("OrderID");
+        public virtual int Update(string UserID, string Feedback, int Rating, int Original_ID, string Original_FeedbackID, string Original_UserID, int Original_Rating, string FeedbackID) {
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(OrderID));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(UserID));
             }
             if ((Feedback == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5812,11 +5812,11 @@ SELECT ID, FeedbackID, OrderID, Feedback, Rating FROM Feedbacks WHERE (FeedbackI
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_FeedbackID));
             }
-            if ((Original_OrderID == null)) {
-                throw new global::System.ArgumentNullException("Original_OrderID");
+            if ((Original_UserID == null)) {
+                throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_OrderID));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UserID));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Rating));
             if ((FeedbackID == null)) {
@@ -6160,7 +6160,7 @@ SELECT ID, HallID, HallName, HallPartyType, HallCapacity, Availability FROM Hall
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6688,7 +6688,7 @@ SELECT ID, IngredientID, IngredientName, QuantityInStock, Unit FROM Inventory WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7191,7 +7191,7 @@ SELECT ID, ItemID, ItemName, ItemPrice, ItemCategory FROM Menu WHERE (ItemID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7630,7 +7630,7 @@ SELECT OrderID, ItemID, Quantity FROM OrderItem WHERE (ItemID = @ItemID) AND (Or
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8112,7 +8112,7 @@ SELECT ID, OrderID, UserID, DateTime, OrderStatus FROM Orders WHERE (OrderID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8551,7 +8551,7 @@ SELECT ItemID, IngredientID, Quantity FROM Recipes WHERE (IngredientID = @Ingred
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9003,7 +9003,7 @@ SELECT ID, RequestID, ReservationID, UserRequest, Reply FROM Requests WHERE (Req
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9603,7 +9603,7 @@ SELECT ID, ReservationID, HallID, UserID, GuestCount, ReservationDate, Reservati
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10212,7 +10212,7 @@ SELECT ID, UserID, Username, Password, FullName, Email, Role FROM Users WHERE (U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::Microsoft.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Manager.Properties.Settings.Default.FoodiePointConnectionString;
+            this._connection.ConnectionString = global::FoodiePoint_proj.Properties.Settings.Default.FoodiePointConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

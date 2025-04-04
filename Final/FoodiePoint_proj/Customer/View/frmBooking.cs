@@ -78,7 +78,7 @@ namespace Customer
             }
 
             string query = "SELECT * FROM Reservations WHERE ReservationID = @ReservationID";
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))

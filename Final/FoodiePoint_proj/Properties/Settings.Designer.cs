@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Manager.Properties {
+namespace FoodiePoint_proj.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -27,7 +27,7 @@ namespace Manager.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\Food" +
-            "iePoint.mdf;Integrated Security=True")]
+            "iePointDB.mdf;Integrated Security=True")]
         public string FoodieDbConnectionString {
             get {
                 return ((string)(this["FoodieDbConnectionString"]));
@@ -38,44 +38,10 @@ namespace Manager.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\Food" +
-            "iePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True")]
+            "iePointDB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True")]
         public string FoodiePointConnectionString {
             get {
                 return ((string)(this["FoodiePointConnectionString"]));
-            }
-        }
-    }
-}
-
-namespace Admin.Properties
-{
-
-
-    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.13.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
-                return defaultInstance;
-            }
-        }
-
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;" +
-            "Integrated Security=True")]
-        public string DatabaseConnectionString
-        {
-            get
-            {
-                return ((string)(this["DatabaseConnectionString"]));
             }
         }
     }
