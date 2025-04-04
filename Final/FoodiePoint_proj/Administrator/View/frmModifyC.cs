@@ -21,7 +21,7 @@ namespace Admin.View
         public frmModifyC()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePoint"].ConnectionString;
             LoadCs();
         }
 

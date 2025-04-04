@@ -20,7 +20,7 @@ namespace Admin.View
         public frmFeedbacks()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePoint"].ConnectionString;
             ratingAnalytics = new RatingAnalytics();
             LoadFeedbacks();
             UpdateAverageRatingDisplay();

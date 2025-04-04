@@ -21,7 +21,7 @@ namespace Admin.View
         public frmModifyChef()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePoint"].ConnectionString;
             LoadChefs();
         }
 

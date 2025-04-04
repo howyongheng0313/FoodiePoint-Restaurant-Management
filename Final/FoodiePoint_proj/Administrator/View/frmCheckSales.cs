@@ -19,7 +19,7 @@ namespace Admin.View
         public frmCheckSales()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["FoodiePoint"].ConnectionString;
             _salesAnalytics = new SalesAnalytics(connectionString);
             LoadYears();
         }
