@@ -43,19 +43,18 @@ namespace Customer
 
         private void btnSendFeedback_Click(object sender, EventArgs e)
         {
-            //string userID = tbxUsername.Text;
-            //string userpass = tbxPassword.Text;
+            string userID = "UD001"; 
             string feedbacks = rtbxFeedback.Text;
 
-            if (string.IsNullOrEmpty(feedbacks)) //string.IsNullOrEmpty(userID) || string.IsNullOrEmpty(userpass) ||
+            if (string.IsNullOrEmpty(feedbacks)) 
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
-            string query = "INSERT INTO Feedbacks (FeedbackID) " + 
-                           "VALUES (@Feedback)";
-            using (SqlConnection conn = new SqlConnection(connectionString))          //^^ ensure the 3 variables goes to Request table
+            string query = "INSERT INTO Feedbacks (OrderID, Feedback) " + 
+                           "VALUES (@OrderID, @Feedback)";
+            using (SqlConnection conn = new SqlConnection(connectionString)) //^^ ensure the 2 variables goes to Request table
             {
                 try
                 {
@@ -63,8 +62,7 @@ namespace Customer
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Feedback", feedbacks);
-                        //cmd.Parameters.AddWithValue("@UserID", userID);
-                        //cmd.Parameters.AddWithValue("@ReservationDate", Convert.ToDateTime(reservationDate));
+                        cmd.Parameters.AddWithValue("@OrderID", userID);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)

@@ -26,7 +26,6 @@ namespace Customer
 
         private void frmMenuPage_Load(object sender, EventArgs e)
         {
-            //this.menuTableAdapter.Fill(this.foodiepointDbDataSet.Menu);
             LoadTableData("");
         }
 

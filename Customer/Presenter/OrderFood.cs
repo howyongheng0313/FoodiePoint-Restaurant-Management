@@ -117,39 +117,6 @@ namespace Customer.Presenter
                 dgv.Rows.Clear();
             }
         }
-
-
-
-        //}
-        //public DataTable GetAllItem()
-        //{
-        //    string query = "SELECT * FROM Menu";
-        //    return dbHelper.ExecuteQuery(query);
-        //}
-
-        //public DataTable searchItem(string searchItemName)
-        //{
-        //    string query = $"SELECT * FROM Menu WHERE ItemName = '{searchItemName}' " ;
-        //    return dbHelper.ExecuteQuery(query);
-        //}
-
-        //public bool addItem()
-        //{
-        //    string query = "";
-        //    return ;
-        //}
-
-        //public bool editItem()
-        //{
-        //    string query = "UPDATE";
-        //    return;
-        //}
-
-        //public bool deleteItem()
-        //{
-        //    string query = "DELETE FROM Menu WHERE ItemName = ";
-        //    return;
-        //}
     }
 }
 

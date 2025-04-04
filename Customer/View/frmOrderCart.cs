@@ -39,11 +39,25 @@ namespace Customer
         {
             InitializeComponent();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            total += OrderFood.add_oneitem(dgv);
+            label1.Text = $"Total Price: " + total.ToString();
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            total -= OrderFood.dlt_oneitem(dgv);
+            label1.Text = $"Total Price: " + total.ToString();
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            OrderFood.dlt_rowitem(dgv);
+        }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
             OrderFood.pay_food(dgv);
-            frmPayment obj1 = new frmPayment();
+            frmCustomerMain obj1 = new frmCustomerMain();
             obj1.Show();
             this.Hide();
         }
@@ -61,9 +75,16 @@ namespace Customer
             obj1.Show();
             this.Hide();
         }
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            frmMenuPage obj1 = new frmMenuPage();
+            obj1.Show();
+            this.Hide();
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,26 +101,9 @@ namespace Customer
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            OrderFood.dlt_rowitem(dgv);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            total += OrderFood.add_oneitem(dgv);
-            label1.Text = $"Total Price: " + total.ToString();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            total -= OrderFood.dlt_oneitem(dgv);
-            label1.Text = $"Total Price: " + total.ToString();
         }
 
         private void lbltotal_Click(object sender, EventArgs e)
@@ -108,9 +112,5 @@ namespace Customer
 
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

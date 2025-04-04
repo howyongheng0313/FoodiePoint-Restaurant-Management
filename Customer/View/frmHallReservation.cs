@@ -56,6 +56,12 @@ namespace Customer
             obj1.Show();
             this.Hide();
         }
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.Show();
+            this.Hide();
+        }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,12 +95,6 @@ namespace Customer
             }
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            frmCustomerMain obj1 = new frmCustomerMain();
-            obj1.Show();
-            this.Hide();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

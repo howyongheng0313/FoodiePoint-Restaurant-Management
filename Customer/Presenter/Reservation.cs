@@ -19,13 +19,9 @@ namespace Customer
         public string ReservationType { get; set; }
 
 
-        public Reservation() //parameterless initialization ??? from gpt
+        public Reservation() 
         {
 
         }
-
-        
-
-
     }
 }

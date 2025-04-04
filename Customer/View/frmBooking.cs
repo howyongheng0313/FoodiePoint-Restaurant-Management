@@ -17,8 +17,6 @@ namespace Customer
     public partial class frmBooking : Form
     {
         private Reservation currentReservation;
-        //private string connectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
-
         public frmBooking(Reservation currentReservation)
         {
             InitializeComponent();
@@ -31,9 +29,7 @@ namespace Customer
             lblreservationStatus.Text = currentReservation.ReservationStatus;
             HallID.Text = currentReservation.HallID;
 
-            
-
-
+            //This lets user to enter request into chat
             string query = $"SELECT UserRequest, Reply FROM Requests WHERE ReservationID = '{currentReservation.ReservationID}'";
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
@@ -58,21 +54,39 @@ namespace Customer
 
         }
 
+        private void SaveReservationToDatabase(Reservation res)
+        {
+            string query = "INSERT INTO Reservations (UserID, GuestCount, ReservationDate, ReservationType) " +
+                           "VALUES (@user, @count, @date, @type)";
+
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", res.UserID);
+                    cmd.Parameters.AddWithValue("@count", res.GuestCount);
+                    cmd.Parameters.AddWithValue("@date", res.ReservationDate);
+                    cmd.Parameters.AddWithValue("@type", res.ReservationType);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         private void btnReservationStatus_Click(object sender, EventArgs e)
 
         {
             if (currentReservation == null)
             {
-                currentReservation = new Reservation(); // Ensure it is initialized
+                currentReservation = new Reservation(); //Ensure it is initialized
             }
 
             if (!int.TryParse(txtGuestCount.Text, out int guestCount) || guestCount > 1000)
             {
                 MessageBox.Show("Guest count cannot exceed 1000.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Stop further execution
+                return; //Stop further execution
             }
 
-            string query = "SELECT * FROM Reservations WHERE ReservationID = @ReservationID";
+            string query = "SELECT count(*) FROM Reservations WHERE ReservationID = @ReservationID";
             using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\vs\\FoodiePoint-Restaurant-Management\\Database\\FoodiePoint.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"))
             {
                 conn.Open();
@@ -102,12 +116,10 @@ namespace Customer
                         currentReservation.ReservationDate = txtResDate.Text;
                         currentReservation.ReservationType = txtResType.Text;
                         currentReservation.GuestCount = int.Parse(txtGuestCount.Text);
-                        currentReservation.UserID = "U001"; // Assign default user ID
+                        currentReservation.UserID = "U001";    // Assign default user ID
 
                         // Save to database
                         SaveReservationToDatabase(currentReservation);
-
-                        
                     }
 
                     this.Close();
@@ -115,60 +127,9 @@ namespace Customer
             }
         }
 
-        private void SaveReservationToDatabase(Reservation res)
-        {
-            string query = "INSERT INTO Reservations (UserID, GuestCount, ReservationDate, ReservationType) " +
-                           "VALUES (@user, @count, @date, @type)";
-
-            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-
-
-                    cmd.Parameters.AddWithValue("@user", res.UserID);
-                    cmd.Parameters.AddWithValue("@count", res.GuestCount);
-                    cmd.Parameters.AddWithValue("@date", res.ReservationDate);
-                    cmd.Parameters.AddWithValue("@type", res.ReservationType);
-
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
 
 
 
-
-        private void btnSendFeedback_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rtbxFeedback_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCustomerToMenu_Click(object sender, EventArgs e)
-        {
-            frmMenuPage obj1 = new frmMenuPage();
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            frmCustomerMain obj1 = new frmCustomerMain();
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -200,6 +161,39 @@ namespace Customer
             {
                 MessageBox.Show("Please enter text before sending request.");
             }
+        }
+        private void btnSendFeedback_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtbxFeedback_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomerToMenu_Click(object sender, EventArgs e)
+        {
+            frmMenuPage obj1 = new frmMenuPage();
+            obj1.Show();
+            this.Hide();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            frmCustomerMain obj1 = new frmCustomerMain();
+            obj1.Show();
+            this.Hide();
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }

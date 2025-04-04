@@ -30,8 +30,8 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnCutomerToHallReservation = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.HallID = new System.Windows.Forms.Label();
@@ -111,23 +111,6 @@
             this.btnCutomerToHallReservation.Text = "Hall Reservation";
             this.btnCutomerToHallReservation.UseVisualStyleBackColor = false;
             // 
-            // btnProfile
-            // 
-            this.btnProfile.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProfile.Location = new System.Drawing.Point(10, 0);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(208, 80);
-            this.btnProfile.TabIndex = 10;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
             // btnCustomerToMenu
             // 
             this.btnCustomerToMenu.BackColor = System.Drawing.Color.SteelBlue;
@@ -145,6 +128,23 @@
             this.btnCustomerToMenu.UseVisualStyleBackColor = false;
             this.btnCustomerToMenu.Click += new System.EventHandler(this.btnCustomerToMenu_Click);
             // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnProfile.Location = new System.Drawing.Point(10, 0);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(208, 80);
+            this.btnProfile.TabIndex = 10;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(403, 87);
@@ -161,7 +161,7 @@
             this.label4.Location = new System.Drawing.Point(29, 300);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 34;
             this.label4.Text = "HallID";
             // 
@@ -171,7 +171,7 @@
             this.HallID.Location = new System.Drawing.Point(200, 300);
             this.HallID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HallID.Name = "HallID";
-            this.HallID.Size = new System.Drawing.Size(0, 20);
+            this.HallID.Size = new System.Drawing.Size(0, 17);
             this.HallID.TabIndex = 33;
             // 
             // lblreservationStatus
@@ -180,7 +180,7 @@
             this.lblreservationStatus.Location = new System.Drawing.Point(187, 257);
             this.lblreservationStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblreservationStatus.Name = "lblreservationStatus";
-            this.lblreservationStatus.Size = new System.Drawing.Size(0, 20);
+            this.lblreservationStatus.Size = new System.Drawing.Size(0, 17);
             this.lblreservationStatus.TabIndex = 32;
             // 
             // lblresID
@@ -189,7 +189,7 @@
             this.lblresID.Location = new System.Drawing.Point(25, 80);
             this.lblresID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblresID.Name = "lblresID";
-            this.lblresID.Size = new System.Drawing.Size(0, 20);
+            this.lblresID.Size = new System.Drawing.Size(0, 17);
             this.lblresID.TabIndex = 31;
             // 
             // button1
@@ -208,7 +208,7 @@
             this.reqtxtbox.Location = new System.Drawing.Point(403, 380);
             this.reqtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.reqtxtbox.Name = "reqtxtbox";
-            this.reqtxtbox.Size = new System.Drawing.Size(196, 27);
+            this.reqtxtbox.Size = new System.Drawing.Size(196, 23);
             this.reqtxtbox.TabIndex = 29;
             // 
             // label3
@@ -217,7 +217,7 @@
             this.label3.Location = new System.Drawing.Point(25, 257);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 20);
+            this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "Reservation Status";
             // 
@@ -226,7 +226,7 @@
             this.txtResType.Location = new System.Drawing.Point(191, 140);
             this.txtResType.Margin = new System.Windows.Forms.Padding(4);
             this.txtResType.Name = "txtResType";
-            this.txtResType.Size = new System.Drawing.Size(160, 27);
+            this.txtResType.Size = new System.Drawing.Size(160, 23);
             this.txtResType.TabIndex = 25;
             this.txtResType.Text = "Put date here...";
             // 
@@ -235,7 +235,7 @@
             this.txtGuestCount.Location = new System.Drawing.Point(191, 219);
             this.txtGuestCount.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestCount.Name = "txtGuestCount";
-            this.txtGuestCount.Size = new System.Drawing.Size(160, 27);
+            this.txtGuestCount.Size = new System.Drawing.Size(160, 23);
             this.txtGuestCount.TabIndex = 23;
             this.txtGuestCount.Text = "Put amount of people here...";
             // 
@@ -245,16 +245,17 @@
             this.label2.Location = new System.Drawing.Point(25, 219);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Gueast Count*";
+            this.label2.Text = "Guest Count*";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtResDate
             // 
             this.txtResDate.Location = new System.Drawing.Point(191, 181);
             this.txtResDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtResDate.Name = "txtResDate";
-            this.txtResDate.Size = new System.Drawing.Size(160, 27);
+            this.txtResDate.Size = new System.Drawing.Size(160, 23);
             this.txtResDate.TabIndex = 21;
             this.txtResDate.Text = "Put date here...";
             // 
@@ -264,7 +265,7 @@
             this.label1.Location = new System.Drawing.Point(25, 181);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.Size = new System.Drawing.Size(123, 17);
             this.label1.TabIndex = 18;
             this.label1.Text = "Reservation Date*";
             // 
@@ -274,7 +275,7 @@
             this.lblFeedback.Location = new System.Drawing.Point(399, 52);
             this.lblFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(71, 20);
+            this.lblFeedback.Size = new System.Drawing.Size(61, 17);
             this.lblFeedback.TabIndex = 16;
             this.lblFeedback.Text = "Request";
             // 
@@ -298,13 +299,13 @@
             this.lblReservationType.Location = new System.Drawing.Point(25, 140);
             this.lblReservationType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReservationType.Name = "lblReservationType";
-            this.lblReservationType.Size = new System.Drawing.Size(145, 20);
+            this.lblReservationType.Size = new System.Drawing.Size(125, 17);
             this.lblReservationType.TabIndex = 15;
             this.lblReservationType.Text = "Reservation Type*";
             // 
             // frmBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);
