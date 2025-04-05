@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.HallID = new System.Windows.Forms.Label();
@@ -44,6 +45,11 @@
             this.lblFeedback = new System.Windows.Forms.Label();
             this.btnReservationBook = new System.Windows.Forms.Button();
             this.lblReservationType = new System.Windows.Forms.Label();
+            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodieDbDataSet = new Manager.FoodieDbDataSet();
+            this.reservationsTableAdapter = new Manager.FoodieDbDataSetTableAdapters.ReservationsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -221,6 +227,21 @@
             this.lblReservationType.Size = new System.Drawing.Size(145, 20);
             this.lblReservationType.TabIndex = 15;
             this.lblReservationType.Text = "Reservation Type*";
+            this.lblReservationType.Click += new System.EventHandler(this.lblReservationType_Click);
+            // 
+            // reservationsBindingSource
+            // 
+            this.reservationsBindingSource.DataMember = "Reservations";
+            this.reservationsBindingSource.DataSource = this.foodieDbDataSet;
+            // 
+            // foodieDbDataSet
+            // 
+            this.foodieDbDataSet.DataSetName = "FoodieDbDataSet";
+            this.foodieDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationsTableAdapter
+            // 
+            this.reservationsTableAdapter.ClearBeforeFill = true;
             // 
             // frmBooking
             // 
@@ -249,6 +270,9 @@
             this.Name = "frmBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmBooking";
+            this.Load += new System.EventHandler(this.frmBooking_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodieDbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +295,8 @@
         private System.Windows.Forms.Label HallID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private Manager.FoodieDbDataSet foodieDbDataSet;
+        private System.Windows.Forms.BindingSource reservationsBindingSource;
+        private Manager.FoodieDbDataSetTableAdapters.ReservationsTableAdapter reservationsTableAdapter;
     }
 }
