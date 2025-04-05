@@ -155,7 +155,7 @@
             // Search_btn
             // 
             this.Search_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_btn.Location = new System.Drawing.Point(695, 37);
+            this.Search_btn.Location = new System.Drawing.Point(698, 37);
             this.Search_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Search_btn.Name = "Search_btn";
             this.Search_btn.Size = new System.Drawing.Size(135, 38);
@@ -177,6 +177,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(26, 88);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -185,7 +186,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 464);
+            this.dataGridView1.Size = new System.Drawing.Size(807, 464);
             this.dataGridView1.TabIndex = 9;
             // 
             // btnViewOrder

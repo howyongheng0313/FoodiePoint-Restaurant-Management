@@ -114,6 +114,11 @@ namespace Admin.View
         {
             this.Close();
         }
+
+        private void dgvFeedbacks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

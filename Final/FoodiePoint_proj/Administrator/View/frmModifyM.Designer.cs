@@ -112,6 +112,9 @@ namespace Admin.View
             this.dgvManagers.AllowUserToAddRows = false;
             this.dgvManagers.AllowUserToDeleteRows = false;
             this.dgvManagers.AllowUserToResizeRows = false;
+            this.dgvManagers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvManagers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvManagers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManagers.Location = new System.Drawing.Point(66, 115);

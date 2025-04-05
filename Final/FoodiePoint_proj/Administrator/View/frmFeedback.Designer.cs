@@ -185,6 +185,7 @@
             this.dgvFeedbacks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFeedbacks.Size = new System.Drawing.Size(981, 437);
             this.dgvFeedbacks.TabIndex = 31;
+            this.dgvFeedbacks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFeedbacks_CellContentClick);
             // 
             // grpAverage
             // 
