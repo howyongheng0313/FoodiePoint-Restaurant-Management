@@ -56,7 +56,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.btnUpdateProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenuToHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenu);
@@ -78,7 +78,6 @@
             // 
             // btnUpdateProfile
             // 
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
             this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,7 +94,6 @@
             // 
             // btnMenuToHallReservation
             // 
-            this.btnMenuToHallReservation.BackColor = System.Drawing.Color.SteelBlue;
             this.btnMenuToHallReservation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenuToHallReservation.FlatAppearance.BorderSize = 0;
             this.btnMenuToHallReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,7 +110,7 @@
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(156)))), ((int)(((byte)(216)))));
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(161)))), ((int)(((byte)(188)))));
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,7 +126,6 @@
             // 
             // btnMenuToProfile
             // 
-            this.btnMenuToProfile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnMenuToProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenuToProfile.FlatAppearance.BorderSize = 0;
             this.btnMenuToProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,7 +155,7 @@
             // Search_btn
             // 
             this.Search_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_btn.Location = new System.Drawing.Point(692, 37);
+            this.Search_btn.Location = new System.Drawing.Point(695, 37);
             this.Search_btn.Margin = new System.Windows.Forms.Padding(4);
             this.Search_btn.Name = "Search_btn";
             this.Search_btn.Size = new System.Drawing.Size(135, 38);
@@ -188,7 +185,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 464);
+            this.dataGridView1.Size = new System.Drawing.Size(804, 464);
             this.dataGridView1.TabIndex = 9;
             // 
             // btnViewOrder

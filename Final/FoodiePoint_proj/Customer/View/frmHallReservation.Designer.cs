@@ -54,7 +54,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.btnUpdateProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnHallReservation);
             this.splitContainer1.Panel1.Controls.Add(this.btnMenu);
@@ -74,7 +74,6 @@
             // 
             // btnUpdateProfile
             // 
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdateProfile.FlatAppearance.BorderSize = 0;
             this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -91,7 +90,7 @@
             // 
             // btnHallReservation
             // 
-            this.btnHallReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(156)))), ((int)(((byte)(216)))));
+            this.btnHallReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(161)))), ((int)(((byte)(188)))));
             this.btnHallReservation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHallReservation.FlatAppearance.BorderSize = 0;
             this.btnHallReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,7 +106,6 @@
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,7 +122,6 @@
             // 
             // btnProfile
             // 
-            this.btnProfile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,7 +151,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(298, 585);
+            this.button1.Location = new System.Drawing.Point(299, 585);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(249, 53);
@@ -173,7 +170,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 440);
+            this.dataGridView1.Size = new System.Drawing.Size(767, 440);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);

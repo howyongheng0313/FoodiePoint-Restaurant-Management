@@ -109,12 +109,20 @@ namespace Admin.View
             // 
             // dgvManagers
             // 
+            this.dgvManagers.AllowUserToAddRows = false;
+            this.dgvManagers.AllowUserToDeleteRows = false;
+            this.dgvManagers.AllowUserToResizeRows = false;
+            this.dgvManagers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvManagers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManagers.Location = new System.Drawing.Point(66, 115);
             this.dgvManagers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvManagers.MultiSelect = false;
             this.dgvManagers.Name = "dgvManagers";
+            this.dgvManagers.ReadOnly = true;
+            this.dgvManagers.RowHeadersVisible = false;
             this.dgvManagers.RowHeadersWidth = 62;
             this.dgvManagers.RowTemplate.Height = 28;
+            this.dgvManagers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManagers.Size = new System.Drawing.Size(950, 459);
             this.dgvManagers.TabIndex = 16;
             // 

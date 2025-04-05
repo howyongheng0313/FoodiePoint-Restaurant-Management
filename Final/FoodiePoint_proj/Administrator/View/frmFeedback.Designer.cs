@@ -166,15 +166,23 @@
             // 
             // dgvFeedbacks
             // 
+            this.dgvFeedbacks.AllowUserToAddRows = false;
+            this.dgvFeedbacks.AllowUserToDeleteRows = false;
+            this.dgvFeedbacks.AllowUserToResizeRows = false;
             this.dgvFeedbacks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFeedbacks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFeedbacks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFeedbacks.Location = new System.Drawing.Point(50, 187);
             this.dgvFeedbacks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvFeedbacks.MultiSelect = false;
             this.dgvFeedbacks.Name = "dgvFeedbacks";
+            this.dgvFeedbacks.ReadOnly = true;
+            this.dgvFeedbacks.RowHeadersVisible = false;
             this.dgvFeedbacks.RowHeadersWidth = 62;
             this.dgvFeedbacks.RowTemplate.Height = 28;
+            this.dgvFeedbacks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFeedbacks.Size = new System.Drawing.Size(981, 437);
             this.dgvFeedbacks.TabIndex = 31;
             // 

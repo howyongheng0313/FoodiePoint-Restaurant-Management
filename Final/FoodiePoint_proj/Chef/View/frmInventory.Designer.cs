@@ -83,7 +83,7 @@
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
             this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventory.Size = new System.Drawing.Size(794, 267);
+            this.dgvInventory.Size = new System.Drawing.Size(797, 267);
             this.dgvInventory.TabIndex = 0;
             // 
             // btnInventoryToChef
@@ -141,6 +141,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToChef);
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnInventoryToOrder);
@@ -169,7 +170,7 @@
             // 
             // btnOrderToInventory
             // 
-            this.btnOrderToInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnOrderToInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(161)))), ((int)(((byte)(188)))));
             this.btnOrderToInventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrderToInventory.Enabled = false;
             this.btnOrderToInventory.FlatAppearance.BorderSize = 0;
@@ -197,7 +198,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.Location = new System.Drawing.Point(679, 571);
+            this.btnConfirm.Location = new System.Drawing.Point(682, 571);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(146, 59);
             this.btnConfirm.TabIndex = 14;
@@ -224,7 +225,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 40);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(837, 40);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tbxSearchInput
@@ -233,7 +234,7 @@
             this.tbxSearchInput.Location = new System.Drawing.Point(4, 5);
             this.tbxSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxSearchInput.Name = "tbxSearchInput";
-            this.tbxSearchInput.Size = new System.Drawing.Size(506, 30);
+            this.tbxSearchInput.Size = new System.Drawing.Size(509, 30);
             this.tbxSearchInput.TabIndex = 11;
             // 
             // btnSearchIngredient
@@ -241,7 +242,7 @@
             this.btnSearchIngredient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearchIngredient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearchIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIngredient.Location = new System.Drawing.Point(518, 5);
+            this.btnSearchIngredient.Location = new System.Drawing.Point(521, 5);
             this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchIngredient.Name = "btnSearchIngredient";
             this.btnSearchIngredient.Size = new System.Drawing.Size(152, 30);
@@ -254,7 +255,7 @@
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReturn.Location = new System.Drawing.Point(678, 5);
+            this.btnReturn.Location = new System.Drawing.Point(681, 5);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(152, 30);

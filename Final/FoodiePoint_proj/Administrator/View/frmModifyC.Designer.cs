@@ -81,15 +81,23 @@ namespace Admin.View
             // 
             // dgvCs
             // 
+            this.dgvCs.AllowUserToAddRows = false;
+            this.dgvCs.AllowUserToDeleteRows = false;
+            this.dgvCs.AllowUserToResizeRows = false;
             this.dgvCs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCs.Location = new System.Drawing.Point(66, 114);
             this.dgvCs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCs.MultiSelect = false;
             this.dgvCs.Name = "dgvCs";
+            this.dgvCs.ReadOnly = true;
+            this.dgvCs.RowHeadersVisible = false;
             this.dgvCs.RowHeadersWidth = 62;
             this.dgvCs.RowTemplate.Height = 28;
+            this.dgvCs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCs.Size = new System.Drawing.Size(950, 451);
             this.dgvCs.TabIndex = 34;
             // 

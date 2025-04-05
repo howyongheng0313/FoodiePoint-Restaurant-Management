@@ -79,15 +79,23 @@
             // 
             // dgvChefs
             // 
+            this.dgvChefs.AllowUserToAddRows = false;
+            this.dgvChefs.AllowUserToDeleteRows = false;
+            this.dgvChefs.AllowUserToResizeRows = false;
             this.dgvChefs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvChefs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChefs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChefs.Location = new System.Drawing.Point(67, 114);
             this.dgvChefs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvChefs.MultiSelect = false;
             this.dgvChefs.Name = "dgvChefs";
+            this.dgvChefs.ReadOnly = true;
+            this.dgvChefs.RowHeadersVisible = false;
             this.dgvChefs.RowHeadersWidth = 62;
             this.dgvChefs.RowTemplate.Height = 28;
+            this.dgvChefs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChefs.Size = new System.Drawing.Size(945, 464);
             this.dgvChefs.TabIndex = 22;
             // 
@@ -95,10 +103,10 @@
             // 
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(344, 2);
+            this.btnEdit.Location = new System.Drawing.Point(345, 2);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(30, 2, 30, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(254, 43);
+            this.btnEdit.Size = new System.Drawing.Size(255, 43);
             this.btnEdit.TabIndex = 21;
             this.btnEdit.Text = "Edit Chef";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -108,10 +116,10 @@
             // 
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRemove.Location = new System.Drawing.Point(658, 2);
+            this.btnRemove.Location = new System.Drawing.Point(660, 2);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(30, 2, 30, 2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(257, 43);
+            this.btnRemove.Size = new System.Drawing.Size(255, 43);
             this.btnRemove.TabIndex = 20;
             this.btnRemove.Text = "Remove Chef";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -124,7 +132,7 @@
             this.btnAdd.Location = new System.Drawing.Point(30, 2);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(30, 2, 30, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(254, 43);
+            this.btnAdd.Size = new System.Drawing.Size(255, 43);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Add Chef";
             this.btnAdd.UseVisualStyleBackColor = true;

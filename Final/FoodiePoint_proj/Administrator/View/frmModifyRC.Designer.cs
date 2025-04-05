@@ -53,7 +53,7 @@ namespace Admin.View
             this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblList.Location = new System.Drawing.Point(61, 72);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(304, 25);
+            this.lblList.Size = new System.Drawing.Size(314, 25);
             this.lblList.TabIndex = 17;
             this.lblList.Text = "Reservation Coordinators (RC) List";
             // 
@@ -83,15 +83,23 @@ namespace Admin.View
             // 
             // dgvRCs
             // 
+            this.dgvRCs.AllowUserToAddRows = false;
+            this.dgvRCs.AllowUserToDeleteRows = false;
+            this.dgvRCs.AllowUserToResizeRows = false;
             this.dgvRCs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRCs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRCs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRCs.Location = new System.Drawing.Point(66, 114);
             this.dgvRCs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvRCs.MultiSelect = false;
             this.dgvRCs.Name = "dgvRCs";
+            this.dgvRCs.ReadOnly = true;
+            this.dgvRCs.RowHeadersVisible = false;
             this.dgvRCs.RowHeadersWidth = 62;
             this.dgvRCs.RowTemplate.Height = 28;
+            this.dgvRCs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRCs.Size = new System.Drawing.Size(950, 445);
             this.dgvRCs.TabIndex = 28;
             // 
