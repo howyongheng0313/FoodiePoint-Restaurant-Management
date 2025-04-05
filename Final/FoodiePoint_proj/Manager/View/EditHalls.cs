@@ -41,7 +41,7 @@ namespace Manager
                 // Get the index of the first selected row
                 int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
                 // Use the selected row index to get the cell value
-                hallIdTxt.Text = dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString();
+                lblHallID.Text = dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString();
                 hallNametxt.Text = dataGridView1.Rows[selectedRowIndex].Cells[1].Value.ToString();
                 hallPartyTypeTxt.Text = dataGridView1.Rows[selectedRowIndex].Cells[2].Value.ToString();
                 hallCapacityTxt.Text = dataGridView1.Rows[selectedRowIndex].Cells[3].Value.ToString();
@@ -53,7 +53,7 @@ namespace Manager
         {
             try
             {
-                string hallid = hallIdTxt.Text;
+                string hallid = lblHallID.Text;
                 string hallname = hallNametxt.Text;
                 string halltype = hallPartyTypeTxt.Text;
                 int capacity = int.Parse(hallCapacityTxt.Text);
@@ -69,7 +69,7 @@ namespace Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string hallid = hallIdTxt.Text;
+            string hallid = lblHallID.Text;
             db.DeleteHall(hallid);
             db.LoadData(dataGridView1, "Halls");
         }
@@ -101,6 +101,11 @@ namespace Manager
         {
             this.Hide();
             bt.HallMgmt();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

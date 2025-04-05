@@ -118,7 +118,7 @@ namespace Manager
         {
             try
             {
-                string query = $"UPDATE Halls SET HallID = '{HallID}', HallName = '{HallName}', HallPartyType = '{HallPartyType}', HallCapacity = '{HallCapacity}', Availability = '{Availability}'  WHERE HallID = '{HallID}'";
+                string query = $"UPDATE Halls SET HallName = '{HallName}', HallPartyType = '{HallPartyType}', HallCapacity = '{HallCapacity}', Availability = '{Availability}'  WHERE HallID = '{HallID}'";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 connection.Open();
