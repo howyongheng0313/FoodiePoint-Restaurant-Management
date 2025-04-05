@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,9 +33,6 @@ namespace Customer
             lblreservationStatus.Text = currentReservation.ReservationStatus;
             HallID.Text = currentReservation.HallID;
 
-            
-
-
             string query = $"SELECT UserRequest, Reply FROM Requests WHERE ReservationID = '{currentReservation.ReservationID}'";
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
             {
@@ -56,11 +54,6 @@ namespace Customer
         public void SetUser(LoginCredent user)
         {
             _currentUser = user;
-        }
-
-        private void frmBooking_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnReservationStatus_Click(object sender, EventArgs e)
@@ -111,10 +104,7 @@ namespace Customer
 
                         // Save to database
                         SaveReservationToDatabase(currentReservation);
-
-                        
                     }
-
                     this.Close();
                 }
             }
@@ -130,51 +120,14 @@ namespace Customer
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-
-
                     cmd.Parameters.AddWithValue("@user", res.UserID);
                     cmd.Parameters.AddWithValue("@count", res.GuestCount);
                     cmd.Parameters.AddWithValue("@date", res.ReservationDate);
                     cmd.Parameters.AddWithValue("@type", res.ReservationType);
 
-
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
-
-
-
-
-        private void btnSendFeedback_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rtbxFeedback_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCustomerToMenu_Click(object sender, EventArgs e)
-        {
-            frmMenuPage obj1 = new frmMenuPage();
-            obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            frmCustomerMain obj1 = new frmCustomerMain();
-            obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -193,10 +146,8 @@ namespace Customer
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-
                         cmd.Parameters.AddWithValue("@reservationID", currentReservation.ReservationID);
                         cmd.Parameters.AddWithValue("@userrequest", reqtxtbox.Text); // Ensure this is correct
-                        
 
                         reqtxtbox.Clear();
                         cmd.ExecuteNonQuery();
@@ -207,15 +158,6 @@ namespace Customer
             {
                 MessageBox.Show("Please enter text before sending request.");
             }
-        }
-
-        private void btnUpdateProfile_Click(object sender, EventArgs e)
-        {
-            Admin.View.frmUpdate obj1 = new Admin.View.frmUpdate();
-            obj1.SetUser(_currentUser);
-            this.Hide();
-            obj1.ShowDialog();
-            this.Show();
         }
     } 
 }

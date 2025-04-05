@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,16 +36,14 @@ namespace Customer
         {
             frmMenuPage obj1 = new frmMenuPage();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void btnCustomerToHallReservation_Click(object sender, EventArgs e)
         {
             frmHallReservation obj1 = new frmHallReservation();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void frmCustomerMain_Load(object sender, EventArgs e)
@@ -110,9 +109,7 @@ namespace Customer
         {
             Admin.View.frmUpdate obj1 = new Admin.View.frmUpdate();
             obj1.SetUser(_currentUser);
-            this.Hide();
-            obj1.ShowDialog();
-            this.Show();
+            Jumper.Dive(obj1);
         }
     }
 }

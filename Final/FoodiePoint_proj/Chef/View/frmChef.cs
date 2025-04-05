@@ -1,4 +1,5 @@
 ﻿using Admin.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,23 +35,21 @@ namespace FoodiePointManagementSystem
         {
             frmOrderPage frmOrder = new frmOrderPage();
             frmOrder.SetUser(_currentUser);
-            this.Hide();
-            frmOrder.ShowDialog();
+            Jumper.Shift(frmOrder);
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
             frmInventory frmInventory = new frmInventory();
             frmInventory.SetUser(_currentUser);
-            this.Hide();
-            frmInventory.ShowDialog();
+            Jumper.Shift(frmInventory);
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
         {
             Admin.View.frmUpdate frmChefProfile = new Admin.View.frmUpdate();
             frmChefProfile.SetUser(_currentUser);
-            frmChefProfile.ShowDialog();
+            Jumper.Dive(frmChefProfile);
         }
     }
 }

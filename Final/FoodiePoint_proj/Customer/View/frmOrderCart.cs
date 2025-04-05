@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,43 +52,8 @@ namespace Customer
         private void btnPay_Click(object sender, EventArgs e)
         {
             OrderFood.pay_food(dgv);
-            frmPayment obj1 = new frmPayment();
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            frmHallReservation obj1 = new frmHallReservation();
-            obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            frmCustomerMain obj1 = new frmCustomerMain();
-            obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmOrderCart_Load(object sender, EventArgs e)
-        {
-
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -101,35 +67,10 @@ namespace Customer
             label1.Text = $"Total Price: " + total.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             total -= OrderFood.dlt_oneitem(dgv);
             label1.Text = $"Total Price: " + total.ToString();
-        }
-
-        private void lbltotal_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdateProfile_Click(object sender, EventArgs e)
-        {
-            Admin.View.frmUpdate obj1 = new Admin.View.frmUpdate();
-            obj1.SetUser(_currentUser);
-            this.Hide();
-            obj1.ShowDialog();
-            this.Show();
         }
     }
 }

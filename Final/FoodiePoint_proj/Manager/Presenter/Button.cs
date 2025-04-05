@@ -1,4 +1,5 @@
 ﻿using Admin.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -22,42 +23,42 @@ namespace Manager
         {
             Main_Menu fm = new Main_Menu();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Shift(fm);
         }
 
         public void HallMgmt()
         {
             frmHall fm = new frmHall();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Shift(fm);
         }
 
         public void Reservations()
         {
             frmReservations fm = new frmReservations();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Shift(fm);
         }
 
         public void Profile()
         {
             Admin.View.frmUpdate fm = new Admin.View.frmUpdate();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Dive(fm);
         }
 
         public void EditMenu()
         {
             EditMenu fm = new EditMenu();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Shift(fm);
         }
 
         public void EditHall()
         {
             EditHalls fm = new EditHalls();
             fm.SetUser(_currentUser);
-            fm.ShowDialog();
+            Jumper.Shift(fm);
         }
     }
 }

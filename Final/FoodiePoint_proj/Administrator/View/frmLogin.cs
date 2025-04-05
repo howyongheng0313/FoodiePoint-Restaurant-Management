@@ -33,8 +33,10 @@ namespace Admin.View
             string paswd = txtPassword.Text;
             LoginCredent user = LoginCredent.Login(usrnm, paswd);
 
+            txtPassword.Text = string.Empty;
             if (user != null)
             {
+                txtUser.Text = string.Empty;
                 Form targetForm = null;
                 string role = user.Role.ToLower().Trim();
 
@@ -51,7 +53,6 @@ namespace Admin.View
                         break;
                     case "reservation coordinator":
                         targetForm = new Reservation_Coordinator.View.frmMainTool();
-                        Jumper.Look(targetForm);
                         break;
                     case "customer":
                         targetForm = new Customer.frmCustomerMain();
@@ -62,10 +63,7 @@ namespace Admin.View
                 {
                     userForm.SetUser(user);
                 }
-
-                this.Hide();
-                targetForm.ShowDialog();
-                this.Close();
+                Jumper.Dive(targetForm);
             }
             else
             {
@@ -78,7 +76,7 @@ namespace Admin.View
         private void btnSignup_Click(object sender, EventArgs e)
         {
             var signUpForm = new frmSignUp("Customer");
-            signUpForm.ShowDialog();
+            Jumper.Dive(signUpForm);
             txtUser.Focus();
         }
     }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin.Presenter;
+using Reservation_Coordinator.Model;
 
 namespace Admin.View
 {
@@ -31,7 +32,7 @@ namespace Admin.View
             var updateForm = new frmUpdate();
             updateForm.SetUser(_currentUser);
             updateForm.UserUpdated += UpdateForm_UserUpdated;
-            updateForm.ShowDialog();
+            Jumper.Dive(updateForm);
         }
 
         private void UpdateForm_UserUpdated(object sender, LoginCredent updatedUser)
@@ -45,56 +46,42 @@ namespace Admin.View
 
             if (result == DialogResult.Yes)
             {
-                var loginForm = new frmLogin();
-                this.Hide();
-                loginForm.ShowDialog();
+                this.Close();
             }
         }
 
         private void btnManager_Click(object sender, EventArgs e)
         {
             var managerForm = new frmModifyM();
-            this.Hide();
-            managerForm.FormClosed += (s, args) => this.Show();
-            managerForm.ShowDialog();
+            Jumper.Dive(managerForm);
         }
         private void btnRC_Click(object sender, EventArgs e)
         {
             var RCForm = new frmModifyRC();
-            this.Hide();
-            RCForm.FormClosed += (s, args) => this.Show();
-            RCForm.ShowDialog();
+            Jumper.Dive(RCForm);
         }
 
         private void btnChef_Click(object sender, EventArgs e)
         {
             var ChefForm = new frmModifyChef();
-            this.Hide();
-            ChefForm.FormClosed += (s, args) => this.Show();
-            ChefForm.ShowDialog();
+            Jumper.Dive(ChefForm);
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             var CForm = new frmModifyC();
-            this.Hide();
-            CForm.FormClosed += (s, args) => this.Show();
-            CForm.ShowDialog();
+            Jumper.Dive(CForm);
         }
         private void btnFeedbacks_Click(object sender, EventArgs e)
         {
             var feedbackForm = new frmFeedbacks();
-            this.Hide();
-            feedbackForm.FormClosed += (s, args) => this.Show();
-            feedbackForm.ShowDialog();
+            Jumper.Dive(feedbackForm);
         }
 
         private void btnSales_Click(object sender, EventArgs e)
         {
             var salesForm = new frmCheckSales();
-            this.Hide();
-            salesForm.FormClosed += (s, args) => this.Show();
-            salesForm.ShowDialog();
+            Jumper.Dive(salesForm);
         }
     }
 }

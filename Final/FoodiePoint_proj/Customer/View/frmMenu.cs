@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,16 +75,21 @@ namespace Customer
         {
             frmCustomerMain obj1 = new frmCustomerMain();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-
             frmOrderCart form3 = new frmOrderCart(selectedRows);
             form3.SetUser(_currentUser);
-            form3.ShowDialog();
+            DialogResult result = Jumper.Dive(form3);
+
+            if (result == DialogResult.OK)
+            {
+                frmCustomerMain obj1 = new frmCustomerMain();
+                obj1.SetUser(_currentUser);
+                Jumper.Shift(obj1);
+            }
         }
        
 
@@ -91,8 +97,7 @@ namespace Customer
         {
             frmHallReservation obj1 = new frmHallReservation();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
@@ -144,9 +149,7 @@ namespace Customer
         {
             Admin.View.frmUpdate obj1 = new Admin.View.frmUpdate();
             obj1.SetUser(_currentUser);
-            this.Hide();
-            obj1.ShowDialog();
-            this.Show();
+            Jumper.Dive(obj1);
         }
     }
 }

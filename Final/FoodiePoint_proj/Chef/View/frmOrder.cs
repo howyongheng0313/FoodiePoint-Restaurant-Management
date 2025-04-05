@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin.Presenter;
 using FoodiePointManagementSystem.Presenter;
+using Reservation_Coordinator.Model;
 
 namespace FoodiePointManagementSystem
 {
@@ -167,8 +168,7 @@ namespace FoodiePointManagementSystem
         {
             frmChef frmChef = new frmChef();
             frmChef.SetUser(_currentUser);
-            this.Hide();
-            frmChef.ShowDialog();
+            Jumper.Shift(frmChef);
         }
 
         // Button to navigate to inventory form
@@ -176,8 +176,7 @@ namespace FoodiePointManagementSystem
         {
             frmInventory frmInventory = new frmInventory();
             frmInventory.SetUser(_currentUser);
-            this.Hide();
-            frmInventory.ShowDialog();
+            Jumper.Shift(frmInventory);
         }
 
         // Button to navigate to chef profile form
@@ -185,7 +184,7 @@ namespace FoodiePointManagementSystem
         {
             Admin.View.frmUpdate frmChefProfile = new Admin.View.frmUpdate();
             frmChefProfile.SetUser(_currentUser);
-            frmChefProfile.ShowDialog();
+            Jumper.Dive(frmChefProfile);
         }
     }
 }

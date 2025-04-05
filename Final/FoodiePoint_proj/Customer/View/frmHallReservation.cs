@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer.Presenter;
+using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,9 +46,6 @@ namespace Customer
             }
         }
 
-
-
-
         private void btnBook_Click(object sender, EventArgs e)
         {
 
@@ -57,8 +55,7 @@ namespace Customer
         {
             frmMenuPage obj1 = new frmMenuPage();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -71,7 +68,6 @@ namespace Customer
             if (e.RowIndex >= 0) // Ensure the row index is valid
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
 
                 Reservation selectedReservation = new Reservation
                 {
@@ -87,10 +83,8 @@ namespace Customer
                 // Open frmBooking with the existing reservation
                 frmBooking bookingForm = new frmBooking(selectedReservation);
                 bookingForm.SetUser(_currentUser);
-                this.Hide();
-                bookingForm.ShowDialog();
+                Jumper.Dive(bookingForm);
                 this.RefreshData();
-                this.Show();
             }
         }
 
@@ -98,8 +92,7 @@ namespace Customer
         {
             frmCustomerMain obj1 = new frmCustomerMain();
             obj1.SetUser(_currentUser);
-            obj1.Show();
-            this.Hide();
+            Jumper.Shift(obj1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,20 +109,15 @@ namespace Customer
             };
             frmBooking bookingForm = new frmBooking(newReservation);
             bookingForm.SetUser(_currentUser);
-            this.Hide();
-            bookingForm.ShowDialog();
+            Jumper.Dive(bookingForm);
             this.RefreshData();
-            this.Show();
-            
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
         {
             Admin.View.frmUpdate obj1 = new Admin.View.frmUpdate();
             obj1.SetUser(_currentUser);
-            this.Hide();
-            obj1.ShowDialog();
-            this.Show();
+            Jumper.Dive(obj1);
         }
     }
 }

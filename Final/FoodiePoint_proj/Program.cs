@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reservation_Coordinator.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,9 @@ namespace FoodiePoint_proj
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin.View.frmLogin());
+            var mainPage = new Admin.View.frmLogin();
+            Jumper.Look(mainPage);
+            Application.Run(mainPage);
         }
     }
 }

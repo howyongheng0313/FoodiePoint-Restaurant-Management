@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin.Presenter;
+using Reservation_Coordinator.Model;
 
 namespace Admin.View
 {
@@ -52,7 +53,7 @@ namespace Admin.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var signUpForm = new frmSignUp("Manager");
-            if (signUpForm.ShowDialog() == DialogResult.OK)
+            if (Jumper.Dive(signUpForm) == DialogResult.OK)
             {
                 LoadManagers();
             }
@@ -82,7 +83,7 @@ namespace Admin.View
                 var updateForm = new frmUpdate(true);
                 updateForm.SetUser(manager);
                 updateForm.UserUpdated += (s, updatedUser) => LoadManagers();
-                updateForm.ShowDialog();
+                Jumper.Dive(updateForm);
             }
         }
 

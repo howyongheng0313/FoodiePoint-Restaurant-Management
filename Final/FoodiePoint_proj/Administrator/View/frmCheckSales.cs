@@ -230,7 +230,6 @@ namespace Admin.View
 
         private void picLogo_Click(object sender, EventArgs e)
         {
-            var mainForm = new frmDashboard();
             this.Close();
         }
     }
