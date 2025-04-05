@@ -38,11 +38,11 @@
             this.grpRating = new System.Windows.Forms.GroupBox();
             this.btnShowAll = new System.Windows.Forms.Button();
             this.dgvFeedbacks = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpAverage = new System.Windows.Forms.GroupBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.grpRating.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeedbacks)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpAverage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,17 +178,17 @@
             this.dgvFeedbacks.Size = new System.Drawing.Size(981, 437);
             this.dgvFeedbacks.TabIndex = 31;
             // 
-            // groupBox1
+            // grpAverage
             // 
-            this.groupBox1.Controls.Add(this.lblAveRating);
-            this.groupBox1.Location = new System.Drawing.Point(50, 70);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(174, 87);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Average Rating";
+            this.grpAverage.Controls.Add(this.lblAveRating);
+            this.grpAverage.Location = new System.Drawing.Point(50, 70);
+            this.grpAverage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpAverage.Name = "grpAverage";
+            this.grpAverage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpAverage.Size = new System.Drawing.Size(174, 87);
+            this.grpAverage.TabIndex = 32;
+            this.grpAverage.TabStop = false;
+            this.grpAverage.Text = "Average Rating";
             // 
             // picLogo
             // 
@@ -209,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpAverage);
             this.Controls.Add(this.dgvFeedbacks);
             this.Controls.Add(this.grpRating);
             this.Controls.Add(this.lblTitle);
@@ -221,8 +221,8 @@
             this.Load += new System.EventHandler(this.frmFeedbacks_Load);
             this.grpRating.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeedbacks)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpAverage.ResumeLayout(false);
+            this.grpAverage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,7 +241,7 @@
         private System.Windows.Forms.GroupBox grpRating;
         private System.Windows.Forms.DataGridView dgvFeedbacks;
         private System.Windows.Forms.Button btnShowAll;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpAverage;
         private System.Windows.Forms.PictureBox picLogo;
     }
 }

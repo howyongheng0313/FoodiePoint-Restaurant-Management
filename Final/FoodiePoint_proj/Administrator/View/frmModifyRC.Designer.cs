@@ -55,7 +55,7 @@ namespace Admin.View
             this.lblList.Name = "lblList";
             this.lblList.Size = new System.Drawing.Size(304, 25);
             this.lblList.TabIndex = 17;
-            this.lblList.Text = "Reservation Coordinator (RC) List";
+            this.lblList.Text = "Reservation Coordinators (RC) List";
             // 
             // lblTitle
             // 
@@ -67,7 +67,7 @@ namespace Admin.View
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1058, 31);
             this.lblTitle.TabIndex = 16;
-            this.lblTitle.Text = "Manage RC";
+            this.lblTitle.Text = "Manage RCs";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSearch

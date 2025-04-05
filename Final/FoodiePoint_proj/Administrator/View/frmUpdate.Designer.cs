@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.lblConfirm = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.lblUserID = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.TextBox();
@@ -46,14 +46,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // label4
+            // lblFullName
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(238, 430);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(238, 430);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Full Name       :";
             // 
@@ -68,16 +68,16 @@
             this.txtFullName.Size = new System.Drawing.Size(456, 28);
             this.txtFullName.TabIndex = 24;
             // 
-            // lblConfirm
+            // lblEmail
             // 
-            this.lblConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblConfirm.AutoSize = true;
-            this.lblConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirm.Location = new System.Drawing.Point(277, 371);
-            this.lblConfirm.Name = "lblConfirm";
-            this.lblConfirm.Size = new System.Drawing.Size(104, 20);
-            this.lblConfirm.TabIndex = 23;
-            this.lblConfirm.Text = "Email       :";
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(277, 371);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(104, 20);
+            this.lblEmail.TabIndex = 23;
+            this.lblEmail.Text = "Email       :";
             // 
             // txtEmail
             // 
@@ -90,16 +90,16 @@
             this.txtEmail.Size = new System.Drawing.Size(456, 28);
             this.txtEmail.TabIndex = 22;
             // 
-            // lblPassword
+            // lblNewPassword
             // 
-            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(198, 311);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(181, 20);
-            this.lblPassword.TabIndex = 21;
-            this.lblPassword.Text = "New Password       :";
+            this.lblNewPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPassword.Location = new System.Drawing.Point(198, 311);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(181, 20);
+            this.lblNewPassword.TabIndex = 21;
+            this.lblNewPassword.Text = "New Password       :";
             // 
             // txtNewPassword
             // 
@@ -218,11 +218,11 @@
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.lblConfirm);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.txtUserID);
@@ -241,11 +241,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.Label lblConfirm;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblNewPassword;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.TextBox txtUserID;
