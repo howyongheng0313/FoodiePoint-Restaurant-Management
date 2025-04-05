@@ -73,11 +73,14 @@ INSERT INTO [dbo].[Users] (Username, [Password], FullName, Email, [Role]) VALUES
 ('kevinho'    , 'kv09'    , 'Kevin Ho Jian Wei', 'kvinho@gmail.com'          , 'Customer');
 
 INSERT INTO [dbo].[Orders] (UserID, [DateTime], OrderStatus) VALUES
-('U005', '2025-02-18 00:00:00', 'Completed'),
-('U006', '2025-02-18 00:00:00', 'Completed'),
-('U007', '2025-02-19 00:00:00', 'In Progress'),
-('U008', '2025-02-19 00:00:00', 'In Progress'),
-('U009', '2025-02-19 00:00:00', 'In Progress');
+('U005', '2024-11-11 11:00:00', 'Completed'),
+('U006', '2025-02-18 10:00:00', 'Completed'),
+('U006', '2025-03-18 18:00:00', 'Completed'),
+('U007', '2025-03-21 08:00:00', 'In Progress'),
+('U005', '2025-04-01 19:00:00', 'In Progress'),
+('U009', '2025-04-12 12:00:00', 'In Progress'),
+('U005', '2025-06-04 09:00:00', 'Pending'),
+('U009', '2025-06-04 15:00:00', 'Pending');
 
 INSERT INTO [dbo].[OrderItem] (OrderID, ItemID, Quantity) VALUES
 ('OD001', 'I002', 2),
@@ -88,7 +91,11 @@ INSERT INTO [dbo].[OrderItem] (OrderID, ItemID, Quantity) VALUES
 ('OD004', 'I002', 1),
 ('OD004', 'I003', 1),
 ('OD004', 'I005', 1),
-('OD005', 'I001', 1);
+('OD005', 'I001', 1),
+('OD006', 'I003', 2),
+('OD006', 'I004', 2),
+('OD007', 'I005', 2),
+('OD008', 'I002', 3);
 
 INSERT INTO [dbo].[Feedbacks] (UserID, Feedback, Rating) VALUES
 ('U005', 'Service is good', 5),
@@ -97,18 +104,21 @@ INSERT INTO [dbo].[Feedbacks] (UserID, Feedback, Rating) VALUES
 
 -- HALL Branch (using USER)
 INSERT INTO [dbo].[Halls] (HallName, HallCapacity, [Availability], HallPartyType) VALUES
-('Grand Hall', 200, 'Inavailable'  , 'Wedding'),
+('Grand Hall', 200, 'Inavailable', 'Wedding'),
 ('Small Room', 50 , 'Inavailable', 'Meeting'),
 ('VIP Lounge', 30 , 'Available'  , 'Private Party'),
 ('Conference', 100, 'Available'  , 'Business'),
 ('Banquet'   , 150, 'Available'  , 'Reception');
 
 INSERT INTO [dbo].[Reservations] (HallID, UserID, GuestCount, ReservationDate, ReservationType, ReservationStatus) VALUES
-('H001', 'U005', 174, '2025-02-17 00:00:00', 'Birthday Party'   , 'Completed'),
-('H002', 'U006', 46 , '2025-02-19 00:00:00', 'Corporate Meeting', 'Confirmed'),
-('H001', 'U007', 168, '2025-02-27 00:00:00', 'Birthday Party'   , 'Confirmed');
+('H001', 'U005', 174, '2025-02-17 17:00:00', 'Birthday Party'   , 'Completed'),
+('H002', 'U006', 46 , '2025-02-19 19:00:00', 'Corporate Meeting', 'Confirmed'),
+('H001', 'U007', 168, '2025-02-27 21:00:00', 'Birthday Party'   , 'Confirmed'),
+(NULL  , 'U005', 64 , '2025-03-13 12:00:00', 'Birthday Party'   , 'Pending');
 
 INSERT INTO [dbo].[Requests] (ReservationID, UserRequest, Reply) VALUES
 ('RS001', 'Provide 3 baby chairs'     , 'No problem!'),
 ('RS001', 'Decorate hall with flowers', 'No problem! But we will charge extra cost.'),
-('RS002', 'Provide 4 baby chairs'     , 'No problem!');
+('RS002', 'Provide 4 baby chairs'     , 'No problem!'),
+('RS004', 'Can i bring some balloon?' , NULL),
+('RS004', 'Should i extra payment?'   , NULL);
