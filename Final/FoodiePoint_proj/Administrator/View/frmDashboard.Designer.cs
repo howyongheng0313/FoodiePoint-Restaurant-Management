@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picProfile = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnManager = new System.Windows.Forms.Button();
             this.btnRC = new System.Windows.Forms.Button();
             this.btnChef = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.grrpUsers = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.grpUsers = new System.Windows.Forms.GroupBox();
+            this.lblManagement = new System.Windows.Forms.Label();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnFeedbacks = new System.Windows.Forms.Button();
             this.grpSales = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSales = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.grrpUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            this.grpUsers.SuspendLayout();
             this.grpSales.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,16 +59,16 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Admin Dashboard";
             // 
-            // pictureBox1
+            // picProfile
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = global::FoodiePoint_proj.Properties.Resources.img;
-            this.pictureBox1.Location = new System.Drawing.Point(1045, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.picProfile.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.picProfile.Image = global::FoodiePoint_proj.Properties.Resources.img;
+            this.picProfile.Location = new System.Drawing.Point(1045, 25);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(99, 97);
+            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfile.TabIndex = 7;
+            this.picProfile.TabStop = false;
             // 
             // lblWelcome
             // 
@@ -134,29 +134,29 @@
             this.btnCustomer.UseVisualStyleBackColor = true;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // grrpUsers
+            // grpUsers
             // 
-            this.grrpUsers.Controls.Add(this.label1);
-            this.grrpUsers.Controls.Add(this.btnCustomer);
-            this.grrpUsers.Controls.Add(this.btnChef);
-            this.grrpUsers.Controls.Add(this.btnManager);
-            this.grrpUsers.Controls.Add(this.btnRC);
-            this.grrpUsers.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.grrpUsers.Location = new System.Drawing.Point(48, 200);
-            this.grrpUsers.Name = "grrpUsers";
-            this.grrpUsers.Size = new System.Drawing.Size(621, 337);
-            this.grrpUsers.TabIndex = 15;
-            this.grrpUsers.TabStop = false;
-            this.grrpUsers.Text = "Management Department";
+            this.grpUsers.Controls.Add(this.lblManagement);
+            this.grpUsers.Controls.Add(this.btnCustomer);
+            this.grpUsers.Controls.Add(this.btnChef);
+            this.grpUsers.Controls.Add(this.btnManager);
+            this.grpUsers.Controls.Add(this.btnRC);
+            this.grpUsers.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.grpUsers.Location = new System.Drawing.Point(48, 200);
+            this.grpUsers.Name = "grpUsers";
+            this.grpUsers.Size = new System.Drawing.Size(621, 337);
+            this.grpUsers.TabIndex = 15;
+            this.grpUsers.TabStop = false;
+            this.grpUsers.Text = "Management Department";
             // 
-            // label1
+            // lblManagement
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Add/Edit/View/Remove";
+            this.lblManagement.AutoSize = true;
+            this.lblManagement.Location = new System.Drawing.Point(222, 39);
+            this.lblManagement.Name = "lblManagement";
+            this.lblManagement.Size = new System.Drawing.Size(171, 20);
+            this.lblManagement.TabIndex = 15;
+            this.lblManagement.Text = "Add/Edit/View/Remove";
             // 
             // btnSales
             // 
@@ -182,7 +182,7 @@
             // 
             // grpSales
             // 
-            this.grpSales.Controls.Add(this.label2);
+            this.grpSales.Controls.Add(this.lblSales);
             this.grpSales.Controls.Add(this.btnFeedbacks);
             this.grpSales.Controls.Add(this.btnSales);
             this.grpSales.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -193,14 +193,14 @@
             this.grpSales.TabStop = false;
             this.grpSales.Text = "Sales Department";
             // 
-            // label2
+            // lblSales
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "View";
+            this.lblSales.AutoSize = true;
+            this.lblSales.Location = new System.Drawing.Point(215, 39);
+            this.lblSales.Name = "lblSales";
+            this.lblSales.Size = new System.Drawing.Size(43, 20);
+            this.lblSales.TabIndex = 18;
+            this.lblSales.Text = "View";
             // 
             // btnLogout
             // 
@@ -220,18 +220,18 @@
             this.ClientSize = new System.Drawing.Size(1178, 744);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.grpSales);
-            this.Controls.Add(this.grrpUsers);
+            this.Controls.Add(this.grpUsers);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picProfile);
             this.Controls.Add(this.lblTitle);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adminstrator Page";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.grrpUsers.ResumeLayout(false);
-            this.grrpUsers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            this.grpUsers.ResumeLayout(false);
+            this.grpUsers.PerformLayout();
             this.grpSales.ResumeLayout(false);
             this.grpSales.PerformLayout();
             this.ResumeLayout(false);
@@ -242,20 +242,20 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picProfile;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnManager;
         private System.Windows.Forms.Button btnRC;
         private System.Windows.Forms.Button btnChef;
         private System.Windows.Forms.Button btnCustomer;
-        private System.Windows.Forms.GroupBox grrpUsers;
+        private System.Windows.Forms.GroupBox grpUsers;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnFeedbacks;
         private System.Windows.Forms.GroupBox grpSales;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblManagement;
+        private System.Windows.Forms.Label lblSales;
     }
 }
 

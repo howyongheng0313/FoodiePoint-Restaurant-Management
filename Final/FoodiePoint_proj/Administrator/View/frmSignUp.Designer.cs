@@ -37,7 +37,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblConfirm = new System.Windows.Forms.Label();
             this.txtConfirm = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.lblRole = new System.Windows.Forms.Label();
             this.cmbRole = new System.Windows.Forms.ComboBox();
@@ -131,15 +131,15 @@
             this.txtConfirm.Size = new System.Drawing.Size(513, 35);
             this.txtConfirm.TabIndex = 8;
             // 
-            // label4
+            // lblFullName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(192, 438);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Full Name       :";
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(192, 438);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(158, 25);
+            this.lblFullName.TabIndex = 11;
+            this.lblFullName.Text = "Full Name       :";
             // 
             // txtFullName
             // 
@@ -205,7 +205,7 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.lblRole);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.lblConfirm);
             this.Controls.Add(this.txtConfirm);
@@ -234,7 +234,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblConfirm;
         private System.Windows.Forms.TextBox txtConfirm;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.ComboBox cmbRole;

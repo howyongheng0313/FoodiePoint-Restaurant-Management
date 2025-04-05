@@ -51,9 +51,9 @@ namespace Admin.View
             this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblList.Location = new System.Drawing.Point(91, 90);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(373, 29);
+            this.lblList.Size = new System.Drawing.Size(385, 29);
             this.lblList.TabIndex = 17;
-            this.lblList.Text = "Reservation Coordinator (RC) List";
+            this.lblList.Text = "Reservation Coordinators (RC) List";
             // 
             // lblTitle
             // 
@@ -62,9 +62,9 @@ namespace Admin.View
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(505, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(195, 37);
+            this.lblTitle.Size = new System.Drawing.Size(212, 37);
             this.lblTitle.TabIndex = 16;
-            this.lblTitle.Text = "Manage RC";
+            this.lblTitle.Text = "Manage RCs";
             // 
             // txtSearch
             // 
