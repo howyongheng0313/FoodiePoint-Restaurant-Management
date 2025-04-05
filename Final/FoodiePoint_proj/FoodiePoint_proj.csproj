@@ -524,9 +524,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\img.jpg" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\output-onlinepngtools.png" />
