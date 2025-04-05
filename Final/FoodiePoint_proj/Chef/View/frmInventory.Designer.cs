@@ -35,6 +35,7 @@
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnOrderToInventory = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tbxSearchInput = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.lblIngredient = new System.Windows.Forms.Label();
             this.tbxIngredient = new System.Windows.Forms.TextBox();
             this.tbxIngredientID = new System.Windows.Forms.TextBox();
-            this.lblLogo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -83,7 +83,7 @@
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 24;
             this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventory.Size = new System.Drawing.Size(791, 267);
+            this.dgvInventory.Size = new System.Drawing.Size(794, 267);
             this.dgvInventory.TabIndex = 0;
             // 
             // btnInventoryToChef
@@ -182,10 +182,22 @@
             this.btnOrderToInventory.Text = "Inventory Page";
             this.btnOrderToInventory.UseVisualStyleBackColor = false;
             // 
+            // lblLogo
+            // 
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(10, 0);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(208, 98);
+            this.lblLogo.TabIndex = 13;
+            this.lblLogo.Text = "Foodie Point";
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.Location = new System.Drawing.Point(676, 571);
+            this.btnConfirm.Location = new System.Drawing.Point(679, 571);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(146, 59);
             this.btnConfirm.TabIndex = 14;
@@ -212,7 +224,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(831, 40);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 40);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tbxSearchInput
@@ -221,7 +233,7 @@
             this.tbxSearchInput.Location = new System.Drawing.Point(4, 5);
             this.tbxSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxSearchInput.Name = "tbxSearchInput";
-            this.tbxSearchInput.Size = new System.Drawing.Size(503, 30);
+            this.tbxSearchInput.Size = new System.Drawing.Size(506, 30);
             this.tbxSearchInput.TabIndex = 11;
             // 
             // btnSearchIngredient
@@ -229,7 +241,7 @@
             this.btnSearchIngredient.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearchIngredient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearchIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIngredient.Location = new System.Drawing.Point(515, 5);
+            this.btnSearchIngredient.Location = new System.Drawing.Point(518, 5);
             this.btnSearchIngredient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchIngredient.Name = "btnSearchIngredient";
             this.btnSearchIngredient.Size = new System.Drawing.Size(152, 30);
@@ -242,7 +254,7 @@
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReturn.Location = new System.Drawing.Point(675, 5);
+            this.btnReturn.Location = new System.Drawing.Point(678, 5);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(152, 30);
@@ -382,18 +394,6 @@
             this.tbxIngredientID.Size = new System.Drawing.Size(182, 30);
             this.tbxIngredientID.TabIndex = 1;
             // 
-            // lblLogo
-            // 
-            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(10, 0);
-            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(208, 98);
-            this.lblLogo.TabIndex = 13;
-            this.lblLogo.Text = "Foodie Point";
-            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -402,6 +402,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmInventory";
             this.Text = "Inventory Page";
             this.Load += new System.EventHandler(this.frmInventory_Load);

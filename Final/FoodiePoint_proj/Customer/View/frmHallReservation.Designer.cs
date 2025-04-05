@@ -33,10 +33,10 @@
             this.btnHallReservation = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.lblFoodiePoint = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblReservation = new System.Windows.Forms.Label();
-            this.lblFoodiePoint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -139,40 +139,6 @@
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(264, 436);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 53);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Make a reservation now";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 105);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 311);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            // 
-            // lblReservation
-            // 
-            this.lblReservation.AutoSize = true;
-            this.lblReservation.Location = new System.Drawing.Point(37, 32);
-            this.lblReservation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblReservation.Name = "lblReservation";
-            this.lblReservation.Size = new System.Drawing.Size(98, 20);
-            this.lblReservation.TabIndex = 0;
-            this.lblReservation.Text = "Reservation";
-            // 
             // lblFoodiePoint
             // 
             this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
@@ -184,6 +150,45 @@
             this.lblFoodiePoint.TabIndex = 15;
             this.lblFoodiePoint.Text = "Foodie Point";
             this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(298, 585);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(249, 53);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Make a reservation now";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(41, 105);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(764, 440);
+            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            // 
+            // lblReservation
+            // 
+            this.lblReservation.AutoSize = true;
+            this.lblReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservation.Location = new System.Drawing.Point(36, 49);
+            this.lblReservation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReservation.Name = "lblReservation";
+            this.lblReservation.Size = new System.Drawing.Size(141, 29);
+            this.lblReservation.TabIndex = 0;
+            this.lblReservation.Text = "Reservation";
             // 
             // frmHallReservation
             // 

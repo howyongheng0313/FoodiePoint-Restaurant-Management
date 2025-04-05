@@ -43,9 +43,11 @@
             this.grpSales = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grrpUsers.SuspendLayout();
             this.grpSales.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -53,19 +55,21 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(41, 31);
+            this.lblTitle.Location = new System.Drawing.Point(36, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(320, 40);
+            this.lblTitle.Size = new System.Drawing.Size(269, 36);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Admin Dashboard";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Image = global::FoodiePoint_proj.Properties.Resources.img;
-            this.pictureBox1.Location = new System.Drawing.Point(1045, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(964, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(88, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -74,17 +78,19 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(43, 81);
+            this.lblWelcome.Location = new System.Drawing.Point(38, 65);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 29);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 8;
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Location = new System.Drawing.Point(811, 25);
+            this.btnUpdate.Location = new System.Drawing.Point(756, 20);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(201, 46);
+            this.btnUpdate.Size = new System.Drawing.Size(179, 37);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update Profile";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -92,10 +98,12 @@
             // 
             // btnManager
             // 
+            this.btnManager.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnManager.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManager.Location = new System.Drawing.Point(76, 83);
+            this.btnManager.Location = new System.Drawing.Point(96, 94);
+            this.btnManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(171, 61);
+            this.btnManager.Size = new System.Drawing.Size(174, 49);
             this.btnManager.TabIndex = 10;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = true;
@@ -103,10 +111,12 @@
             // 
             // btnRC
             // 
+            this.btnRC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRC.Location = new System.Drawing.Point(76, 207);
+            this.btnRC.Location = new System.Drawing.Point(96, 204);
+            this.btnRC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRC.Name = "btnRC";
-            this.btnRC.Size = new System.Drawing.Size(171, 61);
+            this.btnRC.Size = new System.Drawing.Size(174, 49);
             this.btnRC.TabIndex = 11;
             this.btnRC.Text = "Reservation Coordinator";
             this.btnRC.UseVisualStyleBackColor = true;
@@ -114,10 +124,12 @@
             // 
             // btnChef
             // 
+            this.btnChef.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChef.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChef.Location = new System.Drawing.Point(358, 83);
+            this.btnChef.Location = new System.Drawing.Point(324, 94);
+            this.btnChef.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChef.Name = "btnChef";
-            this.btnChef.Size = new System.Drawing.Size(171, 61);
+            this.btnChef.Size = new System.Drawing.Size(174, 49);
             this.btnChef.TabIndex = 13;
             this.btnChef.Text = "Chef";
             this.btnChef.UseVisualStyleBackColor = true;
@@ -125,10 +137,12 @@
             // 
             // btnCustomer
             // 
+            this.btnCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCustomer.Location = new System.Drawing.Point(358, 207);
+            this.btnCustomer.Location = new System.Drawing.Point(324, 204);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(171, 61);
+            this.btnCustomer.Size = new System.Drawing.Size(174, 49);
             this.btnCustomer.TabIndex = 14;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = true;
@@ -142,28 +156,35 @@
             this.grrpUsers.Controls.Add(this.btnManager);
             this.grrpUsers.Controls.Add(this.btnRC);
             this.grrpUsers.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.grrpUsers.Location = new System.Drawing.Point(48, 200);
+            this.grrpUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grrpUsers.Location = new System.Drawing.Point(20, 20);
+            this.grrpUsers.Margin = new System.Windows.Forms.Padding(20);
             this.grrpUsers.Name = "grrpUsers";
-            this.grrpUsers.Size = new System.Drawing.Size(621, 337);
+            this.grrpUsers.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grrpUsers.Size = new System.Drawing.Size(594, 309);
             this.grrpUsers.TabIndex = 15;
             this.grrpUsers.TabStop = false;
             this.grrpUsers.Text = "Management Department";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 39);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Location = new System.Drawing.Point(6, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 20);
+            this.label1.Size = new System.Drawing.Size(582, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Add/Edit/View/Remove";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSales
             // 
+            this.btnSales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSales.Location = new System.Drawing.Point(149, 207);
+            this.btnSales.Location = new System.Drawing.Point(105, 204);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(171, 61);
+            this.btnSales.Size = new System.Drawing.Size(174, 49);
             this.btnSales.TabIndex = 16;
             this.btnSales.Text = "Sales Report";
             this.btnSales.UseVisualStyleBackColor = true;
@@ -171,10 +192,12 @@
             // 
             // btnFeedbacks
             // 
+            this.btnFeedbacks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFeedbacks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeedbacks.Location = new System.Drawing.Point(149, 83);
+            this.btnFeedbacks.Location = new System.Drawing.Point(105, 94);
+            this.btnFeedbacks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFeedbacks.Name = "btnFeedbacks";
-            this.btnFeedbacks.Size = new System.Drawing.Size(171, 61);
+            this.btnFeedbacks.Size = new System.Drawing.Size(174, 49);
             this.btnFeedbacks.TabIndex = 17;
             this.btnFeedbacks.Text = "Feedbacks";
             this.btnFeedbacks.UseVisualStyleBackColor = true;
@@ -186,54 +209,77 @@
             this.grpSales.Controls.Add(this.btnFeedbacks);
             this.grpSales.Controls.Add(this.btnSales);
             this.grpSales.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.grpSales.Location = new System.Drawing.Point(713, 200);
+            this.grpSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpSales.Location = new System.Drawing.Point(654, 20);
+            this.grpSales.Margin = new System.Windows.Forms.Padding(20);
             this.grpSales.Name = "grpSales";
-            this.grpSales.Size = new System.Drawing.Size(431, 337);
+            this.grpSales.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpSales.Size = new System.Drawing.Size(384, 309);
             this.grpSales.TabIndex = 18;
             this.grpSales.TabStop = false;
             this.grpSales.Text = "Sales Department";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 39);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Location = new System.Drawing.Point(6, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.Size = new System.Drawing.Size(372, 16);
             this.label2.TabIndex = 18;
             this.label2.Text = "View";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.Location = new System.Drawing.Point(811, 81);
+            this.btnLogout.Location = new System.Drawing.Point(756, 65);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(201, 45);
+            this.btnLogout.Size = new System.Drawing.Size(179, 36);
             this.btnLogout.TabIndex = 19;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.Controls.Add(this.grrpUsers, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.grpSales, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 200);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 355F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1058, 349);
+            this.tableLayoutPanel1.TabIndex = 20;
+            // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 744);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.grpSales);
-            this.Controls.Add(this.grrpUsers);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitle);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adminstrator Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grrpUsers.ResumeLayout(false);
-            this.grrpUsers.PerformLayout();
             this.grpSales.ResumeLayout(false);
-            this.grpSales.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +302,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

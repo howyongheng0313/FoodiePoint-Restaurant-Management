@@ -35,14 +35,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.btnYour = new System.Windows.Forms.Button();
+            this.lblCart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 473);
+            this.label1.Location = new System.Drawing.Point(437, 610);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 20);
@@ -60,8 +61,9 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(216, 457);
+            this.button2.Location = new System.Drawing.Point(228, 595);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(47, 48);
@@ -72,8 +74,9 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(19, 458);
+            this.button1.Location = new System.Drawing.Point(31, 596);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 48);
@@ -84,10 +87,11 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDelete.Location = new System.Drawing.Point(73, 458);
+            this.btnDelete.Location = new System.Drawing.Point(85, 596);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(135, 49);
@@ -98,10 +102,11 @@
             // 
             // btnPay
             // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPay.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPay.Location = new System.Drawing.Point(541, 457);
+            this.btnPay.Location = new System.Drawing.Point(915, 596);
             this.btnPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(135, 49);
@@ -112,35 +117,35 @@
             // 
             // dgv
             // 
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(19, 78);
+            this.dgv.Location = new System.Drawing.Point(31, 78);
             this.dgv.Margin = new System.Windows.Forms.Padding(4);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(657, 372);
+            this.dgv.Size = new System.Drawing.Size(1019, 477);
             this.dgv.TabIndex = 14;
             // 
-            // btnYour
+            // lblCart
             // 
-            this.btnYour.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnYour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYour.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnYour.Location = new System.Drawing.Point(19, 21);
-            this.btnYour.Margin = new System.Windows.Forms.Padding(4);
-            this.btnYour.Name = "btnYour";
-            this.btnYour.Size = new System.Drawing.Size(135, 49);
-            this.btnYour.TabIndex = 15;
-            this.btnYour.Text = "Your Cart";
-            this.btnYour.UseVisualStyleBackColor = false;
+            this.lblCart.AutoSize = true;
+            this.lblCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCart.Location = new System.Drawing.Point(25, 30);
+            this.lblCart.Name = "lblCart";
+            this.lblCart.Size = new System.Drawing.Size(134, 32);
+            this.lblCart.TabIndex = 21;
+            this.lblCart.Text = "Your Cart";
             // 
             // frmOrderCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
-            this.Controls.Add(this.btnYour);
+            this.Controls.Add(this.lblCart);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnDelete);
@@ -163,11 +168,11 @@
         #endregion
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Button btnYour;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCart;
     }
 }

@@ -33,12 +33,12 @@
             this.btnMenuToHallReservation = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnMenuToProfile = new System.Windows.Forms.Button();
+            this.lblFoodiePoint = new System.Windows.Forms.Label();
             this.Search_btn = new System.Windows.Forms.Button();
             this.search_txt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.lblFoodiePoint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -143,68 +143,6 @@
             this.btnMenuToProfile.UseVisualStyleBackColor = false;
             this.btnMenuToProfile.Click += new System.EventHandler(this.btnMenuToProfile_Click);
             // 
-            // Search_btn
-            // 
-            this.Search_btn.Location = new System.Drawing.Point(548, 18);
-            this.Search_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.Search_btn.Name = "Search_btn";
-            this.Search_btn.Size = new System.Drawing.Size(135, 49);
-            this.Search_btn.TabIndex = 11;
-            this.Search_btn.Text = "Search";
-            this.Search_btn.UseVisualStyleBackColor = true;
-            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
-            // 
-            // search_txt
-            // 
-            this.search_txt.Location = new System.Drawing.Point(27, 25);
-            this.search_txt.Margin = new System.Windows.Forms.Padding(4);
-            this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(439, 27);
-            this.search_txt.TabIndex = 10;
-            this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 75);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(657, 372);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnViewOrder
-            // 
-            this.btnViewOrder.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnViewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOrder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewOrder.Location = new System.Drawing.Point(188, 454);
-            this.btnViewOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewOrder.Name = "btnViewOrder";
-            this.btnViewOrder.Size = new System.Drawing.Size(135, 49);
-            this.btnViewOrder.TabIndex = 8;
-            this.btnViewOrder.Text = "View order";
-            this.btnViewOrder.UseVisualStyleBackColor = false;
-            this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddToCart.Location = new System.Drawing.Point(25, 454);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(135, 49);
-            this.btnAddToCart.TabIndex = 7;
-            this.btnAddToCart.Text = "Add to Cart";
-            this.btnAddToCart.UseVisualStyleBackColor = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
             // lblFoodiePoint
             // 
             this.lblFoodiePoint.Dock = System.Windows.Forms.DockStyle.Top;
@@ -216,6 +154,74 @@
             this.lblFoodiePoint.TabIndex = 15;
             this.lblFoodiePoint.Text = "Foodie Point";
             this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Search_btn
+            // 
+            this.Search_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search_btn.Location = new System.Drawing.Point(692, 37);
+            this.Search_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(135, 38);
+            this.Search_btn.TabIndex = 11;
+            this.Search_btn.Text = "Search";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
+            // 
+            // search_txt
+            // 
+            this.search_txt.Location = new System.Drawing.Point(26, 43);
+            this.search_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.search_txt.Name = "search_txt";
+            this.search_txt.Size = new System.Drawing.Size(562, 27);
+            this.search_txt.TabIndex = 10;
+            this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 88);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(801, 464);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnViewOrder
+            // 
+            this.btnViewOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnViewOrder.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnViewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOrder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewOrder.Location = new System.Drawing.Point(190, 584);
+            this.btnViewOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewOrder.Name = "btnViewOrder";
+            this.btnViewOrder.Size = new System.Drawing.Size(135, 49);
+            this.btnViewOrder.TabIndex = 8;
+            this.btnViewOrder.Text = "View order";
+            this.btnViewOrder.UseVisualStyleBackColor = false;
+            this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAddToCart.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddToCart.Location = new System.Drawing.Point(27, 584);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(135, 49);
+            this.btnAddToCart.TabIndex = 7;
+            this.btnAddToCart.Text = "Add to Cart";
+            this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // frmMenuPage
             // 

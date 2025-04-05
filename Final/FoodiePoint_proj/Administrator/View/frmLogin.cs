@@ -79,5 +79,15 @@ namespace Admin.View
             Jumper.Dive(signUpForm);
             txtUser.Focus();
         }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

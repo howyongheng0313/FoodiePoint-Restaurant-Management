@@ -34,12 +34,12 @@
             this.btnCustomerToMenu = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.lblFoodiePoint = new System.Windows.Forms.Label();
+            this.lblRating = new System.Windows.Forms.Label();
+            this.cmbRating = new System.Windows.Forms.ComboBox();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.rtbxFeedback = new System.Windows.Forms.RichTextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.btnSendFeedback = new System.Windows.Forms.Button();
-            this.cmbRating = new System.Windows.Forms.ComboBox();
-            this.lblRating = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,14 +66,14 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblWelcome);
             this.splitContainer1.Panel2.Controls.Add(this.lblRating);
             this.splitContainer1.Panel2.Controls.Add(this.cmbRating);
             this.splitContainer1.Panel2.Controls.Add(this.lblFeedback);
             this.splitContainer1.Panel2.Controls.Add(this.rtbxFeedback);
-            this.splitContainer1.Panel2.Controls.Add(this.button7);
             this.splitContainer1.Panel2.Controls.Add(this.btnSendFeedback);
             this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
-            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterDistance = 314;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 5;
             // 
@@ -88,7 +88,7 @@
             this.btnUpdateProfile.Location = new System.Drawing.Point(10, 338);
             this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(208, 80);
+            this.btnUpdateProfile.Size = new System.Drawing.Size(294, 80);
             this.btnUpdateProfile.TabIndex = 13;
             this.btnUpdateProfile.Text = "Update Profile";
             this.btnUpdateProfile.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.btnCutomerToHallReservation.Location = new System.Drawing.Point(10, 258);
             this.btnCutomerToHallReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnCutomerToHallReservation.Name = "btnCutomerToHallReservation";
-            this.btnCutomerToHallReservation.Size = new System.Drawing.Size(208, 80);
+            this.btnCutomerToHallReservation.Size = new System.Drawing.Size(294, 80);
             this.btnCutomerToHallReservation.TabIndex = 11;
             this.btnCutomerToHallReservation.Text = "Hall Reservation";
             this.btnCutomerToHallReservation.UseVisualStyleBackColor = false;
@@ -122,7 +122,7 @@
             this.btnCustomerToMenu.Location = new System.Drawing.Point(10, 178);
             this.btnCustomerToMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerToMenu.Name = "btnCustomerToMenu";
-            this.btnCustomerToMenu.Size = new System.Drawing.Size(208, 80);
+            this.btnCustomerToMenu.Size = new System.Drawing.Size(294, 80);
             this.btnCustomerToMenu.TabIndex = 9;
             this.btnCustomerToMenu.Text = "Menu";
             this.btnCustomerToMenu.UseVisualStyleBackColor = false;
@@ -139,7 +139,7 @@
             this.btnProfile.Location = new System.Drawing.Point(10, 98);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(208, 80);
+            this.btnProfile.Size = new System.Drawing.Size(294, 80);
             this.btnProfile.TabIndex = 10;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -152,15 +152,43 @@
             this.lblFoodiePoint.Location = new System.Drawing.Point(10, 0);
             this.lblFoodiePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFoodiePoint.Name = "lblFoodiePoint";
-            this.lblFoodiePoint.Size = new System.Drawing.Size(208, 98);
+            this.lblFoodiePoint.Size = new System.Drawing.Size(294, 98);
             this.lblFoodiePoint.TabIndex = 15;
             this.lblFoodiePoint.Text = "Foodie Point";
             this.lblFoodiePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblRating
+            // 
+            this.lblRating.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblRating.AutoSize = true;
+            this.lblRating.Location = new System.Drawing.Point(513, 265);
+            this.lblRating.Name = "lblRating";
+            this.lblRating.Size = new System.Drawing.Size(62, 20);
+            this.lblRating.TabIndex = 18;
+            this.lblRating.Text = "Rating:";
+            // 
+            // cmbRating
+            // 
+            this.cmbRating.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmbRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRating.FormattingEnabled = true;
+            this.cmbRating.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbRating.Location = new System.Drawing.Point(581, 262);
+            this.cmbRating.Name = "cmbRating";
+            this.cmbRating.Size = new System.Drawing.Size(133, 28);
+            this.cmbRating.Sorted = true;
+            this.cmbRating.TabIndex = 17;
+            // 
             // lblFeedback
             // 
+            this.lblFeedback.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Location = new System.Drawing.Point(25, 281);
+            this.lblFeedback.Location = new System.Drawing.Point(51, 265);
             this.lblFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeedback.Name = "lblFeedback";
             this.lblFeedback.Size = new System.Drawing.Size(81, 20);
@@ -170,33 +198,22 @@
             // 
             // rtbxFeedback
             // 
-            this.rtbxFeedback.Location = new System.Drawing.Point(29, 316);
+            this.rtbxFeedback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbxFeedback.Location = new System.Drawing.Point(55, 305);
             this.rtbxFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.rtbxFeedback.Name = "rtbxFeedback";
-            this.rtbxFeedback.Size = new System.Drawing.Size(647, 91);
+            this.rtbxFeedback.Size = new System.Drawing.Size(659, 122);
             this.rtbxFeedback.TabIndex = 10;
             this.rtbxFeedback.Text = "";
             this.rtbxFeedback.TextChanged += new System.EventHandler(this.rtbxFeedback_TextChanged);
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(55, 97);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(575, 117);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Welcome to FoodiePoint Restaurant!";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // btnSendFeedback
             // 
+            this.btnSendFeedback.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSendFeedback.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSendFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendFeedback.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSendFeedback.Location = new System.Drawing.Point(543, 416);
+            this.btnSendFeedback.Location = new System.Drawing.Point(579, 476);
             this.btnSendFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendFeedback.Name = "btnSendFeedback";
             this.btnSendFeedback.Size = new System.Drawing.Size(135, 49);
@@ -205,30 +222,15 @@
             this.btnSendFeedback.UseVisualStyleBackColor = false;
             this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
             // 
-            // cmbRating
+            // lblWelcome
             // 
-            this.cmbRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRating.FormattingEnabled = true;
-            this.cmbRating.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbRating.Location = new System.Drawing.Point(543, 278);
-            this.cmbRating.Name = "cmbRating";
-            this.cmbRating.Size = new System.Drawing.Size(133, 28);
-            this.cmbRating.Sorted = true;
-            this.cmbRating.TabIndex = 17;
-            // 
-            // lblRating
-            // 
-            this.lblRating.AutoSize = true;
-            this.lblRating.Location = new System.Drawing.Point(475, 281);
-            this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(62, 20);
-            this.lblRating.TabIndex = 18;
-            this.lblRating.Text = "Rating:";
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(50, 98);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(330, 25);
+            this.lblWelcome.TabIndex = 19;
+            this.lblWelcome.Text = "Welcome to FoodiePoint Restaurant!";
             // 
             // frmCustomerMain
             // 
@@ -260,12 +262,12 @@
         private System.Windows.Forms.Button btnCustomerToMenu;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.RichTextBox rtbxFeedback;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnSendFeedback;
         private System.Windows.Forms.Button btnUpdateProfile;
         private System.Windows.Forms.Label lblFoodiePoint;
         private System.Windows.Forms.Label lblRating;
         private System.Windows.Forms.ComboBox cmbRating;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
 

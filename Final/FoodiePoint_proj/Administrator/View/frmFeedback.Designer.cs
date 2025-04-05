@@ -48,30 +48,33 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(451, 28);
+            this.lblTitle.Location = new System.Drawing.Point(387, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(356, 37);
+            this.lblTitle.Size = new System.Drawing.Size(306, 31);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Customers Feedbacks";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAveRating
             // 
             this.lblAveRating.AutoSize = true;
             this.lblAveRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAveRating.Location = new System.Drawing.Point(17, 31);
+            this.lblAveRating.Location = new System.Drawing.Point(15, 25);
             this.lblAveRating.Name = "lblAveRating";
-            this.lblAveRating.Size = new System.Drawing.Size(0, 64);
+            this.lblAveRating.Size = new System.Drawing.Size(0, 54);
             this.lblAveRating.TabIndex = 10;
             // 
             // btn1star
             // 
             this.btn1star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1star.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1star.Location = new System.Drawing.Point(11, 48);
+            this.btn1star.Location = new System.Drawing.Point(10, 38);
+            this.btn1star.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1star.Name = "btn1star";
-            this.btn1star.Size = new System.Drawing.Size(66, 31);
+            this.btn1star.Size = new System.Drawing.Size(59, 25);
             this.btn1star.TabIndex = 21;
             this.btn1star.Text = "1⭐";
             this.btn1star.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             // 
             this.btn2star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2star.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2star.Location = new System.Drawing.Point(97, 48);
+            this.btn2star.Location = new System.Drawing.Point(86, 38);
+            this.btn2star.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn2star.Name = "btn2star";
-            this.btn2star.Size = new System.Drawing.Size(66, 31);
+            this.btn2star.Size = new System.Drawing.Size(59, 25);
             this.btn2star.TabIndex = 22;
             this.btn2star.Text = "2⭐";
             this.btn2star.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // 
             this.btn3star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3star.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3star.Location = new System.Drawing.Point(185, 48);
+            this.btn3star.Location = new System.Drawing.Point(164, 38);
+            this.btn3star.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3star.Name = "btn3star";
-            this.btn3star.Size = new System.Drawing.Size(66, 31);
+            this.btn3star.Size = new System.Drawing.Size(59, 25);
             this.btn3star.TabIndex = 23;
             this.btn3star.Text = "3⭐";
             this.btn3star.UseVisualStyleBackColor = true;
@@ -105,9 +110,10 @@
             // 
             this.btn4star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4star.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4star.Location = new System.Drawing.Point(273, 48);
+            this.btn4star.Location = new System.Drawing.Point(243, 38);
+            this.btn4star.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4star.Name = "btn4star";
-            this.btn4star.Size = new System.Drawing.Size(66, 31);
+            this.btn4star.Size = new System.Drawing.Size(59, 25);
             this.btn4star.TabIndex = 24;
             this.btn4star.Text = "4⭐";
             this.btn4star.UseVisualStyleBackColor = true;
@@ -117,9 +123,10 @@
             // 
             this.btn5star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5star.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5star.Location = new System.Drawing.Point(358, 48);
+            this.btn5star.Location = new System.Drawing.Point(318, 38);
+            this.btn5star.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn5star.Name = "btn5star";
-            this.btn5star.Size = new System.Drawing.Size(66, 31);
+            this.btn5star.Size = new System.Drawing.Size(59, 25);
             this.btn5star.TabIndex = 25;
             this.btn5star.Text = "5⭐";
             this.btn5star.UseVisualStyleBackColor = true;
@@ -127,15 +134,18 @@
             // 
             // grpRating
             // 
+            this.grpRating.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grpRating.Controls.Add(this.btnShowAll);
             this.grpRating.Controls.Add(this.btn5star);
             this.grpRating.Controls.Add(this.btn4star);
             this.grpRating.Controls.Add(this.btn3star);
             this.grpRating.Controls.Add(this.btn2star);
             this.grpRating.Controls.Add(this.btn1star);
-            this.grpRating.Location = new System.Drawing.Point(516, 87);
+            this.grpRating.Location = new System.Drawing.Point(569, 70);
+            this.grpRating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpRating.Name = "grpRating";
-            this.grpRating.Size = new System.Drawing.Size(520, 109);
+            this.grpRating.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpRating.Size = new System.Drawing.Size(462, 87);
             this.grpRating.TabIndex = 26;
             this.grpRating.TabStop = false;
             this.grpRating.Text = "Sort by:";
@@ -144,10 +154,11 @@
             // 
             this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowAll.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAll.Location = new System.Drawing.Point(442, 48);
+            this.btnShowAll.Location = new System.Drawing.Point(393, 38);
+            this.btnShowAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnShowAll.Size = new System.Drawing.Size(66, 31);
+            this.btnShowAll.Size = new System.Drawing.Size(59, 25);
             this.btnShowAll.TabIndex = 26;
             this.btnShowAll.Text = "All";
             this.btnShowAll.UseVisualStyleBackColor = true;
@@ -155,20 +166,26 @@
             // 
             // dgvFeedbacks
             // 
+            this.dgvFeedbacks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFeedbacks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFeedbacks.Location = new System.Drawing.Point(89, 232);
+            this.dgvFeedbacks.Location = new System.Drawing.Point(50, 187);
+            this.dgvFeedbacks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvFeedbacks.Name = "dgvFeedbacks";
             this.dgvFeedbacks.RowHeadersWidth = 62;
             this.dgvFeedbacks.RowTemplate.Height = 28;
-            this.dgvFeedbacks.Size = new System.Drawing.Size(1000, 432);
+            this.dgvFeedbacks.Size = new System.Drawing.Size(981, 437);
             this.dgvFeedbacks.TabIndex = 31;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblAveRating);
-            this.groupBox1.Location = new System.Drawing.Point(219, 87);
+            this.groupBox1.Location = new System.Drawing.Point(50, 70);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 109);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(174, 87);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Average Rating";
@@ -177,9 +194,10 @@
             // 
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogo.Image = global::FoodiePoint_proj.Properties.Resources.output_onlinepngtools;
-            this.picLogo.Location = new System.Drawing.Point(89, 15);
+            this.picLogo.Location = new System.Drawing.Point(50, 13);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(275, 50);
+            this.picLogo.Size = new System.Drawing.Size(244, 40);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 33;
             this.picLogo.TabStop = false;
@@ -187,14 +205,16 @@
             // 
             // frmFeedbacks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 744);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvFeedbacks);
             this.Controls.Add(this.grpRating);
             this.Controls.Add(this.lblTitle);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmFeedbacks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Feedbacks";

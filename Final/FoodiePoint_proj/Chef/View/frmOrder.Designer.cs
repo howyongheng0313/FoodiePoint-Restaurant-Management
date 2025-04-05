@@ -38,8 +38,8 @@
             this.btnReturnOrder = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnProfileToOrder = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblLogo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbxOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -64,7 +64,7 @@
             // 
             this.gbxOrder.Controls.Add(this.btnCompleted);
             this.gbxOrder.Controls.Add(this.btnInProgress);
-            this.gbxOrder.Location = new System.Drawing.Point(62, 8);
+            this.gbxOrder.Location = new System.Drawing.Point(64, 8);
             this.gbxOrder.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.gbxOrder.Name = "gbxOrder";
             this.gbxOrder.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -145,14 +145,14 @@
             this.dgvOrders.RowHeadersWidth = 51;
             this.dgvOrders.RowTemplate.Height = 24;
             this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrders.Size = new System.Drawing.Size(805, 389);
+            this.dgvOrders.Size = new System.Drawing.Size(808, 389);
             this.dgvOrders.TabIndex = 7;
             this.dgvOrders.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellContentDoubleClick);
             // 
             // btnReturnOrder
             // 
             this.btnReturnOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReturnOrder.Location = new System.Drawing.Point(654, 555);
+            this.btnReturnOrder.Location = new System.Drawing.Point(657, 555);
             this.btnReturnOrder.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnReturnOrder.Name = "btnReturnOrder";
             this.btnReturnOrder.Size = new System.Drawing.Size(183, 89);
@@ -202,6 +202,18 @@
             this.btnProfileToOrder.Text = "Orders Page";
             this.btnProfileToOrder.UseVisualStyleBackColor = false;
             // 
+            // lblLogo
+            // 
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(10, 0);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(208, 98);
+            this.lblLogo.TabIndex = 17;
+            this.lblLogo.Text = "Foodie Point";
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -215,20 +227,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(613, 199);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(616, 199);
             this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblLogo.Font = new System.Drawing.Font("Jokerman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(10, 0);
-            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(208, 98);
-            this.lblLogo.TabIndex = 17;
-            this.lblLogo.Text = "Foodie Point";
-            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmOrderPage
             // 
@@ -238,6 +238,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmOrderPage";
             this.Text = "Orders Page";
             this.Load += new System.EventHandler(this.frmOrder_Load);

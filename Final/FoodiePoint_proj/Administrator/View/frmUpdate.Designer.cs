@@ -48,115 +48,133 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(247, 451);
+            this.label4.Location = new System.Drawing.Point(238, 430);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 25);
+            this.label4.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Full Name       :";
             // 
             // txtFullName
             // 
+            this.txtFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFullName.Location = new System.Drawing.Point(453, 446);
+            this.txtFullName.Location = new System.Drawing.Point(421, 426);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(513, 35);
+            this.txtFullName.Size = new System.Drawing.Size(456, 28);
             this.txtFullName.TabIndex = 24;
             // 
             // lblConfirm
             // 
+            this.lblConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirm.Location = new System.Drawing.Point(291, 377);
+            this.lblConfirm.Location = new System.Drawing.Point(277, 371);
             this.lblConfirm.Name = "lblConfirm";
-            this.lblConfirm.Size = new System.Drawing.Size(114, 25);
+            this.lblConfirm.Size = new System.Drawing.Size(104, 20);
             this.lblConfirm.TabIndex = 23;
             this.lblConfirm.Text = "Email       :";
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(453, 372);
+            this.txtEmail.Location = new System.Drawing.Point(421, 367);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(513, 35);
+            this.txtEmail.Size = new System.Drawing.Size(456, 28);
             this.txtEmail.TabIndex = 22;
             // 
             // lblPassword
             // 
+            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(202, 302);
+            this.lblPassword.Location = new System.Drawing.Point(198, 311);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(203, 25);
+            this.lblPassword.Size = new System.Drawing.Size(181, 20);
             this.lblPassword.TabIndex = 21;
             this.lblPassword.Text = "New Password       :";
             // 
             // txtNewPassword
             // 
+            this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewPassword.Location = new System.Drawing.Point(453, 297);
+            this.txtNewPassword.Location = new System.Drawing.Point(421, 307);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPassword.Multiline = true;
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(513, 35);
+            this.txtNewPassword.Size = new System.Drawing.Size(456, 28);
             this.txtNewPassword.TabIndex = 20;
             // 
             // lblUserID
             // 
+            this.lblUserID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUserID.AutoSize = true;
             this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(272, 224);
+            this.lblUserID.Location = new System.Drawing.Point(260, 248);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(133, 25);
+            this.lblUserID.Size = new System.Drawing.Size(122, 20);
             this.lblUserID.TabIndex = 19;
             this.lblUserID.Text = "User ID       :";
             // 
             // txtUserID
             // 
+            this.txtUserID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUserID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserID.Location = new System.Drawing.Point(453, 221);
+            this.txtUserID.Location = new System.Drawing.Point(421, 246);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserID.Multiline = true;
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(513, 35);
+            this.txtUserID.Size = new System.Drawing.Size(456, 28);
             this.txtUserID.TabIndex = 18;
             // 
             // lblUsername
             // 
+            this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(247, 153);
+            this.lblUsername.Location = new System.Drawing.Point(238, 191);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(159, 25);
+            this.lblUsername.Size = new System.Drawing.Size(142, 20);
             this.lblUsername.TabIndex = 17;
             this.lblUsername.Text = "Username       :";
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(550, 53);
+            this.lblTitle.Location = new System.Drawing.Point(516, 42);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(126, 40);
+            this.lblTitle.Size = new System.Drawing.Size(107, 36);
             this.lblTitle.TabIndex = 16;
             this.lblTitle.Text = "Profile";
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(453, 148);
+            this.txtUsername.Location = new System.Drawing.Point(421, 187);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(513, 35);
+            this.txtUsername.Size = new System.Drawing.Size(456, 28);
             this.txtUsername.TabIndex = 15;
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Location = new System.Drawing.Point(319, 591);
+            this.btnSave.Location = new System.Drawing.Point(290, 572);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(189, 61);
+            this.btnSave.Size = new System.Drawing.Size(168, 49);
             this.btnSave.TabIndex = 26;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -164,11 +182,13 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(698, 591);
+            this.btnCancel.Location = new System.Drawing.Point(626, 572);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(189, 61);
+            this.btnCancel.Size = new System.Drawing.Size(168, 49);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -176,12 +196,14 @@
             // 
             // picUser
             // 
+            this.picUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picUser.BackColor = System.Drawing.Color.Transparent;
             this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(485, 53);
+            this.picUser.Location = new System.Drawing.Point(458, 42);
+            this.picUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(46, 40);
+            this.picUser.Size = new System.Drawing.Size(41, 32);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUser.TabIndex = 28;
             this.picUser.TabStop = false;
@@ -189,10 +211,10 @@
             // frmUpdate
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(1178, 744);
+            this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -207,6 +229,8 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtUsername);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Profile";
