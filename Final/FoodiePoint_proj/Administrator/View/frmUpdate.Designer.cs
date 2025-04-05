@@ -54,8 +54,8 @@
             this.lblFullName.Location = new System.Drawing.Point(238, 430);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(142, 20);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Full Name       :";
+            this.lblFullName.TabIndex = 25;
+            this.lblFullName.Text = "Full Name       :";
             // 
             // txtFullName
             // 

@@ -249,7 +249,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.grrpUsers, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.grpUsers, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.grpSales, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 200);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
