@@ -20,11 +20,11 @@ namespace Customer
     {
         private Reservation currentReservation;
         private LoginCredent _currentUser;
+        string ResvID;
 
         public frmBooking(Reservation currentReservation)
         {
             InitializeComponent();
-
             this.currentReservation = currentReservation;
             lblresID.Text = currentReservation.ReservationID;
             txtResType.Text = currentReservation.ReservationType;
@@ -77,8 +77,13 @@ namespace Customer
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@ReservationID", lblresID.Text);
-                    int count = (int)cmd.ExecuteScalar();
-
+                    //int count = (int)cmd.ExecuteScalar();
+                    int count = 0;
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = (int)result;
+                    }
                     if (count > 0) // If ReservationID exists, UPDATE instead of INSERT
                     {
                         string updateQuery = "UPDATE Reservations SET ReservationType = @ResType, ReservationDate = @ResDate, GuestCount = @GuestCount WHERE ReservationID = @ReservationID";
@@ -158,6 +163,18 @@ namespace Customer
             {
                 MessageBox.Show("Please enter text before sending request.");
             }
+        }
+
+        private void lblReservationType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmBooking_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'foodieDbDataSet.Reservations' table. You can move, or remove it, as needed.
+            this.reservationsTableAdapter.Fill(this.foodieDbDataSet.Reservations);
+
         }
     } 
 }

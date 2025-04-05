@@ -121,5 +121,10 @@ namespace Manager
             bt.MainMenu();
             this.Hide();
         }
+
+        private void itemIDtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

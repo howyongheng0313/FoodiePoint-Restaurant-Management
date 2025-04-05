@@ -9,6 +9,7 @@ namespace Customer
 {
     public class Reservation
     {
+
         public string ReservationID { get; set; }
         public string HallID { get; set; }
         public string UserID { get; set; }
