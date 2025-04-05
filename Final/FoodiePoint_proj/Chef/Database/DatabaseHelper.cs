@@ -59,8 +59,29 @@ namespace FoodiePointManagementSystem.Database
                     return false;
                 }
             }
+        }
 
-            
+        public object ExecuteScalar(string query)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cod = new SqlCommand(query, connection))
+                    {
+                        return cod.ExecuteScalar();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message);
+                return null;
+            }
         }
     }
 }
+
+
+

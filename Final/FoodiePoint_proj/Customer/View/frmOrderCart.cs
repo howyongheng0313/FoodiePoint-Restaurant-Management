@@ -1,5 +1,6 @@
 ﻿using Admin.Presenter;
 using Customer.Presenter;
+using FoodiePointManagementSystem.Presenter;
 using Reservation_Coordinator.Model;
 using System;
 using System.Collections.Generic;
@@ -48,17 +49,84 @@ namespace Customer
         {
             InitializeComponent();
         }
-
         private void btnPay_Click(object sender, EventArgs e)
         {
-            OrderFood.pay_food(dgv);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+            if (_currentUser == null)
+            {
+                MessageBox.Show("Please login before ordering.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                OrderService orderService = new OrderService();
+
+                // Create the order first
+                string orderID = orderService.CreateOrder(_currentUser.UserID);
+
+                if (orderID != null)
+                {
+                    // Add each item to the order
+                    bool allItemsAdded = true;
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (!row.IsNewRow) // Skip the empty row at the end if present
+                        {
+                            string itemID = row.Cells["FoodID"].Value.ToString();
+                            int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                            bool itemAdded = orderService.AddOrderItem(orderID, itemID, quantity);
+                            if (!itemAdded)
+                            {
+                                allItemsAdded = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (allItemsAdded)
+                    {
+                        MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error adding items to order.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error placing order: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            OrderFood.dlt_rowitem(dgv);
+            try
+            {
+                if (dgv.SelectedRows.Count > 0)
+                {
+                    // Get the food price and quantity before removing
+                    decimal price = Convert.ToDecimal(dgv.SelectedRows[0].Cells["FoodPrice"].Value);
+                    int qty = Convert.ToInt32(dgv.SelectedRows[0].Cells["Quantity"].Value);
+
+                    // Remove the row
+                    OrderFood.dlt_rowitem(dgv);
+
+                    // Update the total
+                    total -= price * qty;
+                    label1.Text = $"Total Price: " + total.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting item: " + ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

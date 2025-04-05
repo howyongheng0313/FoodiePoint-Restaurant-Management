@@ -16,11 +16,11 @@ namespace Customer.Presenter
 {
     public class OrderFood
     {
-        public string ID;
-        public string FoodName;
-        public decimal FoodPrice;
-        public string Catagory;
-        public int Quantity;
+        public string ID { get; set; }
+        public string FoodName { get; set; }
+        public decimal FoodPrice { get; set; }
+        public string Catagory { get; set; }
+        public int Quantity { get; set; }
         public OrderFood(string ID, string FoodName, decimal FoodPrice, string Catagory)
         {
             this.ID = ID;
@@ -33,123 +33,131 @@ namespace Customer.Presenter
         {
             if (dgv.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dgv.SelectedRows)
-                {
-                    dgv.Rows.Remove(row);
-                }
+                dgv.Rows.RemoveAt(dgv.SelectedRows[0].Index);
             }
             else
             {
                 MessageBox.Show("Please select a row to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         public static decimal add_oneitem(DataGridView dgv)
         {
-            if (dgv.SelectedRows.Count == 1)
-            {
-                int currentQty = Convert.ToInt32(dgv.SelectedRows[0].Cells["Quantity"].Value);
-                dgv.SelectedRows[0].Cells["Quantity"].Value = currentQty + 1;
-                decimal currentPrice = Convert.ToDecimal(dgv.SelectedRows[0].Cells["FoodPrice"].Value);
-                return currentPrice;
-            }
-            else
-            {
-                MessageBox.Show("Please select a row before adding the quantity...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return 0;
-            }
-        }
+            decimal addedPrice = 0;
 
+            if (dgv.SelectedRows.Count > 0)
+            {
+                int rowIndex = dgv.SelectedRows[0].Index;
+                int currentQty = Convert.ToInt32(dgv.Rows[rowIndex].Cells["Quantity"].Value);
+                decimal price = Convert.ToDecimal(dgv.Rows[rowIndex].Cells["FoodPrice"].Value);
+
+                dgv.Rows[rowIndex].Cells["Quantity"].Value = currentQty + 1;
+                addedPrice = price;
+            }
+
+            return addedPrice;
+        }
         public static decimal dlt_oneitem(DataGridView dgv)
         {
-            if (dgv.SelectedRows.Count == 1)
+            decimal removedPrice = 0;
+
+            if (dgv.SelectedRows.Count > 0)
             {
-                
-                int currentQty = Convert.ToInt32(dgv.SelectedRows[0].Cells["Quantity"].Value);
-                dgv.SelectedRows[0].Cells["Quantity"].Value = currentQty - 1;
-                decimal currentPrice = Convert.ToDecimal(dgv.SelectedRows[0].Cells["FoodPrice"].Value);
-                return currentPrice;
-                
+                int rowIndex = dgv.SelectedRows[0].Index;
+                int currentQty = Convert.ToInt32(dgv.Rows[rowIndex].Cells["Quantity"].Value);
+                decimal price = Convert.ToDecimal(dgv.Rows[rowIndex].Cells["FoodPrice"].Value);
+
+                if (currentQty > 1)
+                {
+                    // Decrement quantity
+                    dgv.Rows[rowIndex].Cells["Quantity"].Value = currentQty - 1;
+                    removedPrice = price;
+                }
+                else
+                {
+                    MessageBox.Show("Quantity cannot be less than 1.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
-            {
-                MessageBox.Show("Please select a row before deleting the quantity...", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return 0;
-            }
+
+            return removedPrice;
         }
 
         public static void pay_food(DataGridView dgv)
         {
-
-            string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ToString(); // Update this with your actual DB connection
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-
-                foreach (DataGridViewRow row in dgv.Rows)
+                string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    if (!row.IsNewRow) // Ignore empty rows
+                    conn.Open();
+
+                    // First, create a new order in the Orders table
+                    string orderID = GenerateOrderID(conn);
+                    string userID = GetCurrentUserID();
+                    DateTime orderDateTime = DateTime.Now;
+                    string orderStatus = "Pending";
+
+                    // SQL to insert into Orders table
+                    string orderInsertQuery = "INSERT INTO Orders (OrderID, UserID, DateTime, OrderStatus) VALUES (@OrderID, @UserID, @DateTime, @OrderStatus)";
+                    using (SqlCommand cmd = new SqlCommand(orderInsertQuery, conn))
                     {
-                        string itemID = row.Cells[0].Value.ToString();
-                        string itemName = row.Cells[1].Value.ToString();
-                        decimal itemPrice = Convert.ToDecimal(row.Cells[2].Value);
-                        string itemCategory = row.Cells[3].Value.ToString();
+                        cmd.Parameters.AddWithValue("@OrderID", orderID);
+                        cmd.Parameters.AddWithValue("@UserID", userID);
+                        cmd.Parameters.AddWithValue("@DateTime", orderDateTime);
+                        cmd.Parameters.AddWithValue("@OrderStatus", orderStatus);
+                        cmd.ExecuteNonQuery();
+                    }
 
-
-                        string query = "INSERT INTO OrderItems (ItemID, ItemName, ItemPrice, ItemCategory) + " +
-                                       "VALUES (@ItemID, @ItemName, @ItemPrice, @ItemCategory)";
-
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                    // Then, add each item to the OrderItem table
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (!row.IsNewRow) // Skip the empty row at the end if present
                         {
-                            cmd.Parameters.AddWithValue("@ItemID", itemID);
-                            cmd.Parameters.AddWithValue("@ItemName", itemName);
-                            cmd.Parameters.AddWithValue("@ItemPrice", itemPrice);
-                            cmd.Parameters.AddWithValue("@ItemCategory", itemCategory);
+                            string itemID = row.Cells["FoodID"].Value.ToString();
+                            int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
 
-
-                            //cmd.ExecuteNonQuery();
+                            // SQL to insert into OrderItem table
+                            string itemInsertQuery = "INSERT INTO OrderItem (OrderID, ItemID, Quantity) VALUES (@OrderID, @ItemID, @Quantity)";
+                            using (SqlCommand itemCmd = new SqlCommand(itemInsertQuery, conn))
+                            {
+                                itemCmd.Parameters.AddWithValue("@OrderID", orderID);
+                                itemCmd.Parameters.AddWithValue("@ItemID", itemID);
+                                itemCmd.Parameters.AddWithValue("@Quantity", quantity);
+                                itemCmd.ExecuteNonQuery();
+                            }
                         }
                     }
-                }
 
-                MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgv.Rows.Clear();
+                    MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error placing order: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private static string GenerateOrderID(SqlConnection connection)
+        {
+            // Get the current highest ID from the Orders table
+            string query = "SELECT MAX(ID) FROM Orders";
+            int maxID = 0;
 
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != DBNull.Value && result != null)
+                {
+                    maxID = Convert.ToInt32(result);
+                }
+            }
 
+            int newID = maxID + 1;
+            return "OD" + newID.ToString("D3");
+        }
 
-        //}
-        //public DataTable GetAllItem()
-        //{
-        //    string query = "SELECT * FROM Menu";
-        //    return dbHelper.ExecuteQuery(query);
-        //}
-
-        //public DataTable searchItem(string searchItemName)
-        //{
-        //    string query = $"SELECT * FROM Menu WHERE ItemName = '{searchItemName}' " ;
-        //    return dbHelper.ExecuteQuery(query);
-        //}
-
-        //public bool addItem()
-        //{
-        //    string query = "";
-        //    return ;
-        //}
-
-        //public bool editItem()
-        //{
-        //    string query = "UPDATE";
-        //    return;
-        //}
-
-        //public bool deleteItem()
-        //{
-        //    string query = "DELETE FROM Menu WHERE ItemName = ";
-        //    return;
-        //}
+        private static string GetCurrentUserID()
+        {
+            return "U001"; 
+        }
     }
 }
 
