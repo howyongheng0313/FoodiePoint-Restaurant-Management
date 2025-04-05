@@ -49,6 +49,7 @@ namespace Customer
         {
             InitializeComponent();
         }
+
         private void btnPay_Click(object sender, EventArgs e)
         {
             if (_currentUser == null)
@@ -59,41 +60,21 @@ namespace Customer
 
             try
             {
-                OrderService orderService = new OrderService();
-
                 // Create the order first
-                string orderID = orderService.CreateOrder(_currentUser.UserID);
+                string orderID = OrderFood.CreateOrder(_currentUser.UserID);
 
                 if (orderID != null)
                 {
                     // Add each item to the order
-                    bool allItemsAdded = true;
-                    foreach (DataGridViewRow row in dgv.Rows)
-                    {
-                        if (!row.IsNewRow) // Skip the empty row at the end if present
-                        {
-                            string itemID = row.Cells["FoodID"].Value.ToString();
-                            int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
-
-                            bool itemAdded = orderService.AddOrderItem(orderID, itemID, quantity);
-                            if (!itemAdded)
-                            {
-                                allItemsAdded = false;
-                                break;
-                            }
-                        }
-                    }
-
-                    if (allItemsAdded)
-                    {
-                        MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
-                    else
+                    int result = OrderFood.AddOrderItems(dgv.Rows, orderID);
+                    if (result == -1)
                     {
                         MessageBox.Show("Error adding items to order.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
+                    MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
             }
             catch (Exception ex)

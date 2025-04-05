@@ -263,7 +263,7 @@
             this.txtStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtStatus.Location = new System.Drawing.Point(26, 611);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(166, 23);
+            this.txtStatus.Size = new System.Drawing.Size(166, 27);
             this.txtStatus.TabIndex = 55;
             // 
             // label8
@@ -274,7 +274,7 @@
             this.label8.Location = new System.Drawing.Point(21, 590);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(169, 18);
+            this.label8.Size = new System.Drawing.Size(210, 24);
             this.label8.TabIndex = 54;
             this.label8.Text = "Filter Reservation Status";
             // 
@@ -283,7 +283,7 @@
             this.txtUserID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtUserID.Location = new System.Drawing.Point(326, 521);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(91, 23);
+            this.txtUserID.Size = new System.Drawing.Size(91, 27);
             this.txtUserID.TabIndex = 53;
             // 
             // label7
@@ -294,7 +294,7 @@
             this.label7.Location = new System.Drawing.Point(323, 500);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 18);
+            this.label7.Size = new System.Drawing.Size(117, 24);
             this.label7.TabIndex = 52;
             this.label7.Text = "Filter User ID";
             // 
@@ -303,7 +303,7 @@
             this.txtHallID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtHallID.Location = new System.Drawing.Point(203, 521);
             this.txtHallID.Name = "txtHallID";
-            this.txtHallID.Size = new System.Drawing.Size(84, 23);
+            this.txtHallID.Size = new System.Drawing.Size(84, 27);
             this.txtHallID.TabIndex = 51;
             // 
             // label6
@@ -314,7 +314,7 @@
             this.label6.Location = new System.Drawing.Point(200, 500);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 18);
+            this.label6.Size = new System.Drawing.Size(110, 24);
             this.label6.TabIndex = 50;
             this.label6.Text = "Filter Hall ID";
             // 
@@ -323,7 +323,7 @@
             this.txtReservationID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtReservationID.Location = new System.Drawing.Point(24, 521);
             this.txtReservationID.Name = "txtReservationID";
-            this.txtReservationID.Size = new System.Drawing.Size(140, 23);
+            this.txtReservationID.Size = new System.Drawing.Size(140, 27);
             this.txtReservationID.TabIndex = 49;
             // 
             // label5
@@ -334,7 +334,7 @@
             this.label5.Location = new System.Drawing.Point(23, 500);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 18);
+            this.label5.Size = new System.Drawing.Size(177, 24);
             this.label5.TabIndex = 48;
             this.label5.Text = "Filter Reservation ID";
             // 
@@ -355,7 +355,7 @@
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.Location = new System.Drawing.Point(586, 521);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(156, 23);
+            this.txtSearch.Size = new System.Drawing.Size(156, 27);
             this.txtSearch.TabIndex = 46;
             // 
             // label4
@@ -366,14 +366,14 @@
             this.label4.Location = new System.Drawing.Point(583, 500);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 18);
+            this.label4.Size = new System.Drawing.Size(203, 24);
             this.label4.TabIndex = 45;
             this.label4.Text = "Filter Reservation Type";
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(691, 629);
+            this.button4.Location = new System.Drawing.Point(694, 629);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(155, 31);
@@ -403,7 +403,7 @@
             this.monthCmbBox.Location = new System.Drawing.Point(456, 519);
             this.monthCmbBox.Margin = new System.Windows.Forms.Padding(4);
             this.monthCmbBox.Name = "monthCmbBox";
-            this.monthCmbBox.Size = new System.Drawing.Size(83, 25);
+            this.monthCmbBox.Size = new System.Drawing.Size(83, 28);
             this.monthCmbBox.TabIndex = 43;
             this.monthCmbBox.SelectedIndexChanged += new System.EventHandler(this.monthCmbBox_SelectedIndexChanged);
             // 
@@ -415,7 +415,7 @@
             this.label10.Location = new System.Drawing.Point(453, 500);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 18);
+            this.label10.Size = new System.Drawing.Size(109, 24);
             this.label10.TabIndex = 42;
             this.label10.Text = "Filter Month";
             // 
@@ -449,7 +449,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(817, 395);
             this.dataGridView1.TabIndex = 40;
             // 
             // reservationIDDataGridViewTextBoxColumn
@@ -525,7 +525,7 @@
             this.label3.Location = new System.Drawing.Point(17, 62);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 24);
+            this.label3.Size = new System.Drawing.Size(152, 29);
             this.label3.TabIndex = 20;
             this.label3.Text = "Reservation";
             // 
@@ -536,7 +536,7 @@
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 26);
+            this.label1.Size = new System.Drawing.Size(267, 32);
             this.label1.TabIndex = 19;
             this.label1.Text = "Welcome, Mr. David";
             // 
@@ -551,7 +551,7 @@
             // 
             // frmReservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 673);
             this.Controls.Add(this.splitContainer1);

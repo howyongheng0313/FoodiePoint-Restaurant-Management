@@ -118,7 +118,7 @@
             this.pnlContent.Location = new System.Drawing.Point(0, 98);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(862, 575);
+            this.pnlContent.Size = new System.Drawing.Size(853, 575);
             this.pnlContent.TabIndex = 9;
             // 
             // lblTitle
@@ -128,7 +128,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(3, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(856, 67);
+            this.lblTitle.Size = new System.Drawing.Size(859, 67);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "TITLE";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

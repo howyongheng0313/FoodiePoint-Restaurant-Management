@@ -81,82 +81,62 @@ namespace Customer.Presenter
             return removedPrice;
         }
 
-        public static void pay_food(DataGridView dgv)
+        public static string CreateOrder(string userID)
         {
             try
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["FoodiePointDB"].ConnectionString;
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                object result;
+                string query = $"INSERT INTO Orders (UserID, DateTime, OrderStatus) " +
+                               $"VALUES ('{userID}', '{DateTime.Now}', 'Pending'); " +
+                               $"SELECT OrderID FROM Orders WHERE ID = SCOPE_IDENTITY();";
+                using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
                 {
-                    conn.Open();
-
-                    // First, create a new order in the Orders table
-                    string orderID = GenerateOrderID(conn);
-                    string userID = GetCurrentUserID();
-                    DateTime orderDateTime = DateTime.Now;
-                    string orderStatus = "Pending";
-
-                    // SQL to insert into Orders table
-                    string orderInsertQuery = "INSERT INTO Orders (OrderID, UserID, DateTime, OrderStatus) VALUES (@OrderID, @UserID, @DateTime, @OrderStatus)";
-                    using (SqlCommand cmd = new SqlCommand(orderInsertQuery, conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@OrderID", orderID);
-                        cmd.Parameters.AddWithValue("@UserID", userID);
-                        cmd.Parameters.AddWithValue("@DateTime", orderDateTime);
-                        cmd.Parameters.AddWithValue("@OrderStatus", orderStatus);
-                        cmd.ExecuteNonQuery();
+                        conn.Open();
+                        result = cmd.ExecuteScalar();
+                        conn.Close();
                     }
-
-                    // Then, add each item to the OrderItem table
-                    foreach (DataGridViewRow row in dgv.Rows)
-                    {
-                        if (!row.IsNewRow) // Skip the empty row at the end if present
-                        {
-                            string itemID = row.Cells["FoodID"].Value.ToString();
-                            int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
-
-                            // SQL to insert into OrderItem table
-                            string itemInsertQuery = "INSERT INTO OrderItem (OrderID, ItemID, Quantity) VALUES (@OrderID, @ItemID, @Quantity)";
-                            using (SqlCommand itemCmd = new SqlCommand(itemInsertQuery, conn))
-                            {
-                                itemCmd.Parameters.AddWithValue("@OrderID", orderID);
-                                itemCmd.Parameters.AddWithValue("@ItemID", itemID);
-                                itemCmd.Parameters.AddWithValue("@Quantity", quantity);
-                                itemCmd.ExecuteNonQuery();
-                            }
-                        }
-                    }
-
-                    MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                if (result != null)
+                    return result.ToString();
+                else
+                    throw new Exception("Failed to retrieve OrderID after creating order");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error placing order: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error creating order: " + ex.Message);
+                return null;
             }
         }
-        private static string GenerateOrderID(SqlConnection connection)
-        {
-            // Get the current highest ID from the Orders table
-            string query = "SELECT MAX(ID) FROM Orders";
-            int maxID = 0;
 
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+        public static int AddOrderItems(DataGridViewRowCollection dgvRow, string orderID)
+        {
+            string query = "INSERT INTO OrderItem (OrderID, ItemID, Quantity) VALUES ";
+            bool not_first = false;
+            foreach (DataGridViewRow row in dgvRow)
             {
-                var result = cmd.ExecuteScalar();
-                if (result != DBNull.Value && result != null)
+                if (row.IsNewRow) break;
+                if (not_first) query += ",";
+                else not_first = true;
+
+                string itemID = row.Cells["FoodID"].Value.ToString();
+                int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+                query += $"('{orderID}', '{itemID}', {quantity})";
+            }
+            if (!not_first) return 0;
+
+            int result;
+            using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    maxID = Convert.ToInt32(result);
+                    conn.Open();
+                    result = cmd.ExecuteNonQuery();
+                    conn.Close();
                 }
             }
-
-            int newID = maxID + 1;
-            return "OD" + newID.ToString("D3");
-        }
-
-        private static string GetCurrentUserID()
-        {
-            return "U001"; 
+            return result;
         }
     }
 }

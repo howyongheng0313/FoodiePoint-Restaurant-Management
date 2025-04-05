@@ -20,7 +20,6 @@ namespace Customer
     {
         private Reservation currentReservation;
         private LoginCredent _currentUser;
-        string ResvID;
 
         public frmBooking(Reservation currentReservation)
         {
