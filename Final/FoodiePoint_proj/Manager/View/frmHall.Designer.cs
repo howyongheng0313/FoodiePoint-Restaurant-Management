@@ -125,7 +125,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -144,7 +143,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewHall);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
             this.splitContainer1.SplitterDistance = 228;
             this.splitContainer1.SplitterWidth = 1;
@@ -354,7 +352,6 @@
             this.dataGridViewHall.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHall.Size = new System.Drawing.Size(823, 400);
             this.dataGridViewHall.TabIndex = 13;
-            this.dataGridViewHall.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHall_CellContentClick);
             // 
             // hallIDDataGridViewTextBoxColumn
             // 

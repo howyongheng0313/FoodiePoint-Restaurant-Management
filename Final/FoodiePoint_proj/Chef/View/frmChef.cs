@@ -26,11 +26,6 @@ namespace FoodiePointManagementSystem
             _currentUser = user;
         }
 
-        private void frmChef_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOrder_Click(object sender, EventArgs e)
         {
             frmOrderPage frmOrder = new frmOrderPage();

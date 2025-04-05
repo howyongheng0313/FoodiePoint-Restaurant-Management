@@ -113,7 +113,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -130,7 +129,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewMenu);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
             this.splitContainer1.SplitterDistance = 228;
             this.splitContainer1.SplitterWidth = 1;
@@ -290,7 +288,6 @@
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 28;
             this.label4.Text = "Item Name";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label7
             // 
@@ -344,8 +341,6 @@
             this.dataGridViewMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewMenu.Size = new System.Drawing.Size(632, 483);
             this.dataGridViewMenu.TabIndex = 17;
-            this.dataGridViewMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuItem_CellClick);
-            this.dataGridViewMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMenu_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -412,7 +407,6 @@
             this.label1.Size = new System.Drawing.Size(209, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome, Mr. David";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuBindingSource1
             // 
@@ -475,10 +469,6 @@
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.BindingSource menuBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemCategoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
         private FoodieDbDataSet foodieDbDataSet;
         private System.Windows.Forms.BindingSource menuBindingSource1;

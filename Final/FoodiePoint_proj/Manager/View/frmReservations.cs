@@ -29,42 +29,10 @@ namespace Manager
             label1.Text = $"Welcome, {_currentUser.FullName}";
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmRseservations_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'foodieDbDataSet.Reservations' table. You can move, or remove it, as needed.
             this.reservationsTableAdapter.Fill(this.foodieDbDataSet.Reservations);
-
-        }
-
-
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rsTypetxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -109,25 +77,10 @@ namespace Manager
             bt.Profile();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             string searchid = txtReservationID.Text;
             db.SearchReservationID(dataGridView1, "Reservations", searchid);
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -152,11 +105,6 @@ namespace Manager
         {
             string searchstatus = txtStatus.Text;
             db.SearchReservationStatus(dataGridView1, "Reservations", searchstatus);
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

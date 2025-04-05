@@ -37,26 +37,6 @@ namespace Manager
             lblHallID.Text = HallID;
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -84,12 +64,6 @@ namespace Manager
         {
             // TODO: This line of code loads data into the 'foodieDbDataSet.Halls' table. You can move, or remove it, as needed.
             this.hallsTableAdapter.Fill(this.foodieDbDataSet.Halls);
-
-        }
-
-        private void hallIdTxt_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,11 +87,6 @@ namespace Manager
         {
             this.Hide();
             button.EditHall();
-        }
-
-        private void dataGridViewHall_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

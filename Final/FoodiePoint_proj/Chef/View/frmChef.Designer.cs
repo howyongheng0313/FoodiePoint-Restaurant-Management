@@ -123,7 +123,6 @@
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmChef";
             this.Text = "Chef Main Page";
-            this.Load += new System.EventHandler(this.frmChef_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

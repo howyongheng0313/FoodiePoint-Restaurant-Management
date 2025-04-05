@@ -31,22 +31,6 @@ namespace Manager
         {
             // TODO: This line of code loads data into the 'foodieDbDataSet.Menu' table. You can move, or remove it, as needed.
             this.menuTableAdapter.Fill(this.foodieDbDataSet.Menu);
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -121,9 +105,7 @@ namespace Manager
             {
                 MessageBox.Show(item);
             }
-
         }
-        
 
         private void button4_Click(object sender, EventArgs e)
         {

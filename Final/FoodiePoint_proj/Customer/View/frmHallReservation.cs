@@ -46,21 +46,11 @@ namespace Customer
             }
         }
 
-        private void btnBook_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             frmMenuPage obj1 = new frmMenuPage();
             obj1.SetUser(_currentUser);
             Jumper.Shift(obj1);
-        }
-
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

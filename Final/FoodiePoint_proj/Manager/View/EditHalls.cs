@@ -34,26 +34,6 @@ namespace Manager
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -67,11 +47,6 @@ namespace Manager
                 hallCapacityTxt.Text = dataGridView1.Rows[selectedRowIndex].Cells[3].Value.ToString();
                 availabilityCmb.Text = dataGridView1.Rows[selectedRowIndex].Cells[4].Value.ToString();
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -122,17 +97,11 @@ namespace Manager
             bt.Profile();
         }
 
-        private void hallIdTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
             bt.HallMgmt();
         }
     }
-    
 }
 

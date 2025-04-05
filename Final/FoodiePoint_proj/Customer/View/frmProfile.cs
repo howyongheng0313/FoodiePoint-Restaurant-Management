@@ -46,14 +46,8 @@ namespace Customer
             Jumper.Shift(obj1);
         }
 
-        private void frmCustomerMain_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnSendFeedback_Click(object sender, EventArgs e)
         {
-            //string userID = tbxUsername.Text;
-            //string userpass = tbxPassword.Text;
             string feedbacks = rtbxFeedback.Text;
             string rating = cmbRating.Text;
 
@@ -88,21 +82,6 @@ namespace Customer
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-        }
-
-        private void lblFeedback_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rtbxFeedback_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)

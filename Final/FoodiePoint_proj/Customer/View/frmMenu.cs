@@ -129,20 +129,10 @@ namespace Customer
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Search_btn_Click(object sender, EventArgs e)
         {
             string searchText = search_txt.Text.Trim();
             LoadTableData(searchText); 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)

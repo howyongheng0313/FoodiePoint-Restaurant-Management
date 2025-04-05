@@ -95,7 +95,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -121,7 +120,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1082, 673);
             this.splitContainer1.SplitterDistance = 228;
             this.splitContainer1.SplitterWidth = 1;
@@ -224,7 +222,6 @@
             this.button11.TabIndex = 60;
             this.button11.Text = "Search";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button7
             // 
@@ -353,7 +350,6 @@
             this.label5.Size = new System.Drawing.Size(177, 24);
             this.label5.TabIndex = 48;
             this.label5.Text = "Filter Reservation ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
@@ -374,7 +370,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(156, 27);
             this.txtSearch.TabIndex = 46;
-            this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -387,7 +382,6 @@
             this.label4.Size = new System.Drawing.Size(203, 24);
             this.label4.TabIndex = 45;
             this.label4.Text = "Filter Reservation Type";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button4
             // 
@@ -470,7 +464,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(817, 395);
             this.dataGridView1.TabIndex = 40;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // reservationIDDataGridViewTextBoxColumn
             // 

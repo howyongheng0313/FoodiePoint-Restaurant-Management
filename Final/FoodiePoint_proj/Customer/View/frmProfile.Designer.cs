@@ -143,7 +143,6 @@
             this.btnProfile.TabIndex = 10;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // lblFoodiePoint
             // 
@@ -194,7 +193,6 @@
             this.lblFeedback.Size = new System.Drawing.Size(81, 20);
             this.lblFeedback.TabIndex = 16;
             this.lblFeedback.Text = "Feedback";
-            this.lblFeedback.Click += new System.EventHandler(this.lblFeedback_Click);
             // 
             // rtbxFeedback
             // 
@@ -205,7 +203,6 @@
             this.rtbxFeedback.Size = new System.Drawing.Size(659, 122);
             this.rtbxFeedback.TabIndex = 10;
             this.rtbxFeedback.Text = "";
-            this.rtbxFeedback.TextChanged += new System.EventHandler(this.rtbxFeedback_TextChanged);
             // 
             // btnSendFeedback
             // 
@@ -244,7 +241,6 @@
             this.Name = "frmCustomerMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customer Main Page";
-            this.Load += new System.EventHandler(this.frmCustomerMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();

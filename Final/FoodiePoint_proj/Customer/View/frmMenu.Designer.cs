@@ -174,7 +174,6 @@
             this.search_txt.Name = "search_txt";
             this.search_txt.Size = new System.Drawing.Size(562, 27);
             this.search_txt.TabIndex = 10;
-            this.search_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -191,7 +190,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(801, 464);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnViewOrder
             // 

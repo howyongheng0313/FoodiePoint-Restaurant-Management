@@ -39,15 +39,6 @@ namespace Manager
             FoodID = $"I{row}";
             lblItemID.Text = FoodID;
         }
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -78,21 +69,6 @@ namespace Manager
             this.menuTableAdapter.Fill(this.foodieDbDataSet.Menu);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuItem_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -110,24 +86,10 @@ namespace Manager
             this.button2.Click += new EventHandler(this.initializeFoodItemID);
         }
 
-        private void dataGridViewMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             button.EditMenu();
-        }
-
-        private void itemIDtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
