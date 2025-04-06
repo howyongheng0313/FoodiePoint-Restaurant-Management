@@ -132,6 +132,9 @@ namespace FoodiePointManagementSystem
                 dgvOrders.Refresh();
 
                 btnReturnOrder.Visible = true;
+                btnInProgress.Visible = false;
+                btnCompleted.Visible = false;
+                gbxOrder.Visible = false;
 
                 MessageBox.Show($"Order items shown for {selectedOrderID}");
             }
@@ -161,6 +164,9 @@ namespace FoodiePointManagementSystem
             MessageBox.Show("Order list is returned!");
 
             btnReturnOrder.Visible = false;
+            btnInProgress.Visible = true;
+            btnCompleted.Visible = true;
+            gbxOrder.Visible = true;
         }
 
         // Button to navigate to chef form
