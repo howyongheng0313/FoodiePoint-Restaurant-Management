@@ -86,9 +86,12 @@ namespace Customer.Presenter
             try
             {
                 object result;
+                string formattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
                 string query = $"INSERT INTO Orders (UserID, DateTime, OrderStatus) " +
-                               $"VALUES ('{userID}', '{DateTime.Now}', 'Pending'); " +
+                               $"VALUES ('{userID}', '{formattedDate}', 'Pending'); " +
                                $"SELECT OrderID FROM Orders WHERE ID = SCOPE_IDENTITY();";
+
                 using (SqlConnection conn = new SqlConnection(DatabaseHelper.connectionString))
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -98,6 +101,7 @@ namespace Customer.Presenter
                         conn.Close();
                     }
                 }
+
                 if (result != null)
                     return result.ToString();
                 else
