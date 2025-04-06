@@ -17,11 +17,6 @@ namespace Admin.Model
         {
             _connectionString = connectionString;
         }
-
-        /// <summary>
-        /// Gets the list of years for which sales data is available
-        /// </summary>
-        /// <returns>DataTable containing years</returns>
         public DataTable GetAvailableYears()
         {
             DataTable yearsTable = new DataTable();
@@ -51,11 +46,6 @@ namespace Admin.Model
             return yearsTable;
         }
 
-        /// <summary>
-        /// Gets monthly sales data for a specific year
-        /// </summary>
-        /// <param name="year">The year to get sales data for</param>
-        /// <returns>DataTable with Month and TotalSales columns</returns>
         public DataTable GetMonthlySalesData(int year)
         {
             DataTable salesData = new DataTable();
@@ -95,12 +85,6 @@ namespace Admin.Model
 
             return salesData;
         }
-
-        /// <summary>
-        /// Gets sales data categorized by menu item categories for a specific year
-        /// </summary>
-        /// <param name="year">The year to get sales data for</param>
-        /// <returns>DataTable with ItemCategory and TotalSales columns</returns>
         public DataTable GetCategorySalesData(int year)
         {
             DataTable categoryData = new DataTable();

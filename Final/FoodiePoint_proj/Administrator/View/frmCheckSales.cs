@@ -83,7 +83,6 @@ namespace Admin.View
                 // Add the series to the chart
                 chartReport.Series.Add(salesSeries);
 
-                // Prepare data for all 12 months (including months with zero sales)
                 string[] monthNames = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
                 decimal[] monthlySales = new decimal[12];
 
@@ -93,7 +92,6 @@ namespace Admin.View
                     monthlySales[i] = 0;
                 }
 
-                // Fill in the actual sales data
                 foreach (DataRow row in salesData.Rows)
                 {
                     int month = Convert.ToInt32(row["Month"]);
@@ -114,21 +112,17 @@ namespace Admin.View
                     salesSeries.Points.Add(point);
                 }
 
-                // Set chart title
                 Title title = new Title($"Monthly Sales for {year}", Docking.Top);
                 title.Font = new Font("Arial", 14, FontStyle.Bold);
                 chartReport.Titles.Add(title);
 
-                // Configure X-axis
                 chartArea.AxisX.Title = "Month";
                 chartArea.AxisX.TitleFont = new Font("Arial", 10, FontStyle.Bold);
 
-                // Configure Y-axis
                 chartArea.AxisY.Title = "Total Sales ($)";
                 chartArea.AxisY.TitleFont = new Font("Arial", 10, FontStyle.Bold);
-                chartArea.AxisY.LabelStyle.Format = "C0"; // Currency format without decimal places
+                chartArea.AxisY.LabelStyle.Format = "C0";
 
-                // Refresh the chart
                 chartReport.Invalidate();
             }
             catch (Exception ex)
@@ -148,7 +142,6 @@ namespace Admin.View
             int selectedYear = int.Parse(cmbYear.SelectedItem.ToString());
             GenerateCategorySalesChart(selectedYear);
         }
-
         private void GenerateCategorySalesChart(int year)
         {
             try
@@ -161,7 +154,6 @@ namespace Admin.View
                     return;
                 }
 
-                // Clear existing series and points
                 chartReport.Series.Clear();
                 chartReport.ChartAreas.Clear();
                 chartReport.Titles.Clear();
@@ -194,32 +186,25 @@ namespace Admin.View
                     point.LabelForeColor = Color.Black;
                 }
 
-                // Set chart title
                 Title title = new Title($"Sales by Category for {year}", Docking.Top);
                 title.Font = new Font("Arial", 14, FontStyle.Bold);
                 chartReport.Titles.Add(title);
 
-                // Configure X-axis
                 chartArea.AxisX.Title = "Category";
                 chartArea.AxisX.TitleFont = new Font("Arial", 10, FontStyle.Bold);
                 chartArea.AxisX.Interval = 1;
                 chartArea.AxisX.LabelStyle.Angle = -45; // Angle the category names for better readability
                 chartArea.AxisX.LabelStyle.Font = new Font("Arial", 8);
 
-                // Configure Y-axis
                 chartArea.AxisY.Title = "Total Sales ($)";
                 chartArea.AxisY.TitleFont = new Font("Arial", 10, FontStyle.Bold);
-                chartArea.AxisY.LabelStyle.Format = "C0"; // Currency format without decimal places
+                chartArea.AxisY.LabelStyle.Format = "C0";
 
-                // Add some visual enhancements
                 chartArea.BackColor = Color.WhiteSmoke;
                 categorySeries.BorderWidth = 1;
                 categorySeries.BorderColor = Color.DarkGray;
 
-                // Set the maximum number of vertical grid lines
                 chartArea.AxisX.MajorGrid.Interval = 1;
-
-                // Refresh the chart
                 chartReport.Invalidate();
             }
             catch (Exception ex)
@@ -227,7 +212,6 @@ namespace Admin.View
                 MessageBox.Show("Error generating category sales chart: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void picLogo_Click(object sender, EventArgs e)
         {
             this.Close();

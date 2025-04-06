@@ -48,9 +48,9 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(448, 25);
+            this.lblTitle.Location = new System.Drawing.Point(504, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(183, 31);
+            this.lblTitle.Size = new System.Drawing.Size(212, 37);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Sales Report";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,11 +64,11 @@
             this.grpReport.Controls.Add(this.cmbYear);
             this.grpReport.Controls.Add(this.chartReport);
             this.grpReport.Controls.Add(this.btnCategory);
-            this.grpReport.Location = new System.Drawing.Point(52, 66);
+            this.grpReport.Location = new System.Drawing.Point(58, 82);
             this.grpReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpReport.Name = "grpReport";
             this.grpReport.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpReport.Size = new System.Drawing.Size(974, 572);
+            this.grpReport.Size = new System.Drawing.Size(1096, 715);
             this.grpReport.TabIndex = 27;
             this.grpReport.TabStop = false;
             this.grpReport.Text = "Generate by:";
@@ -76,10 +76,10 @@
             // btnGenerate
             // 
             this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerate.Location = new System.Drawing.Point(202, 25);
+            this.btnGenerate.Location = new System.Drawing.Point(227, 31);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(144, 33);
+            this.btnGenerate.Size = new System.Drawing.Size(162, 41);
             this.btnGenerate.TabIndex = 35;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -90,11 +90,11 @@
             this.cmbYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbYear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Location = new System.Drawing.Point(74, 30);
+            this.cmbYear.Location = new System.Drawing.Point(83, 38);
             this.cmbYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbYear.Size = new System.Drawing.Size(108, 24);
+            this.cmbYear.Size = new System.Drawing.Size(121, 28);
             this.cmbYear.TabIndex = 20;
             this.cmbYear.Text = "Year";
             // 
@@ -109,7 +109,7 @@
             legend1.Name = "Sales (RM)";
             legend1.Title = "Sales (RM)";
             this.chartReport.Legends.Add(legend1);
-            this.chartReport.Location = new System.Drawing.Point(74, 71);
+            this.chartReport.Location = new System.Drawing.Point(83, 89);
             this.chartReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartReport.Name = "chartReport";
             series1.ChartArea = "ChartArea1";
@@ -117,7 +117,7 @@
             series1.Name = "Series1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chartReport.Series.Add(series1);
-            this.chartReport.Size = new System.Drawing.Size(832, 477);
+            this.chartReport.Size = new System.Drawing.Size(936, 596);
             this.chartReport.TabIndex = 17;
             this.chartReport.Text = "chart1";
             // 
@@ -125,10 +125,10 @@
             // 
             this.btnCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCategory.Location = new System.Drawing.Point(762, 25);
+            this.btnCategory.Location = new System.Drawing.Point(857, 31);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(144, 33);
+            this.btnCategory.Size = new System.Drawing.Size(162, 41);
             this.btnCategory.TabIndex = 15;
             this.btnCategory.Text = "Dish Category";
             this.btnCategory.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@
             // 
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogo.Image = global::FoodiePoint_proj.Properties.Resources.output_onlinepngtools;
-            this.picLogo.Location = new System.Drawing.Point(52, 16);
+            this.picLogo.Location = new System.Drawing.Point(58, 20);
             this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(244, 40);
+            this.picLogo.Size = new System.Drawing.Size(274, 50);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 34;
             this.picLogo.TabStop = false;
@@ -149,14 +149,14 @@
             // 
             // frmCheckSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 673);
+            this.ClientSize = new System.Drawing.Size(1217, 841);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.grpReport);
             this.Controls.Add(this.lblTitle);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(897, 736);
             this.Name = "frmCheckSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales Report Visualization";
