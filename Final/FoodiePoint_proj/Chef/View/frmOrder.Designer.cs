@@ -64,7 +64,7 @@
             // 
             this.gbxOrder.Controls.Add(this.btnCompleted);
             this.gbxOrder.Controls.Add(this.btnInProgress);
-            this.gbxOrder.Location = new System.Drawing.Point(67, 8);
+            this.gbxOrder.Location = new System.Drawing.Point(68, 8);
             this.gbxOrder.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.gbxOrder.Name = "gbxOrder";
             this.gbxOrder.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -145,14 +145,14 @@
             this.dgvOrders.RowHeadersWidth = 51;
             this.dgvOrders.RowTemplate.Height = 24;
             this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrders.Size = new System.Drawing.Size(814, 389);
+            this.dgvOrders.Size = new System.Drawing.Size(817, 389);
             this.dgvOrders.TabIndex = 7;
             this.dgvOrders.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellContentDoubleClick);
             // 
             // btnReturnOrder
             // 
             this.btnReturnOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReturnOrder.Location = new System.Drawing.Point(663, 555);
+            this.btnReturnOrder.Location = new System.Drawing.Point(664, 497);
             this.btnReturnOrder.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnReturnOrder.Name = "btnReturnOrder";
             this.btnReturnOrder.Size = new System.Drawing.Size(183, 89);
@@ -228,7 +228,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(622, 199);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(625, 199);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // frmOrderPage
