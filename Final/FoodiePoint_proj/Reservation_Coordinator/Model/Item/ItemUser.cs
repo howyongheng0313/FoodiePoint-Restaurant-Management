@@ -9,12 +9,10 @@ namespace Reservation_Coordinator.Model.Item
 {
     public class ItemUser
     {
-        public static readonly string tb_code = "[dbo].[Users]";
-
         public static ItemUser Login(string usrnm, string paswd)
         {
             var login_cmd = new SqlCommand(
-                $"SELECT * FROM {tb_code} " +
+                $"SELECT * FROM {DataHelper.UserT} " +
                 "WHERE [Username] = @usrnm AND [Password] = @paswd", DataHelper.conn);
             login_cmd.Parameters.AddWithValue("@usrnm", usrnm);
             login_cmd.Parameters.AddWithValue("@paswd", paswd);
@@ -44,7 +42,7 @@ namespace Reservation_Coordinator.Model.Item
         public static bool ExistUsername(string usrnm)
         {
             var exist_cmd = new SqlCommand(
-                $"SELECT [Username] FROM {tb_code} " +
+                $"SELECT [Username] FROM {DataHelper.UserT} " +
                 $"WHERE [Username] = @usrnm", DataHelper.conn);
             exist_cmd.Parameters.AddWithValue("@usrnm", usrnm);
 
@@ -58,7 +56,7 @@ namespace Reservation_Coordinator.Model.Item
         public static bool ExistEmail(string email)
         {
             var exist_cmd = new SqlCommand(
-                $"SELECT [Email] FROM {tb_code} " +
+                $"SELECT [Email] FROM {DataHelper.UserT} " +
                 $"WHERE [Email] = @email", DataHelper.conn);
             exist_cmd.Parameters.AddWithValue("@email", email);
 
@@ -92,7 +90,7 @@ namespace Reservation_Coordinator.Model.Item
                 return "Invallid Values";
 
             var update_cmd = new SqlCommand(
-                $"UPDATE {tb_code} SET " +
+                $"UPDATE {DataHelper.UserT} SET " +
                 "[Username] = @usrnm" +
                 (fullName != FullName ?
                 ", [FullName] = @fulnm" : "") +
