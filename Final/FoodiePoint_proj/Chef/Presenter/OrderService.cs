@@ -32,9 +32,7 @@ namespace FoodiePointManagementSystem.Presenter
         // Method to get all orders
         public DataTable GetAllOrders()
         {
-            string query = "SELECT OrderID, UserID, " +
-                          "CONVERT(VARCHAR, DateTime, 103) + ' ' + CONVERT(VARCHAR, DateTime, 108) AS DateTime, " +
-                          "OrderStatus FROM Orders ORDER BY DateTime DESC";
+            string query = "SELECT OrderID, UserID, DateTime, OrderStatus FROM Orders ORDER BY DateTime DESC";
             return dbHelper.ExecuteQuery(query);
         }
 
